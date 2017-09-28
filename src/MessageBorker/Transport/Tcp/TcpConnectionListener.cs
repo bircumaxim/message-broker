@@ -46,7 +46,6 @@ namespace Transport.Tcp
             IsListening = !IsListening;
             _listenerSocket.Close();
             _listenerSocket.Dispose();
-            Console.WriteLine("Socket was closed");
         }
 
         private void BindSocketToEndpoint(EndPoint endPoint)
@@ -86,11 +85,11 @@ namespace Transport.Tcp
 
         private void Validate()
         {
-            if (!IsPortAvailable(_port))
-            {
-                //TODO log here exception
-                throw new Exception("Given port is not available");
-            }
+//            if (!IsPortAvailable(_port))
+//            {
+//                //TODO log here exception
+//                throw new Exception("Given port is not available");
+//            }
         }
         
         private bool IsPortAvailable(int port)

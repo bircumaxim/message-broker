@@ -10,7 +10,7 @@ namespace Server
     internal class Program
     {
         private static readonly List<TcpConnector> Connections = new List<TcpConnector>();
-        private const int Port = 9000;
+        private const int Port = 5000;
 
         public static void Main(string[] args)
         {
@@ -18,9 +18,10 @@ namespace Server
             tcpConnectionListener.TcpClientConnected += OnClientConnected;
             tcpConnectionListener.StartAsync();
 
-            Console.WriteLine("Server started on port 9000");
+            Console.WriteLine("Server started on port 5000");
             Console.WriteLine("Press any keyt to spot the server");
             Console.ReadKey();
+            tcpConnectionListener.Stop();
         }
 
         public static void OnClientConnected(object sender, TcpClientConnectedEventArgs args)
@@ -33,7 +34,6 @@ namespace Server
 
         public static void OnConnectorMessageReceived(object sender, MessageReceivedEventArgs args)
         {
-            Console.WriteLine("Huinea");
             if (args.Message.MessageTypeId != 1) return;
             var message = args.Message as HealthCheckMessage;
             Console.WriteLine($"Message form {args.Connector.ConnectorId} {message?.SourceServerName}");

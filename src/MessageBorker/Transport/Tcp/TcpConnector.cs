@@ -1,6 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Net.Sockets;
+using System.Resources;
+using System.Threading;
+using System.Threading.Tasks;
 using Serialization;
 using Serialization.Deserializers;
 using Serialization.Serializers;
@@ -13,11 +16,13 @@ namespace Transport.Tcp
         private readonly Socket _socket;
         private readonly NetworkStream _networkStream;
         private readonly IWireProtocol _wireProtocol;
+        private readonly ManualResetEvent _allDone;
 
         public TcpConnector(Socket socket, long connectorId, IWireProtocol wireProtocol) : base(connectorId)
         {
             _socket = socket;
             _wireProtocol = wireProtocol;
+            _allDone = new ManualResetEvent(false);
             _networkStream = new NetworkStream(_socket);
         }
 
@@ -29,10 +34,9 @@ namespace Transport.Tcp
                 throw new Exception("Tried to start communication with a TCP socket that is not connected.");
             }
 
-
-            StartReceivingMessages();
+            Task.Factory.StartNew(StartReceivingMessages);
         }
-
+        
         private void StartReceivingMessages()
         {
             //TODO log here started receiving messages
@@ -42,7 +46,6 @@ namespace Transport.Tcp
                 {
                     var message = _wireProtocol.ReadMessage(new DefaultDeserializer(_networkStream));
                     //TODO log here that a new message was received by communicator
-                    Console.WriteLine(message.MessageTypeId);
                     OnMessageReceived(message);
                 }
                 catch (Exception ex)
@@ -120,5 +123,14 @@ namespace Transport.Tcp
 
             //TODO log here that message was sent.
         }
+    }
+
+    public class StateObject
+    {
+        // Size of receive buffer.
+        public const int BufferSize = 1024;
+
+        // Receive buffer.
+        public byte[] Buffer = new byte[BufferSize];
     }
 }
