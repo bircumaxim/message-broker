@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Serialization;
 using Transport.Events;
-using Transport.Serialization;
 
 namespace Transport
 {

@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B1368E68-7A69-4E7F-9327-2748E49C5D8A}</ProjectGuid>
+    <ProjectGuid>{D834526C-49E4-4EC9-A4F7-43FCCDD165DC}</ProjectGuid>
     <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Transport</RootNamespace>
-    <AssemblyName>Transport</AssemblyName>
+    <RootNamespace>Serialization</RootNamespace>
+    <AssemblyName>Serialization</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,23 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connector.cs" />
-    <Compile Include="Events\CommunicationWay.cs" />
-    <Compile Include="Events\ConnectionState.cs" />
-    <Compile Include="Events\ConnectorStateChangeEventArgs.cs" />
-    <Compile Include="Events\MessageReceivedEventArgs.cs" />
-    <Compile Include="IConnector.cs" />
-    <Compile Include="IRun.cs" />
+    <Compile Include="Deserializers\DefaultDeserializer.cs" />
+    <Compile Include="IDeserializer.cs" />
+    <Compile Include="ISerializable.cs" />
+    <Compile Include="ISerializer.cs" />
+    <Compile Include="IWireProtocol.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="MessageFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tcp\Events\TcpClientConnectedEventArgs.cs" />
-    <Compile Include="Tcp\TcpConnectionListener.cs" />
-    <Compile Include="Tcp\TcpConnector.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Serialization\Serialization.csproj">
-      <Project>{D834526C-49E4-4EC9-A4F7-43FCCDD165DC}</Project>
-      <Name>Serialization</Name>
-    </ProjectReference>
+    <Compile Include="Serializable.cs" />
+    <Compile Include="SerializableObjectHandler.cs" />
+    <Compile Include="Serializers\DefaultSerializer.cs" />
+    <Compile Include="WireProtocols\DefaultWireProtocol.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

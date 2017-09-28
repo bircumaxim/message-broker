@@ -1,5 +1,5 @@
-﻿using Transport.Events;
-using Transport.Serialization;
+﻿using Serialization;
+using Transport.Events;
 
 namespace Transport
 {

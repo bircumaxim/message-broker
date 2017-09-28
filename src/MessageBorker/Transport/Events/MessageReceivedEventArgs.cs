@@ -1,5 +1,5 @@
 ﻿using System;
-using Transport.Serialization;
+using Serialization;
 
 namespace Transport.Events
 {
@@ -7,12 +7,12 @@ namespace Transport.Events
 
     public class MessageReceivedEventArgs : EventArgs
     {
-        public IConnector Communicator { get; set; }
+        public IConnector Connector { get; set; }
         public Message Message { get; set; }
 
-        public MessageReceivedEventArgs(IConnector communicator, Message message)
+        public MessageReceivedEventArgs(IConnector connector, Message message)
         {
-            Communicator = communicator;
+            Connector = connector;
             Message = message;
         }
     }

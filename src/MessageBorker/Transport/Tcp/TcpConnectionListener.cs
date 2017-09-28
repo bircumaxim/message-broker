@@ -37,9 +37,7 @@ namespace Transport.Tcp
         public Task StartAsync()
         {
             //TODO log here that socket is starting
-            BindSocketToEndpoint(new IPEndPoint(0, _port));
-            IsListening = !IsListening;
-            return Task.Factory.StartNew(TcpSocketListening);
+            return Task.Factory.StartNew(Start);
         }
 
         public void Stop()
@@ -56,7 +54,7 @@ namespace Transport.Tcp
             try
             {
                 _listenerSocket.Bind(endPoint);
-                _listenerSocket.Listen(100);
+                _listenerSocket.Listen(0);
             }
             catch (Exception e)
             {

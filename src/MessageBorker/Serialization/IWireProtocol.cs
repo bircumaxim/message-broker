@@ -1,4 +1,4 @@
-﻿namespace Transport.Serialization
+﻿namespace Serialization
 {
     public interface IWireProtocol
     {

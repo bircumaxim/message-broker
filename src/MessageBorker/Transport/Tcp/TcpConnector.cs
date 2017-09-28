@@ -1,10 +1,10 @@
 ﻿using System;
 using System.IO;
 using System.Net.Sockets;
+using Serialization;
+using Serialization.Deserializers;
+using Serialization.Serializers;
 using Transport.Events;
-using Transport.Serialization;
-using Transport.Serialization.Deserializers;
-using Transport.Serialization.Serializers;
 
 namespace Transport.Tcp
 {
@@ -42,11 +42,13 @@ namespace Transport.Tcp
                 {
                     var message = _wireProtocol.ReadMessage(new DefaultDeserializer(_networkStream));
                     //TODO log here that a new message was received by communicator
+                    Console.WriteLine(message.MessageTypeId);
                     OnMessageReceived(message);
                 }
                 catch (Exception ex)
                 {
                     //TODO log here exception
+                    Console.WriteLine(ex);
                     break; //Stop listening
                 }
             }
@@ -58,6 +60,8 @@ namespace Transport.Tcp
             catch (Exception ex)
             {
                 //TODO log here exception.
+                Console.WriteLine(ex);
+                throw;
             }
         }
 
