@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConnectionLessConnector.cs" />
+    <Compile Include="ConnectionOrientedConnector.cs" />
     <Compile Include="Connector.cs" />
     <Compile Include="Events\CommunicationWay.cs" />
     <Compile Include="Events\ConnectionState.cs" />
@@ -50,6 +52,7 @@
     <Compile Include="Tcp\Events\TcpClientConnectedEventArgs.cs" />
     <Compile Include="Tcp\TcpConnectionListener.cs" />
     <Compile Include="Tcp\TcpConnector.cs" />
+    <Compile Include="UDP\UdpConnector.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Serialization\Serialization.csproj">

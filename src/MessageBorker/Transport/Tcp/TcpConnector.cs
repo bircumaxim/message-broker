@@ -11,22 +11,21 @@ using Transport.Events;
 
 namespace Transport.Tcp
 {
-    public class TcpConnector : Connector
+    public class TcpConnector : ConnectionOrientedConnector
     {
         private readonly Socket _socket;
         private readonly NetworkStream _networkStream;
         private readonly IWireProtocol _wireProtocol;
-        private readonly ManualResetEvent _allDone;
 
         public TcpConnector(Socket socket, long connectorId, IWireProtocol wireProtocol) : base(connectorId)
         {
             _socket = socket;
             _wireProtocol = wireProtocol;
-            _allDone = new ManualResetEvent(false);
             _networkStream = new NetworkStream(_socket);
+            Validate();
         }
 
-        protected override void StartCommunicaiton()
+        protected override void StartCommunication()
         {
             if (!_socket.Connected)
             {
@@ -37,38 +36,7 @@ namespace Transport.Tcp
             Task.Factory.StartNew(StartReceivingMessages);
         }
         
-        private void StartReceivingMessages()
-        {
-            //TODO log here started receiving messages
-            while (ConnectionState == ConnectionState.Connected || ConnectionState == ConnectionState.Connecting)
-            {
-                try
-                {
-                    var message = _wireProtocol.ReadMessage(new DefaultDeserializer(_networkStream));
-                    //TODO log here that a new message was received by communicator
-                    OnMessageReceived(message);
-                }
-                catch (Exception ex)
-                {
-                    //TODO log here exception
-                    Console.WriteLine(ex);
-                    break; //Stop listening
-                }
-            }
-
-            try
-            {
-                Stop();
-            }
-            catch (Exception ex)
-            {
-                //TODO log here exception.
-                Console.WriteLine(ex);
-                throw;
-            }
-        }
-
-        protected override void StopCommunicaiton()
+        protected override void StopCommunication()
         {
             if (!_socket.Connected) return;
             _socket.Shutdown(SocketShutdown.Send);
@@ -87,14 +55,40 @@ namespace Transport.Tcp
             SendMessageToSocket(message);
         }
 
+        private void StartReceivingMessages()
+        {
+            //TODO log here started receiving messages
+            while (ConnectionState == ConnectionState.Connected || ConnectionState == ConnectionState.Connecting)
+            {
+                try
+                {
+                    var message = _wireProtocol.ReadMessage(new DefaultDeserializer(_networkStream));
+                    //TODO log here that a new message was received by communicator
+                    OnMessageReceived(message);
+                }
+                catch (Exception ex)
+                {
+                    //TODO log here exception
+                    Console.WriteLine(ex);
+                    break; //Stop listening
+                }
+            }
+            try
+            {
+                Stop();
+            }
+            catch (Exception ex)
+            {
+                //TODO log here exception.
+                Console.WriteLine(ex);
+                throw;
+            }
+        }
+        
         private void SendMessageToSocket(Message message)
         {
             //TODO log here that Message is preparing to be sent to communicator
-
-            //Create MemoryStream to write message to a byte array
             var memoryStream = new MemoryStream();
-
-            //Write message
             _wireProtocol.WriteMessage(new DefaultSerializer(memoryStream), message);
 
             //Check the length of message data 50 MegaBytes in our case
@@ -104,7 +98,6 @@ namespace Transport.Tcp
                 throw new Exception("Message is too big to send.");
             }
 
-            //SendMessage message (contents of created memory stream)
             var sendBuffer = memoryStream.ToArray();
             var length = sendBuffer.Length;
             var totalSent = 0;
@@ -120,17 +113,16 @@ namespace Transport.Tcp
 
                 totalSent += sent;
             }
-
             //TODO log here that message was sent.
         }
-    }
 
-    public class StateObject
-    {
-        // Size of receive buffer.
-        public const int BufferSize = 1024;
-
-        // Receive buffer.
-        public byte[] Buffer = new byte[BufferSize];
+        private void Validate()
+        {
+            if (_socket == null || _wireProtocol == null || _networkStream == null)
+            {
+                //TODO log here exception
+                throw new NullReferenceException();
+            }
+        }
     }
 }

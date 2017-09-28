@@ -6,13 +6,13 @@ namespace Transport.Events
 
     public class ConnectorStateChangeEventArgs : EventArgs
     {
-        public Connector Connector { get; set; }
+        public ConnectionOrientedConnector ConnectionOrientedConnector { get; set; }
         public ConnectionState OldState { get; set; }
         public ConnectionState NewState { get; set; }
 
-        public ConnectorStateChangeEventArgs(Connector connector, ConnectionState oldState, ConnectionState newState)
+        public ConnectorStateChangeEventArgs(ConnectionOrientedConnector connectionOrientedConnector, ConnectionState oldState, ConnectionState newState)
         {
-            Connector = connector;
+            ConnectionOrientedConnector = connectionOrientedConnector;
             OldState = oldState;
             NewState = newState;
         }
