@@ -10,7 +10,7 @@ using Serialization.Deserializers;
 using Serialization.Serializers;
 using Transport.Events;
 
-namespace Transport.UDP
+namespace Transport.Udp
 {
     public class UdpConnector : ConnectionLessConnector
     {
