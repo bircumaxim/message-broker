@@ -1,5 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Net;
+using System.Net.Sockets;
+using Serialization.WireProtocols;
+using Transport.Tcp;
 
 namespace Producer
 {
@@ -7,7 +10,13 @@ namespace Producer
     {
         public static void Main(string[] args)
         {
-            //TODO implement producer
+            var socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            socket.Connect(IPAddress.Parse("127.0.1"), 9000);
+            var tcpConnector = new TcpConnector(socket, 1, new DefaultWireProtocol());
+            tcpConnector.StartAsync();
+
+            Console.WriteLine("Stop Producer");
+            Console.ReadKey();
         }
     }
 }

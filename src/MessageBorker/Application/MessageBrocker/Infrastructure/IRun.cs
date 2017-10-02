@@ -2,7 +2,6 @@
 
 namespace MessageBrocker
 {
-    
     public interface IRun
     {
         void Start();

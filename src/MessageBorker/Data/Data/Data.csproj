@@ -40,6 +40,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoteApplication.cs" />
+    <Compile Include="Transport.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Domain.csproj">
+      <Project>{4D823F99-81AF-4B60-86CD-3FAECEB9C8CB}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Transport\Transport.csproj">
+      <Project>{B1368E68-7A69-4E7F-9327-2748E49C5D8A}</Project>
+      <Name>Transport</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Events" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
