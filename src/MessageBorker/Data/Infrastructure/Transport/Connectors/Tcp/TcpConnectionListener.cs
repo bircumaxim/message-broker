@@ -5,12 +5,14 @@ using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
+using log4net;
 using Transport.Tcp.Events;
 
-namespace Transport.Tcp
+namespace Transport.Connectors.Tcp
 {
     public class TcpConnectionListener : IRun
     {
+        private readonly ILog _logger;
         private readonly int _port;
         private readonly Socket _listenerSocket;
         private readonly ManualResetEvent _allDone;
@@ -19,6 +21,7 @@ namespace Transport.Tcp
 
         public TcpConnectionListener(int port)
         {
+            _logger = LogManager.GetLogger(GetType());
             _port = port;
             _listenerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             _allDone = new ManualResetEvent(false);
@@ -29,29 +32,29 @@ namespace Transport.Tcp
 
         public void Start()
         {
-            //TODO log here that socket is starting
+            _logger.Info("Starting listener socket");
             if (IsListening)
             {
-                //TODO log here that socket is already listening
+                _logger.Error("Socket already listening");
                 return;
             }
             BindSocketToEndpoint(new IPEndPoint(0, _port));
             IsListening = !IsListening;
+            _logger.Debug($"Socket was started on port {_port}");
             TcpSocketListening();
         }
 
         public Task StartAsync()
         {
-            //TODO log here that socket is starting
             return Task.Factory.StartNew(Start);
         }
 
         public void Stop()
         {
-            //TODO log here that socket was stoped
+            _logger.Info("Stoping listener socket");
             if (!IsListening)
             {
-                //TODO log here that socket is no listening
+                _logger.Error("Socket is not listening already");
                 return;
             }
             IsListening = !IsListening;
@@ -71,7 +74,7 @@ namespace Transport.Tcp
             }
             catch (Exception e)
             {
-                //TODO log herer socket binding exception
+                _logger.Error("Socket binding exception");
                 Console.WriteLine(e);
                 throw;
             }
@@ -79,10 +82,10 @@ namespace Transport.Tcp
 
         private void TcpSocketListening()
         {
+            _logger.Info("Waiting for connections");
             while (IsListening)
             {
                 _allDone.Reset();
-                //TODO log here waiting for a connection
                 _listenerSocket.BeginAccept(OnSocketAccepted, _listenerSocket);
                 _allDone.WaitOne();
             }
@@ -93,7 +96,7 @@ namespace Transport.Tcp
             _allDone.Set();
             var socketListener = (Socket) result.AsyncState;
             var accptedSocket = socketListener.EndAccept(result);
-            //TODO log here that new client socket was accepted
+            _logger.Info("New client socket was accepted");
             TcpClientConnected?.Invoke(this, new TcpClientConnectedEventArgs {ClientSocket = accptedSocket});
         }
 
@@ -108,7 +111,7 @@ namespace Transport.Tcp
         {
             if (!IsPortAvailable(_port) || _listenerSocket == null || _allDone == null)
             {
-                //TODO log here exception
+                _logger.Error("Entity validation error");
                 //TODO check why this is not working correctly
                 //throw new Exception("Given port is not available");
             }

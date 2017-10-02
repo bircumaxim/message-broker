@@ -1,24 +1,25 @@
 ﻿using System;
 using System.IO;
 using System.Net.Sockets;
-using System.Resources;
-using System.Threading;
 using System.Threading.Tasks;
+using log4net;
 using Serialization;
 using Serialization.Deserializers;
 using Serialization.Serializers;
 using Transport.Events;
 
-namespace Transport.Tcp
+namespace Transport.Connectors.Tcp
 {
     public class TcpConnector : ConnectionOrientedConnector
     {
+        private readonly ILog _logger;
         private readonly Socket _socket;
         private readonly NetworkStream _networkStream;
         private readonly IWireProtocol _wireProtocol;
 
         public TcpConnector(Socket socket, long connectorId, IWireProtocol wireProtocol) : base(connectorId)
         {
+            _logger = LogManager.GetLogger(GetType());
             _socket = socket;
             _wireProtocol = wireProtocol;
             _networkStream = new NetworkStream(_socket);
@@ -29,7 +30,7 @@ namespace Transport.Tcp
         {
             if (!_socket.Connected)
             {
-                //TODO log here exception socket is not connected
+                _logger.Error("Socket is not connected");
                 throw new Exception("Tried to start communication with a TCP socket that is not connected.");
             }
 
@@ -48,7 +49,7 @@ namespace Transport.Tcp
         {
             if (ConnectionState != ConnectionState.Connected)
             {
-                //TODO log here exception that socket is not connected
+                _logger.Error("Socket is not connected");
                 throw new Exception("Communicator's state is not connected. It can not send message.");
             }
 
@@ -57,18 +58,18 @@ namespace Transport.Tcp
 
         private void StartReceivingMessages()
         {
-            //TODO log here started receiving messages
+            _logger.Info("Started receivin messages");
             while (ConnectionState == ConnectionState.Connected || ConnectionState == ConnectionState.Connecting)
             {
                 try
                 {
                     var message = _wireProtocol.ReadMessage(new DefaultDeserializer(_networkStream));
-                    //TODO log here that a new message was received by communicator
+                    _logger.Info("A new message was received by communicator");
                     OnMessageReceived(message);
                 }
                 catch (Exception ex)
                 {
-                    //TODO log here exception
+                    _logger.Error("Receiving message was failed");
                     Console.WriteLine(ex);
                     break; //Stop listening
                 }
@@ -79,7 +80,7 @@ namespace Transport.Tcp
             }
             catch (Exception ex)
             {
-                //TODO log here exception.
+                _logger.Error("Failed to stop the connector");
                 Console.WriteLine(ex);
                 throw;
             }
@@ -87,14 +88,14 @@ namespace Transport.Tcp
         
         private void SendMessageToSocket(Message message)
         {
-            //TODO log here that Message is preparing to be sent to communicator
+            _logger.Info("Message is preparing to be sent to communicator");
             var memoryStream = new MemoryStream();
             _wireProtocol.WriteMessage(new DefaultSerializer(memoryStream), message);
 
             //Check the length of message data 50 MegaBytes in our case
             if (memoryStream.Length > 52428800) //TODO add settings module and put it into settings 
             {
-                //TODO log here exception
+                _logger.Error("Message is too big to send.");
                 throw new Exception("Message is too big to send.");
             }
 
@@ -106,21 +107,22 @@ namespace Transport.Tcp
                 var sent = _socket.Send(sendBuffer, totalSent, length - totalSent, SocketFlags.None);
                 if (sent <= 0)
                 {
-                    //TODO log here exception
+                    _logger.Error("Message can not be sent via TCP socket. Only " + totalSent + " bytes of " +
+                                  length + " bytes are sent.");
                     throw new Exception("Message can not be sent via TCP socket. Only " + totalSent + " bytes of " +
                                         length + " bytes are sent.");
                 }
 
                 totalSent += sent;
             }
-            //TODO log here that message was sent.
+            _logger.Info("Message was sent");
         }
 
         private void Validate()
         {
             if (_socket == null || _wireProtocol == null || _networkStream == null)
             {
-                //TODO log here exception
+                _logger.Error("Entity vaildation error");
                 throw new NullReferenceException();
             }
         }

@@ -1,16 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
+using log4net;
 
 namespace MessageBrocker
 {
     internal class Program
     {
+        private static readonly ILog _logger = LogManager.GetLogger(typeof(Program));
         private static readonly BrockerService BrockerService = new BrockerService();
 
         public static void Main(string[] args)
         {
+            _logger.Info("Starting message broker");
             BrockerService.StartAsync();
-            Console.WriteLine("Press any key to stop servr");
+            _logger.Info("Press any key to stop");
             Console.ReadKey();
         }
     }

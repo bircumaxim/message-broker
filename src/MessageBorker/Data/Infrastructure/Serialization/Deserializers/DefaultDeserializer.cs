@@ -1,15 +1,19 @@
 ﻿using System;
 using System.IO;
 using System.Text;
+using log4net;
+using log4net.Core;
 
 namespace Serialization.Deserializers
 {
     public class DefaultDeserializer : IDeserializer
     {
+        private readonly ILog _logger;
         private readonly Stream _stream;
 
         public DefaultDeserializer(Stream stream)
         {
+            _logger =  LogManager.GetLogger(this.GetType());
             _stream = stream;
         }
 
@@ -18,7 +22,7 @@ namespace Serialization.Deserializers
             var b = _stream.ReadByte();
             if (b == -1)
             {
-                //TODO log here exception
+                _logger.Error("Can not read from stream! Input stream is closed.");
                 throw new Exception("Can not read from stream! Input stream is closed.");
             }
 
@@ -121,7 +125,7 @@ namespace Serialization.Deserializers
                 var read = _stream.Read(buffer, totalRead, length - totalRead);
                 if (read <= 0)
                 {
-                    //TODO log here exception
+                    _logger.Error("Can not read from stream! Input stream is closed.");
                     throw new Exception("Can not read from stream! Input stream is closed.");
                 }
 

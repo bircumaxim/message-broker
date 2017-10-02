@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Data;
+using log4net;
 using Serialization.WireProtocols;
+using Transport.Connectors.Tcp;
 using Transport.Tcp;
 using Transport.Tcp.Events;
 
-namespace Data
+namespace Transport
 {
     public class TcpConnectionManager : ConnectionManager
     {
@@ -39,16 +42,10 @@ namespace Data
 
         private void OnTcpClientConnected(object sender, TcpClientConnectedEventArgs args)
         {
-            try
-            {
-                //TODO add used wire protocol tu settings.
-                var tcpConnector = new TcpConnector(args.ClientSocket, Guid.NewGuid().GetHashCode(), new DefaultWireProtocol());
-                OnNewConnection(tcpConnector);
-            }
-            catch (Exception ex)
-            {
-                //TODO log here exception.
-            }
+            //TODO add used wire protocol tu settings.
+            var connectorId = Guid.NewGuid().GetHashCode();
+            var tcpConnector = new TcpConnector(args.ClientSocket, connectorId, new DefaultWireProtocol());
+            OnNewConnection(tcpConnector);
         }
 
         #endregion

@@ -5,21 +5,23 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using log4net;
 using Serialization;
 using Serialization.Deserializers;
 using Serialization.Serializers;
-using Transport.Events;
 
-namespace Transport.Udp
+namespace Transport.Connectors.Udp
 {
     public class UdpConnector : ConnectionLessConnector
     {
+        private readonly ILog _logger;
         private readonly Socket _socket;
         private readonly IWireProtocol _wireProtocol;
         private readonly ManualResetEvent _allDone;
         
         public UdpConnector(int port, long connectorId, IWireProtocol wireProtocol) : base(connectorId)
         {
+            _logger = LogManager.GetLogger(this.GetType());
             _socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
             _wireProtocol = wireProtocol;
             _allDone = new ManualResetEvent(false);
@@ -39,10 +41,9 @@ namespace Transport.Udp
             _socket.Dispose();
         }
 
-        
         private void StartReceivingMessages()
         {
-            //TODO log here started receiving messages
+            _logger.Info($"Conector with {ConnectorId} Started receiving messages");
             while (IsAlive)
             {
                 try
@@ -50,11 +51,11 @@ namespace Transport.Udp
                     _allDone.Reset();
                     var state = new StateObject {Buffer = new byte[_socket.SendBufferSize]};
                     _socket.BeginReceive(state.Buffer, 0, state.Buffer.Length, 0, ReadCallback, state);
-                    //TODO log here that a new message was received by communicator
+                    _logger.Info($"A new message was received by connector with {ConnectorId}");
                 }
                 catch (Exception ex)
                 {
-                    //TODO log here exception
+                    _logger.Error($"Connector {ConnectorId} failed to receive message !");
                     Console.WriteLine(ex);
                     break; //Stop listening
                 }
@@ -66,7 +67,7 @@ namespace Transport.Udp
             }
             catch (Exception ex)
             {
-                //TODO log here exception.
+                _logger.Error($"Connector {ConnectorId} failed to stop !");
                 Console.WriteLine(ex);
                 throw;
             }
@@ -80,7 +81,7 @@ namespace Transport.Udp
             if (state == null) return;
             var memoryStream = new MemoryStream(state.Buffer, 0, bytesRead);
             var message = _wireProtocol.ReadMessage(new DefaultDeserializer(memoryStream));
-//            Console.WriteLine(message.MessageTypeId);
+            _logger.Info($"Received new message with id {message.MessageTypeId}");
         }
         
         protected override void SendMessageInternal(Message message, EndPoint endPoint)
@@ -94,7 +95,7 @@ namespace Transport.Udp
         {
             if (_socket == null || _allDone == null || _wireProtocol == null)
             {
-                //TODO log here exception.
+                _logger.Error($"Entity validation failed");
                 throw new NullReferenceException();
             }
         }

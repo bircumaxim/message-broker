@@ -1,15 +1,18 @@
 ﻿using System.Net;
+using log4net;
 using Serialization;
 
-namespace Transport
+namespace Transport.Connectors
 {
     public abstract class ConnectionLessConnector : Connector, IConnectionLessConnector
     {
+        private readonly ILog _logger;
         private readonly object _sendLock;
         protected bool IsAlive; 
 
         protected ConnectionLessConnector(long connectorId) : base(connectorId)
         {
+            _logger = LogManager.GetLogger(GetType());
             _sendLock = new object();
             IsAlive = false;
         }
@@ -18,12 +21,12 @@ namespace Transport
 
         public override void Start()
         {
-            //TODO log here that communication is going to be started
+            _logger.Info("Starting connection less comunication");
             lock (_sendLock)
             {
                 if (IsAlive)
                 {
-                    //TODO communication is already started
+                    _logger.Error("Connection less communication is already started");
                     return;
                 }
                 StartCommunication();
@@ -33,12 +36,12 @@ namespace Transport
 
         public override void Stop()
         {
-            //TODO log here that connector is going to be disconnected
+            _logger.Info("Connector is going to be disconnected"); 
             lock (_sendLock)
             {
                 if (!IsAlive)
                 {
-                    //TODO communication is already stoped
+                    _logger.Error("Connectiop less comunication is already stoped");
                     return;
                 }
                 StopCommunication();

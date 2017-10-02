@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Data;
 using Domain;
+using Domain.UseCases;
 
 namespace MessageBrocker
 {

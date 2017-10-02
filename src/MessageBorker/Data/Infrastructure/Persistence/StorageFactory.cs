@@ -1,10 +1,13 @@
 ﻿using System;
+using log4net;
 using Persistence.Storages;
 
 namespace Persistence
 {
     public class StorageFactory
     {
+        private static readonly ILog _logger = LogManager.GetLogger(typeof(StorageFactory));
+        
         public static IStorage CreateStorageManager()
         {
             //Get a reference to the settings
@@ -12,7 +15,7 @@ namespace Persistence
 
             //Create storage manager according to the settings
             var storageType = ""; //TODO read here storage type from settings.
-            IStorage storage = null;
+            IStorage storage;
             if (storageType.Equals("FILE", StringComparison.OrdinalIgnoreCase))
             {
                 storage = new FileStorage();
@@ -20,12 +23,6 @@ namespace Persistence
             else //Default storage manager
             {
                 storage =  new MemoryStorage();
-            }
-
-            if (storage == null)
-            {
-                //TODO log here exception.
-                throw  new NullReferenceException();
             }
             return storage;
         }

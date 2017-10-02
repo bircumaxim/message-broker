@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Domain.GateWays;
+using log4net;
 using Transport;
 using Transport.Events;
 
@@ -10,18 +11,19 @@ namespace Data
 {
     public class Transport : ITransportGateWay
     {
+        private readonly ILog _logger;
         private SortedList<int, RemoteApplication> _remoteApplications;
         private readonly SortedList<long, IConnector> _connectors;
         private readonly List<IConnectionManager> _connectionManagers;
 
         public Transport()
         {
+            _logger = LogManager.GetLogger(GetType());
             _remoteApplications = new SortedList<int, RemoteApplication>();
             _connectors = new SortedList<long, IConnector>();
             _connectionManagers = new List<IConnectionManager>();
             AddConnectionManager(new TcpConnectionManager(Convert.ToInt32(9000)));
         }
-
 
         public void Start()
         {
@@ -56,7 +58,7 @@ namespace Data
                     }
                     catch (Exception ex)
                     {
-                        //TODO log here exeption
+                        _logger.Error($"Failed to stpo connector wit id {communicatorId}");
                     }
                 }
             }
@@ -78,8 +80,7 @@ namespace Data
 
         private void OnConnectorConnected(object sender, ConnectorConnectedEventArgs args)
         {
-            //TODO log here that a new connector was connected.
-            Console.WriteLine("New Conector was connected");
+            _logger.Debug($"New connector with id {args.Connector.ConnectorId} was connected");
         }
     }
 }

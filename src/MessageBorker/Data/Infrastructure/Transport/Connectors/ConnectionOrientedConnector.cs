@@ -1,11 +1,13 @@
 ﻿using System;
+using log4net;
 using Serialization;
 using Transport.Events;
 
-namespace Transport
+namespace Transport.Connectors
 {
     public abstract class ConnectionOrientedConnector : Connector, IConnectionOrientedConnector
     {
+        private readonly ILog _logger;
         private readonly object _sendLock;
         public event ConnectorStateChangeHandler StateChanged;
         public ConnectionState ConnectionState { get; set; }
@@ -13,6 +15,7 @@ namespace Transport
 
         protected ConnectionOrientedConnector(long connectorId) : base(connectorId)
         {
+            _logger = LogManager.GetLogger(this.GetType());
             CommunicationWay = CommunicationWay.Send;
             ConnectionState = ConnectionState.Disconnected;
             _sendLock = new object();
@@ -22,11 +25,11 @@ namespace Transport
 
         public override void Start()
         {
-            //TODO log here that connector is starting
+            _logger.Info("Connector is starting");
             if (ConnectionState != ConnectionState.Disconnected)
             {
-                //TODO log here exception
-                throw new Exception("Communicator is already connected");
+                _logger.Error("Connector is already connected");
+                throw new Exception("Connector is already connected");
             }
 
             lock (_sendLock)
@@ -39,7 +42,7 @@ namespace Transport
 
         public override void Stop()
         {
-            //TODO log here that connector is going to be disconnected
+            _logger.Info("Connector is disconecting");
             lock (_sendLock)
             {
                 OnStateChange(ConnectionState.Disconnecting);
