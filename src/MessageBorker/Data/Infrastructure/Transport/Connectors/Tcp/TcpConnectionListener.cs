@@ -51,6 +51,10 @@ namespace Transport.Connectors.Tcp
 
         public void Stop()
         {
+            if (_listenerSocket == null)
+            {
+                Console.WriteLine("Huinea");
+            }
             _logger.Info("Stoping listener socket");
             if (!IsListening)
             {
@@ -58,9 +62,7 @@ namespace Transport.Connectors.Tcp
                 return;
             }
             IsListening = !IsListening;
-            _listenerSocket.Shutdown(SocketShutdown.Send);
-            _listenerSocket.Close();
-            _listenerSocket.Dispose();
+//            _listenerSocket.Dispose();
         }
 
         #endregion

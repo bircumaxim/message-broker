@@ -2,7 +2,7 @@
 using Serialization;
 using Transport.Events;
 
-namespace Transport
+namespace Transport.Connectors
 {
     public interface IConnector : IRun
     {     

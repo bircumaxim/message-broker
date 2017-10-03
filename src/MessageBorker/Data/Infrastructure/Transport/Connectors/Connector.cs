@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using log4net;
 using Serialization;
@@ -22,7 +23,7 @@ namespace Transport.Connectors
         }
 
         #region Control IRum Methods
-
+        
         public abstract void Start();
 
         public Task StartAsync()

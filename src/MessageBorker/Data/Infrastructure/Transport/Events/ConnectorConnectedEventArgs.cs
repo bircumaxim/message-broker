@@ -1,4 +1,6 @@
-﻿namespace Transport.Events
+﻿using Transport.Connectors;
+
+namespace Transport.Events
 {
     public delegate void ConnectorConnectedHandler(object sender, ConnectorConnectedEventArgs args);
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using Serialization;
+using Transport.Connectors;
 
 namespace Transport.Events
 {

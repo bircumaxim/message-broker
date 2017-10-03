@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Domain.GateWays;
 using log4net;
 using Transport;
+using Transport.Connectors;
 using Transport.Events;
 
 namespace Data
@@ -12,7 +13,7 @@ namespace Data
     public class Transport : ITransportGateWay
     {
         private readonly ILog _logger;
-        private SortedList<int, RemoteApplication> _remoteApplications;
+        private readonly SortedList<int, RemoteApplication> _remoteApplications;
         private readonly SortedList<long, IConnector> _connectors;
         private readonly List<IConnectionManager> _connectionManagers;
 
@@ -40,6 +41,7 @@ namespace Data
 
         public void Stop()
         {
+            _logger.Info("Huinea");
             _connectionManagers.ForEach(manager => manager.Stop());
             StopConnectors();
             ClearConnectors();
@@ -49,16 +51,15 @@ namespace Data
         {
             lock (_connectors)
             {
-                var communicatorIds = _connectors.Keys.ToArray();
-                foreach (var communicatorId in communicatorIds)
+                foreach (var connectorId in _connectors.Keys.ToArray())
                 {
                     try
                     {
-                        _connectors[communicatorId].Stop();
+                        _connectors[connectorId].Stop();
                     }
                     catch (Exception ex)
                     {
-                        _logger.Error($"Failed to stpo connector wit id {communicatorId}");
+                        _logger.Error($"Failed to stpo connector wit id {connectorId}");
                     }
                 }
             }
@@ -80,7 +81,9 @@ namespace Data
 
         private void OnConnectorConnected(object sender, ConnectorConnectedEventArgs args)
         {
-            _logger.Debug($"New connector with id {args.Connector.ConnectorId} was connected");
+            var remoteApplication = new RemoteApplication(args.Connector);
+            var applicationId = Guid.NewGuid().GetHashCode();
+            _remoteApplications.Add(applicationId, remoteApplication);
         }
     }
 }
