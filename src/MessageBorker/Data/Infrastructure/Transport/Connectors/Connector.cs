@@ -11,14 +11,15 @@ namespace Transport.Connectors
     public abstract class Connector : IConnector
     {
         private readonly ILog _logger;
-        public static readonly HashSet<long> ConnectorIdsInUse = new HashSet<long>();
+        public static HashSet<string> ConnectorIdsInUse;
         public event MessageReceivedHandler MessageReceived;
-        public long ConnectorId { get; }
+        public string ConnectorId { get; }
 
-        protected Connector(long connectorId)
+        protected Connector()
         {
             _logger = LogManager.GetLogger(this.GetType());
-            ConnectorId = connectorId;
+            ConnectorIdsInUse = new HashSet<string>();
+            ConnectorId = Guid.NewGuid().ToString();
             Validate();
         }
 
@@ -52,6 +53,7 @@ namespace Transport.Connectors
                 _logger.Error("Connector id should be unique");
                 throw new Exception("Connector id should be unique");
             }
+            ConnectorIdsInUse.Add(ConnectorId);
         }
     }
 }

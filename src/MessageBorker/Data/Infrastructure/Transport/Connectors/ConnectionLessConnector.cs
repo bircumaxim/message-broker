@@ -10,7 +10,7 @@ namespace Transport.Connectors
         private readonly object _sendLock;
         protected bool IsAlive; 
 
-        protected ConnectionLessConnector(long connectorId) : base(connectorId)
+        protected ConnectionLessConnector()
         {
             _logger = LogManager.GetLogger(GetType());
             _sendLock = new object();

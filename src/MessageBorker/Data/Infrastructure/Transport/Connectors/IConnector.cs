@@ -8,7 +8,7 @@ namespace Transport.Connectors
     {     
         event MessageReceivedHandler MessageReceived;
 
-        long ConnectorId { get;  }
+        string ConnectorId { get;  }
     }
     
     public interface IConnectionOrientedConnector 

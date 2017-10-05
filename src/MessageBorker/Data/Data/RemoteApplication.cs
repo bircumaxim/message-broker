@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Data.Events;
-using Domain.UseCases;
 using log4net;
 using Transport;
 using Transport.Connectors;
+using Transport.Events;
 
-namespace Data.Models
+namespace Data
 {
     public class RemoteApplication : IRun
     {
@@ -19,9 +19,15 @@ namespace Data.Models
         {
             Name = Guid.NewGuid().ToString();
             _connector = connector;
+            _connector.MessageReceived += OnMessageReceived;
             _logger = LogManager.GetLogger(GetType());
             Validate();
             _logger.Info($"New remote application with id {Name}");
+        }
+
+        private void OnMessageReceived(object sender, MessageReceivedEventArgs args)
+        {
+//            MessageUseCaseFactory.GetUseCaseForMessage(args.Message);
         }
 
         public void Start()

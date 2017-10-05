@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="BrockerService.cs" />
     <Compile Include="Infrastructure\IRun.cs" />
+    <Compile Include="Messages\DefaultMessage.cs" />
     <Compile Include="Messages\PingMessage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

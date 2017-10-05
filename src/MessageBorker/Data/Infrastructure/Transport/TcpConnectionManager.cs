@@ -42,7 +42,7 @@ namespace Transport
         {
             //TODO add used wire protocol to settings.
             var connectorId = Guid.NewGuid().GetHashCode();
-            var tcpConnector = new TcpConnector(args.ClientSocket, connectorId, new DefaultWireProtocol());
+            var tcpConnector = new TcpConnector(args.ClientSocket, new DefaultWireProtocol());
             OnNewConnection(tcpConnector);
         }
 

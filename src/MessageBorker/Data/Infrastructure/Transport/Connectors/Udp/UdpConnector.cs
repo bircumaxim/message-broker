@@ -19,7 +19,7 @@ namespace Transport.Connectors.Udp
         private readonly IWireProtocol _wireProtocol;
         private readonly ManualResetEvent _allDone;
         
-        public UdpConnector(int port, long connectorId, IWireProtocol wireProtocol) : base(connectorId)
+        public UdpConnector(int port, IWireProtocol wireProtocol)
         {
             _logger = LogManager.GetLogger(this.GetType());
             _socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);

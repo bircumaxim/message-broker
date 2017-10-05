@@ -17,7 +17,7 @@ namespace Transport.Connectors.Tcp
         private readonly NetworkStream _networkStream;
         private readonly IWireProtocol _wireProtocol;
 
-        public TcpConnector(Socket socket, long connectorId, IWireProtocol wireProtocol) : base(connectorId)
+        public TcpConnector(Socket socket, IWireProtocol wireProtocol)
         {
             _logger = LogManager.GetLogger(GetType());
             _socket = socket;

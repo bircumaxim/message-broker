@@ -43,6 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Buss.cs" />
+    <Compile Include="Messages\DefaultMessage.cs" />
+    <Compile Include="Messages\PingMessage.cs" />
+    <Compile Include="Payload.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -50,6 +53,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\Infrastructure\Serialization\Serialization.csproj">
+      <Project>{D834526C-49E4-4EC9-A4F7-43FCCDD165DC}</Project>
+      <Name>Serialization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\Infrastructure\Transport\Transport.csproj">
+      <Project>{B1368E68-7A69-4E7F-9327-2748E49C5D8A}</Project>
+      <Name>Transport</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

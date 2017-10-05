@@ -47,22 +47,23 @@
     <Compile Include="PingMessage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Data\Infrastructure\Serialization\Serialization.csproj">
-      <Project>{D834526C-49E4-4EC9-A4F7-43FCCDD165DC}</Project>
-      <Name>Serialization</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Data\Infrastructure\Transport\Transport.csproj">
-      <Project>{B1368E68-7A69-4E7F-9327-2748E49C5D8A}</Project>
-      <Name>Transport</Name>
-    </ProjectReference>
+    <Compile Include="TestMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\MessageBuss\MessageBuss.csproj">
+      <Project>{BBBCF041-CE80-4E35-9C99-1D87DB326997}</Project>
+      <Name>MessageBuss</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\Infrastructure\Serialization\Serialization.csproj">
+      <Project>{D834526C-49E4-4EC9-A4F7-43FCCDD165DC}</Project>
+      <Name>Serialization</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

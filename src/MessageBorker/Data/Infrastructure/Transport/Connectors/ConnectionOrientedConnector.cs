@@ -13,7 +13,7 @@ namespace Transport.Connectors
         public ConnectionState ConnectionState { get; set; }
         public CommunicationWay CommunicationWay { get; set; }
 
-        protected ConnectionOrientedConnector(long connectorId) : base(connectorId)
+        protected ConnectionOrientedConnector()
         {
             _logger = LogManager.GetLogger(this.GetType());
             CommunicationWay = CommunicationWay.Send;

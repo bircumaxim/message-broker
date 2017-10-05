@@ -1,0 +1,26 @@
+2017-10-06 01:59:10,871 [1] [INFO  ] MessageBrocker.Program - Starting message broker 
+2017-10-06 01:59:10,930 [1] [INFO  ] MessageBrocker.Program - Press any key to stop the server 
+2017-10-06 01:59:10,934 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-06 01:59:10,979 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket was started on port 9000 
+2017-10-06 01:59:10,992 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-06 01:59:15,352 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - New client socket was accepted 
+2017-10-06 01:59:15,445 [4] [INFO  ] Data.Models.RemoteApplication - New remote application with id 17b9f0a0-19f6-45d6-8baf-9e8529044100 
+2017-10-06 01:59:15,463 [4] [INFO  ] Data.Models.RemoteApplication - Starting remote applicatoin 
+2017-10-06 01:59:15,480 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-06 01:59:15,498 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Started receivin messages 
+2017-10-06 01:59:15,527 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 063da6ca-68dd-4cb5-8519-48f3fa72bb05 
+2017-10-06 01:59:55,072 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-06 01:59:55,092 [1] [INFO  ] MessageBrocker.Program - Press any key to exit 
+2017-10-06 02:00:00,068 [1] [INFO  ] MessageBrocker.Program - Starting message broker 
+2017-10-06 02:00:00,123 [1] [INFO  ] MessageBrocker.Program - Press any key to stop the server 
+2017-10-06 02:00:00,127 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-06 02:00:00,154 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket was started on port 9000 
+2017-10-06 02:00:00,168 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-06 02:00:04,612 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - New client socket was accepted 
+2017-10-06 02:00:04,636 [5] [INFO  ] Data.Models.RemoteApplication - New remote application with id 360ec638-7e4b-411d-913e-5b828fbf2235 
+2017-10-06 02:00:04,652 [5] [INFO  ] Data.Models.RemoteApplication - Starting remote applicatoin 
+2017-10-06 02:00:04,669 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-06 02:00:04,685 [7] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Started receivin messages 
+2017-10-06 02:00:04,718 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 6f2e8e57-3776-46a7-9405-e45ea6f55702 
+2017-10-06 02:25:29,390 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-06 02:25:29,410 [1] [INFO  ] MessageBrocker.Program - Press any key to exit 
