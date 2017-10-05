@@ -6,7 +6,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
 using log4net;
-using Transport.Tcp.Events;
+using Transport.Connectors.Tcp.Events;
 
 namespace Transport.Connectors.Tcp
 {
@@ -15,6 +15,7 @@ namespace Transport.Connectors.Tcp
         private readonly ILog _logger;
         private readonly int _port;
         private readonly Socket _listenerSocket;
+        private readonly CancellationTokenSource _cancellationTokenSource;
         private readonly ManualResetEvent _allDone;
         public bool IsListening { get; set; }
         public event TcpClientConnectedHandler TcpClientConnected;
@@ -25,6 +26,7 @@ namespace Transport.Connectors.Tcp
             _port = port;
             _listenerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             _allDone = new ManualResetEvent(false);
+            _cancellationTokenSource = new CancellationTokenSource();
             Validate();
         }
 
@@ -32,7 +34,7 @@ namespace Transport.Connectors.Tcp
 
         public void Start()
         {
-            _logger.Info("Starting listener socket");
+            _logger.Info("Starting sockets listener");
             if (IsListening)
             {
                 _logger.Error("Socket already listening");
@@ -46,23 +48,21 @@ namespace Transport.Connectors.Tcp
 
         public Task StartAsync()
         {
-            return Task.Factory.StartNew(Start);
+            return Task.Factory.StartNew(Start, _cancellationTokenSource.Token);
         }
 
         public void Stop()
         {
-            if (_listenerSocket == null)
-            {
-                Console.WriteLine("Huinea");
-            }
-            _logger.Info("Stoping listener socket");
+            _logger.Info("Stop sockets listener");
             if (!IsListening)
             {
                 _logger.Error("Socket is not listening already");
                 return;
             }
             IsListening = !IsListening;
-//            _listenerSocket.Dispose();
+            _cancellationTokenSource.Cancel();
+            _listenerSocket.Close();
+            _listenerSocket.Dispose();
         }
 
         #endregion
@@ -95,8 +95,10 @@ namespace Transport.Connectors.Tcp
 
         private void OnSocketAccepted(IAsyncResult result)
         {
+            if (!IsListening) return;
             _allDone.Set();
             var socketListener = (Socket) result.AsyncState;
+            if (socketListener == null) return;
             var accptedSocket = socketListener.EndAccept(result);
             _logger.Info("New client socket was accepted");
             TcpClientConnected?.Invoke(this, new TcpClientConnectedEventArgs {ClientSocket = accptedSocket});
@@ -114,8 +116,7 @@ namespace Transport.Connectors.Tcp
             if (!IsPortAvailable(_port) || _listenerSocket == null || _allDone == null)
             {
                 _logger.Error("Entity validation error");
-                //TODO check why this is not working correctly
-                //throw new Exception("Given port is not available");
+                throw new Exception("Given port is not available");
             }
         }
     }

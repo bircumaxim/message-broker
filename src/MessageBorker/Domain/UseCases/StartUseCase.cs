@@ -4,13 +4,12 @@ using log4net;
 
 namespace Domain.UseCases
 {
-    public class StartAndInitUseCase : IUseCase
+    public class StartUseCase : IUseCase
     {
         private readonly ITransportGateWay _transportGateWay;
-
         private readonly ILog _logger;
         
-        public StartAndInitUseCase(ITransportGateWay transportGateWay)
+        public StartUseCase(ITransportGateWay transportGateWay)
         {
             _logger = LogManager.GetLogger(GetType());
             _transportGateWay = transportGateWay;

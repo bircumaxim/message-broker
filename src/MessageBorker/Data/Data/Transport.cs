@@ -41,7 +41,6 @@ namespace Data
 
         public void Stop()
         {
-            _logger.Info("Huinea");
             _connectionManagers.ForEach(manager => manager.Stop());
             StopConnectors();
             ClearConnectors();

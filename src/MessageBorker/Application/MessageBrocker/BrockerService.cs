@@ -9,25 +9,25 @@ namespace MessageBrocker
 {
     public class BrockerService : IRun
     {
-        private readonly StartAndInitUseCase _startAndInitUseCase;
+        private readonly StartUseCase _startUseCase;
         private readonly StopUseCase _stopUseCase;
         private readonly Transport _transport;
         
         public BrockerService()
         {
             _transport = new Transport();
-            _startAndInitUseCase = new StartAndInitUseCase(_transport);
+            _startUseCase = new StartUseCase(_transport);
             _stopUseCase = new StopUseCase(_transport);
         }
 
         public void Start()
         {
-            _startAndInitUseCase.Execute();
+            _startUseCase.Execute();
         }
 
         public Task StartAsync()
         {
-            return _startAndInitUseCase.ExecuteAsync();
+            return _startUseCase.ExecuteAsync();
         }
 
         public void Stop()

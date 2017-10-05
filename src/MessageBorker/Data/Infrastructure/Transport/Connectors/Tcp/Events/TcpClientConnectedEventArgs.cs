@@ -1,6 +1,6 @@
 ﻿using System.Net.Sockets;
 
-namespace Transport.Tcp.Events
+namespace Transport.Connectors.Tcp.Events
 {
     public delegate void TcpClientConnectedHandler(object sender, TcpClientConnectedEventArgs args);
 

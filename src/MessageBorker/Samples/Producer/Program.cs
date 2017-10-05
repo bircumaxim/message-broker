@@ -3,7 +3,6 @@ using System.Net;
 using System.Net.Sockets;
 using Serialization.WireProtocols;
 using Transport.Connectors.Tcp;
-using Transport.Tcp;
 
 namespace Producer
 {

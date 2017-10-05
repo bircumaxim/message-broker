@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Data;
-using log4net;
 using Serialization.WireProtocols;
 using Transport.Connectors.Tcp;
-using Transport.Tcp;
-using Transport.Tcp.Events;
+using Transport.Connectors.Tcp.Events;
 
 namespace Transport
 {

@@ -3,7 +3,7 @@
 namespace Persistence.Storages
 {
     public class MemoryStorage : IStorage
-    {
+    {   
         public int StoreMessage(MessageRecord messageRecord)
         {
             throw new System.NotImplementedException();
