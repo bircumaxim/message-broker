@@ -42,12 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IStorage.cs" />
-    <Compile Include="Models\MessageRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StorageFactory.cs" />
     <Compile Include="Storages\FileStorage.cs" />
-    <Compile Include="Storages\MemoryStorage.cs" />
+    <Compile Include="Storages\MemoryStorageFactory.cs" />
+    <Compile Include="Storages\Storrage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.config" />

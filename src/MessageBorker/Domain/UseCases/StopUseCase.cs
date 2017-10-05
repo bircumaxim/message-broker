@@ -3,7 +3,7 @@ using Domain.GateWays;
 
 namespace Domain.UseCases
 {
-    public class StopUseCase : IUseCase
+    public class StopUseCase
     {
         private readonly ITransportGateWay _transportGateWay;
 
@@ -15,12 +15,6 @@ namespace Domain.UseCases
         public void Execute()
         {
             _transportGateWay.Stop();
-        }
-
-        public Task ExecuteAsync()
-        {
-            //TODO do interface segregatio here.
-            throw new System.NotImplementedException();
         }
     }
 }

@@ -2,7 +2,7 @@
 using log4net;
 using Transport.Connectors;
 
-namespace Data
+namespace Data.Models
 {
     public class RemoteApplication
     {

@@ -1,9 +1,10 @@
 ﻿using System;
+using System.ComponentModel;
+using log4net;
 
-namespace Domain.Messages
+namespace Data.Models
 {
-    [Serializable]
-    public class Message
+    public class MessageData
     {
         public bool IsDurable { get; set; }
         public string RoutingKey { get; set; }

@@ -42,14 +42,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mappers\ExchangeMapper.cs" />
+    <Compile Include="Mappers\MessageMapper.cs" />
+    <Compile Include="Mappers\QueueMapper.cs" />
+    <Compile Include="Models\ExchangeData.cs" />
+    <Compile Include="Models\ExchangeDataType.cs" />
+    <Compile Include="Models\MessageData.cs" />
+    <Compile Include="Models\QueueData.cs" />
+    <Compile Include="Models\RemoteApplication.cs" />
+    <Compile Include="Persistence.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RemoteApplication.cs" />
     <Compile Include="Transport.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\Domain.csproj">
       <Project>{4D823F99-81AF-4B60-86CD-3FAECEB9C8CB}</Project>
       <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Persistence\Persistence.csproj">
+      <Project>{F6252F2B-A841-4699-809A-EA412A75D069}</Project>
+      <Name>Persistence</Name>
     </ProjectReference>
     <ProjectReference Include="..\Infrastructure\Transport\Transport.csproj">
       <Project>{B1368E68-7A69-4E7F-9327-2748E49C5D8A}</Project>

@@ -4,7 +4,7 @@ using log4net;
 
 namespace Domain.UseCases
 {
-    public class StartUseCase : IUseCase
+    public class StartUseCase
     {
         private readonly ITransportGateWay _transportGateWay;
         private readonly ILog _logger;

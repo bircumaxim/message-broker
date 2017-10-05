@@ -9,6 +9,11 @@ namespace Serialization
         private static MessageFactory _instance;
         public static MessageFactory Instance => _instance ?? (_instance = new MessageFactory());
 
+        private MessageFactory()
+        {
+            
+        }
+        
         public Message CreateMessageByTypeId(int messageTypeId)
         {
             return Activator.CreateInstance(GetMessageType(messageTypeId)) as Message;
