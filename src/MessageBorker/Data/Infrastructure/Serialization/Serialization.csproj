@@ -50,7 +50,6 @@
     <Compile Include="Message.cs" />
     <Compile Include="MessageFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Serializable.cs" />
     <Compile Include="SerializableObjectHandler.cs" />
     <Compile Include="Serializers\DefaultSerializer.cs" />
     <Compile Include="WireProtocols\DefaultWireProtocol.cs" />

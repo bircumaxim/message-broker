@@ -5,6 +5,6 @@ namespace Domain.GateWays
 {
     public interface IPersistenceGateWay
     {
-        List<Exchange> GetExchanges();
+        Exchange GetExchange();
     }
 }

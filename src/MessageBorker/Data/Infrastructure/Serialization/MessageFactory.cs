@@ -11,19 +11,31 @@ namespace Serialization
 
         private MessageFactory()
         {
-            
-        }
-        
-        public Message CreateMessageByTypeId(int messageTypeId)
-        {
-            return Activator.CreateInstance(GetMessageType(messageTypeId)) as Message;
         }
 
-        private static Type GetMessageType(int messageTypeId)
+        public Message CreateMessageByName(string messageTypeName)
         {
-            return Assembly.GetEntryAssembly()
-                .GetTypes()
-                .FirstOrDefault(t => t.GetCustomAttribute<Serializable>().Id == messageTypeId);
+            Message message;
+            Type messageType;
+            if (TryGetMessageType(messageTypeName, out messageType))
+            {
+                message = Activator.CreateInstance(messageType) as Message;
+            }
+            else
+            {
+                throw new NullReferenceException($"Unknown message type {messageTypeName}");
+            }
+            return message;
+        }
+
+        private bool TryGetMessageType(string messageTypeName, out Type messageType)
+        {
+            messageType = Assembly.GetEntryAssembly()
+                              .GetTypes()
+                              .FirstOrDefault(type => type.Name.Equals(messageTypeName)) ?? AppDomain.CurrentDomain.GetAssemblies()
+                              .SelectMany(assembly => assembly.GetTypes())
+                              .FirstOrDefault(type => type.Name == messageTypeName);
+            return messageType != null;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Data
             _exchangeDataStorage = MemoryStorageFactory.Instance.GetStorrageFor<ExchangeData>(typeof(ExchangeData));
         }
 
-        public List<Exchange> GetExchanges()
+        public Exchange GetExchange()
         {
             return null;
         }

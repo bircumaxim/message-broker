@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="BrockerService.cs" />
     <Compile Include="Infrastructure\IRun.cs" />
+    <Compile Include="Messages\PingMessage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -53,6 +54,10 @@
     <ProjectReference Include="..\..\Data\Data\Data.csproj">
       <Project>{194ACBF7-7E68-467E-AF28-4E50E2BEBF2F}</Project>
       <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\Infrastructure\Serialization\Serialization.csproj">
+      <Project>{d834526c-49e4-4ec9-a4f7-43fccdd165dc}</Project>
+      <Name>Serialization</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Domain\Domain.csproj">
       <Project>{4D823F99-81AF-4B60-86CD-3FAECEB9C8CB}</Project>

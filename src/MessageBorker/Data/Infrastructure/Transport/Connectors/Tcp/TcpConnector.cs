@@ -58,13 +58,12 @@ namespace Transport.Connectors.Tcp
 
         private void StartReceivingMessages()
         {
-            _logger.Info("Started receivin messages");
+            _logger.Debug("Started receivin messages");
             while (ConnectionState == ConnectionState.Connected || ConnectionState == ConnectionState.Connecting)
             {
                 try
                 {
                     var message = _wireProtocol.ReadMessage(new DefaultDeserializer(_networkStream));
-                    _logger.Info("A new message was received by communicator");
                     OnMessageReceived(message);
                 }
                 catch (Exception ex)

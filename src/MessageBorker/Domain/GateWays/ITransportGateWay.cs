@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Domain.Messages;
 
 namespace Domain.GateWays
 {

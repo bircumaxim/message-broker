@@ -13,7 +13,7 @@ namespace Serialization.WireProtocols
             serializer.WriteUInt32(DefaultProtocolType);
             
             //Write the message type
-            serializer.WriteInt32(message.GetType().GetCustomAttribute<Serializable>().Id);
+            serializer.WriteStringUtf8(message.GetType().Name);
             
             //Write message
             serializer.WriteObject(message);
@@ -29,10 +29,10 @@ namespace Serialization.WireProtocols
             }
 
             //Read message type
-            var messageTypeId = deserializer.ReadInt32();
+            var messageTypeName = deserializer.ReadStringUtf8();
 
             //Read and return message
-            return deserializer.ReadObject(() => MessageFactory.Instance.CreateMessageByTypeId(messageTypeId));
+            return deserializer.ReadObject(() => MessageFactory.Instance.CreateMessageByName(messageTypeName));
         }
     }
 }

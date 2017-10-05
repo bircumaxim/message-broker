@@ -11,12 +11,12 @@ namespace MessageBrocker
     {
         private readonly StartUseCase _startUseCase;
         private readonly StopUseCase _stopUseCase;
-        private readonly MessageReceivedUseCase _messageReceivedUse;
+        private readonly RouteMessageUseCase _routeMessageUseCase;
         private readonly Transport _transport;
         
         public BrockerService()
         {
-            _messageReceivedUse = new MessageReceivedUseCase();
+            _routeMessageUseCase = new RouteMessageUseCase();
             _transport = new Transport();
             _startUseCase = new StartUseCase(_transport);
             _stopUseCase = new StopUseCase(_transport);

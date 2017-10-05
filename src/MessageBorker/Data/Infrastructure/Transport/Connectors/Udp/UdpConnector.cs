@@ -51,7 +51,6 @@ namespace Transport.Connectors.Udp
                     _allDone.Reset();
                     var state = new StateObject {Buffer = new byte[_socket.SendBufferSize]};
                     _socket.BeginReceive(state.Buffer, 0, state.Buffer.Length, 0, ReadCallback, state);
-                    _logger.Info($"A new message was received by connector with {ConnectorId}");
                 }
                 catch (Exception ex)
                 {
@@ -81,7 +80,7 @@ namespace Transport.Connectors.Udp
             if (state == null) return;
             var memoryStream = new MemoryStream(state.Buffer, 0, bytesRead);
             var message = _wireProtocol.ReadMessage(new DefaultDeserializer(memoryStream));
-            _logger.Info($"Received new message with id {message.MessageTypeId}");
+            _logger.Info($"Received new message with id {message.MessageTypeName}");
         }
         
         protected override void SendMessageInternal(Message message, EndPoint endPoint)

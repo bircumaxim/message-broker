@@ -2,7 +2,7 @@
 
 namespace Domain.UseCases
 {
-    public class MessageReceivedUseCase
+    public class RouteMessageUseCase
     {
         public void Execute()
         {

@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\MessageReceivedFromRemoteApplicationEventArgs.cs" />
     <Compile Include="Mappers\ExchangeMapper.cs" />
     <Compile Include="Mappers\MessageMapper.cs" />
     <Compile Include="Mappers\QueueMapper.cs" />
@@ -62,6 +63,10 @@
     <ProjectReference Include="..\Infrastructure\Persistence\Persistence.csproj">
       <Project>{F6252F2B-A841-4699-809A-EA412A75D069}</Project>
       <Name>Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Serialization\Serialization.csproj">
+      <Project>{d834526c-49e4-4ec9-a4f7-43fccdd165dc}</Project>
+      <Name>Serialization</Name>
     </ProjectReference>
     <ProjectReference Include="..\Infrastructure\Transport\Transport.csproj">
       <Project>{B1368E68-7A69-4E7F-9327-2748E49C5D8A}</Project>

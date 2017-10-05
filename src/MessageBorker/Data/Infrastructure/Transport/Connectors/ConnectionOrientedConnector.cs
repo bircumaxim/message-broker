@@ -25,13 +25,11 @@ namespace Transport.Connectors
 
         public override void Start()
         {
-            _logger.Info("Connector is starting");
+            _logger.Info("Strting connector");
             if (ConnectionState != ConnectionState.Disconnected)
             {
-                _logger.Error("Connector is already connected");
                 throw new Exception("Connector is already connected");
             }
-
             lock (_sendLock)
             {
                 OnStateChange(ConnectionState.Connecting);

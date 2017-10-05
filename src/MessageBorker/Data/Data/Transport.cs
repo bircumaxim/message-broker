@@ -14,14 +14,14 @@ namespace Data
     public class Transport : ITransportGateWay
     {
         private readonly ILog _logger;
-        private readonly SortedList<int, RemoteApplication> _remoteApplications;
+        private readonly Dictionary<string, RemoteApplication> _remoteApplications;
         private readonly SortedList<long, IConnector> _connectors;
         private readonly List<IConnectionManager> _connectionManagers;
 
         public Transport()
         {
             _logger = LogManager.GetLogger(GetType());
-            _remoteApplications = new SortedList<int, RemoteApplication>();
+            _remoteApplications = new Dictionary<string, RemoteApplication>();
             _connectors = new SortedList<long, IConnector>();
             _connectionManagers = new List<IConnectionManager>();
             AddConnectionManager(new TcpConnectionManager(Convert.ToInt32(9000)));
@@ -59,7 +59,7 @@ namespace Data
                     }
                     catch (Exception ex)
                     {
-                        _logger.Error($"Failed to stpo connector wit id {connectorId}");
+                        throw new Exception($"Failed to stpo connector wit id {connectorId}");
                     }
                 }
             }
@@ -82,8 +82,9 @@ namespace Data
         private void OnConnectorConnected(object sender, ConnectorConnectedEventArgs args)
         {
             var remoteApplication = new RemoteApplication(args.Connector);
-            var applicationId = Guid.NewGuid().GetHashCode();
+            var applicationId = remoteApplication.Name;
             _remoteApplications.Add(applicationId, remoteApplication);
+            remoteApplication.StartAsync();
         }
     }
 }

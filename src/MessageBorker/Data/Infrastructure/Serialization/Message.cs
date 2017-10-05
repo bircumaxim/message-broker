@@ -7,7 +7,7 @@ namespace Serialization
     {
         public string MessageId { get; set; }
         public string RepliedMessageId { get; set; }
-        public int MessageTypeId => GetType().GetCustomAttribute<Serializable>().Id;
+        public string MessageTypeName => GetType().Name;
 
         protected Message()
         {

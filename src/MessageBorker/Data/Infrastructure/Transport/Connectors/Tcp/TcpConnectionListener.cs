@@ -100,7 +100,7 @@ namespace Transport.Connectors.Tcp
             var socketListener = (Socket) result.AsyncState;
             if (socketListener == null) return;
             var accptedSocket = socketListener.EndAccept(result);
-            _logger.Info("New client socket was accepted");
+            _logger.Debug("New client socket was accepted");
             TcpClientConnected?.Invoke(this, new TcpClientConnectedEventArgs {ClientSocket = accptedSocket});
         }
 

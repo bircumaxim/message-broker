@@ -40,7 +40,7 @@ namespace Transport
 
         private void OnTcpClientConnected(object sender, TcpClientConnectedEventArgs args)
         {
-            //TODO add used wire protocol tu settings.
+            //TODO add used wire protocol to settings.
             var connectorId = Guid.NewGuid().GetHashCode();
             var tcpConnector = new TcpConnector(args.ClientSocket, connectorId, new DefaultWireProtocol());
             OnNewConnection(tcpConnector);
