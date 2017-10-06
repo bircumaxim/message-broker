@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using Serialization;
 
-namespace MessageBrocker.Messages
+namespace Messages.Messages
 {
     public class DefaultMessage : Message
     {

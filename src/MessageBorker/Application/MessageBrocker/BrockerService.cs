@@ -4,6 +4,7 @@ using Data;
 using Domain;
 using Domain.UseCases;
 using MessageBrocker.Infrastructure;
+using Messages.Messages;
 
 namespace MessageBrocker
 {

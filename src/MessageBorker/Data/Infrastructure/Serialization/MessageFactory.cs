@@ -30,9 +30,13 @@ namespace Serialization
 
         private bool TryGetMessageType(string messageTypeName, out Type messageType)
         {
-            messageType = Assembly.GetEntryAssembly()
+            //TODO extract defautl assembly to settings !!!
+            messageType = AppDomain.CurrentDomain.Load("Messages")
                               .GetTypes()
-                              .FirstOrDefault(type => type.Name.Equals(messageTypeName)) ?? AppDomain.CurrentDomain.GetAssemblies()
+                              .FirstOrDefault(type => type.Name.Equals(messageTypeName)) ?? Assembly.GetEntryAssembly()
+                              .GetTypes()
+                              .FirstOrDefault(type => type.Name.Equals(messageTypeName)) ?? AppDomain.CurrentDomain
+                              .GetAssemblies()
                               .SelectMany(assembly => assembly.GetTypes())
                               .FirstOrDefault(type => type.Name == messageTypeName);
             return messageType != null;

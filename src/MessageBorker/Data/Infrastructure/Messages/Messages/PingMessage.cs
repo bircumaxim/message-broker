@@ -1,6 +1,6 @@
 ﻿using Serialization;
 
-namespace Producer
+namespace Messages.Messages
 {
     public class PingMessage : Message
     {
