@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
+using log4net;
 
 namespace Serialization
 {
     public class MessageFactory
     {
+        private readonly ILog _logger;
         private static MessageFactory _instance;
         public static MessageFactory Instance => _instance ?? (_instance = new MessageFactory());
 
         private MessageFactory()
         {
+            _logger = LogManager.GetLogger(GetType());
         }
 
         public Message CreateMessageByName(string messageTypeName)
@@ -30,9 +33,16 @@ namespace Serialization
 
         private bool TryGetMessageType(string messageTypeName, out Type messageType)
         {
-            //TODO extract defautl assembly to settings !!!
-            messageType = AppDomain.CurrentDomain.Load("Messages")
-                              .GetTypes()
+            Assembly loaddedModule = null;
+            try
+            {
+                loaddedModule = AppDomain.CurrentDomain.Load(Configuration.Instance.ObjectsToSerializeModule);
+            }
+            catch (Exception e)
+            {
+                _logger.Error("There is no susch module");
+            }
+            messageType = loaddedModule?.GetTypes()
                               .FirstOrDefault(type => type.Name.Equals(messageTypeName)) ?? Assembly.GetEntryAssembly()
                               .GetTypes()
                               .FirstOrDefault(type => type.Name.Equals(messageTypeName)) ?? AppDomain.CurrentDomain

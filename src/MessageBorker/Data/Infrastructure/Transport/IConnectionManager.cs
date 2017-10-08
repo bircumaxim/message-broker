@@ -1,7 +1,6 @@
-﻿using Transport;
-using Transport.Events;
+﻿using Transport.Events;
 
-namespace Data
+namespace Transport
 {
     public interface IConnectionManager : IRun
     {

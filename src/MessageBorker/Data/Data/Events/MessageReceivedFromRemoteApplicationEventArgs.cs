@@ -1,4 +1,4 @@
-﻿using Data.Models;
+﻿using Serialization;
 
 namespace Data.Events
 {
@@ -7,6 +7,6 @@ namespace Data.Events
     public class MessageReceivedFromRemoteApplicationEventArgs
     {
         public RemoteApplication Application { get; set; }
-        public MessageData MessageData { get; set; }
+        public Message Message { get; set; }
     }
 }

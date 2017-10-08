@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Data.Configuration;
+using Data.Events;
+using Data.Mappers;
 using Data.Models;
 using Domain.GateWays;
+using Domain.UseCases;
 using log4net;
 using Transport;
 using Transport.Connectors;
@@ -13,78 +17,76 @@ namespace Data
 {
     public class Transport : ITransportGateWay
     {
-        private readonly ILog _logger;
         private readonly Dictionary<string, RemoteApplication> _remoteApplications;
-        private readonly SortedList<long, IConnector> _connectors;
         private readonly List<IConnectionManager> _connectionManagers;
+        private readonly UseCaseFactory _useCaseFactory;
 
-        public Transport()
+        public Transport(IConfiguration configuration)
         {
-            _logger = LogManager.GetLogger(GetType());
+            var persistence = new Persistence(configuration);
+            _useCaseFactory = new UseCaseFactory(persistence);
             _remoteApplications = new Dictionary<string, RemoteApplication>();
-            _connectors = new SortedList<long, IConnector>();
-            _connectionManagers = new List<IConnectionManager>();
-            AddConnectionManager(new TcpConnectionManager(Convert.ToInt32(9000)));
+            _connectionManagers = configuration.GetConnectionManagers();
         }
 
         public void Start()
         {
-            foreach (var manager in _connectionManagers)
+            _connectionManagers.ForEach(manager =>
             {
+                manager.ConnectorConnected += OnConnectorConnected;
                 manager.Start();
-            }
+            });
         }
 
         public Task StartAsync()
         {
-            return Task.Factory.StartNew(() => _connectionManagers.ForEach(manager => manager.StartAsync()));
+            return Task.Factory.StartNew(() =>
+                _connectionManagers.ForEach(manager =>
+                {
+                    manager.ConnectorConnected += OnConnectorConnected;
+                    manager.StartAsync();
+                })
+            );
         }
 
         public void Stop()
         {
-            _connectionManagers.ForEach(manager => manager.Stop());
-            StopConnectors();
-            ClearConnectors();
+            _connectionManagers.ForEach(manager =>
+            {
+                manager.Stop();
+                manager.ConnectorConnected -= OnConnectorConnected;
+            });
+            StopRemoteApplications();
         }
 
-        private void StopConnectors()
+        private void StopRemoteApplications()
         {
-            lock (_connectors)
+            lock (_remoteApplications)
             {
-                foreach (var connectorId in _connectors.Keys.ToArray())
+                foreach (var remoteApplication in _remoteApplications.Values)
                 {
-                    try
-                    {
-                        _connectors[connectorId].Stop();
-                    }
-                    catch (Exception ex)
-                    {
-                        throw new Exception($"Failed to stpo connector wit id {connectorId}");
-                    }
+                    remoteApplication.MessageReceivedFromRemoteApplication -= OnMessageReceivedFromRemoteApplication;
+                    remoteApplication.Stop();
                 }
+                _remoteApplications.Clear();
             }
-        }
-
-        private void ClearConnectors()
-        {
-            lock (_connectors)
-            {
-                _connectors.Clear();
-            }
-        }
-        
-        private void AddConnectionManager(IConnectionManager connectionManager)
-        {
-            connectionManager.ConnectorConnected += OnConnectorConnected;
-            _connectionManagers.Add(connectionManager);
         }
 
         private void OnConnectorConnected(object sender, ConnectorConnectedEventArgs args)
         {
             var remoteApplication = new RemoteApplication(args.Connector);
-            var applicationId = remoteApplication.Name;
-            _remoteApplications.Add(applicationId, remoteApplication);
+            remoteApplication.MessageReceivedFromRemoteApplication += OnMessageReceivedFromRemoteApplication;
+            lock (_remoteApplications)
+            {
+                _remoteApplications.Add(remoteApplication.Name, remoteApplication);
+            }
             remoteApplication.StartAsync();
+        }
+
+        private void OnMessageReceivedFromRemoteApplication(object seneder, MessageReceivedFromRemoteApplicationEventArgs args)
+        {
+            var useCase = _useCaseFactory.GetUseCaseFor(args.Message);
+            useCase?.Execute();
         }
     }
 }

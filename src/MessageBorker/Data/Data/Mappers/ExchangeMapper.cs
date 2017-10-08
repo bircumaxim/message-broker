@@ -11,6 +11,10 @@ namespace Data.Mappers
     {
         public Exchange Map(ExchangeData model)
         {
+            if (model == null)
+            {
+                return null;
+            }
             Exchange exchange;
             switch (model.ExchangeDataType)
             {

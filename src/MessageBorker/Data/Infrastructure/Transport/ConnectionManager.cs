@@ -1,12 +1,20 @@
 ﻿using System.Threading.Tasks;
-using Transport;
+using Serialization;
+using Serialization.WireProtocols;
 using Transport.Connectors;
 using Transport.Events;
 
-namespace Data
+namespace Transport
 {
     public abstract class ConnectionManager : IConnectionManager
-    {   
+    {
+        protected IWireProtocol WireProtocol;
+
+        protected ConnectionManager(IWireProtocol wireProtocol)
+        {
+            WireProtocol = wireProtocol;
+        }
+
         public event ConnectorConnectedHandler ConnectorConnected;
 
         public abstract void Start();

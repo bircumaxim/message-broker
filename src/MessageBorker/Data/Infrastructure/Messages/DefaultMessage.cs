@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using Serialization;
 
-namespace Messages.Messages
+namespace Messages
 {
     public class DefaultMessage : Message
     {

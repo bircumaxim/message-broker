@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration.cs" />
     <Compile Include="Deserializers\DefaultDeserializer.cs" />
     <Compile Include="IDeserializer.cs" />
     <Compile Include="ISerializable.cs" />
@@ -55,10 +56,10 @@
     <Compile Include="WireProtocols\DefaultWireProtocol.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <Content Include="config.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

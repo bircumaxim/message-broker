@@ -42,7 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\FileConfiguration\ConnectionManagersConfiguration.cs" />
+    <Compile Include="Configuration\FileConfiguration\ExchangeAndQueuesConfiguration.cs" />
+    <Compile Include="Configuration\FileConfiguration\FileConfiguration.cs" />
+    <Compile Include="Configuration\IConfiguration.cs" />
     <Compile Include="Events\MessageReceivedFromRemoteApplicationEventArgs.cs" />
+    <Compile Include="Mappers\DefaultMessageMapper.cs" />
     <Compile Include="Mappers\ExchangeMapper.cs" />
     <Compile Include="Mappers\MessageMapper.cs" />
     <Compile Include="Mappers\QueueMapper.cs" />
@@ -55,11 +60,16 @@
     <Compile Include="RemoteApplication.cs" />
     <Compile Include="Transport.cs" />
     <Compile Include="MessageUseCaseFactory.cs" />
+    <Compile Include="UseCaseFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\Domain.csproj">
       <Project>{4D823F99-81AF-4B60-86CD-3FAECEB9C8CB}</Project>
       <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Messages\Messages.csproj">
+      <Project>{2a5971c3-1e8f-4129-850b-5777ccaa59ee}</Project>
+      <Name>Messages</Name>
     </ProjectReference>
     <ProjectReference Include="..\Infrastructure\Persistence\Persistence.csproj">
       <Project>{F6252F2B-A841-4699-809A-EA412A75D069}</Project>
@@ -76,9 +86,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

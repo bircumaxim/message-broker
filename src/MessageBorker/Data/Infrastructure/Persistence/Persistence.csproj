@@ -48,9 +48,6 @@
     <Compile Include="Storages\Storrage.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app.config" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

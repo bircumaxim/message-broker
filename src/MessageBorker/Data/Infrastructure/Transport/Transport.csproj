@@ -50,6 +50,7 @@
     <Compile Include="Connectors\Tcp\Events\TcpClientConnectedEventArgs.cs" />
     <Compile Include="Connectors\Tcp\TcpConnectionListener.cs" />
     <Compile Include="Connectors\Tcp\TcpConnector.cs" />
+    <Compile Include="Connectors\Udp\UdpConnectionListener.cs" />
     <Compile Include="Connectors\Udp\UdpConnector.cs" />
     <Compile Include="Events\CommunicationWay.cs" />
     <Compile Include="Events\ConnectionState.cs" />
@@ -66,9 +67,6 @@
       <Project>{D834526C-49E4-4EC9-A4F7-43FCCDD165DC}</Project>
       <Name>Serialization</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="app.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

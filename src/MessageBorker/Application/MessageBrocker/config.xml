@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ConnectionManagers : 
+        TcpConnectionManager : 
+            Port - default = 9000
+            MaxMessageLength - deafutl = 52428800
+            WireProtocol - deafutl = DefaultWireProtocol
+            
+        UdpConnectionManager :
+            TODO refacor Udp connection manager and add settings here.
+            
+    Exchanges:
+        DirectExchange - Name {required, unique}
+        TopicExchange - Name {required, unique}
+        FanoutExchange - Name {required, unique}
+        Eche exchange could hold ques 
+                        Queue: Name {required, unique}
+-->
+
+<MessageBrocker>
+    <ConnectionManagers>
+        <TcpConnectionManager />
+    </ConnectionManagers>
+    
+    <Exchanges>
+        <DirectExchange Name="test">
+            <Queue Name="test"/>    
+        </DirectExchange>
+
+        <TopicExchange Name="Test1">
+            <Queue Name="TestQueue2"/>
+        </TopicExchange>
+
+        <FanoutExchange Name="Test2">
+            <Queue Name="TestQueue3"/>
+        </FanoutExchange>
+        
+    </Exchanges>
+</MessageBrocker>

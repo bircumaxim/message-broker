@@ -18,10 +18,10 @@ namespace Transport.Connectors.Udp
         private readonly Socket _socket;
         private readonly IWireProtocol _wireProtocol;
         private readonly ManualResetEvent _allDone;
-        
+
         public UdpConnector(int port, IWireProtocol wireProtocol)
         {
-            _logger = LogManager.GetLogger(this.GetType());
+            _logger = LogManager.GetLogger(GetType());
             _socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
             _wireProtocol = wireProtocol;
             _allDone = new ManualResetEvent(false);
@@ -33,7 +33,7 @@ namespace Transport.Connectors.Udp
         {
             Task.Factory.StartNew(StartReceivingMessages);
         }
-  
+
         protected override void StopCommunication()
         {
             if (!IsAlive) return;
@@ -80,14 +80,17 @@ namespace Transport.Connectors.Udp
             if (state == null) return;
             var memoryStream = new MemoryStream(state.Buffer, 0, bytesRead);
             var message = _wireProtocol.ReadMessage(new DefaultDeserializer(memoryStream));
-            _logger.Info($"Received new message with id {message.MessageTypeName}");
+            if (message != null)
+            {
+                OnMessageReceived(message);
+            }
         }
-        
+
         protected override void SendMessageInternal(Message message, EndPoint endPoint)
         {
             var memoryStream = new MemoryStream();
             _wireProtocol.WriteMessage(new DefaultSerializer(memoryStream), message);
-            _socket.SendTo(memoryStream.ToArray(), endPoint);   
+            _socket.SendTo(memoryStream.ToArray(), endPoint);
         }
 
         private void Validate()

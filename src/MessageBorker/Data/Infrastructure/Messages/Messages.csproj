@@ -41,8 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Messages\DefaultMessage.cs" />
-    <Compile Include="Messages\PingMessage.cs" />
+    <Compile Include="CloseConnectionMessage.cs" />
+    <Compile Include="ErrorMessage.cs" />
+    <Compile Include="OpenConnectionMessage.cs" />
+    <Compile Include="DefaultMessage.cs" />
+    <Compile Include="PingMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -12,17 +12,20 @@ namespace Transport.Connectors.Tcp
 {
     public class TcpConnector : ConnectionOrientedConnector
     {
+        private const int DefaultMessageLength = 52428800;
         private readonly ILog _logger;
         private readonly Socket _socket;
         private readonly NetworkStream _networkStream;
         private readonly IWireProtocol _wireProtocol;
+        private readonly int _maxMessageLength;
 
-        public TcpConnector(Socket socket, IWireProtocol wireProtocol)
+        public TcpConnector(Socket socket, IWireProtocol wireProtocol, int maxMessageLength = DefaultMessageLength)
         {
             _logger = LogManager.GetLogger(GetType());
             _socket = socket;
             _wireProtocol = wireProtocol;
             _networkStream = new NetworkStream(_socket);
+            _maxMessageLength = maxMessageLength;
             Validate();
         }
 
@@ -33,10 +36,9 @@ namespace Transport.Connectors.Tcp
                 _logger.Error("Socket is not connected");
                 throw new Exception("Tried to start communication with a TCP socket that is not connected.");
             }
-
             Task.Factory.StartNew(StartReceivingMessages);
         }
-        
+
         protected override void StopCommunication()
         {
             if (!_socket.Connected) return;
@@ -58,7 +60,7 @@ namespace Transport.Connectors.Tcp
 
         private void StartReceivingMessages()
         {
-            _logger.Debug("Started receivin messages");
+            _logger.Debug("Started receiving messages");
             while (ConnectionState == ConnectionState.Connected || ConnectionState == ConnectionState.Connecting)
             {
                 try
@@ -66,11 +68,10 @@ namespace Transport.Connectors.Tcp
                     var message = _wireProtocol.ReadMessage(new DefaultDeserializer(_networkStream));
                     OnMessageReceived(message);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    _logger.Error("Receiving message was failed");
-                    Console.WriteLine(ex);
-                    break; //Stop listening
+                    _logger.Error("Receiving message failed");
+                    break;
                 }
             }
             try
@@ -84,15 +85,15 @@ namespace Transport.Connectors.Tcp
                 throw;
             }
         }
-        
+
         private void SendMessageToSocket(Message message)
         {
             _logger.Info("Message is preparing to be sent to communicator");
             var memoryStream = new MemoryStream();
+            //TODO add default serializers to settings
             _wireProtocol.WriteMessage(new DefaultSerializer(memoryStream), message);
 
-            //Check the length of message data 50 MegaBytes in our case
-            if (memoryStream.Length > 52428800) //TODO add settings module and put it into settings 
+            if (memoryStream.Length > _maxMessageLength)
             {
                 _logger.Error("Message is too big to send.");
                 throw new Exception("Message is too big to send.");
@@ -108,8 +109,6 @@ namespace Transport.Connectors.Tcp
                 {
                     _logger.Error("Message can not be sent via TCP socket. Only " + totalSent + " bytes of " +
                                   length + " bytes are sent.");
-                    throw new Exception("Message can not be sent via TCP socket. Only " + totalSent + " bytes of " +
-                                        length + " bytes are sent.");
                 }
 
                 totalSent += sent;

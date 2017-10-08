@@ -5,13 +5,12 @@ namespace Data
 {
     public static class MessageUseCaseFactory
     {
-        public static IUseCase GetUseCaseForMessage(Message message)
+        public static void GetUseCaseForMessage(Message message)
         {
             switch (message.MessageTypeName)
             {
                 
             }
-            return null;
         }
     }
 }

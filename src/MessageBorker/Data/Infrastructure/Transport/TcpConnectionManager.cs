@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Data;
+using Serialization;
 using Serialization.WireProtocols;
 using Transport.Connectors.Tcp;
 using Transport.Connectors.Tcp.Events;
@@ -10,9 +10,12 @@ namespace Transport
     public class TcpConnectionManager : ConnectionManager
     {
         private readonly TcpConnectionListener _connectionListener;
+        private readonly int _maxMessageLength;
 
-        public TcpConnectionManager(int port)
+        public TcpConnectionManager(int port, IWireProtocol wireProtocol, int maxMessageLength) :
+            base(wireProtocol)
         {
+            _maxMessageLength = maxMessageLength;
             _connectionListener = new TcpConnectionListener(port);
             _connectionListener.TcpClientConnected += OnTcpClientConnected;
         }
@@ -40,9 +43,7 @@ namespace Transport
 
         private void OnTcpClientConnected(object sender, TcpClientConnectedEventArgs args)
         {
-            //TODO add used wire protocol to settings.
-            var connectorId = Guid.NewGuid().GetHashCode();
-            var tcpConnector = new TcpConnector(args.ClientSocket, new DefaultWireProtocol());
+            var tcpConnector = new TcpConnector(args.ClientSocket, WireProtocol, _maxMessageLength);
             OnNewConnection(tcpConnector);
         }
 

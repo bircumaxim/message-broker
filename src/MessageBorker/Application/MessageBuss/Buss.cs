@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
-using Messages.Messages;
+using System.Security.Cryptography;
+using Messages;
 using Serialization;
 using Serialization.Serializers;
 using Serialization.WireProtocols;
@@ -18,7 +19,6 @@ namespace MessageBuss
         private readonly Queue<Message> _messagesToSend;
         private readonly IWireProtocol _wireProtocol;
 
-
         private Buss()
         {
             Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -28,6 +28,7 @@ namespace MessageBuss
             _tcpConnector.StateChanged += OnStateChange;
             _tcpConnector.StartAsync();
             _messagesToSend = new Queue<Message>();
+            _messagesToSend.Enqueue(new OpenConnectionMessage());
             _wireProtocol = new DefaultWireProtocol();
         }
 
@@ -55,9 +56,16 @@ namespace MessageBuss
             }
         }
 
+        public void Ping()
+        {
+            var pingMessage = new PingMessage();
+            _tcpConnector.SendMessage(pingMessage);
+        }
+        
         private Message CreateDefaultMessage(Message payload)
         {
             var defaultMessage = new DefaultMessage();
+            //TODO add default serializer to settings.
             _wireProtocol.WriteMessage(new DefaultSerializer(defaultMessage.MemoryStream), payload);
             defaultMessage.ExchangeName = "test";
             defaultMessage.IsDurable = false;

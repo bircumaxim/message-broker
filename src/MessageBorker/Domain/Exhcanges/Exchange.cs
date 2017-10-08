@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Domain.Messages;
 using log4net;
 
@@ -9,7 +10,7 @@ namespace Domain.Exhcanges
     {
         public string Name { get; }
         private readonly ILog _logger;
-        protected readonly Dictionary<string, Queue<Message>> Queues;
+        public readonly Dictionary<string, Queue<Message>> Queues;
 
         protected Exchange(string name)
         {
@@ -44,6 +45,11 @@ namespace Domain.Exhcanges
                 _logger.Error("Name is required for an exhange !");
                 throw new NullReferenceException();
             }
+        }
+
+        public List<Queue<Message>> GetAllQueues()
+        {
+            return Queues.Values.ToList();
         }
     }
 }

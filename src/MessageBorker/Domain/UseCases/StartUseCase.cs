@@ -4,25 +4,18 @@ using log4net;
 
 namespace Domain.UseCases
 {
-    public class StartUseCase
+    public class StartUseCase : IUseCase
     {
         private readonly ITransportGateWay _transportGateWay;
-        private readonly ILog _logger;
         
         public StartUseCase(ITransportGateWay transportGateWay)
         {
-            _logger = LogManager.GetLogger(GetType());
             _transportGateWay = transportGateWay;
         }
 
-        public void Execute()
+        public virtual void Execute()
         {
             _transportGateWay.Start();
-        }
-
-        public Task ExecuteAsync()
-        {
-            return _transportGateWay.StartAsync();
         }
     }
 }

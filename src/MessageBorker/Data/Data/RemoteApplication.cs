@@ -1,7 +1,10 @@
 ﻿using System;
+using System.ComponentModel.Design.Serialization;
 using System.Threading.Tasks;
 using Data.Events;
+using Data.Mappers;
 using log4net;
+using Messages;
 using Transport;
 using Transport.Connectors;
 using Transport.Events;
@@ -27,7 +30,11 @@ namespace Data
 
         private void OnMessageReceived(object sender, MessageReceivedEventArgs args)
         {
-//            MessageUseCaseFactory.GetUseCaseForMessage(args.Message);
+            MessageReceivedFromRemoteApplication?.Invoke(this, new MessageReceivedFromRemoteApplicationEventArgs
+            {
+                Application = this,
+                Message = args.Message
+            });
         }
 
         public void Start()
@@ -43,6 +50,7 @@ namespace Data
 
         public void Stop()
         {
+            _connector.MessageReceived -= OnMessageReceived;
             _connector.Stop();
         }
         

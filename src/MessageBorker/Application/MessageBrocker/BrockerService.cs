@@ -1,28 +1,34 @@
 ﻿using System;
+using System.IO;
+using System.Reflection;
 using System.Threading.Tasks;
 using Data;
+using Data.Configuration;
+using Data.Configuration.FileConfiguration;
 using Domain;
 using Domain.UseCases;
 using MessageBrocker.Infrastructure;
-using Messages.Messages;
 
 namespace MessageBrocker
 {
     public class BrockerService : IRun
     {
+        private readonly StartAsyncUseCase _startAsyncUseCase;
         private readonly StartUseCase _startUseCase;
         private readonly StopUseCase _stopUseCase;
-        private readonly RouteMessageUseCase _routeMessageUseCase;
         private readonly Transport _transport;
-        
+        private readonly IConfiguration _configuration;
+        private static readonly string ConfigFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Application/MessageBrocker/config.xml");
+
         public BrockerService()
         {
-            _routeMessageUseCase = new RouteMessageUseCase();
-            _transport = new Transport();
+            _configuration = new FileConfiguration(ConfigFilePath);
+            _transport = new Transport(_configuration);
             _startUseCase = new StartUseCase(_transport);
+            _startAsyncUseCase = new StartAsyncUseCase(_transport);
             _stopUseCase = new StopUseCase(_transport);
         }
-
+        
         public void Start()
         {
             _startUseCase.Execute();
@@ -30,7 +36,7 @@ namespace MessageBrocker
 
         public Task StartAsync()
         {
-            return _startUseCase.ExecuteAsync();
+            return _startAsyncUseCase.ExecuteAsync();
         }
 
         public void Stop()
