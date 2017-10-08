@@ -18,17 +18,18 @@ namespace Data
         private readonly Storrage<List<ExchangeData>> _exchangeDataStorage;
         private readonly Storrage<Dictionary<string, QueueData<MessageData>>> _queuesData;
         private readonly IConfiguration _configuration;
-        
+
         public Persistence(IConfiguration configuration)
         {
             _messageMapper = new MessageMapper();
             _exchangeMapper = new ExchangeMapper();
             _configuration = configuration;
-            
+
             _queuesData = MemoryStorageFactory.Instance
-                .GetStorrageFor<Dictionary<string, QueueData<MessageData>>>(typeof(Dictionary<string, QueueData<MessageData>>));
-            _exchangeDataStorage = MemoryStorageFactory.Instance.
-                GetStorrageFor<List<ExchangeData>>(typeof(List<ExchangeData>));
+                .GetStorrageFor<Dictionary<string, QueueData<MessageData>>>(
+                    typeof(Dictionary<string, QueueData<MessageData>>));
+            _exchangeDataStorage =
+                MemoryStorageFactory.Instance.GetStorrageFor<List<ExchangeData>>(typeof(List<ExchangeData>));
             InitStorages();
         }
 
@@ -43,8 +44,11 @@ namespace Data
             foreach (var queue in queues)
             {
                 var queueData = _queuesData.Data[queue.Key];
-                var message = queue.Value.Dequeue();
-                queueData.Enqueue(_messageMapper.InverseMap(message));
+                while (!queue.Value.IsEmpty())
+                {
+                    var message = queue.Value.Dequeue();
+                    queueData.Enqueue(_messageMapper.InverseMap(message));
+                }
             }
         }
 

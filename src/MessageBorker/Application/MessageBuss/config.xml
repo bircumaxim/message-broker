@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Brockers : 
+        Brocker : 
+            Name - {required, unique}
+            Port - default = 9000
+            WireProtocol - deafutl = DefaultWireProtocol
+-->
+<Buss>
+    <Brockers>
+        <Brocker Name="Brocker" Ip="127.0.0.1" Port="9000" WireProtocol="DefaultWireProtocol">
+            <DefaultDirect Name="test"/>
+            <DefaultTopic Name="Test1"/>
+            <DefaultFanout Name="Test2"/>
+        </Brocker>
+    </Brockers>
+</Buss>

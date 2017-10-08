@@ -42,7 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Brocker.cs" />
     <Compile Include="Buss.cs" />
+    <Compile Include="BussFactory.cs" />
+    <Compile Include="Configuration\FileConfiguration.cs" />
+    <Compile Include="Configuration\IConfiguration.cs" />
+    <Compile Include="MessageReceivedFromBrockerEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -50,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.config" />
+    <Content Include="config.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Data\Infrastructure\Messages\Messages.csproj">

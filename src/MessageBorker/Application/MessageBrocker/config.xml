@@ -1,5 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<MessageBrocker>
+    <ConnectionManagers>
+        <TcpConnectionManager />
+    </ConnectionManagers>
+    
+    <Exchanges>
+        <DirectExchange Name="test">
+            <Queue Name="test1"/>    
+            <Queue Name="test2"/>    
+            <Queue Name="test3"/>    
+        </DirectExchange>
+
+        <TopicExchange Name="Test1">
+            <Queue Name="TestQueue2"/>
+            <Queue Name="TestQueue1"/>
+            <Queue Name="TestQueue3"/>
+        </TopicExchange>
+
+        <FanoutExchange Name="Test2">
+            <Queue Name="TestQueue2"/>
+            <Queue Name="TestQueue3"/>
+        </FanoutExchange>
+        
+    </Exchanges>
+</MessageBrocker>
+
+
 <!--
+        Short description
+
     ConnectionManagers : 
         TcpConnectionManager : 
             Port - default = 9000
@@ -16,24 +45,3 @@
         Eche exchange could hold ques 
                         Queue: Name {required, unique}
 -->
-
-<MessageBrocker>
-    <ConnectionManagers>
-        <TcpConnectionManager />
-    </ConnectionManagers>
-    
-    <Exchanges>
-        <DirectExchange Name="test">
-            <Queue Name="test"/>    
-        </DirectExchange>
-
-        <TopicExchange Name="Test1">
-            <Queue Name="TestQueue2"/>
-        </TopicExchange>
-
-        <FanoutExchange Name="Test2">
-            <Queue Name="TestQueue3"/>
-        </FanoutExchange>
-        
-    </Exchanges>
-</MessageBrocker>

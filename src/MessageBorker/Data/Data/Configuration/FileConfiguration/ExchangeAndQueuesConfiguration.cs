@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Xml;
 using Data.Models;
 
@@ -8,7 +9,7 @@ namespace Data.Configuration.FileConfiguration
     {
         private const string DefaultExchangeNme = "DefaultExchange";
         private const string DefaultQueuename = "DefaultQueue";
-        
+
         public List<ExchangeData> Exchanges { get; }
         public Dictionary<string, QueueData<MessageData>> Queues { get; }
 
@@ -16,10 +17,10 @@ namespace Data.Configuration.FileConfiguration
         {
             Exchanges = new List<ExchangeData>();
             Queues = new Dictionary<string, QueueData<MessageData>>();
-            LoadConnectionManagers(configsDocument);
+            LoadConfigurations(configsDocument);
         }
 
-        private void LoadConnectionManagers(XmlNode configsDocument)
+        private void LoadConfigurations(XmlNode configsDocument)
         {
             var exchangeNodes = configsDocument.SelectSingleNode("/MessageBrocker/Exchanges");
             if (exchangeNodes != null)
@@ -37,7 +38,7 @@ namespace Data.Configuration.FileConfiguration
             if (exchangeNode.Attributes != null)
             {
                 exchange.Name = exchangeNode.Attributes.GetNamedItem("Name").Value ?? DefaultExchangeNme;
-                switch (exchange.Name)
+                switch (exchangeNode.Name)
                 {
                     case "DirectExchange":
                         exchange.ExchangeDataType = ExchangeDataType.Direct;
@@ -46,7 +47,7 @@ namespace Data.Configuration.FileConfiguration
                         exchange.ExchangeDataType = ExchangeDataType.Topic;
                         break;
                     case "FanoutExchange":
-                        exchange.ExchangeDataType = ExchangeDataType.Topic;
+                        exchange.ExchangeDataType = ExchangeDataType.Fanout;
                         break;
                 }
 
@@ -66,10 +67,22 @@ namespace Data.Configuration.FileConfiguration
                 {
                     queue.Name = queueNode.Attributes.GetNamedItem("Name").Value ?? DefaultQueuename;
                 }
-                Queues.Add(queue.Name, queue);
+                AddIfNotExist(queue);
+                if (queuesThatBelongToGivenExchange.ContainsKey(queue.Name))
+                {
+                    throw new Exception($"A queue with Name: {queue.Name} is already binded to this exchange");
+                }
                 queuesThatBelongToGivenExchange.Add(queue.Name, queue);
             }
             return queuesThatBelongToGivenExchange;
+        }
+
+        private void AddIfNotExist(QueueData<MessageData> queue)
+        {
+            if (!Queues.ContainsKey(queue.Name))
+            {
+                Queues.Add(queue.Name, queue);
+            }
         }
     }
 }

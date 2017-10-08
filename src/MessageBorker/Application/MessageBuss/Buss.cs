@@ -1,75 +1,64 @@
-﻿using System.Collections.Generic;
-using System.Net;
-using System.Net.Sockets;
-using System.Security.Cryptography;
+﻿using System;
 using Messages;
 using Serialization;
 using Serialization.Serializers;
-using Serialization.WireProtocols;
-using Transport.Connectors.Tcp;
-using Transport.Events;
 
 namespace MessageBuss
 {
     public class Buss
     {
-        private static Buss _instance;
-        public static Buss Instance => _instance ?? (_instance = new Buss());
-        private readonly TcpConnector _tcpConnector;
-        private readonly Queue<Message> _messagesToSend;
-        private readonly IWireProtocol _wireProtocol;
+        private readonly Brocker _brocker;
 
-        private Buss()
+        public Buss(Brocker brocker)
         {
-            Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            //TODO read ip and port from settings
-            socket.Connect(IPAddress.Parse("127.0.0.1"), 9000);
-            _tcpConnector = new TcpConnector(socket, new DefaultWireProtocol());
-            _tcpConnector.StateChanged += OnStateChange;
-            _tcpConnector.StartAsync();
-            _messagesToSend = new Queue<Message>();
-            _messagesToSend.Enqueue(new OpenConnectionMessage());
-            _wireProtocol = new DefaultWireProtocol();
+            _brocker = brocker;
         }
 
-        private void OnStateChange(object sender, ConnectorStateChangeEventArgs args)
+        public void Publish(string exchangeName, string routingKey, Message payload, bool isDurable = false)
         {
-            if (args.NewState == ConnectionState.Connected)
-            {
-                while (_messagesToSend.Count > 0)
-                {
-                    _tcpConnector.SendMessage(_messagesToSend.Dequeue());
-                }
-            }
-        }
-
-        public void Send(Message payload)
-        {
-            var message = CreateDefaultMessage(payload);
-            if (_tcpConnector.ConnectionState == ConnectionState.Connected)
-            {
-                _tcpConnector.SendMessage(message);
-            }
-            else
-            {
-                _messagesToSend.Enqueue(message);
-            }
+            _brocker.Send(CreateDefaultMessage(exchangeName, routingKey, payload, isDurable));
         }
 
         public void Ping()
         {
-            var pingMessage = new PingMessage();
-            _tcpConnector.SendMessage(pingMessage);
+            _brocker.Ping();
         }
-        
-        private Message CreateDefaultMessage(Message payload)
+
+        public void Fanout(Message payload, bool isDurable = false)
         {
-            var defaultMessage = new DefaultMessage();
-            //TODO add default serializer to settings.
-            _wireProtocol.WriteMessage(new DefaultSerializer(defaultMessage.MemoryStream), payload);
-            defaultMessage.ExchangeName = "test";
-            defaultMessage.IsDurable = false;
-            defaultMessage.RoutingKey = "test";
+            Publish(GetExchangeNameForType("Fanout"), "", payload, isDurable);
+        }
+
+        public void Direct(Message payload, string routingKey, bool isDurable = false)
+        {
+            Publish(GetExchangeNameForType("Direct"), routingKey, payload, isDurable);
+        }
+
+        public void Topic(Message payload, string routingKey, bool isDurable = false)
+        {
+            Publish(GetExchangeNameForType("Topic"), routingKey, payload, isDurable);
+        }
+
+        private string GetExchangeNameForType(string exchangeType)
+        {
+            string exchangeName;
+            _brocker.DefautlExchanges.TryGetValue(exchangeType, out exchangeName);
+            if (exchangeName == null)
+            {
+                throw new Exception($"Default exchange for {exchangeType} was not set !!!");
+            }
+            return exchangeName;
+        }
+
+        private Message CreateDefaultMessage(string exchangeName, string routingKey, Message payload, bool isDurable = false)
+        {
+            var defaultMessage = new DefaultMessage
+            {
+                IsDurable = isDurable,
+                RoutingKey = routingKey,
+                ExchangeName = exchangeName
+            };
+            _brocker.WireProtocol.WriteMessage(new DefaultSerializer(defaultMessage.MemoryStream), payload);
             return defaultMessage;
         }
     }

@@ -7,11 +7,9 @@ namespace Producer
     {
         public static void Main(string[] args)
         {
-            while (true)
-            {
-                Buss.Instance.Send(new UserOrderPayload());
-                Console.ReadKey();
-            }
+            var buss = BussFactory.Instance.GetBussFor("Brocker");
+            buss.Topic(new UserOrderPayload(), "TestQueue2");
+            Console.ReadKey();
         }
     }
 }

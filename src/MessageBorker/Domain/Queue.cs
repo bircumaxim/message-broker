@@ -9,7 +9,7 @@ namespace Domain
         private readonly ConcurrentQueue<T> _concurrentQueue;
 
         public Queue()
-        {
+        {   
             _concurrentQueue = new ConcurrentQueue<T>();
         }
 
@@ -18,6 +18,11 @@ namespace Domain
             _concurrentQueue.Enqueue(ObjectCloner.Clone(message));
         }
 
+        public bool IsEmpty()
+        {
+            return _concurrentQueue.IsEmpty;
+        }
+        
         public T Dequeue()
         {
             T message;
