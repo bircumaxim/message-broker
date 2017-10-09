@@ -41,10 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CloseConnectionMessage.cs" />
+    <Compile Include="CloseConnectionRequest.cs" />
+    <Compile Include="DefaultMessageRequest.cs" />
+    <Compile Include="DefaultMessageResponse.cs" />
     <Compile Include="ErrorMessage.cs" />
-    <Compile Include="OpenConnectionMessage.cs" />
+    <Compile Include="OpenConnectionRequest.cs" />
     <Compile Include="DefaultMessage.cs" />
+    <Compile Include="OpenConnectionResponse.cs" />
     <Compile Include="PingMessage.cs" />
     <Compile Include="PongMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

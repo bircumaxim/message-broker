@@ -8,5 +8,6 @@ namespace Domain.GateWays
     {
         void PersistQueues(Dictionary<string, Queue<Message>> queues);
         Exchange GetExchangeFor(Message message);
+        Message GetMessageFromQueueWithName(string queueName);
     }
 }

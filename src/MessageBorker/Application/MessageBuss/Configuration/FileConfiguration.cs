@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Xml;
+using MessageBuss.Brocker;
 using Serialization;
 using Serialization.WireProtocols;
 
 namespace MessageBuss.Configuration
 {
-    public class FileConfiguration : IConfiguration
+    internal class FileConfiguration : IConfiguration
     {
         private const string DefaultWireProtcolName = "DefaultWireProtocol";
         private const string DefaultIp = "127.0.0.1";
         private const string DefaultPort = "9000";
-        private readonly Dictionary<string, Brocker> _brockers;
+        private readonly Dictionary<string, BrockerClient> _brockerClients;
 
-        public FileConfiguration(string filePath)
+        internal FileConfiguration(string filePath)
         {
-            _brockers = new Dictionary<string, Brocker>();
+            _brockerClients = new Dictionary<string, BrockerClient>();
             var configsDocument = new XmlDocument();
             configsDocument.Load(filePath);
             LoadConfigurationFrom(configsDocument);
@@ -30,15 +31,15 @@ namespace MessageBuss.Configuration
             {
                 foreach (XmlElement brockerNode in brockerNodes)
                 {
-                    Brocker brocker = GetBrockerFromNode(brockerNode);
-                    _brockers.Add(brocker.Name, brocker);
+                    BrockerClient brockerClient = GetBrockerFromNode(brockerNode);
+                    _brockerClients.Add(brockerClient.BrockerName, brockerClient);
                 }
             }
         }
 
-        private Brocker GetBrockerFromNode(XmlNode brockerNode)
+        private BrockerClient GetBrockerFromNode(XmlNode brockerNode)
         {
-            Brocker brocker = null;
+            BrockerClient brocker = null;
             if (brockerNode.Attributes != null)
             {
                 var brockerName = brockerNode.Attributes.GetNamedItem("Name")?.Value;
@@ -47,7 +48,7 @@ namespace MessageBuss.Configuration
                 var ip = brockerNode.Attributes.GetNamedItem("Ip")?.Value ?? DefaultIp;
                 var port = Convert.ToInt32(brockerNode.Attributes.GetNamedItem("Port")?.Value ?? DefaultPort);
 
-                brocker = new Brocker(brockerName, GetWireProtocol(wireProtocolName),
+                brocker = new BrockerClient(brockerName, GetWireProtocol(wireProtocolName),
                     new IPEndPoint(IPAddress.Parse(ip), port), GetDefaultExchanges(brockerNode));
             }
             return brocker;
@@ -75,9 +76,9 @@ namespace MessageBuss.Configuration
         }
 
 
-        public Dictionary<string, Brocker> GetBrockers()
+        public Dictionary<string, BrockerClient> GetBrockers()
         {
-            return _brockers;
+            return _brockerClients;
         }
     }
 }

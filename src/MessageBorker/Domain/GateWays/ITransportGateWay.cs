@@ -10,5 +10,6 @@ namespace Domain.GateWays
         void Start();
         Task StartAsync();
         void Stop();
+        void Send(MessageResponse messageResponse);
     }
 }

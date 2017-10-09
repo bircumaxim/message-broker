@@ -42,12 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Brocker.cs" />
-    <Compile Include="Buss.cs" />
-    <Compile Include="BussFactory.cs" />
+    <Compile Include="Brocker\BrockerClient.cs" />
+    <Compile Include="Brocker\Events\BrockerClientMessageReceivedEventArgs.cs" />
+    <Compile Include="Buss\Buss.cs" />
+    <Compile Include="Buss\BussFactory.cs" />
+    <Compile Include="Buss\Events\MessegeReceviedEventArgs.cs" />
     <Compile Include="Configuration\FileConfiguration.cs" />
     <Compile Include="Configuration\IConfiguration.cs" />
-    <Compile Include="MessageReceivedFromBrockerEventArgs.cs" />
+    <Compile Include="IRun.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

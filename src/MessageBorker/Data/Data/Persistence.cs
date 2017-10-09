@@ -58,5 +58,10 @@ namespace Data
                 _exchangeDataStorage.Data.FirstOrDefault(excnage => excnage.Name.Equals(message.ExchangeName));
             return _exchangeMapper.Map(exchangeData);
         }
+
+        public Message GetMessageFromQueueWithName(string queueName)
+        {
+            return _messageMapper.Map(_queuesData.Data[queueName].Dequeue());
+        }
     }
 }

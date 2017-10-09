@@ -17,11 +17,11 @@ namespace Data
         public string Name { get; }
         private readonly ILog _logger;
         private readonly IConnector _connector;
-        public event MessageReceivedFromRemoteApplicationHandler MessageReceivedFromRemoteApplication;
+        public event RemoteApplicationMessageReceived RemoteApplicationMessageReceived;
         
         public RemoteApplication(IConnector connector)
         {
-            Name = Guid.NewGuid().ToString();
+            Name = connector.ConnectorId;
             _connector = connector;
             _connector.MessageReceived += OnMessageReceived;
             _logger = LogManager.GetLogger(GetType());
@@ -31,7 +31,7 @@ namespace Data
 
         private void OnMessageReceived(object sender, MessageReceivedEventArgs args)
         {
-            MessageReceivedFromRemoteApplication?.Invoke(this, new MessageReceivedFromRemoteApplicationEventArgs
+            RemoteApplicationMessageReceived?.Invoke(this, new RemoteApplicationMessageReceivedEventArgs
             {
                 Application = this,
                 Message = args.Message
@@ -40,7 +40,7 @@ namespace Data
 
         public void Send(Message message)
         {
-            
+            _connector.SendMessage(message);
         }
         
         public void Start()

@@ -1,17 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using System.Net;
-using System.Net.Sockets;
-using System.Security.Cryptography;
+using MessageBuss.Brocker;
 using MessageBuss.Configuration;
-using Messages;
-using Serialization;
-using Serialization.Serializers;
-using Serialization.WireProtocols;
-using Transport.Connectors.Tcp;
-using Transport.Events;
 
-namespace MessageBuss
+namespace MessageBuss.Buss
 {
     public class BussFactory
     {
@@ -19,17 +11,17 @@ namespace MessageBuss
         public static BussFactory Instance => _instance ?? (_instance = new BussFactory());
         
         private static readonly string ConfigFilePath = Path.Combine(Directory.GetCurrentDirectory(), "./config.xml");
-        private readonly Dictionary<string, Brocker> _brockers;
+        private readonly Dictionary<string, BrockerClient> _brockerClients;
 
         private BussFactory()
         {
             IConfiguration configuration = new FileConfiguration(ConfigFilePath);
-            _brockers = configuration.GetBrockers();
+            _brockerClients = configuration.GetBrockers();
         }
 
         public Buss GetBussFor(string brockerName)
         {
-            var brocker = _brockers[brockerName];
+            var brocker = _brockerClients[brockerName];
             brocker.Start();
             return new Buss(brocker);
         }

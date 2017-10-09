@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using Serialization;
+using MessageBuss.Brocker;
 
 namespace MessageBuss.Configuration
 {
-    public interface IConfiguration
+    internal interface IConfiguration
     {
-        Dictionary<string,Brocker> GetBrockers();
+        Dictionary<string, BrockerClient> GetBrockers();
     }
 }

@@ -1,5 +1,5 @@
 ﻿using System;
-using MessageBuss;
+using MessageBuss.Buss;
 
 namespace Producer
 {
@@ -8,8 +8,11 @@ namespace Producer
         public static void Main(string[] args)
         {
             var buss = BussFactory.Instance.GetBussFor("Brocker");
-            buss.Fanout(new UserOrderPayload());
-            buss.Dispose();
+            while (true)
+            {
+                buss.Fanout(new UserOrderPayload {UserName = "Joric", OrderId = 123});
+                Console.ReadKey();
+            }
         }
     }
 }

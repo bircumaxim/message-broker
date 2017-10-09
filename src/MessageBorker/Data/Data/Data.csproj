@@ -46,7 +46,10 @@
     <Compile Include="Configuration\FileConfiguration\ExchangeAndQueuesConfiguration.cs" />
     <Compile Include="Configuration\FileConfiguration\FileConfiguration.cs" />
     <Compile Include="Configuration\IConfiguration.cs" />
-    <Compile Include="Events\MessageReceivedFromRemoteApplicationEventArgs.cs" />
+    <Compile Include="Mappers\DefaultMessageRequestMapper.cs" />
+    <Compile Include="Mappers\DefaultMessageResponseMapper.cs" />
+    <Compile Include="RemoteApplicationManager.cs" />
+    <Compile Include="Events\RemoteApplicationMessageReceivedEventArgs.cs" />
     <Compile Include="Mappers\DefaultMessageMapper.cs" />
     <Compile Include="Mappers\ExchangeMapper.cs" />
     <Compile Include="Mappers\MessageMapper.cs" />
@@ -59,7 +62,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoteApplication.cs" />
     <Compile Include="Transport.cs" />
-    <Compile Include="MessageUseCaseFactory.cs" />
     <Compile Include="UseCaseFactory.cs" />
   </ItemGroup>
   <ItemGroup>
