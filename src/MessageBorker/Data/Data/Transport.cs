@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Data.Configuration;
@@ -74,19 +75,60 @@ namespace Data
 
         private void OnConnectorConnected(object sender, ConnectorConnectedEventArgs args)
         {
-            var remoteApplication = new RemoteApplication(args.Connector);
-            remoteApplication.MessageReceivedFromRemoteApplication += OnMessageReceivedFromRemoteApplication;
-            lock (_remoteApplications)
-            {
-                _remoteApplications.Add(remoteApplication.Name, remoteApplication);
-            }
-            remoteApplication.StartAsync();
+            var connector = args.Connector;
+            connector.MessageReceived += OnMessageReceivedFromConnector;
+            connector.StartAsync();
         }
 
-        private void OnMessageReceivedFromRemoteApplication(object seneder, MessageReceivedFromRemoteApplicationEventArgs args)
+        private void OnMessageReceivedFromConnector(object seneder, MessageReceivedEventArgs args)
         {
-            var useCase = _useCaseFactory.GetUseCaseFor(args.Message);
-            useCase?.Execute();
+            if (args.Message.MessageTypeName == "OpenConnectionMessage")
+            {
+                var remoteApplication = new RemoteApplication(args.Connector);
+                remoteApplication.MessageReceivedFromRemoteApplication += OnMessageReceivedFromRemoteApplication;
+                lock (_remoteApplications)
+                {
+                    _remoteApplications.Add(remoteApplication.Name, remoteApplication);
+                }
+                remoteApplication.StartAsync();
+            }
+        }
+
+        private void OnMessageReceivedFromRemoteApplication(object seneder,
+            MessageReceivedFromRemoteApplicationEventArgs args)
+        {
+            switch (args.Message.MessageTypeName)
+            {
+                case "CloseConnectionMessage":
+                    RemoveApplication(args.Application.Name);
+                    break;
+                case "PingMessage":
+                    SendPongMessage(args.Application.Name);
+                    break;
+                case "PongMessage":
+                    //TODO add logs here.
+                    break;
+                default:
+                    var useCase = _useCaseFactory.GetUseCaseFor(args.Message);
+                    useCase?.Execute();
+                    break;
+            }
+        }
+
+        private void SendPongMessage(string applicationName)
+        {
+            //TODO send here pong message to remote app.
+        }
+
+        private void RemoveApplication(string applicationName)
+        {
+            lock (_remoteApplications)
+            {
+                _remoteApplications[applicationName].Stop();
+                _remoteApplications[applicationName].MessageReceivedFromRemoteApplication -=
+                    OnMessageReceivedFromRemoteApplication;
+                _remoteApplications.Remove(applicationName);
+            }
         }
     }
 }

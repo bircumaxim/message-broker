@@ -4,7 +4,7 @@ using Serialization;
 
 namespace Transport.Connectors
 {
-    public abstract class ConnectionLessConnector : Connector, IConnectionLessConnector
+    public abstract class ConnectionLessConnector : Connector
     {
         private readonly ILog _logger;
         private readonly object _sendLock;
@@ -55,14 +55,14 @@ namespace Transport.Connectors
 
         protected abstract void StopCommunication();
         
-        public void SendMessage(Message message, EndPoint endPoint)
+        public override void SendMessage(Message message)
         {
             lock (_sendLock)
             {
-                SendMessageInternal(message, endPoint);
+                SendMessageInternal(message);
             }
         }
         
-        protected abstract void SendMessageInternal(Message message, EndPoint endPoint);
+        protected abstract void SendMessageInternal(Message message);
     }
 }

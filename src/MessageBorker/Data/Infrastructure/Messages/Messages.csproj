@@ -46,6 +46,7 @@
     <Compile Include="OpenConnectionMessage.cs" />
     <Compile Include="DefaultMessage.cs" />
     <Compile Include="PingMessage.cs" />
+    <Compile Include="PongMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

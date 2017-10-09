@@ -34,6 +34,8 @@ namespace Transport.Connectors
 
         public abstract void Stop();
 
+        public abstract void SendMessage(Message message);
+        
         #endregion
 
         #region Listeners

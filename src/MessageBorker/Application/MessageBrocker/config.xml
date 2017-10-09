@@ -2,6 +2,7 @@
 <MessageBrocker>
     <ConnectionManagers>
         <TcpConnectionManager />
+        <UdpConnectionManager />
     </ConnectionManagers>
     
     <Exchanges>

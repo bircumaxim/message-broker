@@ -65,7 +65,7 @@ namespace Transport.Connectors
 
         protected abstract void StopCommunication();
         
-        public void SendMessage(Message message)
+        public override void SendMessage(Message message)
         {
             lock (_sendLock)
             {

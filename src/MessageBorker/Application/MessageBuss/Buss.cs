@@ -61,5 +61,10 @@ namespace MessageBuss
             _brocker.WireProtocol.WriteMessage(new DefaultSerializer(defaultMessage.MemoryStream), payload);
             return defaultMessage;
         }
+
+        public void Dispose()
+        {
+            _brocker.Stop();
+        }
     }
 }

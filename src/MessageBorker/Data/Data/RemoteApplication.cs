@@ -5,6 +5,7 @@ using Data.Events;
 using Data.Mappers;
 using log4net;
 using Messages;
+using Serialization;
 using Transport;
 using Transport.Connectors;
 using Transport.Events;
@@ -37,6 +38,11 @@ namespace Data
             });
         }
 
+        public void Send(Message message)
+        {
+            
+        }
+        
         public void Start()
         {
             _connector.Start();

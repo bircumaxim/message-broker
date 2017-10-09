@@ -9,6 +9,8 @@ namespace Transport.Connectors
         event MessageReceivedHandler MessageReceived;
 
         string ConnectorId { get;  }
+        
+        void SendMessage(Message message);
     }
     
     public interface IConnectionOrientedConnector 
@@ -16,12 +18,5 @@ namespace Transport.Connectors
         event ConnectorStateChangeHandler StateChanged;
         
         CommunicationWay CommunicationWay { get; set; }
-
-        void SendMessage(Message message);
-    }
-
-    public interface IConnectionLessConnector 
-    {
-        void SendMessage(Message message, EndPoint endPoint);
     }
 }

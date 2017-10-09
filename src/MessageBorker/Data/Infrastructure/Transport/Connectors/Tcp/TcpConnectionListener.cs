@@ -42,7 +42,7 @@ namespace Transport.Connectors.Tcp
             }
             BindSocketToEndpoint(new IPEndPoint(0, _port));
             IsListening = !IsListening;
-            _logger.Debug($"Socket was started on port {_port}");
+            _logger.Debug($"Tcp Socket was started on port {_port}");
             TcpSocketListening();
         }
 

@@ -28,10 +28,22 @@ namespace Data.Configuration.FileConfiguration
             {
                 switch (connectionManagerXmlElement.Name)
                 {
+                    case "UdpConnectionManager":
+                        AddUdpConnectionManager(connectionManagerXmlElement);
+                        break;
                     case "TcpConnectionManager":
                         AddTcpConnectionManager(connectionManagerXmlElement);
                         break;
                 }
+            }
+        }
+
+        private void AddUdpConnectionManager(XmlNode connectionManager)
+        {
+            if (connectionManager.Attributes != null)
+            {
+                var port = Convert.ToInt32(connectionManager.Attributes.GetNamedItem("Port")?.Value ?? DefaultPort);
+                ConnectionManagers.Add(new UdpConnectionManager(port, GetWireProtocolByName(connectionManager)));
             }
         }
 

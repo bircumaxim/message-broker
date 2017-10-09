@@ -14,7 +14,7 @@ namespace MessageBuss
     public class Brocker
     {
         public MessageReceivedFromBrockerHandler MessageReceivedFromBrockerHandler { get; set; }
-        public string Name { get;}
+        public string Name { get; }
         public IPEndPoint IpEndPoint { get; }
         private readonly TcpConnector _tcpConnector;
         private readonly Queue<Message> _messagesToSend;
@@ -22,7 +22,8 @@ namespace MessageBuss
 
         public Dictionary<string, string> DefautlExchanges { get; }
 
-        public Brocker(string name, IWireProtocol wireProtocol, IPEndPoint ipEndPoint, Dictionary<string, string> defautlExchanges)
+        public Brocker(string name, IWireProtocol wireProtocol, IPEndPoint ipEndPoint,
+            Dictionary<string, string> defautlExchanges)
         {
             Name = name;
             IpEndPoint = ipEndPoint;
@@ -32,20 +33,22 @@ namespace MessageBuss
             _tcpConnector.StateChanged += OnStateChange;
             _tcpConnector.MessageReceived += OnMessageReceived;
             _messagesToSend = new Queue<Message>();
+            _messagesToSend.Enqueue(new OpenConnectionMessage {ClientName = "Huinea"});
         }
 
         public void Start()
         {
             _tcpConnector.StartAsync();
         }
-
+        
         public void Stop()
         {
+            _tcpConnector.SendMessage(new CloseConnectionMessage());
             _tcpConnector.StateChanged -= OnStateChange;
             _tcpConnector.MessageReceived -= OnMessageReceived;
             _tcpConnector.Stop();
         }
-        
+
         public void Send(Message message)
         {
             if (_tcpConnector.ConnectionState == ConnectionState.Connected)
@@ -57,12 +60,12 @@ namespace MessageBuss
                 _messagesToSend.Enqueue(message);
             }
         }
-        
+
         public void Ping()
         {
             Send(new PingMessage());
         }
-        
+
         private void OnStateChange(object sender, ConnectorStateChangeEventArgs args)
         {
             if (args.NewState == ConnectionState.Connected)
@@ -76,10 +79,20 @@ namespace MessageBuss
 
         private void OnMessageReceived(object sender, MessageReceivedEventArgs args)
         {
+            switch (args.Message.MessageTypeName)
+            {
+                case "PingMessage":
+                    Send(new PongMessage());
+                    break;
+                case "PongMessage":
+                    //TODO add logs here.
+                    break;
+            }
+            
             var messageReceivedFromBrockerEventArgs = new MessageReceivedFromBrockerEventArgs(this, args.Message);
             MessageReceivedFromBrockerHandler?.Invoke(this, messageReceivedFromBrockerEventArgs);
         }
-        
+
         private Socket GetTcpSocket()
         {
             var socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);

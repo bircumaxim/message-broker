@@ -8,8 +8,8 @@ namespace Producer
         public static void Main(string[] args)
         {
             var buss = BussFactory.Instance.GetBussFor("Brocker");
-            buss.Topic(new UserOrderPayload(), "TestQueue2");
-            Console.ReadKey();
+            buss.Fanout(new UserOrderPayload());
+            buss.Dispose();
         }
     }
 }
