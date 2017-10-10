@@ -128,5 +128,10 @@ namespace Data
                 _remoteApplications.Clear();
             }
         }
+
+        public int GetConnectionsNumber()
+        {
+            return _remoteApplications.Count;
+        }
     }
 }

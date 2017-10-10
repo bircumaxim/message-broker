@@ -5,6 +5,7 @@ using MessageBuss.Brocker.Events;
 using MessageBuss.Buss.Events;
 using Messages;
 using Messages.Payload;
+using Messages.ServerInfo;
 using Serialization;
 using Serialization.Deserializers;
 using Serialization.Serializers;
@@ -29,6 +30,11 @@ namespace MessageBuss.Buss
             _brocker.Ping();
         }
 
+        public void RequestServerInfo()
+        {
+            _brocker.SendOrEnqueue(new ServerGerneralInfoRequest());
+        }
+        
         public void Request(string queueName)
         {
             _brocker.SendOrEnqueue(new PayloadRequest {QueueName = queueName});

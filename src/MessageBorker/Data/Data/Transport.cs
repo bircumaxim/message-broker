@@ -1,33 +1,30 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Data.Configuration;
 using Data.Events;
 using Data.Mappers;
 using Domain.GateWays;
 using Domain.Messages;
-using Messages;
 using Messages.Connection;
 using Messages.ServerInfo;
-using Serialization;
-using Serialization.Deserializers;
-using Serialization.WireProtocols;
 
 namespace Data
 {
     public class Transport : ITransportGateWay
     {
+        private readonly ServerGeneralInfoResponseMapper _serverGeneralInfoResponseMapper;
         private readonly PayloadResponseMapper _payloadResponseMapper;
         private readonly RemoteApplicationManager _remoteApplicationManager;
         private readonly UseCaseFactory _useCaseFactory;
+        private readonly Persistence _persistence;
 
         public Transport(IConfiguration configuration)
         {
-            var persistence = new Persistence(configuration);
-            _useCaseFactory = new UseCaseFactory(persistence, this);
+            _persistence = new Persistence(configuration);
+            _useCaseFactory = new UseCaseFactory(_persistence, this);
             _remoteApplicationManager = new RemoteApplicationManager(configuration);
             _remoteApplicationManager.RemoteApplicationMessageReceived += RemoteApplicationMessageReceived;
             _payloadResponseMapper = new PayloadResponseMapper();
+            _serverGeneralInfoResponseMapper = new ServerGeneralInfoResponseMapper();
         }
 
         public void Start()
@@ -55,6 +52,13 @@ namespace Data
             else if (args.Message.MessageTypeName == typeof(PingMessage).Name)
             {
                 _remoteApplicationManager.SendMessage(args.Application.Name, new PongMessage());
+            }
+            else if (args.Message.MessageTypeName == typeof(ServerGerneralInfoRequest).Name)
+            {
+                var serverGeneralInfo = _persistence.GetServerInfo();
+                serverGeneralInfo.ConnectionsCount = _remoteApplicationManager.GetConnectionsNumber();
+                var serverGeneralInfoResponse = _serverGeneralInfoResponseMapper.Map(serverGeneralInfo);
+                _remoteApplicationManager.SendMessage(args.Application.Name, serverGeneralInfoResponse);
             }
             else if (args.Message.MessageTypeName == typeof(PongMessage).Name)
             {

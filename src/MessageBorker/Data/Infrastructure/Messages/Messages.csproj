@@ -49,7 +49,6 @@
     <Compile Include="Payload\PayloadRequest.cs" />
     <Compile Include="Payload\PayloadResponse.cs" />
     <Compile Include="Payload\PayloadMessage.cs" />
-    <Compile Include="ServerInfo\ExchangeInfo.cs" />
     <Compile Include="ServerInfo\PingMessage.cs" />
     <Compile Include="ServerInfo\PongMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

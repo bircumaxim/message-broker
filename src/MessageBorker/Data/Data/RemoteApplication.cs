@@ -15,7 +15,6 @@ namespace Data
     public class RemoteApplication : IRun
     {
         public string Name { get; }
-        private readonly ILog _logger;
         private readonly IConnector _connector;
         public event RemoteApplicationMessageReceived RemoteApplicationMessageReceived;
         
@@ -24,9 +23,9 @@ namespace Data
             Name = connector.ConnectorId;
             _connector = connector;
             _connector.MessageReceived += OnMessageReceived;
-            _logger = LogManager.GetLogger(GetType());
+            var logger = LogManager.GetLogger(GetType());
             Validate();
-            _logger.Info($"New remote application {_connector.GetType().Name} with id {Name}");
+            logger.Info($"New remote application {_connector.GetType().Name} with id {Name}");
         }
 
         private void OnMessageReceived(object sender, MessageReceivedEventArgs args)

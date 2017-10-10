@@ -2,7 +2,7 @@
 
 namespace Messages.ServerInfo
 {
-    public class ServerGerneralInfo : Message
+    public class ServerGerneralInfoRequest : Message
     {
         
     }

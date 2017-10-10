@@ -18,6 +18,11 @@ namespace Data.Models
             _concurrentQueue.Enqueue(message);
         }
 
+        public int Count()
+        {
+            return _concurrentQueue.Count;
+        }
+        
         public T Dequeue()
         {
             T message;

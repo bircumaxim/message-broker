@@ -8,7 +8,6 @@ namespace Messages.ServerInfo
         public DateTime ServerStartTime { get; set; }
         public int ConnectionsCount { get; set; }
         public int MessagesInQueue { get; set; }
-        public Message[] ExchangeInfos { get; set; }
 
         public override void Serialize(ISerializer serializer)
         {
@@ -16,7 +15,6 @@ namespace Messages.ServerInfo
             serializer.WriteDateTime(ServerStartTime);
             serializer.WriteInt32(ConnectionsCount);
             serializer.WriteInt32(MessagesInQueue);
-            serializer.WriteObjectArray(ExchangeInfos);
         }
 
         public override void Deserialize(IDeserializer deserializer)
@@ -25,7 +23,6 @@ namespace Messages.ServerInfo
             ServerStartTime = deserializer.ReadDateTime();
             ConnectionsCount = deserializer.ReadInt32();
             MessagesInQueue = deserializer.ReadInt32();
-            //TODO add here deserialization of object array.
         }
     }
 }
