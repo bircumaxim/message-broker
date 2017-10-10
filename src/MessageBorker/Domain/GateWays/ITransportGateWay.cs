@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using Domain.Exhcanges;
+﻿using System.Threading.Tasks;
 using Domain.Messages;
 
 namespace Domain.GateWays

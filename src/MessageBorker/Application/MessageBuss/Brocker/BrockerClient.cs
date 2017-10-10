@@ -5,6 +5,8 @@ using System.Net.Sockets;
 using System.Threading.Tasks;
 using MessageBuss.Brocker.Events;
 using Messages;
+using Messages.Connection;
+using Messages.ServerInfo;
 using Serialization;
 using Transport.Connectors.Tcp;
 using Transport.Events;
@@ -47,10 +49,13 @@ namespace MessageBuss.Brocker
 
         public void Stop()
         {
-            _tcpConnector.SendMessage(new CloseConnectionRequest());
-            _tcpConnector.StateChanged -= OnStateChange;
-            _tcpConnector.MessageReceived -= OnMessageReceived;
-            _tcpConnector.Stop();
+            if (_tcpConnector.ConnectionState == ConnectionState.Connected)
+            {
+                _tcpConnector.SendMessage(new CloseConnectionRequest());
+                _tcpConnector.StateChanged -= OnStateChange;
+                _tcpConnector.MessageReceived -= OnMessageReceived;
+                _tcpConnector.Stop();   
+            }
         }
 
         #endregion
@@ -90,6 +95,9 @@ namespace MessageBuss.Brocker
                 case "OpenConnectionResponse":
                     OnOpenConecctionResponse(args.Message as OpenConnectionResponse);
                     break;
+                case "CloseConnectionResponse":
+                    OnCloseConecctionResponse();
+                    break;
                 case "PingMessage":
                     SendOrEnqueue(new PongMessage());
                     break;
@@ -101,6 +109,11 @@ namespace MessageBuss.Brocker
         }
 
         #endregion
+
+        private void OnCloseConecctionResponse()
+        {
+           Stop();
+        }
 
         private void OnOpenConecctionResponse(OpenConnectionResponse response)
         {

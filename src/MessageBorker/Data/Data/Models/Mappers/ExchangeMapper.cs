@@ -1,11 +1,10 @@
 ﻿using System.Linq;
-using Data.Models;
 using Domain;
 using Domain.Exhcanges;
 using Domain.Infrastructure.Mapping;
 using Domain.Messages;
 
-namespace Data.Mappers
+namespace Data.Models.Mappers
 {
     public class ExchangeMapper : IMapper<ExchangeData, Exchange>
     {
@@ -16,15 +15,15 @@ namespace Data.Mappers
                 return null;
             }
             Exchange exchange;
-            switch (model.ExchangeDataType)
+            switch (model.ExchangeTypeData)
             {
-                case ExchangeDataType.Direct:
+                case ExchangeTypeData.Direct:
                     exchange = new DirectExchange(model.Name);
                     break;
-                case ExchangeDataType.Fanout:
+                case ExchangeTypeData.Fanout:
                     exchange = new FanoutExchange(model.Name);
                     break;
-                case ExchangeDataType.Topic:
+                case ExchangeTypeData.Topic:
                     exchange = new TopicExchange(model.Name);
                     break;
                 default:

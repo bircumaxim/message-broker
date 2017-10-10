@@ -2,7 +2,9 @@
 using System.Threading.Tasks;
 using Data.Configuration;
 using Data.Events;
+using log4net;
 using Messages;
+using Messages.Connection;
 using Serialization;
 using Transport;
 using Transport.Events;
@@ -11,12 +13,14 @@ namespace Data
 {
     public class RemoteApplicationManager : IRun
     {
+        private readonly ILog _logger;
         private readonly Dictionary<string, RemoteApplication> _remoteApplications;
         private readonly List<IConnectionManager> _connectionManagers;
         public event RemoteApplicationMessageReceived RemoteApplicationMessageReceived;
 
         public RemoteApplicationManager(IConfiguration configuration)
         {
+            _logger = LogManager.GetLogger(GetType());
             _remoteApplications = new Dictionary<string, RemoteApplication>();
             _connectionManagers = configuration.GetConnectionManagers();
         }
@@ -29,6 +33,7 @@ namespace Data
             {
                 manager.ConnectorConnected += OnConnectorConnected;
                 manager.Start();
+                _logger.Info($"Started {manager.GetType().Name}");
             });
         }
 
@@ -45,6 +50,7 @@ namespace Data
 
         public void Stop()
         {
+            SendConnectionCloseMessageToRemoteApplicatoins();
             _connectionManagers.ForEach(manager =>
             {
                 manager.Stop();
@@ -53,6 +59,16 @@ namespace Data
             StopRemoteApplications();
         }
 
+        private void SendConnectionCloseMessageToRemoteApplicatoins()
+        {
+            lock (_remoteApplications)
+            {
+                foreach (var remoteApplication in _remoteApplications.Values)
+                {
+                    remoteApplication.Send(new CloseConnectionResponse());
+                }   
+            }
+        }
 
         #endregion
         

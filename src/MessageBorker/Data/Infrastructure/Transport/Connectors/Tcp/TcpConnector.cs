@@ -60,7 +60,6 @@ namespace Transport.Connectors.Tcp
 
         private void StartReceivingMessages()
         {
-            _logger.Debug("Started receiving messages");
             while (ConnectionState == ConnectionState.Connected || ConnectionState == ConnectionState.Connecting)
             {
                 try
@@ -70,27 +69,17 @@ namespace Transport.Connectors.Tcp
                 }
                 catch (Exception)
                 {
-                    _logger.Error("Receiving message failed");
+                    _logger.Error($"Receiving message failed {GetType().Name} with id=\"{ConnectorId}\"");
                     break;
                 }
-            }
-            try
-            {
-                Stop();
-            }
-            catch (Exception ex)
-            {
-                _logger.Error("Failed to stop the connector");
-                Console.WriteLine(ex);
-                throw;
             }
         }
 
         private void SendMessageToSocket(Message message)
         {
-            _logger.Info("Message is preparing to be sent to communicator");
+            _logger.Debug(
+                $"{message.MessageTypeName} is preparing to be sent to {GetType().Name} with id=\"{ConnectorId}\"");
             var memoryStream = new MemoryStream();
-            //TODO add default serializers to settings
             _wireProtocol.WriteMessage(new DefaultSerializer(memoryStream), message);
 
             if (memoryStream.Length > _maxMessageLength)
@@ -113,7 +102,7 @@ namespace Transport.Connectors.Tcp
 
                 totalSent += sent;
             }
-            _logger.Info("Message was sent");
+            _logger.Info($"Sent     message=\"{message.MessageTypeName}\" size=\"{totalSent} byte\" to {GetType().Name} with id {ConnectorId}");
         }
 
         private void Validate()

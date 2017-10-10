@@ -41,13 +41,13 @@ namespace Data.Configuration.FileConfiguration
                 switch (exchangeNode.Name)
                 {
                     case "DirectExchange":
-                        exchange.ExchangeDataType = ExchangeDataType.Direct;
+                        exchange.ExchangeTypeData = ExchangeTypeData.Direct;
                         break;
                     case "TopicExchange":
-                        exchange.ExchangeDataType = ExchangeDataType.Topic;
+                        exchange.ExchangeTypeData = ExchangeTypeData.Topic;
                         break;
                     case "FanoutExchange":
-                        exchange.ExchangeDataType = ExchangeDataType.Fanout;
+                        exchange.ExchangeTypeData = ExchangeTypeData.Fanout;
                         break;
                 }
 

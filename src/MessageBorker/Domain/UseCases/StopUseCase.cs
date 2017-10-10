@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Domain.GateWays;
+﻿using Domain.GateWays;
 
 namespace Domain.UseCases
 {

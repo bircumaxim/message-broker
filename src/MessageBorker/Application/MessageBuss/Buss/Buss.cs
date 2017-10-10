@@ -4,6 +4,7 @@ using MessageBuss.Brocker;
 using MessageBuss.Brocker.Events;
 using MessageBuss.Buss.Events;
 using Messages;
+using Messages.Payload;
 using Serialization;
 using Serialization.Deserializers;
 using Serialization.Serializers;
@@ -30,7 +31,7 @@ namespace MessageBuss.Buss
 
         public void Request(string queueName)
         {
-            _brocker.SendOrEnqueue(new DefaultMessageRequest {QueueName = queueName});
+            _brocker.SendOrEnqueue(new PayloadRequest {QueueName = queueName});
         }
 
         public void Publish(string exchangeName, string routingKey, Message payload, bool isDurable = false)
@@ -63,16 +64,21 @@ namespace MessageBuss.Buss
 
         private void OnMessageReceivedFromBrocker(object sender, BrockerClientMessageReceivedEventArgs args)
         {
-            if (args.Message.MessageTypeName == "DefaultMessageResponse")
+            switch (args.Message.MessageTypeName)
             {
-                var message = args.Message as DefaultMessageResponse;
-                Message payload = null;
-                if (message != null)
-                {
-                    var deserializer = new DefaultDeserializer(new MemoryStream(message.Payload));
-                    payload = _brocker.WireProtocol.ReadMessage(deserializer);
-                }
-                MessageReceived?.Invoke(this, new MessegeReceviedEventArgs(payload));
+                case "DefaultMessageResponse":
+                    var message = args.Message as DefaultMessageResponse;
+                    Message payload = null;
+                    if (message != null)
+                    {
+                        var deserializer = new DefaultDeserializer(new MemoryStream(message.Payload));
+                        payload = _brocker.WireProtocol.ReadMessage(deserializer);
+                    }
+                    MessageReceived?.Invoke(this, new MessegeReceviedEventArgs(payload));
+                    break;
+                default:
+                    MessageReceived?.Invoke(this, new MessegeReceviedEventArgs(args.Message));
+                    break;
             }
         }
 
@@ -90,7 +96,7 @@ namespace MessageBuss.Buss
         private Message CreateDefaultMessage(string exchangeName, string routingKey, Message payload,
             bool isDurable = false)
         {
-            var defaultMessage = new DefaultMessage
+            var defaultMessage = new PayloadMessage
             {
                 IsDurable = isDurable,
                 RoutingKey = routingKey,

@@ -1,10 +1,11 @@
 ﻿using Domain.Infrastructure.Mapping;
 using Domain.Messages;
 using Messages;
+using Messages.Payload;
 
 namespace Data.Mappers
 {
-    public class DefaultMessageResponseMapper : IMapper<MessageResponse, DefaultMessageResponse>
+    public class PayloadResponseMapper : IMapper<MessageResponse, DefaultMessageResponse>
     {
         public DefaultMessageResponse Map(MessageResponse model)
         {

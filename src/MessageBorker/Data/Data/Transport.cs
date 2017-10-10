@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Threading.Tasks;
 using Data.Configuration;
 using Data.Events;
@@ -6,6 +7,8 @@ using Data.Mappers;
 using Domain.GateWays;
 using Domain.Messages;
 using Messages;
+using Messages.Connection;
+using Messages.ServerInfo;
 using Serialization;
 using Serialization.Deserializers;
 using Serialization.WireProtocols;
@@ -14,7 +17,7 @@ namespace Data
 {
     public class Transport : ITransportGateWay
     {
-        private readonly DefaultMessageResponseMapper _defaultMessageResponseMapper;
+        private readonly PayloadResponseMapper _payloadResponseMapper;
         private readonly RemoteApplicationManager _remoteApplicationManager;
         private readonly UseCaseFactory _useCaseFactory;
 
@@ -24,7 +27,7 @@ namespace Data
             _useCaseFactory = new UseCaseFactory(persistence, this);
             _remoteApplicationManager = new RemoteApplicationManager(configuration);
             _remoteApplicationManager.RemoteApplicationMessageReceived += RemoteApplicationMessageReceived;
-            _defaultMessageResponseMapper = new DefaultMessageResponseMapper();
+            _payloadResponseMapper = new PayloadResponseMapper();
         }
 
         public void Start()
@@ -45,28 +48,29 @@ namespace Data
 
         private void RemoteApplicationMessageReceived(object seneder, RemoteApplicationMessageReceivedEventArgs args)
         {
-            switch (args.Message.MessageTypeName)
+            if (args.Message.MessageTypeName == typeof(CloseConnectionRequest).Name)
             {
-                case "CloseConnectionRequest":
-                    _remoteApplicationManager.StopRemoteApplication(args.Application.Name);
-                    break;
-                case "PingMessage":
-                    _remoteApplicationManager.SendMessage(args.Application.Name, new PongMessage());
-                    break;
-                case "PongMessage":
-                    //TODO add logs here.
-                    break;
-                default:
-                    var useCase = _useCaseFactory.GetUseCaseFor(args);
-                    useCase?.Execute();
-                    break;
+                _remoteApplicationManager.StopRemoteApplication(args.Application.Name);
+            }
+            else if (args.Message.MessageTypeName == typeof(PingMessage).Name)
+            {
+                _remoteApplicationManager.SendMessage(args.Application.Name, new PongMessage());
+            }
+            else if (args.Message.MessageTypeName == typeof(PongMessage).Name)
+            {
+                //TODO add logs here.
+            }
+            else
+            {
+                var useCase = _useCaseFactory.GetUseCaseFor(args);
+                useCase?.Execute();
             }
         }
 
         public void Send(MessageResponse messageResponse)
         {
             _remoteApplicationManager.SendMessage(messageResponse.ReceiverName,
-                _defaultMessageResponseMapper.Map(messageResponse));
+                _payloadResponseMapper.Map(messageResponse));
         }
     }
 }

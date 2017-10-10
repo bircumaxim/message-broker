@@ -1,6 +1,6 @@
 ﻿namespace Data.Models
 {
-    public enum ExchangeDataType
+    public enum ExchangeTypeData
     {
         Direct,
         Topic,

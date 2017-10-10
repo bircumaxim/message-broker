@@ -1,8 +1,7 @@
-﻿using Data.Models;
-using Domain.Infrastructure.Mapping;
+﻿using Domain.Infrastructure.Mapping;
 using Domain.Messages;
 
-namespace Data.Mappers
+namespace Data.Models.Mappers
 {
     public class MessageMapper : ITwoWaysMapper<MessageData, Message>
     {

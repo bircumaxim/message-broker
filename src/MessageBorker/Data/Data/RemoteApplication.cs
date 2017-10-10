@@ -26,7 +26,7 @@ namespace Data
             _connector.MessageReceived += OnMessageReceived;
             _logger = LogManager.GetLogger(GetType());
             Validate();
-            _logger.Info($"New remote application with id {Name}");
+            _logger.Info($"New remote application {_connector.GetType().Name} with id {Name}");
         }
 
         private void OnMessageReceived(object sender, MessageReceivedEventArgs args)
@@ -50,7 +50,6 @@ namespace Data
 
         public Task StartAsync()
         {
-            _logger.Info("Starting remote applicatoin");
             return _connector.StartAsync();
         }
 

@@ -1,9 +1,9 @@
 ﻿using System.IO;
 using Serialization;
 
-namespace Messages
+namespace Messages.Payload
 {
-    public class DefaultMessage : Message
+    public class PayloadMessage : Message
     {
         public bool IsDurable { get; set; }
         public string RoutingKey { get; set; }
@@ -11,7 +11,7 @@ namespace Messages
         public MemoryStream MemoryStream { get; }
         public byte[] Payload { get; set; }
 
-        public DefaultMessage()
+        public PayloadMessage()
         {
             MemoryStream = new MemoryStream();
         }

@@ -1,6 +1,6 @@
 ﻿using Serialization;
 
-namespace Messages
+namespace Messages.Connection
 {
     public class OpenConnectionResponse : Message
     {

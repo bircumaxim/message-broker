@@ -1,14 +1,13 @@
-﻿using Data.Models;
-using Domain.Infrastructure.Mapping;
+﻿using Domain.Infrastructure.Mapping;
 using Domain.Messages;
-using Messages;
+using Messages.Payload;
 
 
 namespace Data.Mappers
 {
-    public class DefaultMessageMapper : IMapper<DefaultMessage, Message>
+    public class PayloadMessageMapper : IMapper<PayloadMessage, Message>
     {
-        public Message Map(DefaultMessage model)
+        public Message Map(PayloadMessage model)
         {
             if (model == null)
             {

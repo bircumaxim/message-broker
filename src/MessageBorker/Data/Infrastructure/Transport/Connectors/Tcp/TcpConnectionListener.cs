@@ -34,7 +34,7 @@ namespace Transport.Connectors.Tcp
 
         public void Start()
         {
-            _logger.Info("Starting sockets listener");
+            _logger.Debug("Starting sockets listener");
             if (IsListening)
             {
                 _logger.Error("Socket already listening");
@@ -42,7 +42,7 @@ namespace Transport.Connectors.Tcp
             }
             BindSocketToEndpoint(new IPEndPoint(0, _port));
             IsListening = !IsListening;
-            _logger.Debug($"Tcp Socket was started on port {_port}");
+            _logger.Info($"Started Socket protocol=\"TCP\" port=\"{_port}\"");
             TcpSocketListening();
         }
 
@@ -84,7 +84,7 @@ namespace Transport.Connectors.Tcp
 
         private void TcpSocketListening()
         {
-            _logger.Info("Waiting for connections");
+            _logger.Info("Waiting for connections...");
             while (IsListening)
             {
                 _allDone.Reset();
@@ -100,7 +100,7 @@ namespace Transport.Connectors.Tcp
             var socketListener = (Socket) result.AsyncState;
             if (socketListener == null) return;
             var accptedSocket = socketListener.EndAccept(result);
-            _logger.Debug("New client socket was accepted");
+            _logger.Debug($"Socket accepted protocol=\"{accptedSocket.ProtocolType}\" endpoint=\"{accptedSocket.RemoteEndPoint}\"");
             TcpClientConnected?.Invoke(this, new TcpClientConnectedEventArgs {ClientSocket = accptedSocket});
         }
 

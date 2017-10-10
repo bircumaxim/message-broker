@@ -25,7 +25,6 @@ namespace Transport.Connectors
 
         public override void Start()
         {
-            _logger.Info("Strting connector");
             if (ConnectionState != ConnectionState.Disconnected)
             {
                 throw new Exception("Connector is already connected");
@@ -34,17 +33,18 @@ namespace Transport.Connectors
             {
                 OnStateChange(ConnectionState.Connecting);
                 StartCommunication();
+                _logger.Debug($"{GetType().Name} started");
                 OnStateChange(ConnectionState.Connected);
             }
         }
 
         public override void Stop()
         {
-            _logger.Info("Connector is disconecting");
             lock (_sendLock)
             {
                 OnStateChange(ConnectionState.Disconnecting);
                 StopCommunication();
+                _logger.Debug($"{GetType().Name} stoped");
                 OnStateChange(ConnectionState.Disconnected);
             }
         }

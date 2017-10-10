@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Domain.Messages
+﻿namespace Domain.Messages
 {
     public class MessageRequest
     {

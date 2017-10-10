@@ -41,16 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CloseConnectionRequest.cs" />
-    <Compile Include="DefaultMessageRequest.cs" />
-    <Compile Include="DefaultMessageResponse.cs" />
+    <Compile Include="Connection\CloseConnectionRequest.cs" />
+    <Compile Include="Connection\CloseConnectionResponse.cs" />
+    <Compile Include="Connection\OpenConnectionRequest.cs" />
+    <Compile Include="Connection\OpenConnectionResponse.cs" />
     <Compile Include="ErrorMessage.cs" />
-    <Compile Include="OpenConnectionRequest.cs" />
-    <Compile Include="DefaultMessage.cs" />
-    <Compile Include="OpenConnectionResponse.cs" />
-    <Compile Include="PingMessage.cs" />
-    <Compile Include="PongMessage.cs" />
+    <Compile Include="Payload\PayloadRequest.cs" />
+    <Compile Include="Payload\PayloadResponse.cs" />
+    <Compile Include="Payload\PayloadMessage.cs" />
+    <Compile Include="ServerInfo\ExchangeInfo.cs" />
+    <Compile Include="ServerInfo\PingMessage.cs" />
+    <Compile Include="ServerInfo\PongMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerInfo\ServerGeneralInfoResponse.cs" />
+    <Compile Include="ServerInfo\ServerGerneralInfoRequest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Serialization\Serialization.csproj">

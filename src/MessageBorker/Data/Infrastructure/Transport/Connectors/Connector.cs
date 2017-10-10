@@ -41,7 +41,7 @@ namespace Transport.Connectors
 
         protected void OnMessageReceived(Message message)
         {
-            _logger.Info($"{message.MessageTypeName} was received by a {GetType().Name} with id {ConnectorId}");
+            _logger.Info($"Received message=\"{message.MessageTypeName}\" by {GetType().Name} with id {ConnectorId}");
             MessageReceived?.Invoke(this, new MessageReceivedEventArgs(this, message));
         }
 

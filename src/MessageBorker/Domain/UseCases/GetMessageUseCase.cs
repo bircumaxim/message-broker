@@ -7,8 +7,8 @@ namespace Domain.UseCases
     public class GetMessageUseCase : IUseCase
     {
         private readonly MessageRequest _messageRequest;
-        private IPersistenceGateWay _persistenceGateWay;
-        private ITransportGateWay _transportGateWay;
+        private readonly IPersistenceGateWay _persistenceGateWay;
+        private readonly ITransportGateWay _transportGateWay;
 
         public GetMessageUseCase(MessageRequest messageRequest, ITransportGateWay transportGateWay, IPersistenceGateWay persistenceGateWay)
         {

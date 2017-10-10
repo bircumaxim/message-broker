@@ -1655,3 +1655,1285 @@
 2017-10-09 23:54:35,374 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
 2017-10-09 23:55:16,985 [7] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
 2017-10-09 23:55:17,012 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:13:29,898 [1] [INFO  ] MessageBrocker.Program - Starting message broker 
+2017-10-09 22:13:29,914 [1] [INFO  ] MessageBrocker.Program - Press any key to stop the server 
+2017-10-09 22:13:29,915 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:13:29,917 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Tcp Socket was started on port 9000 
+2017-10-09 22:13:29,918 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:13:31,898 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:13:31,898 [1] [INFO  ] MessageBrocker.Program - Press any key to exit 
+2017-10-09 22:16:27,838 [1] [INFO  ] MessageBrocker.Program - Starting message broker 
+2017-10-09 22:16:27,854 [1] [INFO  ] MessageBrocker.Program - Press any key to stop the server 
+2017-10-09 22:16:27,854 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:16:27,854 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Tcp Socket was started on port 9000 
+2017-10-09 22:16:27,854 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:16:30,155 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - New client socket was accepted 
+2017-10-09 22:16:30,170 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:16:30,170 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Started receiving messages 
+2017-10-09 22:16:30,207 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionRequest was received by a TcpConnector with id f034076b-7b4a-4ba9-8da3-e148825373c3 
+2017-10-09 22:16:30,207 [4] [INFO  ] Data.RemoteApplication - New remote application with id f034076b-7b4a-4ba9-8da3-e148825373c3 
+2017-10-09 22:16:30,207 [4] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:16:30,207 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:16:30,207 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:16:30,223 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:16:30,285 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id f034076b-7b4a-4ba9-8da3-e148825373c3 
+2017-10-09 22:16:33,230 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id f034076b-7b4a-4ba9-8da3-e148825373c3 
+2017-10-09 22:16:33,382 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id f034076b-7b4a-4ba9-8da3-e148825373c3 
+2017-10-09 22:16:33,528 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id f034076b-7b4a-4ba9-8da3-e148825373c3 
+2017-10-09 22:16:33,663 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id f034076b-7b4a-4ba9-8da3-e148825373c3 
+2017-10-09 22:16:33,782 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id f034076b-7b4a-4ba9-8da3-e148825373c3 
+2017-10-09 22:16:48,796 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - New client socket was accepted 
+2017-10-09 22:16:48,811 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:16:48,811 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Started receiving messages 
+2017-10-09 22:16:48,849 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionRequest was received by a TcpConnector with id 083842b3-8617-4406-b037-1dfb44190919 
+2017-10-09 22:16:48,849 [8] [INFO  ] Data.RemoteApplication - New remote application with id 083842b3-8617-4406-b037-1dfb44190919 
+2017-10-09 22:16:48,849 [8] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:16:48,849 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:16:48,849 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:16:48,849 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:16:48,896 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessageRequest was received by a TcpConnector with id 083842b3-8617-4406-b037-1dfb44190919 
+2017-10-09 22:16:48,912 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:16:48,912 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:22:22,274 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id f034076b-7b4a-4ba9-8da3-e148825373c3 
+2017-10-09 22:22:22,274 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id f034076b-7b4a-4ba9-8da3-e148825373c3 
+2017-10-09 22:22:22,274 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id f034076b-7b4a-4ba9-8da3-e148825373c3 
+2017-10-09 22:22:22,401 [4] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:22:22,401 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:22:23,192 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - New client socket was accepted 
+2017-10-09 22:22:23,192 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:22:23,192 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Started receiving messages 
+2017-10-09 22:22:23,224 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionRequest was received by a TcpConnector with id 3831ef56-f63d-49dd-80ed-4904c863c9ad 
+2017-10-09 22:22:23,224 [4] [INFO  ] Data.RemoteApplication - New remote application with id 3831ef56-f63d-49dd-80ed-4904c863c9ad 
+2017-10-09 22:22:23,224 [4] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:22:23,224 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:22:23,224 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:22:23,224 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:22:23,261 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - PingMessage was received by a TcpConnector with id 3831ef56-f63d-49dd-80ed-4904c863c9ad 
+2017-10-09 22:22:23,261 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:22:23,277 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:22:23,277 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 3831ef56-f63d-49dd-80ed-4904c863c9ad 
+2017-10-09 22:22:48,019 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:22:48,019 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:22:48,019 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:22:48,019 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:22:48,019 [8] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:22:48,034 [1] [INFO  ] MessageBrocker.Program - Press any key to exit 
+2017-10-09 22:22:48,034 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:22:48,034 [4] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:22:48,034 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:22:49,672 [1] [INFO  ] MessageBrocker.Program - Starting message broker 
+2017-10-09 22:22:49,673 [1] [INFO  ] MessageBrocker.Program - Press any key to stop the server 
+2017-10-09 22:22:49,673 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:22:49,673 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Tcp Socket was started on port 9000 
+2017-10-09 22:22:49,689 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:22:53,155 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - New client socket was accepted 
+2017-10-09 22:22:53,173 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:22:53,175 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Started receiving messages 
+2017-10-09 22:22:53,192 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionRequest was received by a TcpConnector with id 9843e8f1-72a0-4152-b61f-892dbf129045 
+2017-10-09 22:22:53,192 [4] [INFO  ] Data.RemoteApplication - New remote application with id 9843e8f1-72a0-4152-b61f-892dbf129045 
+2017-10-09 22:22:53,192 [4] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:22:53,192 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:22:53,208 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:22:53,208 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:22:53,224 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - PingMessage was received by a TcpConnector with id 9843e8f1-72a0-4152-b61f-892dbf129045 
+2017-10-09 22:22:53,224 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:22:53,224 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:22:53,239 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 9843e8f1-72a0-4152-b61f-892dbf129045 
+2017-10-09 22:23:24,234 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 9843e8f1-72a0-4152-b61f-892dbf129045 
+2017-10-09 22:23:24,250 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 9843e8f1-72a0-4152-b61f-892dbf129045 
+2017-10-09 22:23:24,250 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 9843e8f1-72a0-4152-b61f-892dbf129045 
+2017-10-09 22:23:24,312 [4] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:23:24,312 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:23:58,907 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - New client socket was accepted 
+2017-10-09 22:23:58,907 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:23:58,907 [10] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Started receiving messages 
+2017-10-09 22:23:58,939 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionRequest was received by a TcpConnector with id 3eaf2194-5f33-4559-9bf0-95bbc7bb0c16 
+2017-10-09 22:23:58,939 [10] [INFO  ] Data.RemoteApplication - New remote application with id 3eaf2194-5f33-4559-9bf0-95bbc7bb0c16 
+2017-10-09 22:23:58,939 [10] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:23:58,939 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:23:58,939 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:23:58,939 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:23:58,970 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - PingMessage was received by a TcpConnector with id 3eaf2194-5f33-4559-9bf0-95bbc7bb0c16 
+2017-10-09 22:23:58,970 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:23:58,970 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:24:16,036 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:24:16,052 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:24:16,052 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:24:16,052 [10] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:24:16,052 [1] [INFO  ] MessageBrocker.Program - Press any key to exit 
+2017-10-09 22:24:16,052 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:27:49,790 [1] [INFO  ] MessageBrocker.Program - Starting message broker 
+2017-10-09 22:27:49,806 [1] [INFO  ] MessageBrocker.Program - Press any key to stop the server 
+2017-10-09 22:27:49,806 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:27:49,806 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Tcp Socket was started on port 9000 
+2017-10-09 22:27:49,806 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:28:18,222 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - New client socket was accepted 
+2017-10-09 22:28:18,222 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:28:18,222 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Started receiving messages 
+2017-10-09 22:28:18,253 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionRequest was received by a TcpConnector with id 771b6833-f879-421a-9581-4dec2050a987 
+2017-10-09 22:28:18,269 [8] [INFO  ] Data.RemoteApplication - New remote application with id 771b6833-f879-421a-9581-4dec2050a987 
+2017-10-09 22:28:18,269 [8] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:28:18,269 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:28:18,269 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:28:18,269 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:28:18,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - PingMessage was received by a TcpConnector with id 771b6833-f879-421a-9581-4dec2050a987 
+2017-10-09 22:28:18,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:28:18,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:28:52,565 [8] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:28:52,565 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:28:53,103 [7] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - New client socket was accepted 
+2017-10-09 22:28:53,103 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:28:53,103 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Started receiving messages 
+2017-10-09 22:28:53,135 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionRequest was received by a TcpConnector with id a3034d80-19dd-4d94-8cb5-d53326724d6c 
+2017-10-09 22:28:53,135 [8] [INFO  ] Data.RemoteApplication - New remote application with id a3034d80-19dd-4d94-8cb5-d53326724d6c 
+2017-10-09 22:28:53,135 [8] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:28:53,135 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:28:53,135 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:28:53,135 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:28:53,182 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - PingMessage was received by a TcpConnector with id a3034d80-19dd-4d94-8cb5-d53326724d6c 
+2017-10-09 22:28:53,182 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:28:53,182 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:29:34,921 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:29:34,924 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:29:34,925 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:29:34,926 [1] [INFO  ] MessageBrocker.Program - Press any key to exit 
+2017-10-09 22:29:34,926 [8] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:29:34,927 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:30:19,725 [1] [INFO  ] MessageBrocker.Program - Starting message broker 
+2017-10-09 22:30:19,725 [1] [INFO  ] MessageBrocker.Program - Press any key to stop the server 
+2017-10-09 22:30:19,725 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:30:19,725 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Tcp Socket was started on port 9000 
+2017-10-09 22:30:19,742 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:30:23,099 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - New client socket was accepted 
+2017-10-09 22:30:23,099 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:30:23,099 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Started receiving messages 
+2017-10-09 22:30:23,130 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionRequest was received by a TcpConnector with id 46808b66-0570-4ae4-9b56-f2d10ed840db 
+2017-10-09 22:30:23,130 [4] [INFO  ] Data.RemoteApplication - New remote application with id 46808b66-0570-4ae4-9b56-f2d10ed840db 
+2017-10-09 22:30:23,130 [4] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:30:23,130 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:30:23,130 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:30:23,147 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:30:23,168 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - PingMessage was received by a TcpConnector with id 46808b66-0570-4ae4-9b56-f2d10ed840db 
+2017-10-09 22:30:23,168 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:30:23,168 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:30:23,183 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 46808b66-0570-4ae4-9b56-f2d10ed840db 
+2017-10-09 22:30:25,719 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 46808b66-0570-4ae4-9b56-f2d10ed840db 
+2017-10-09 22:30:25,872 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 46808b66-0570-4ae4-9b56-f2d10ed840db 
+2017-10-09 22:30:26,019 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 46808b66-0570-4ae4-9b56-f2d10ed840db 
+2017-10-09 22:30:42,805 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:30:42,805 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:30:42,805 [1] [INFO  ] MessageBrocker.Program - Press any key to exit 
+2017-10-09 22:30:42,805 [4] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:30:42,805 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:32:33,404 [1] [INFO  ] MessageBrocker.Program - Starting message broker 
+2017-10-09 22:32:33,404 [1] [INFO  ] MessageBrocker.Program - Press any key to stop the server 
+2017-10-09 22:32:33,404 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:32:33,421 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Tcp Socket was started on port 9000 
+2017-10-09 22:32:33,422 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:32:37,176 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - New client socket was accepted 
+2017-10-09 22:32:37,176 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:32:37,192 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Started receiving messages 
+2017-10-09 22:32:37,223 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionRequest was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,225 [6] [INFO  ] Data.RemoteApplication - New remote application with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,227 [6] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:32:37,228 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:32:37,229 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:32:37,230 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:32:37,261 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - PingMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,261 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:32:37,261 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:32:37,277 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,277 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,277 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,277 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,292 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,292 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,292 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,292 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,292 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,292 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,292 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,292 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,292 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,292 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,292 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,292 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,292 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,308 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,308 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,308 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,308 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,308 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,308 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,308 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,308 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,308 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,308 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,308 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,308 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,308 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,308 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,308 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,308 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,325 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,326 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,327 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,328 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,329 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,330 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,331 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,332 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,332 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,333 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,334 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,336 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,337 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,338 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,339 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,340 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,341 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,342 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,343 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,344 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,345 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,345 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,346 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,347 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,348 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,349 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,350 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,351 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,353 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,354 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,355 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,356 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,357 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,358 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,358 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,359 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,360 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,361 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,362 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,363 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,363 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,364 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,365 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,366 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,372 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,373 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,375 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,376 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,377 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,379 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,380 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,381 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,383 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,384 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,385 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,386 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,388 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,389 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,390 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,392 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,393 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,393 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,394 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,395 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,396 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,396 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:37,397 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7f93b87-5fdb-42b4-a35e-f75e3851a2ea 
+2017-10-09 22:32:38,169 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - New client socket was accepted 
+2017-10-09 22:32:38,169 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:32:38,169 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Started receiving messages 
+2017-10-09 22:32:38,201 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionRequest was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,201 [8] [INFO  ] Data.RemoteApplication - New remote application with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,201 [8] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:32:38,201 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:32:38,201 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:32:38,201 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:32:38,222 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - PingMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,222 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:32:38,238 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:32:38,238 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,238 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,238 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,238 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,238 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,238 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,238 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,238 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,238 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,238 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,254 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,254 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,254 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,254 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,254 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,254 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,254 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,254 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,254 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,254 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,254 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,269 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,269 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,269 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,269 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,269 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,269 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,269 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,269 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,269 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,269 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,269 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,269 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,269 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,269 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,285 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,285 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,285 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,285 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,285 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,285 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,285 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,285 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,285 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,285 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,285 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,285 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,285 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,285 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,285 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,285 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,300 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,318 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,320 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,321 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,322 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,323 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,323 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,323 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,323 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,323 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,323 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,323 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,323 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,323 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,323 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,323 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,323 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,323 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,323 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,323 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,323 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,323 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,323 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,323 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,338 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,338 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,338 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,338 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,338 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,338 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:38,338 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id abe9cffc-1bc8-4b51-9a5c-9c1695204e77 
+2017-10-09 22:32:39,101 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - New client socket was accepted 
+2017-10-09 22:32:39,101 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:32:39,101 [10] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Started receiving messages 
+2017-10-09 22:32:39,123 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionRequest was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,123 [10] [INFO  ] Data.RemoteApplication - New remote application with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,123 [10] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:32:39,123 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:32:39,123 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:32:39,123 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:32:39,154 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - PingMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,154 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:32:39,170 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:32:39,170 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,170 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,170 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,170 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,170 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,170 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,170 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,170 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,170 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,186 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,186 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,186 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,186 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,186 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,186 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,186 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,186 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,186 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,186 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,186 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,186 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,186 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,186 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,186 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,186 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,186 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,186 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,186 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,201 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,201 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,201 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,201 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,201 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,201 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,201 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,201 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,201 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,201 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,201 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,201 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,201 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,201 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,217 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,219 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,221 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,222 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,223 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,223 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,223 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,223 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,223 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,223 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,223 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,223 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,223 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,223 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,223 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,223 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,223 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,223 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,223 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,223 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,223 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,239 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,239 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,239 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,239 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,239 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,239 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,239 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,239 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,239 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,239 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,239 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,239 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,239 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,239 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,255 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,255 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,255 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,255 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,255 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,255 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,255 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,255 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,255 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,255 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,255 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,255 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,255 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,255 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,255 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,255 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,255 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,255 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,270 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,270 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,270 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,270 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:39,270 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 2a2bdd1e-439a-41c7-bb90-2fb1160ef65b 
+2017-10-09 22:32:40,320 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - New client socket was accepted 
+2017-10-09 22:32:40,323 [11] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:32:40,323 [7] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Started receiving messages 
+2017-10-09 22:32:40,339 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionRequest was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,339 [7] [INFO  ] Data.RemoteApplication - New remote application with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,339 [7] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:32:40,339 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:32:40,339 [11] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:32:40,339 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:32:40,371 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - PingMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,371 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:32:40,386 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:32:40,386 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,386 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,386 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,386 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,386 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,386 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,386 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,386 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,386 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,386 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,386 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,402 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,402 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,402 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,402 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,402 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,402 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,402 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,402 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,402 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,402 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,402 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,402 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,402 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,402 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,402 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,402 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,402 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,421 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,424 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,424 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,424 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,424 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,424 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,424 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,424 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,424 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,424 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,424 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,424 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,424 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,424 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,424 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,424 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,424 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,424 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,440 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,440 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,440 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,440 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,440 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,440 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,440 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,440 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,440 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,440 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,440 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,455 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,455 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,455 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,455 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,455 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,455 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,455 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,455 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,455 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,455 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,455 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,455 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,455 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,455 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,455 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,455 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,455 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,471 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,471 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,471 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,471 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,471 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,471 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,471 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,471 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,471 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,471 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,471 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,471 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,471 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,471 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,471 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,471 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,471 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,471 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,471 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,486 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,486 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,486 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,486 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,486 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,486 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:40,486 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id c4e4a8d7-f3f0-4731-9f6b-278f7de57768 
+2017-10-09 22:32:52,634 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:32:52,634 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:32:52,634 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:32:52,634 [6] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:32:52,634 [8] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:32:52,634 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:32:52,634 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:32:52,634 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:32:52,650 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:32:52,650 [10] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:32:52,652 [1] [INFO  ] MessageBrocker.Program - Press any key to exit 
+2017-10-09 22:32:52,652 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:32:52,652 [7] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:32:52,655 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:33:59,077 [1] [INFO  ] MessageBrocker.Program - Starting message broker 
+2017-10-09 22:33:59,093 [1] [INFO  ] MessageBrocker.Program - Press any key to stop the server 
+2017-10-09 22:33:59,093 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:33:59,093 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:34:12,275 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:34:12,275 [1] [INFO  ] MessageBrocker.Program - Press any key to exit 
+2017-10-09 22:34:13,529 [1] [INFO  ] MessageBrocker.Program - Starting message broker 
+2017-10-09 22:34:13,545 [1] [INFO  ] MessageBrocker.Program - Press any key to stop the server 
+2017-10-09 22:34:13,560 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:34:13,560 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:34:25,277 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:34:25,308 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionRequest was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,308 [8] [INFO  ] Data.RemoteApplication - New remote application with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,308 [8] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:34:25,308 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:34:25,308 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:34:25,308 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:34:25,339 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - PingMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,339 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:34:25,339 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:34:25,355 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,355 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,355 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,371 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,372 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,373 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,374 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,375 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,376 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,376 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,376 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,376 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,376 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,376 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,376 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,376 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,376 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,376 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,376 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,376 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,376 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,376 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,376 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,376 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,376 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,392 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,392 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,392 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,392 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,392 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,392 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,392 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,392 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,392 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,392 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,392 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,392 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,392 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,408 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,408 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,408 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,408 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,408 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,408 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,408 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,408 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,408 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,408 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,408 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,408 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,408 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,408 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,408 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,408 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,408 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,408 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,423 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,423 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,423 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,423 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,423 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,423 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,423 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,423 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,423 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,423 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,423 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,423 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,423 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,423 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,423 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,423 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,423 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,439 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,439 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,439 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,439 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,439 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,439 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,439 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,455 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,455 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,455 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,455 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,455 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,455 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,455 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,455 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,455 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,455 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,455 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,471 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,472 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,474 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,475 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,477 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,477 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,477 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,477 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:25,477 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:33,398 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - CloseConnectionRequest was received by a TcpConnector with id 5b664394-8462-4041-9039-93b674226e8e 
+2017-10-09 22:34:33,398 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:34:33,398 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:35:23,265 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:35:23,265 [1] [INFO  ] MessageBrocker.Program - Press any key to exit 
+2017-10-09 22:35:26,217 [1] [INFO  ] MessageBrocker.Program - Starting message broker 
+2017-10-09 22:35:26,233 [1] [INFO  ] MessageBrocker.Program - Press any key to stop the server 
+2017-10-09 22:35:26,233 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:35:26,233 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:35:29,142 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:35:29,179 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionRequest was received by a TcpConnector with id 79544b93-82ca-4c40-9ae4-75efbe69c0ab 
+2017-10-09 22:35:29,179 [4] [INFO  ] Data.RemoteApplication - New remote application with id 79544b93-82ca-4c40-9ae4-75efbe69c0ab 
+2017-10-09 22:35:29,179 [4] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:35:29,179 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:35:29,179 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:35:29,179 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:35:29,211 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - PingMessage was received by a TcpConnector with id 79544b93-82ca-4c40-9ae4-75efbe69c0ab 
+2017-10-09 22:35:29,226 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:35:29,226 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Message was sent 
+2017-10-09 22:35:29,226 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 79544b93-82ca-4c40-9ae4-75efbe69c0ab 
+2017-10-09 22:37:01,144 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:37:01,144 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:37:01,144 [1] [INFO  ] MessageBrocker.Program - Press any key to exit 
+2017-10-09 22:37:01,144 [4] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:37:01,144 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:37:02,130 [1] [INFO  ] MessageBrocker.Program - Starting message broker 
+2017-10-09 22:37:02,146 [1] [INFO  ] MessageBrocker.Program - Press any key to stop the server 
+2017-10-09 22:37:02,146 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:37:02,146 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:37:12,720 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:37:12,758 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionRequest was received by a TcpConnector with id 54919a49-a2c6-40df-bcfd-b2bee825a1ee 
+2017-10-09 22:37:12,758 [4] [INFO  ] Data.RemoteApplication - New remote application with id 54919a49-a2c6-40df-bcfd-b2bee825a1ee 
+2017-10-09 22:37:12,758 [4] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:37:12,758 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:37:12,758 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse was sent to 54919a49-a2c6-40df-bcfd-b2bee825a1ee 
+2017-10-09 22:37:12,789 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - PingMessage was received by a TcpConnector with id 54919a49-a2c6-40df-bcfd-b2bee825a1ee 
+2017-10-09 22:37:12,789 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - PongMessage was sent to 54919a49-a2c6-40df-bcfd-b2bee825a1ee 
+2017-10-09 22:37:12,805 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id 54919a49-a2c6-40df-bcfd-b2bee825a1ee 
+2017-10-09 22:39:39,107 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:39:39,122 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:39:39,122 [1] [INFO  ] MessageBrocker.Program - Press any key to exit 
+2017-10-09 22:39:39,122 [4] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:39:40,155 [1] [INFO  ] MessageBrocker.Program - Starting message broker 
+2017-10-09 22:39:40,171 [1] [INFO  ] MessageBrocker.Program - Press any key to stop the server 
+2017-10-09 22:39:40,171 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:39:40,171 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:39:43,443 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:39:43,474 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionRequest was received by a TcpConnector with id a7e57d9e-c301-4151-a7ae-a4fa3335c737 
+2017-10-09 22:39:43,474 [4] [INFO  ] Data.RemoteApplication - New remote application with id a7e57d9e-c301-4151-a7ae-a4fa3335c737 
+2017-10-09 22:39:43,474 [4] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:39:43,491 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:39:43,493 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent message="OpenConnectionResponse" to TcpConnector with id a7e57d9e-c301-4151-a7ae-a4fa3335c737 
+2017-10-09 22:39:43,512 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - PingMessage was received by a TcpConnector with id a7e57d9e-c301-4151-a7ae-a4fa3335c737 
+2017-10-09 22:39:43,512 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent message="PongMessage" to TcpConnector with id a7e57d9e-c301-4151-a7ae-a4fa3335c737 
+2017-10-09 22:39:43,528 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - DefaultMessage was received by a TcpConnector with id a7e57d9e-c301-4151-a7ae-a4fa3335c737 
+2017-10-09 22:41:21,414 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:41:21,414 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:41:21,414 [4] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:41:21,429 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:42:35,355 [1] [INFO  ] MessageBrocker.Program - Starting message broker 
+2017-10-09 22:42:35,371 [1] [INFO  ] MessageBrocker.Program - Press any key to stop the server 
+2017-10-09 22:42:35,371 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:42:35,371 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:42:39,984 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:42:40,022 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message=OpenConnectionRequest by TcpConnector with id 632f3642-42da-43f7-8db5-c206aacb1883 
+2017-10-09 22:42:40,022 [4] [INFO  ] Data.RemoteApplication - New remote application with id 632f3642-42da-43f7-8db5-c206aacb1883 
+2017-10-09 22:42:40,022 [4] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:42:40,022 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:42:40,022 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent message="OpenConnectionResponse" to TcpConnector with id 632f3642-42da-43f7-8db5-c206aacb1883 
+2017-10-09 22:42:40,053 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message=PingMessage by TcpConnector with id 632f3642-42da-43f7-8db5-c206aacb1883 
+2017-10-09 22:42:40,069 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent message="PongMessage" to TcpConnector with id 632f3642-42da-43f7-8db5-c206aacb1883 
+2017-10-09 22:42:40,069 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message=DefaultMessage by TcpConnector with id 632f3642-42da-43f7-8db5-c206aacb1883 
+2017-10-09 22:43:04,972 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:43:04,972 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:43:04,972 [4] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:43:04,972 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:43:04,972 [1] [INFO  ] MessageBrocker.Program - Press any key to exit 
+2017-10-09 22:43:06,053 [1] [INFO  ] MessageBrocker.Program - Starting message broker 
+2017-10-09 22:43:06,066 [1] [INFO  ] MessageBrocker.Program - Press any key to stop the server 
+2017-10-09 22:43:06,068 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:43:06,069 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:43:09,810 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:43:09,841 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message=OpenConnectionRequest by TcpConnector with id 2a3b3b7f-df74-4310-a2d6-97de9d3471f2 
+2017-10-09 22:43:09,841 [4] [INFO  ] Data.RemoteApplication - New remote application with id 2a3b3b7f-df74-4310-a2d6-97de9d3471f2 
+2017-10-09 22:43:09,841 [4] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:43:09,841 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:43:09,858 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" to TcpConnector with id 2a3b3b7f-df74-4310-a2d6-97de9d3471f2 
+2017-10-09 22:43:09,880 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message=PingMessage by TcpConnector with id 2a3b3b7f-df74-4310-a2d6-97de9d3471f2 
+2017-10-09 22:43:09,880 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" to TcpConnector with id 2a3b3b7f-df74-4310-a2d6-97de9d3471f2 
+2017-10-09 22:43:09,880 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message=DefaultMessage by TcpConnector with id 2a3b3b7f-df74-4310-a2d6-97de9d3471f2 
+2017-10-09 22:43:27,059 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:43:27,059 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:43:27,074 [1] [INFO  ] MessageBrocker.Program - Press any key to exit 
+2017-10-09 22:43:27,074 [4] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:43:27,074 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:43:28,030 [1] [INFO  ] MessageBrocker.Program - Starting message broker 
+2017-10-09 22:43:28,045 [1] [INFO  ] MessageBrocker.Program - Press any key to stop the server 
+2017-10-09 22:43:28,045 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:43:28,045 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:43:32,232 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:43:32,279 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message=OpenConnectionRequest by TcpConnector with id 33627018-bacb-4359-acbd-2c62ede66d8d 
+2017-10-09 22:43:32,279 [4] [INFO  ] Data.RemoteApplication - New remote application with id 33627018-bacb-4359-acbd-2c62ede66d8d 
+2017-10-09 22:43:32,279 [4] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:43:32,279 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:43:32,279 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent 	message="OpenConnectionResponse" to TcpConnector with id 33627018-bacb-4359-acbd-2c62ede66d8d 
+2017-10-09 22:43:32,332 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message=PingMessage by TcpConnector with id 33627018-bacb-4359-acbd-2c62ede66d8d 
+2017-10-09 22:43:32,332 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent 	message="PongMessage" to TcpConnector with id 33627018-bacb-4359-acbd-2c62ede66d8d 
+2017-10-09 22:43:32,332 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message=DefaultMessage by TcpConnector with id 33627018-bacb-4359-acbd-2c62ede66d8d 
+2017-10-09 22:43:44,446 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:43:44,462 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:43:44,462 [4] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:43:44,462 [1] [INFO  ] MessageBrocker.Program - Press any key to exit 
+2017-10-09 22:43:44,462 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:43:45,348 [1] [INFO  ] MessageBrocker.Program - Starting message broker 
+2017-10-09 22:43:45,363 [1] [INFO  ] MessageBrocker.Program - Press any key to stop the server 
+2017-10-09 22:43:45,363 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:43:45,363 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:43:49,585 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:43:49,623 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message=OpenConnectionRequest by TcpConnector with id c247a453-b77c-4133-a130-04271576d3c3 
+2017-10-09 22:43:49,623 [4] [INFO  ] Data.RemoteApplication - New remote application with id c247a453-b77c-4133-a130-04271576d3c3 
+2017-10-09 22:43:49,623 [4] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:43:49,623 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:43:49,623 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent	message="OpenConnectionResponse" to TcpConnector with id c247a453-b77c-4133-a130-04271576d3c3 
+2017-10-09 22:43:49,639 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message=PingMessage by TcpConnector with id c247a453-b77c-4133-a130-04271576d3c3 
+2017-10-09 22:43:49,655 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent	message="PongMessage" to TcpConnector with id c247a453-b77c-4133-a130-04271576d3c3 
+2017-10-09 22:43:49,655 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message=DefaultMessage by TcpConnector with id c247a453-b77c-4133-a130-04271576d3c3 
+2017-10-09 22:44:07,473 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:44:07,475 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:44:07,475 [4] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:44:07,475 [1] [INFO  ] MessageBrocker.Program - Press any key to exit 
+2017-10-09 22:44:07,475 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:44:08,376 [1] [INFO  ] MessageBrocker.Program - Starting message broker 
+2017-10-09 22:44:08,377 [1] [INFO  ] MessageBrocker.Program - Press any key to stop the server 
+2017-10-09 22:44:08,377 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:44:08,377 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:44:13,974 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:44:13,995 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message=OpenConnectionRequest by TcpConnector with id 8191a219-c99e-46c6-9df1-9745d56d30b9 
+2017-10-09 22:44:13,995 [4] [INFO  ] Data.RemoteApplication - New remote application with id 8191a219-c99e-46c6-9df1-9745d56d30b9 
+2017-10-09 22:44:13,995 [4] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:44:14,011 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:44:14,011 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" to TcpConnector with id 8191a219-c99e-46c6-9df1-9745d56d30b9 
+2017-10-09 22:44:14,058 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message=PingMessage by TcpConnector with id 8191a219-c99e-46c6-9df1-9745d56d30b9 
+2017-10-09 22:44:14,058 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" to TcpConnector with id 8191a219-c99e-46c6-9df1-9745d56d30b9 
+2017-10-09 22:44:14,058 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message=DefaultMessage by TcpConnector with id 8191a219-c99e-46c6-9df1-9745d56d30b9 
+2017-10-09 22:44:50,569 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:44:50,569 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:44:50,569 [1] [INFO  ] MessageBrocker.Program - Press any key to exit 
+2017-10-09 22:44:50,569 [4] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:44:50,569 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:44:51,490 [1] [INFO  ] MessageBrocker.Program - Starting message broker 
+2017-10-09 22:44:51,506 [1] [INFO  ] MessageBrocker.Program - Press any key to stop the server 
+2017-10-09 22:44:51,506 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:44:51,506 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:44:52,956 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:44:52,993 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 5ee6901f-04c2-4d52-8b36-e0d88a3e2d5a 
+2017-10-09 22:44:52,993 [4] [INFO  ] Data.RemoteApplication - New remote application with id 5ee6901f-04c2-4d52-8b36-e0d88a3e2d5a 
+2017-10-09 22:44:52,993 [4] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:44:52,993 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:44:52,993 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" to TcpConnector with id 5ee6901f-04c2-4d52-8b36-e0d88a3e2d5a 
+2017-10-09 22:44:53,040 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 5ee6901f-04c2-4d52-8b36-e0d88a3e2d5a 
+2017-10-09 22:44:53,040 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" to TcpConnector with id 5ee6901f-04c2-4d52-8b36-e0d88a3e2d5a 
+2017-10-09 22:44:53,040 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="DefaultMessage" by TcpConnector with id 5ee6901f-04c2-4d52-8b36-e0d88a3e2d5a 
+2017-10-09 22:45:31,205 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:45:31,205 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:45:31,220 [4] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:45:31,220 [1] [INFO  ] MessageBrocker.Program - Press any key to exit 
+2017-10-09 22:45:31,220 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:45:31,806 [1] [INFO  ] MessageBrocker.Program - Starting message broker 
+2017-10-09 22:45:31,822 [1] [INFO  ] MessageBrocker.Program - Press any key to stop the server 
+2017-10-09 22:45:31,822 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:45:31,822 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:45:58,419 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:45:58,434 [1] [INFO  ] MessageBrocker.Program - Press any key to exit 
+2017-10-09 22:45:59,721 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:45:59,737 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:46:16,815 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:46:18,068 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:46:18,084 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Tcp Socket was started on port 9000 
+2017-10-09 22:46:18,084 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:47:04,132 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:47:05,118 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:47:05,118 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Started Tcp socket port="9000" 
+2017-10-09 22:47:05,118 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:47:50,685 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:47:51,617 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:47:51,633 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket Protocol="TCP" port="9000" 
+2017-10-09 22:47:51,633 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:48:10,952 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:48:11,902 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:48:11,906 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 22:48:11,906 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:48:15,072 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:48:15,706 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:48:15,711 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 22:48:15,711 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:48:16,342 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:48:16,943 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:48:16,959 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 22:48:16,959 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:48:48,421 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:48:49,353 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:48:49,369 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 22:48:49,369 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections 
+2017-10-09 22:49:06,181 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - New client socket was accepted 
+2017-10-09 22:49:06,181 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:49:06,181 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Started receiving messages 
+2017-10-09 22:49:06,213 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 400ded93-4323-4774-86c1-37a3eca29f1a 
+2017-10-09 22:49:06,213 [6] [INFO  ] Data.RemoteApplication - New remote application with id 400ded93-4323-4774-86c1-37a3eca29f1a 
+2017-10-09 22:49:06,213 [6] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:49:06,213 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:49:06,228 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:49:06,228 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" to TcpConnector with id 400ded93-4323-4774-86c1-37a3eca29f1a 
+2017-10-09 22:49:06,266 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 400ded93-4323-4774-86c1-37a3eca29f1a 
+2017-10-09 22:49:06,266 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:49:06,266 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" to TcpConnector with id 400ded93-4323-4774-86c1-37a3eca29f1a 
+2017-10-09 22:49:06,266 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="DefaultMessage" by TcpConnector with id 400ded93-4323-4774-86c1-37a3eca29f1a 
+2017-10-09 22:52:19,034 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:52:19,035 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:52:19,035 [6] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:52:19,936 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:52:19,952 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 22:52:19,952 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 22:52:24,472 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - New client socket accepted protocol="Tcp" endpoint="127.0.0.1:51719" 
+2017-10-09 22:52:24,488 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:52:24,488 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Started receiving messages 
+2017-10-09 22:52:24,504 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 37e7f94f-77d8-4daf-98e0-da3b4c9d1d78 
+2017-10-09 22:52:24,504 [4] [INFO  ] Data.RemoteApplication - New remote application with id 37e7f94f-77d8-4daf-98e0-da3b4c9d1d78 
+2017-10-09 22:52:24,504 [4] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:52:24,504 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Strting connector 
+2017-10-09 22:52:24,519 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:52:24,519 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" to TcpConnector with id 37e7f94f-77d8-4daf-98e0-da3b4c9d1d78 
+2017-10-09 22:52:24,541 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 37e7f94f-77d8-4daf-98e0-da3b4c9d1d78 
+2017-10-09 22:52:24,557 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:52:24,557 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" to TcpConnector with id 37e7f94f-77d8-4daf-98e0-da3b4c9d1d78 
+2017-10-09 22:52:24,557 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="DefaultMessage" by TcpConnector with id 37e7f94f-77d8-4daf-98e0-da3b4c9d1d78 
+2017-10-09 22:56:50,886 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 22:56:50,886 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:56:50,886 [4] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed 
+2017-10-09 22:56:50,886 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 22:56:51,801 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 22:56:51,817 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 22:56:51,817 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 22:56:58,066 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:51779" 
+2017-10-09 22:56:58,066 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-09 22:56:58,088 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 0f1e616f-621f-43b4-84ba-202b94c63a3f 
+2017-10-09 22:56:58,088 [8] [INFO  ] Data.RemoteApplication - New remote application with id 0f1e616f-621f-43b4-84ba-202b94c63a3f 
+2017-10-09 22:56:58,088 [8] [INFO  ] Data.RemoteApplication - Starting remote applicatoin 
+2017-10-09 22:56:58,088 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:56:58,104 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" to TcpConnector with id 0f1e616f-621f-43b4-84ba-202b94c63a3f 
+2017-10-09 22:56:58,135 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 0f1e616f-621f-43b4-84ba-202b94c63a3f 
+2017-10-09 22:56:58,135 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - Message is preparing to be sent to communicator 
+2017-10-09 22:56:58,135 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" to TcpConnector with id 0f1e616f-621f-43b4-84ba-202b94c63a3f 
+2017-10-09 22:56:58,135 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="DefaultMessage" by TcpConnector with id 0f1e616f-621f-43b4-84ba-202b94c63a3f 
+2017-10-09 23:00:35,718 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:00:35,734 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 23:00:35,734 [8] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed TcpConnector with id="0f1e616f-621f-43b4-84ba-202b94c63a3f" 
+2017-10-09 23:00:37,051 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 23:00:37,051 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:00:37,051 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:01:34,856 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:51834" 
+2017-10-09 23:01:34,856 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-09 23:01:34,873 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id c72612af-6b58-407a-bc95-24f653348719 
+2017-10-09 23:01:34,873 [9] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id c72612af-6b58-407a-bc95-24f653348719 
+2017-10-09 23:01:34,888 [9] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="c72612af-6b58-407a-bc95-24f653348719" 
+2017-10-09 23:01:34,888 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" to TcpConnector with id c72612af-6b58-407a-bc95-24f653348719 
+2017-10-09 23:01:34,919 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id c72612af-6b58-407a-bc95-24f653348719 
+2017-10-09 23:01:34,919 [9] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="c72612af-6b58-407a-bc95-24f653348719" 
+2017-10-09 23:01:34,919 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" to TcpConnector with id c72612af-6b58-407a-bc95-24f653348719 
+2017-10-09 23:01:34,919 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="DefaultMessage" by TcpConnector with id c72612af-6b58-407a-bc95-24f653348719 
+2017-10-09 23:01:54,744 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:01:54,744 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 23:01:54,744 [9] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed TcpConnector with id="c72612af-6b58-407a-bc95-24f653348719" 
+2017-10-09 23:01:56,030 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:01:56,030 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:04:36,656 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:04:37,956 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:04:37,971 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:04:53,122 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:04:53,940 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:04:53,955 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:05:02,649 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:05:03,245 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:05:03,251 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:05:32,550 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:05:33,852 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:05:33,852 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:05:55,160 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 00530231-91fe-4cb0-9903-eda905859664 
+2017-10-09 23:05:55,160 [9] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 00530231-91fe-4cb0-9903-eda905859664 
+2017-10-09 23:05:55,160 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" to TcpConnector with id 00530231-91fe-4cb0-9903-eda905859664 
+2017-10-09 23:05:55,192 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 00530231-91fe-4cb0-9903-eda905859664 
+2017-10-09 23:05:55,192 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" to TcpConnector with id 00530231-91fe-4cb0-9903-eda905859664 
+2017-10-09 23:05:55,192 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="DefaultMessage" by TcpConnector with id 00530231-91fe-4cb0-9903-eda905859664 
+2017-10-09 23:06:41,186 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:06:41,186 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 23:06:41,186 [9] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed TcpConnector with id="00530231-91fe-4cb0-9903-eda905859664" 
+2017-10-09 23:06:42,726 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:06:42,726 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:06:49,380 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 451a97f0-eef3-434a-b731-01d0eb9bfc09 
+2017-10-09 23:06:49,380 [8] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 451a97f0-eef3-434a-b731-01d0eb9bfc09 
+2017-10-09 23:06:49,380 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" to TcpConnector with id 451a97f0-eef3-434a-b731-01d0eb9bfc09 
+2017-10-09 23:06:49,412 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 451a97f0-eef3-434a-b731-01d0eb9bfc09 
+2017-10-09 23:06:49,415 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" to TcpConnector with id 451a97f0-eef3-434a-b731-01d0eb9bfc09 
+2017-10-09 23:06:49,417 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="DefaultMessage" by TcpConnector with id 451a97f0-eef3-434a-b731-01d0eb9bfc09 
+2017-10-09 23:07:13,260 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:07:13,260 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 23:07:13,260 [8] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed TcpConnector with id="451a97f0-eef3-434a-b731-01d0eb9bfc09" 
+2017-10-09 23:07:14,539 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:07:14,539 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:07:19,628 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id f6cf7e69-10f5-404d-bc80-5c1583b8b907 
+2017-10-09 23:07:19,628 [4] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id f6cf7e69-10f5-404d-bc80-5c1583b8b907 
+2017-10-09 23:07:19,628 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" to TcpConnector with id f6cf7e69-10f5-404d-bc80-5c1583b8b907 
+2017-10-09 23:07:19,659 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id f6cf7e69-10f5-404d-bc80-5c1583b8b907 
+2017-10-09 23:07:19,659 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" to TcpConnector with id f6cf7e69-10f5-404d-bc80-5c1583b8b907 
+2017-10-09 23:07:19,676 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="DefaultMessage" by TcpConnector with id f6cf7e69-10f5-404d-bc80-5c1583b8b907 
+2017-10-09 23:07:31,031 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:07:31,031 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 23:07:31,031 [4] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed TcpConnector with id="f6cf7e69-10f5-404d-bc80-5c1583b8b907" 
+2017-10-09 23:08:00,014 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 23:08:00,030 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:08:00,030 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:08:04,436 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:08:47,929 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 23:08:47,945 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:08:47,945 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:08:49,445 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:09:48,724 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 23:09:48,724 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:09:48,740 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:09:50,641 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:10:33,599 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 23:10:33,614 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:10:33,614 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:10:36,000 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:10:54,718 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 23:10:54,718 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:10:54,718 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:10:59,037 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:11:08,770 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 23:11:08,786 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:11:08,786 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:11:09,809 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:11:23,738 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 23:11:23,754 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:11:23,754 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:11:24,855 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:16:26,638 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 23:16:26,660 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:16:26,660 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:16:29,868 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:52066" 
+2017-10-09 23:16:29,868 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-09 23:16:29,883 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id e8fb43b3-9d0a-45e7-80eb-ce60391ee53f 
+2017-10-09 23:16:29,899 [6] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id e8fb43b3-9d0a-45e7-80eb-ce60391ee53f 
+2017-10-09 23:16:29,899 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="e8fb43b3-9d0a-45e7-80eb-ce60391ee53f" 
+2017-10-09 23:16:29,899 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" to TcpConnector with id e8fb43b3-9d0a-45e7-80eb-ce60391ee53f 
+2017-10-09 23:16:29,930 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id e8fb43b3-9d0a-45e7-80eb-ce60391ee53f 
+2017-10-09 23:16:29,930 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="e8fb43b3-9d0a-45e7-80eb-ce60391ee53f" 
+2017-10-09 23:16:29,930 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" to TcpConnector with id e8fb43b3-9d0a-45e7-80eb-ce60391ee53f 
+2017-10-09 23:16:29,930 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="DefaultMessage" by TcpConnector with id e8fb43b3-9d0a-45e7-80eb-ce60391ee53f 
+2017-10-09 23:16:35,716 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="CloseConnectionRequest" by TcpConnector with id e8fb43b3-9d0a-45e7-80eb-ce60391ee53f 
+2017-10-09 23:16:35,732 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 23:16:36,348 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:52072" 
+2017-10-09 23:16:36,348 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-09 23:16:36,385 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 5a6837d7-0389-4dc4-bebe-b89035c1ab4b 
+2017-10-09 23:16:36,385 [4] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 5a6837d7-0389-4dc4-bebe-b89035c1ab4b 
+2017-10-09 23:16:36,385 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="5a6837d7-0389-4dc4-bebe-b89035c1ab4b" 
+2017-10-09 23:16:36,385 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" to TcpConnector with id 5a6837d7-0389-4dc4-bebe-b89035c1ab4b 
+2017-10-09 23:16:36,417 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 5a6837d7-0389-4dc4-bebe-b89035c1ab4b 
+2017-10-09 23:16:36,417 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="5a6837d7-0389-4dc4-bebe-b89035c1ab4b" 
+2017-10-09 23:16:36,417 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" to TcpConnector with id 5a6837d7-0389-4dc4-bebe-b89035c1ab4b 
+2017-10-09 23:16:36,417 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="DefaultMessage" by TcpConnector with id 5a6837d7-0389-4dc4-bebe-b89035c1ab4b 
+2017-10-09 23:16:42,033 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - CloseConnectionResponse is preparing to be sent to TcpConnector with id="5a6837d7-0389-4dc4-bebe-b89035c1ab4b" 
+2017-10-09 23:16:42,033 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="CloseConnectionResponse" to TcpConnector with id 5a6837d7-0389-4dc4-bebe-b89035c1ab4b 
+2017-10-09 23:16:42,033 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:16:42,033 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Connector is disconecting 
+2017-10-09 23:16:42,033 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="CloseConnectionRequest" by TcpConnector with id 5a6837d7-0389-4dc4-bebe-b89035c1ab4b 
+2017-10-09 23:18:33,383 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 23:18:33,399 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:18:33,401 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:18:36,562 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:52099" 
+2017-10-09 23:18:36,562 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-09 23:18:36,593 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 4ab24772-0122-4951-a295-c84332a4fecb 
+2017-10-09 23:18:36,593 [6] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 4ab24772-0122-4951-a295-c84332a4fecb 
+2017-10-09 23:18:36,593 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="4ab24772-0122-4951-a295-c84332a4fecb" 
+2017-10-09 23:18:36,593 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" to TcpConnector with id 4ab24772-0122-4951-a295-c84332a4fecb 
+2017-10-09 23:18:36,615 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 4ab24772-0122-4951-a295-c84332a4fecb 
+2017-10-09 23:18:36,615 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="4ab24772-0122-4951-a295-c84332a4fecb" 
+2017-10-09 23:18:36,615 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" to TcpConnector with id 4ab24772-0122-4951-a295-c84332a4fecb 
+2017-10-09 23:18:36,615 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="DefaultMessage" by TcpConnector with id 4ab24772-0122-4951-a295-c84332a4fecb 
+2017-10-09 23:18:42,003 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - CloseConnectionResponse is preparing to be sent to TcpConnector with id="4ab24772-0122-4951-a295-c84332a4fecb" 
+2017-10-09 23:18:42,003 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="CloseConnectionResponse" to TcpConnector with id 4ab24772-0122-4951-a295-c84332a4fecb 
+2017-10-09 23:18:42,003 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:18:42,003 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="CloseConnectionRequest" by TcpConnector with id 4ab24772-0122-4951-a295-c84332a4fecb 
+2017-10-09 23:18:42,003 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector stoped 
+2017-10-09 23:20:07,368 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 23:20:07,384 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:20:07,384 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:20:10,754 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:52121" 
+2017-10-09 23:20:10,754 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-09 23:20:10,776 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 326359e5-9106-4eea-b2c5-7c2598da7314 
+2017-10-09 23:20:10,776 [6] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 326359e5-9106-4eea-b2c5-7c2598da7314 
+2017-10-09 23:20:10,776 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="326359e5-9106-4eea-b2c5-7c2598da7314" 
+2017-10-09 23:20:10,776 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" to TcpConnector with id 326359e5-9106-4eea-b2c5-7c2598da7314 
+2017-10-09 23:20:10,807 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 326359e5-9106-4eea-b2c5-7c2598da7314 
+2017-10-09 23:20:10,807 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="326359e5-9106-4eea-b2c5-7c2598da7314" 
+2017-10-09 23:20:10,807 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" to TcpConnector with id 326359e5-9106-4eea-b2c5-7c2598da7314 
+2017-10-09 23:20:10,807 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="DefaultMessage" by TcpConnector with id 326359e5-9106-4eea-b2c5-7c2598da7314 
+2017-10-09 23:20:12,027 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - CloseConnectionResponse is preparing to be sent to TcpConnector with id="326359e5-9106-4eea-b2c5-7c2598da7314" 
+2017-10-09 23:20:12,027 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="CloseConnectionResponse" to TcpConnector with id 326359e5-9106-4eea-b2c5-7c2598da7314 
+2017-10-09 23:20:12,027 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:20:12,027 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="CloseConnectionRequest" by TcpConnector with id 326359e5-9106-4eea-b2c5-7c2598da7314 
+2017-10-09 23:20:12,027 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector stoped 
+2017-10-09 23:28:23,299 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 23:28:23,314 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:28:23,314 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:28:26,052 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:52250" 
+2017-10-09 23:28:26,052 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-09 23:28:26,067 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 8060536d-e88c-4dcc-94d7-49db95d32f91 
+2017-10-09 23:28:26,083 [6] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 8060536d-e88c-4dcc-94d7-49db95d32f91 
+2017-10-09 23:28:26,083 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="8060536d-e88c-4dcc-94d7-49db95d32f91" 
+2017-10-09 23:28:26,083 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" to TcpConnector with id 8060536d-e88c-4dcc-94d7-49db95d32f91 
+2017-10-09 23:28:26,105 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 8060536d-e88c-4dcc-94d7-49db95d32f91 
+2017-10-09 23:28:26,105 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="8060536d-e88c-4dcc-94d7-49db95d32f91" 
+2017-10-09 23:28:26,105 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" to TcpConnector with id 8060536d-e88c-4dcc-94d7-49db95d32f91 
+2017-10-09 23:28:26,105 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="DefaultMessage" by TcpConnector with id 8060536d-e88c-4dcc-94d7-49db95d32f91 
+2017-10-09 23:28:30,307 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="CloseConnectionRequest" by TcpConnector with id 8060536d-e88c-4dcc-94d7-49db95d32f91 
+2017-10-09 23:28:30,309 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector stoped 
+2017-10-09 23:28:48,922 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:52257" 
+2017-10-09 23:28:48,922 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-09 23:28:48,944 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 9a8d19a3-5d2e-4ad0-8bfb-d58e9e455e73 
+2017-10-09 23:28:48,944 [6] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 9a8d19a3-5d2e-4ad0-8bfb-d58e9e455e73 
+2017-10-09 23:28:48,944 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="9a8d19a3-5d2e-4ad0-8bfb-d58e9e455e73" 
+2017-10-09 23:28:48,944 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" to TcpConnector with id 9a8d19a3-5d2e-4ad0-8bfb-d58e9e455e73 
+2017-10-09 23:28:48,975 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 9a8d19a3-5d2e-4ad0-8bfb-d58e9e455e73 
+2017-10-09 23:28:48,975 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="9a8d19a3-5d2e-4ad0-8bfb-d58e9e455e73" 
+2017-10-09 23:28:48,975 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" to TcpConnector with id 9a8d19a3-5d2e-4ad0-8bfb-d58e9e455e73 
+2017-10-09 23:28:48,991 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="DefaultMessage" by TcpConnector with id 9a8d19a3-5d2e-4ad0-8bfb-d58e9e455e73 
+2017-10-09 23:28:50,780 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="CloseConnectionRequest" by TcpConnector with id 9a8d19a3-5d2e-4ad0-8bfb-d58e9e455e73 
+2017-10-09 23:28:50,780 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector stoped 
+2017-10-09 23:29:05,583 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:52263" 
+2017-10-09 23:29:05,583 [10] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-09 23:29:05,614 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 69b96b1a-82b3-439a-8cca-0ee24ebbf870 
+2017-10-09 23:29:05,614 [9] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 69b96b1a-82b3-439a-8cca-0ee24ebbf870 
+2017-10-09 23:29:05,614 [9] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="69b96b1a-82b3-439a-8cca-0ee24ebbf870" 
+2017-10-09 23:29:05,614 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" to TcpConnector with id 69b96b1a-82b3-439a-8cca-0ee24ebbf870 
+2017-10-09 23:29:05,645 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 69b96b1a-82b3-439a-8cca-0ee24ebbf870 
+2017-10-09 23:29:05,645 [9] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="69b96b1a-82b3-439a-8cca-0ee24ebbf870" 
+2017-10-09 23:29:05,645 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" to TcpConnector with id 69b96b1a-82b3-439a-8cca-0ee24ebbf870 
+2017-10-09 23:29:08,540 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="CloseConnectionRequest" by TcpConnector with id 69b96b1a-82b3-439a-8cca-0ee24ebbf870 
+2017-10-09 23:29:08,540 [9] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector stoped 
+2017-10-09 23:29:12,280 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:31:06,365 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 23:31:06,365 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:31:06,381 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:31:09,724 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:52303" 
+2017-10-09 23:31:09,739 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-09 23:31:09,771 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id c02fac9a-51a3-4c22-ada1-0411aeb77c80 
+2017-10-09 23:31:09,771 [6] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id c02fac9a-51a3-4c22-ada1-0411aeb77c80 
+2017-10-09 23:31:09,771 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="c02fac9a-51a3-4c22-ada1-0411aeb77c80" 
+2017-10-09 23:31:09,771 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" 112 bytes of 112 to TcpConnector with id c02fac9a-51a3-4c22-ada1-0411aeb77c80 
+2017-10-09 23:31:09,809 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id c02fac9a-51a3-4c22-ada1-0411aeb77c80 
+2017-10-09 23:31:09,809 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="c02fac9a-51a3-4c22-ada1-0411aeb77c80" 
+2017-10-09 23:31:09,809 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" 60 bytes of 60 to TcpConnector with id c02fac9a-51a3-4c22-ada1-0411aeb77c80 
+2017-10-09 23:31:38,516 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - CloseConnectionResponse is preparing to be sent to TcpConnector with id="c02fac9a-51a3-4c22-ada1-0411aeb77c80" 
+2017-10-09 23:31:38,516 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="CloseConnectionResponse" 72 bytes of 72 to TcpConnector with id c02fac9a-51a3-4c22-ada1-0411aeb77c80 
+2017-10-09 23:31:38,516 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:31:38,516 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="CloseConnectionRequest" by TcpConnector with id c02fac9a-51a3-4c22-ada1-0411aeb77c80 
+2017-10-09 23:31:38,516 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector stoped 
+2017-10-09 23:31:39,432 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 23:31:39,448 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:31:39,448 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:31:44,005 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:52314" 
+2017-10-09 23:31:44,021 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-09 23:31:44,037 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id dbe1461a-f95d-459e-90ec-910d23ca5635 
+2017-10-09 23:31:44,037 [6] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id dbe1461a-f95d-459e-90ec-910d23ca5635 
+2017-10-09 23:31:44,037 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="dbe1461a-f95d-459e-90ec-910d23ca5635" 
+2017-10-09 23:31:44,052 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" size="112" to TcpConnector with id dbe1461a-f95d-459e-90ec-910d23ca5635 
+2017-10-09 23:31:44,075 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id dbe1461a-f95d-459e-90ec-910d23ca5635 
+2017-10-09 23:31:44,075 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="dbe1461a-f95d-459e-90ec-910d23ca5635" 
+2017-10-09 23:31:44,075 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" size="60" to TcpConnector with id dbe1461a-f95d-459e-90ec-910d23ca5635 
+2017-10-09 23:32:02,883 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - CloseConnectionResponse is preparing to be sent to TcpConnector with id="dbe1461a-f95d-459e-90ec-910d23ca5635" 
+2017-10-09 23:32:02,883 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="CloseConnectionResponse" size="72" to TcpConnector with id dbe1461a-f95d-459e-90ec-910d23ca5635 
+2017-10-09 23:32:02,898 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:32:02,898 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="CloseConnectionRequest" by TcpConnector with id dbe1461a-f95d-459e-90ec-910d23ca5635 
+2017-10-09 23:32:02,898 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector stoped 
+2017-10-09 23:32:03,800 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 23:32:03,822 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:32:03,822 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:32:06,632 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:52323" 
+2017-10-09 23:32:06,632 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-09 23:32:06,665 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id a8b53195-7665-4315-9a08-ced376c5687a 
+2017-10-09 23:32:06,665 [6] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id a8b53195-7665-4315-9a08-ced376c5687a 
+2017-10-09 23:32:06,665 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="a8b53195-7665-4315-9a08-ced376c5687a" 
+2017-10-09 23:32:06,665 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" size="112 byte" to TcpConnector with id a8b53195-7665-4315-9a08-ced376c5687a 
+2017-10-09 23:32:06,701 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id a8b53195-7665-4315-9a08-ced376c5687a 
+2017-10-09 23:32:06,701 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="a8b53195-7665-4315-9a08-ced376c5687a" 
+2017-10-09 23:32:06,701 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" size="60 byte" to TcpConnector with id a8b53195-7665-4315-9a08-ced376c5687a 
+2017-10-09 23:33:54,805 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - CloseConnectionResponse is preparing to be sent to TcpConnector with id="a8b53195-7665-4315-9a08-ced376c5687a" 
+2017-10-09 23:33:54,820 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="CloseConnectionResponse" size="72 byte" to TcpConnector with id a8b53195-7665-4315-9a08-ced376c5687a 
+2017-10-09 23:33:54,820 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-09 23:33:54,820 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="CloseConnectionRequest" by TcpConnector with id a8b53195-7665-4315-9a08-ced376c5687a 
+2017-10-09 23:33:54,820 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector stoped 
+2017-10-09 23:52:56,185 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-09 23:52:56,203 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-09 23:52:56,204 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-09 23:52:59,708 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:52578" 
+2017-10-09 23:52:59,708 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-09 23:52:59,740 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id e42c87b0-7087-4106-a4e6-ccbb57a233e0 
+2017-10-09 23:52:59,740 [6] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id e42c87b0-7087-4106-a4e6-ccbb57a233e0 
+2017-10-09 23:52:59,740 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="e42c87b0-7087-4106-a4e6-ccbb57a233e0" 
+2017-10-09 23:52:59,740 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" size="112 byte" to TcpConnector with id e42c87b0-7087-4106-a4e6-ccbb57a233e0 
+2017-10-09 23:52:59,771 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id e42c87b0-7087-4106-a4e6-ccbb57a233e0 
+2017-10-09 23:52:59,771 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="e42c87b0-7087-4106-a4e6-ccbb57a233e0" 
+2017-10-09 23:52:59,787 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" size="60 byte" to TcpConnector with id e42c87b0-7087-4106-a4e6-ccbb57a233e0 
+2017-10-09 23:53:31,227 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="CloseConnectionRequest" by TcpConnector with id e42c87b0-7087-4106-a4e6-ccbb57a233e0 
+2017-10-09 23:53:31,242 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector stoped 
+2017-10-09 23:53:32,097 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:52589" 
+2017-10-09 23:53:32,097 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-09 23:53:32,112 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id c5fdfe12-cf4e-4028-b443-016c35c0dac8 
+2017-10-09 23:53:32,112 [7] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id c5fdfe12-cf4e-4028-b443-016c35c0dac8 
+2017-10-09 23:53:32,128 [7] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="c5fdfe12-cf4e-4028-b443-016c35c0dac8" 
+2017-10-09 23:53:32,128 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" size="112 byte" to TcpConnector with id c5fdfe12-cf4e-4028-b443-016c35c0dac8 
+2017-10-09 23:53:32,143 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id c5fdfe12-cf4e-4028-b443-016c35c0dac8 
+2017-10-09 23:53:32,143 [7] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="c5fdfe12-cf4e-4028-b443-016c35c0dac8" 
+2017-10-09 23:53:32,143 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" size="60 byte" to TcpConnector with id c5fdfe12-cf4e-4028-b443-016c35c0dac8 
+2017-10-09 23:53:32,162 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PayloadMessage" by TcpConnector with id c5fdfe12-cf4e-4028-b443-016c35c0dac8 

@@ -1,9 +1,8 @@
-﻿using Data.Models;
-using Domain;
+﻿using Domain;
 using Domain.Infrastructure.Mapping;
 using Domain.Messages;
 
-namespace Data.Mappers
+namespace Data.Models.Mappers
 {
     public class QueueMapper : IMapper<QueueData<MessageData>, Queue<Message>>
     {

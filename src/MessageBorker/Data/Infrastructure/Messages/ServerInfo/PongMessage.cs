@@ -1,6 +1,6 @@
 ﻿using Serialization;
 
-namespace Messages
+namespace Messages.ServerInfo
 {
     public class PongMessage : Message
     {

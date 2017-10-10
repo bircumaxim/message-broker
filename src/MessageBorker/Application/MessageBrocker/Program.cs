@@ -1,8 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Net.Sockets;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
 using log4net;
 
 namespace MessageBrocker
@@ -14,13 +10,11 @@ namespace MessageBrocker
 
         public static void Main(string[] args)
         {   
-            Logger.Info("Starting message broker");
             BrockerService.StartAsync();
-            Logger.Info("Press any key to stop the server");
             Console.ReadKey();
             BrockerService.Stop();
+            Console.WriteLine("\nServer stoped.\nPress any key to exit.");
             Console.ReadKey(); 
-            Logger.Info("Press any key to exit");
         }
     }
 }

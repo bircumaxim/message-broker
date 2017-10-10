@@ -1,21 +1,21 @@
 ﻿using Serialization;
 
-namespace Messages
+namespace Messages.Payload
 {
-    public class DefaultMessageResponse : Message
+    public class PayloadRequest : Message
     {
-        public byte[] Payload { get; set; }
-
+        public string QueueName { get; set; }
+        
         public override void Serialize(ISerializer serializer)
         {
             base.Serialize(serializer);
-            serializer.WriteByteArray(Payload);
+            serializer.WriteStringUtf8(QueueName);
         }
 
         public override void Deserialize(IDeserializer deserializer)
         {
             base.Deserialize(deserializer);
-            Payload = deserializer.ReadByteArray();
+            QueueName = deserializer.ReadStringUtf8();
         }
     }
 }
