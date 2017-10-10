@@ -1,0 +1,450 @@
+2017-10-11 01:21:46,168 [1] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="UDP" port="9000" 
+2017-10-11 01:21:49,938 [4] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connection less comunication 
+2017-10-11 01:22:29,133 [1] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="UDP" port="9000" 
+2017-10-11 01:22:32,460 [5] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connection less comunication 
+2017-10-11 01:22:40,536 [6] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connection less comunication 
+2017-10-11 01:24:27,656 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connection less comunication 
+2017-10-11 01:24:53,693 [10] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connection less comunication 
+2017-10-11 01:25:18,492 [1] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="UDP" port="9000" 
+2017-10-11 01:25:20,657 [5] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connection less comunication 
+2017-10-11 01:26:09,817 [1] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="UDP" port="9000" 
+2017-10-11 01:26:15,155 [4] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connection less comunication 
+2017-10-11 01:26:27,459 [1] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="UDP" port="9000" 
+2017-10-11 01:26:41,181 [4] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connection less comunication 
+2017-10-11 01:27:35,483 [1] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="UDP" port="9000" 
+2017-10-11 01:27:46,070 [5] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connection less comunication 
+2017-10-11 01:27:46,117 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id 17b5f49a-010a-4db0-af3d-c4506401d45a 
+2017-10-11 01:27:46,120 [3] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id 17b5f49a-010a-4db0-af3d-c4506401d45a 
+2017-10-11 01:27:46,122 [6] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connection less comunication 
+2017-10-11 01:27:46,123 [6] [ERROR ] Transport.Connectors.Udp.UdpConnector - Connection less communication is already started 
+2017-10-11 01:27:46,132 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PingMessage" by UdpConnector with id 17b5f49a-010a-4db0-af3d-c4506401d45a 
+2017-10-11 01:27:54,092 [1] [INFO  ] Transport.Connectors.Udp.UdpConnector - Connector is going to be disconnected 
+2017-10-11 01:27:54,862 [1] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="UDP" port="9000" 
+2017-10-11 01:27:57,121 [4] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connection less comunication 
+2017-10-11 01:27:57,169 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id 0fb8acf3-e598-4922-966b-cdf00ed71b1b 
+2017-10-11 01:27:57,172 [3] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id 0fb8acf3-e598-4922-966b-cdf00ed71b1b 
+2017-10-11 01:27:57,173 [6] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connection less comunication 
+2017-10-11 01:27:57,174 [6] [ERROR ] Transport.Connectors.Udp.UdpConnector - Connection less communication is already started 
+2017-10-11 01:27:57,180 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PingMessage" by UdpConnector with id 0fb8acf3-e598-4922-966b-cdf00ed71b1b 
+2017-10-11 01:28:06,475 [1] [INFO  ] Transport.Connectors.Udp.UdpConnector - Connector is going to be disconnected 
+2017-10-11 01:28:07,209 [1] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="UDP" port="9000" 
+2017-10-11 01:28:09,140 [5] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connection less comunication 
+2017-10-11 01:28:09,191 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id cbacf5ea-f6c6-48a0-bda3-186257c0e4e6 
+2017-10-11 01:28:09,193 [3] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id cbacf5ea-f6c6-48a0-bda3-186257c0e4e6 
+2017-10-11 01:28:09,194 [6] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connection less comunication 
+2017-10-11 01:28:09,195 [6] [ERROR ] Transport.Connectors.Udp.UdpConnector - Connection less communication is already started 
+2017-10-11 01:28:09,202 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PingMessage" by UdpConnector with id cbacf5ea-f6c6-48a0-bda3-186257c0e4e6 
+2017-10-11 01:29:24,501 [1] [INFO  ] Transport.Connectors.Udp.UdpConnector - Connector is going to be disconnected 
+2017-10-11 01:29:25,268 [1] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="UDP" port="9000" 
+2017-10-11 01:29:31,371 [5] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connection less comunication 
+2017-10-11 01:29:31,426 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id 0f550b17-e6b1-4e3e-80a4-70b7cdbca808 
+2017-10-11 01:29:31,430 [3] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id 0f550b17-e6b1-4e3e-80a4-70b7cdbca808 
+2017-10-11 01:29:31,432 [6] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connection less comunication 
+2017-10-11 01:29:31,433 [6] [ERROR ] Transport.Connectors.Udp.UdpConnector - Connection less communication is already started 
+2017-10-11 01:29:31,441 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PingMessage" by UdpConnector with id 0f550b17-e6b1-4e3e-80a4-70b7cdbca808 
+2017-10-11 01:32:03,292 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connection less comunication 
+2017-10-11 01:32:03,338 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id 8b285aeb-5128-4d4a-b7c7-8dab96abcad3 
+2017-10-11 01:32:03,339 [3] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id 8b285aeb-5128-4d4a-b7c7-8dab96abcad3 
+2017-10-11 01:32:03,340 [9] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connection less comunication 
+2017-10-11 01:32:03,342 [9] [ERROR ] Transport.Connectors.Udp.UdpConnector - Connection less communication is already started 
+2017-10-11 01:32:03,352 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PingMessage" by UdpConnector with id 8b285aeb-5128-4d4a-b7c7-8dab96abcad3 
+2017-10-11 01:32:17,221 [1] [INFO  ] Transport.Connectors.Udp.UdpConnector - Connector is going to be disconnected 
+2017-10-11 01:32:17,230 [1] [INFO  ] Transport.Connectors.Udp.UdpConnector - Connector is going to be disconnected 
+2017-10-11 01:32:22,345 [1] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="UDP" port="9000" 
+2017-10-11 01:32:26,410 [5] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connectionLess comunication 
+2017-10-11 01:32:26,581 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id 1fc20742-eb53-4b70-ad68-1f23a7a3f06c 
+2017-10-11 01:32:26,630 [3] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id 1fc20742-eb53-4b70-ad68-1f23a7a3f06c 
+2017-10-11 01:32:26,632 [7] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connectionLess comunication 
+2017-10-11 01:32:26,634 [7] [ERROR ] Transport.Connectors.Udp.UdpConnector - ConnectionLess communication is already started 
+2017-10-11 01:32:26,643 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PingMessage" by UdpConnector with id 1fc20742-eb53-4b70-ad68-1f23a7a3f06c 
+2017-10-11 01:33:40,516 [1] [INFO  ] Transport.Connectors.Udp.UdpConnector - Connector is going to be disconnected 
+2017-10-11 01:33:41,996 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-11 01:33:42,005 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-11 01:33:42,006 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-11 01:33:46,122 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:57708" 
+2017-10-11 01:33:46,126 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-11 01:33:46,151 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 82eccd54-a9e2-449c-b1d3-aebef445e9d8 
+2017-10-11 01:33:46,156 [6] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 82eccd54-a9e2-449c-b1d3-aebef445e9d8 
+2017-10-11 01:33:46,158 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="82eccd54-a9e2-449c-b1d3-aebef445e9d8" 
+2017-10-11 01:33:46,160 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" size="112 byte" to TcpConnector with id 82eccd54-a9e2-449c-b1d3-aebef445e9d8 
+2017-10-11 01:33:46,197 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 82eccd54-a9e2-449c-b1d3-aebef445e9d8 
+2017-10-11 01:33:46,199 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="82eccd54-a9e2-449c-b1d3-aebef445e9d8" 
+2017-10-11 01:33:46,201 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" size="60 byte" to TcpConnector with id 82eccd54-a9e2-449c-b1d3-aebef445e9d8 
+2017-10-11 01:33:52,063 [6] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed TcpConnector with id="82eccd54-a9e2-449c-b1d3-aebef445e9d8" 
+2017-10-11 01:34:16,030 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - CloseConnectionResponse is preparing to be sent to TcpConnector with id="82eccd54-a9e2-449c-b1d3-aebef445e9d8" 
+2017-10-11 01:34:52,293 [1] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="UDP" port="9000" 
+2017-10-11 01:35:02,201 [1] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="UDP" port="9000" 
+2017-10-11 01:35:51,184 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connectionLess comunication 
+2017-10-11 01:36:27,965 [7] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id 01364cce-337c-4f0c-bcf8-33b6317895e0 
+2017-10-11 01:36:44,322 [7] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id 01364cce-337c-4f0c-bcf8-33b6317895e0 
+2017-10-11 01:37:31,451 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connectionLess comunication 
+2017-10-11 01:37:31,473 [11] [ERROR ] Transport.Connectors.Udp.UdpConnector - ConnectionLess communication is already started 
+2017-10-11 01:37:32,498 [7] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PingMessage" by UdpConnector with id 01364cce-337c-4f0c-bcf8-33b6317895e0 
+2017-10-11 01:38:09,543 [1] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="UDP" port="9000" 
+2017-10-11 01:38:12,606 [4] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connectionLess comunication 
+2017-10-11 01:38:12,647 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id 76848f52-9cde-4e89-a7ce-63f7087d05dc 
+2017-10-11 01:38:12,649 [3] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id 76848f52-9cde-4e89-a7ce-63f7087d05dc 
+2017-10-11 01:38:12,657 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PingMessage" by UdpConnector with id 76848f52-9cde-4e89-a7ce-63f7087d05dc 
+2017-10-11 01:38:34,816 [1] [INFO  ] Transport.Connectors.Udp.UdpConnector - Connector is going to be disconnected 
+2017-10-11 01:38:36,256 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-11 01:38:36,265 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-11 01:38:36,266 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-11 01:38:38,531 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:57804" 
+2017-10-11 01:38:38,538 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-11 01:38:38,569 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id b87ae0ef-f75b-41ce-ba99-a4a005e88084 
+2017-10-11 01:38:38,574 [6] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id b87ae0ef-f75b-41ce-ba99-a4a005e88084 
+2017-10-11 01:38:38,576 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="b87ae0ef-f75b-41ce-ba99-a4a005e88084" 
+2017-10-11 01:38:38,579 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" size="112 byte" to TcpConnector with id b87ae0ef-f75b-41ce-ba99-a4a005e88084 
+2017-10-11 01:38:38,614 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id b87ae0ef-f75b-41ce-ba99-a4a005e88084 
+2017-10-11 01:38:38,616 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="b87ae0ef-f75b-41ce-ba99-a4a005e88084" 
+2017-10-11 01:38:38,617 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" size="60 byte" to TcpConnector with id b87ae0ef-f75b-41ce-ba99-a4a005e88084 
+2017-10-11 01:39:55,856 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - CloseConnectionResponse is preparing to be sent to TcpConnector with id="b87ae0ef-f75b-41ce-ba99-a4a005e88084" 
+2017-10-11 01:39:55,858 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="CloseConnectionResponse" size="72 byte" to TcpConnector with id b87ae0ef-f75b-41ce-ba99-a4a005e88084 
+2017-10-11 01:39:55,860 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-11 01:39:55,863 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector stoped 
+2017-10-11 01:39:55,864 [6] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed TcpConnector with id="b87ae0ef-f75b-41ce-ba99-a4a005e88084" 
+2017-10-11 01:39:57,680 [1] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="UDP" port="9000" 
+2017-10-11 01:40:16,701 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting sockets listener 
+2017-10-11 01:40:16,711 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="TCP" port="9000" 
+2017-10-11 01:40:16,712 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-11 01:40:24,415 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Stop sockets listener 
+2017-10-11 01:40:48,865 [1] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="UDP" port="9000" 
+2017-10-11 01:47:12,691 [5] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="UDP" port="9000" 
+2017-10-11 01:49:31,937 [4] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="UDP" port="9000" 
+2017-10-11 01:54:46,411 [4] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 01:54:46,419 [4] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="UDP" port="9000" 
+2017-10-11 02:04:13,117 [5] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:04:13,128 [5] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="9000" 
+2017-10-11 02:04:14,581 [1] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Stoping UdpReceiver 
+2017-10-11 02:04:23,185 [4] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:04:23,193 [4] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="9000" 
+2017-10-11 02:04:35,489 [5] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connectionLess comunication 
+2017-10-11 02:04:35,531 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id 297e0686-34bf-4c23-8079-ac7103a35312 
+2017-10-11 02:04:35,533 [3] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id 297e0686-34bf-4c23-8079-ac7103a35312 
+2017-10-11 02:04:35,540 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PingMessage" by UdpConnector with id 297e0686-34bf-4c23-8079-ac7103a35312 
+2017-10-11 02:04:45,270 [1] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Stoping UdpReceiver 
+2017-10-11 02:04:45,274 [1] [INFO  ] Transport.Connectors.Udp.UdpConnector - Connector is going to be disconnected 
+2017-10-11 02:05:08,922 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting TcpConnectionListener 
+2017-10-11 02:05:08,932 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="Tcp" port="9000" 
+2017-10-11 02:05:08,933 [4] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-11 02:05:11,193 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:58198" 
+2017-10-11 02:05:11,199 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-11 02:05:11,226 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 87fb3679-8fcc-4454-bf05-7126318dfa20 
+2017-10-11 02:05:11,229 [6] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 87fb3679-8fcc-4454-bf05-7126318dfa20 
+2017-10-11 02:05:11,233 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="87fb3679-8fcc-4454-bf05-7126318dfa20" 
+2017-10-11 02:05:11,234 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" size="112 byte" to TcpConnector with id 87fb3679-8fcc-4454-bf05-7126318dfa20 
+2017-10-11 02:05:11,272 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 87fb3679-8fcc-4454-bf05-7126318dfa20 
+2017-10-11 02:05:11,273 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="87fb3679-8fcc-4454-bf05-7126318dfa20" 
+2017-10-11 02:05:11,275 [6] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" size="60 byte" to TcpConnector with id 87fb3679-8fcc-4454-bf05-7126318dfa20 
+2017-10-11 02:07:49,080 [6] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed TcpConnector with id="87fb3679-8fcc-4454-bf05-7126318dfa20" 
+2017-10-11 02:07:53,027 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - CloseConnectionResponse is preparing to be sent to TcpConnector with id="87fb3679-8fcc-4454-bf05-7126318dfa20" 
+2017-10-11 02:07:54,590 [5] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:07:54,604 [5] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="9000" 
+2017-10-11 02:07:56,601 [4] [INFO  ] Transport.Connectors.Udp.UdpConnector - Starting connectionLess comunication 
+2017-10-11 02:07:56,638 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id bcdbc534-69d9-4a61-afb4-11398f1d7ca0 
+2017-10-11 02:07:56,642 [3] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id bcdbc534-69d9-4a61-afb4-11398f1d7ca0 
+2017-10-11 02:07:56,648 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PingMessage" by UdpConnector with id bcdbc534-69d9-4a61-afb4-11398f1d7ca0 
+2017-10-11 02:26:25,515 [1] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Stoping UdpReceiver 
+2017-10-11 02:26:25,517 [1] [INFO  ] Transport.Connectors.Udp.UdpConnector - Connector is going to be disconnected 
+2017-10-11 02:26:28,031 [5] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:26:28,041 [5] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="9000" 
+2017-10-11 02:27:20,948 [1] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Stoping UdpReceiver 
+2017-10-11 02:27:22,277 [4] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:27:22,279 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting TcpConnectionListener 
+2017-10-11 02:27:22,287 [4] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-11 02:27:22,288 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="Tcp" port="9000" 
+2017-10-11 02:27:22,289 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-11 02:27:43,765 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:58507" 
+2017-10-11 02:27:43,772 [7] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-11 02:27:43,798 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id e4862e78-25d5-4fe5-b684-066d57594fff 
+2017-10-11 02:27:43,800 [8] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id e4862e78-25d5-4fe5-b684-066d57594fff 
+2017-10-11 02:27:43,804 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="e4862e78-25d5-4fe5-b684-066d57594fff" 
+2017-10-11 02:27:43,807 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" size="112 byte" to TcpConnector with id e4862e78-25d5-4fe5-b684-066d57594fff 
+2017-10-11 02:27:43,839 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id e4862e78-25d5-4fe5-b684-066d57594fff 
+2017-10-11 02:27:43,841 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="e4862e78-25d5-4fe5-b684-066d57594fff" 
+2017-10-11 02:27:43,843 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" size="60 byte" to TcpConnector with id e4862e78-25d5-4fe5-b684-066d57594fff 
+2017-10-11 02:27:55,886 [8] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed TcpConnector with id="e4862e78-25d5-4fe5-b684-066d57594fff" 
+2017-10-11 02:28:41,902 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:58522" 
+2017-10-11 02:28:41,905 [9] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-11 02:28:41,932 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id a51bbb7f-3b83-44b8-925b-922e6ad70197 
+2017-10-11 02:28:41,936 [10] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id a51bbb7f-3b83-44b8-925b-922e6ad70197 
+2017-10-11 02:28:41,937 [10] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="a51bbb7f-3b83-44b8-925b-922e6ad70197" 
+2017-10-11 02:28:41,939 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" size="112 byte" to TcpConnector with id a51bbb7f-3b83-44b8-925b-922e6ad70197 
+2017-10-11 02:28:41,971 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id a51bbb7f-3b83-44b8-925b-922e6ad70197 
+2017-10-11 02:28:41,972 [10] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="a51bbb7f-3b83-44b8-925b-922e6ad70197" 
+2017-10-11 02:28:41,973 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" size="60 byte" to TcpConnector with id a51bbb7f-3b83-44b8-925b-922e6ad70197 
+2017-10-11 02:28:41,975 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PayloadMessage" by TcpConnector with id a51bbb7f-3b83-44b8-925b-922e6ad70197 
+2017-10-11 02:28:41,988 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="ServerGerneralInfoRequest" by TcpConnector with id a51bbb7f-3b83-44b8-925b-922e6ad70197 
+2017-10-11 02:28:41,993 [10] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - ServerGeneralInfoResponse is preparing to be sent to TcpConnector with id="a51bbb7f-3b83-44b8-925b-922e6ad70197" 
+2017-10-11 02:28:41,994 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="ServerGeneralInfoResponse" size="90 byte" to TcpConnector with id a51bbb7f-3b83-44b8-925b-922e6ad70197 
+2017-10-11 02:29:22,133 [10] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed TcpConnector with id="a51bbb7f-3b83-44b8-925b-922e6ad70197" 
+2017-10-11 02:29:22,946 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:58533" 
+2017-10-11 02:29:22,948 [10] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-11 02:29:22,977 [11] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 2e67bf97-238a-4904-a19b-9646a02453c2 
+2017-10-11 02:29:22,979 [11] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 2e67bf97-238a-4904-a19b-9646a02453c2 
+2017-10-11 02:29:22,980 [11] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="2e67bf97-238a-4904-a19b-9646a02453c2" 
+2017-10-11 02:29:22,981 [11] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" size="112 byte" to TcpConnector with id 2e67bf97-238a-4904-a19b-9646a02453c2 
+2017-10-11 02:29:23,015 [11] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 2e67bf97-238a-4904-a19b-9646a02453c2 
+2017-10-11 02:29:23,016 [11] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="2e67bf97-238a-4904-a19b-9646a02453c2" 
+2017-10-11 02:29:23,017 [11] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" size="60 byte" to TcpConnector with id 2e67bf97-238a-4904-a19b-9646a02453c2 
+2017-10-11 02:29:23,018 [11] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PayloadMessage" by TcpConnector with id 2e67bf97-238a-4904-a19b-9646a02453c2 
+2017-10-11 02:29:23,020 [11] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="ServerGerneralInfoRequest" by TcpConnector with id 2e67bf97-238a-4904-a19b-9646a02453c2 
+2017-10-11 02:29:23,022 [11] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - ServerGeneralInfoResponse is preparing to be sent to TcpConnector with id="2e67bf97-238a-4904-a19b-9646a02453c2" 
+2017-10-11 02:29:23,023 [11] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="ServerGeneralInfoResponse" size="90 byte" to TcpConnector with id 2e67bf97-238a-4904-a19b-9646a02453c2 
+2017-10-11 02:29:40,495 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - CloseConnectionResponse is preparing to be sent to TcpConnector with id="e4862e78-25d5-4fe5-b684-066d57594fff" 
+2017-10-11 02:29:41,224 [4] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:29:41,225 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting TcpConnectionListener 
+2017-10-11 02:29:41,234 [4] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-11 02:29:41,234 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="Tcp" port="9000" 
+2017-10-11 02:29:41,235 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-11 02:30:11,692 [9] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:58550" 
+2017-10-11 02:30:51,394 [4] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:30:51,405 [4] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-11 02:30:51,394 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting TcpConnectionListener 
+2017-10-11 02:30:51,412 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="Tcp" port="9000" 
+2017-10-11 02:30:51,413 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-11 02:31:10,102 [9] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:58568" 
+2017-10-11 02:31:10,107 [7] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-11 02:31:23,123 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting TcpConnectionListener 
+2017-10-11 02:31:23,124 [4] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:31:23,132 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="Tcp" port="9000" 
+2017-10-11 02:31:23,133 [4] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-11 02:31:23,134 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-11 02:31:26,055 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:58590" 
+2017-10-11 02:31:26,058 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-11 02:31:26,089 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 8745f3e8-21ef-4d51-abe0-8448850719d1 
+2017-10-11 02:31:26,091 [8] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 8745f3e8-21ef-4d51-abe0-8448850719d1 
+2017-10-11 02:31:26,092 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="8745f3e8-21ef-4d51-abe0-8448850719d1" 
+2017-10-11 02:31:26,097 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" size="112 byte" to TcpConnector with id 8745f3e8-21ef-4d51-abe0-8448850719d1 
+2017-10-11 02:31:26,126 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 8745f3e8-21ef-4d51-abe0-8448850719d1 
+2017-10-11 02:31:26,130 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="8745f3e8-21ef-4d51-abe0-8448850719d1" 
+2017-10-11 02:31:26,131 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" size="60 byte" to TcpConnector with id 8745f3e8-21ef-4d51-abe0-8448850719d1 
+2017-10-11 02:31:26,132 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PayloadMessage" by TcpConnector with id 8745f3e8-21ef-4d51-abe0-8448850719d1 
+2017-10-11 02:31:26,140 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="ServerGerneralInfoRequest" by TcpConnector with id 8745f3e8-21ef-4d51-abe0-8448850719d1 
+2017-10-11 02:31:26,142 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - ServerGeneralInfoResponse is preparing to be sent to TcpConnector with id="8745f3e8-21ef-4d51-abe0-8448850719d1" 
+2017-10-11 02:31:26,145 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="ServerGeneralInfoResponse" size="90 byte" to TcpConnector with id 8745f3e8-21ef-4d51-abe0-8448850719d1 
+2017-10-11 02:31:41,625 [9] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id 1eece817-c2c3-4ea2-b5b8-a5feb9830f8e 
+2017-10-11 02:31:41,626 [9] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id 1eece817-c2c3-4ea2-b5b8-a5feb9830f8e 
+2017-10-11 02:31:58,887 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting TcpConnectionListener 
+2017-10-11 02:31:58,895 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="Tcp" port="9000" 
+2017-10-11 02:31:58,887 [4] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:31:58,896 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-11 02:31:58,897 [4] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-11 02:32:09,717 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:58604" 
+2017-10-11 02:32:09,721 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-11 02:32:09,752 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 9e509e5f-59e5-40e9-92ac-691efa7b9d39 
+2017-10-11 02:32:09,756 [8] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 9e509e5f-59e5-40e9-92ac-691efa7b9d39 
+2017-10-11 02:32:09,758 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="9e509e5f-59e5-40e9-92ac-691efa7b9d39" 
+2017-10-11 02:32:09,759 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" size="112 byte" to TcpConnector with id 9e509e5f-59e5-40e9-92ac-691efa7b9d39 
+2017-10-11 02:32:09,790 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 9e509e5f-59e5-40e9-92ac-691efa7b9d39 
+2017-10-11 02:32:09,791 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="9e509e5f-59e5-40e9-92ac-691efa7b9d39" 
+2017-10-11 02:32:09,792 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id cf8b19f8-da8f-4d63-9bf8-44bfada461c6 
+2017-10-11 02:32:09,793 [3] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id cf8b19f8-da8f-4d63-9bf8-44bfada461c6 
+2017-10-11 02:32:09,793 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" size="60 byte" to TcpConnector with id 9e509e5f-59e5-40e9-92ac-691efa7b9d39 
+2017-10-11 02:32:09,794 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PayloadMessage" by TcpConnector with id 9e509e5f-59e5-40e9-92ac-691efa7b9d39 
+2017-10-11 02:32:09,804 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PingMessage" by UdpConnector with id cf8b19f8-da8f-4d63-9bf8-44bfada461c6 
+2017-10-11 02:32:09,804 [10] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="ServerGerneralInfoRequest" by UdpConnector with id cf8b19f8-da8f-4d63-9bf8-44bfada461c6 
+2017-10-11 02:32:09,804 [9] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessage" by UdpConnector with id cf8b19f8-da8f-4d63-9bf8-44bfada461c6 
+2017-10-11 02:32:09,807 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="ServerGerneralInfoRequest" by TcpConnector with id 9e509e5f-59e5-40e9-92ac-691efa7b9d39 
+2017-10-11 02:32:09,808 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - ServerGeneralInfoResponse is preparing to be sent to TcpConnector with id="9e509e5f-59e5-40e9-92ac-691efa7b9d39" 
+2017-10-11 02:32:09,809 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="ServerGeneralInfoResponse" size="90 byte" to TcpConnector with id 9e509e5f-59e5-40e9-92ac-691efa7b9d39 
+2017-10-11 02:33:12,667 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - CloseConnectionResponse is preparing to be sent to TcpConnector with id="9e509e5f-59e5-40e9-92ac-691efa7b9d39" 
+2017-10-11 02:33:12,668 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="CloseConnectionResponse" size="72 byte" to TcpConnector with id 9e509e5f-59e5-40e9-92ac-691efa7b9d39 
+2017-10-11 02:33:12,670 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Stoping TcpConnectionListener 
+2017-10-11 02:33:12,672 [1] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Stoping UdpReceiver 
+2017-10-11 02:33:12,674 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector stoped 
+2017-10-11 02:33:12,676 [8] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed TcpConnector with id="9e509e5f-59e5-40e9-92ac-691efa7b9d39" 
+2017-10-11 02:33:12,676 [1] [DEBUG ] Transport.Connectors.Udp.UdpConnector - UdpConnector stoped 
+2017-10-11 02:33:13,897 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting TcpConnectionListener 
+2017-10-11 02:33:13,898 [4] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:33:13,908 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="Tcp" port="9000" 
+2017-10-11 02:33:13,909 [4] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-11 02:33:13,910 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-11 02:33:16,463 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Stoping TcpConnectionListener 
+2017-10-11 02:33:16,464 [1] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Stoping UdpReceiver 
+2017-10-11 02:33:26,835 [6] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:33:26,845 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Stoping TcpConnectionListener 
+2017-10-11 02:33:26,856 [1] [ERROR ] Transport.Connectors.Tcp.TcpConnectionListener - TcpConnectionListener stoped already 
+2017-10-11 02:33:26,857 [1] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Stoping UdpReceiver 
+2017-10-11 02:33:26,858 [1] [ERROR ] Transport.Connectors.Udp.UdpReceiver - UdpReceiver stoped already 
+2017-10-11 02:33:26,835 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting TcpConnectionListener 
+2017-10-11 02:33:26,863 [6] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-11 02:33:26,863 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="Tcp" port="9000" 
+2017-10-11 02:33:26,864 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-11 02:33:48,482 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting TcpConnectionListener 
+2017-10-11 02:33:48,482 [6] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:33:48,507 [6] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-11 02:33:48,507 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="Tcp" port="9000" 
+2017-10-11 02:33:48,509 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-11 02:33:51,361 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:58645" 
+2017-10-11 02:33:51,383 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-11 02:33:51,393 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 82a62305-18f3-456c-b7ec-b946dfbcb68e 
+2017-10-11 02:33:51,398 [8] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 82a62305-18f3-456c-b7ec-b946dfbcb68e 
+2017-10-11 02:34:27,611 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting TcpConnectionListener 
+2017-10-11 02:34:27,612 [6] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:34:27,635 [6] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-11 02:34:27,636 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="Tcp" port="9000" 
+2017-10-11 02:34:27,638 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-11 02:34:33,815 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:58671" 
+2017-10-11 02:34:33,825 [4] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-11 02:34:33,917 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 97f5b9f5-cf2d-4aad-b28c-536d108fe910 
+2017-10-11 02:34:33,919 [8] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 97f5b9f5-cf2d-4aad-b28c-536d108fe910 
+2017-10-11 02:35:02,491 [4] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:35:02,491 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting TcpConnectionListener 
+2017-10-11 02:35:02,502 [4] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-11 02:35:02,503 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="Tcp" port="9000" 
+2017-10-11 02:35:02,504 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-11 02:35:06,591 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:58682" 
+2017-10-11 02:35:06,595 [6] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-11 02:35:06,625 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 97088a96-e264-4c8f-bdee-ad10df1823bb 
+2017-10-11 02:35:06,627 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - UdpInitMessageResponse is preparing to be sent to UdpConnector with id="05e25dda-9285-4d11-8292-590aada16350" 
+2017-10-11 02:35:06,627 [8] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 97088a96-e264-4c8f-bdee-ad10df1823bb 
+2017-10-11 02:35:06,629 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id 05e25dda-9285-4d11-8292-590aada16350 
+2017-10-11 02:35:06,629 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="97088a96-e264-4c8f-bdee-ad10df1823bb" 
+2017-10-11 02:35:06,630 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" size="112 byte" to TcpConnector with id 97088a96-e264-4c8f-bdee-ad10df1823bb 
+2017-10-11 02:35:06,660 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 97088a96-e264-4c8f-bdee-ad10df1823bb 
+2017-10-11 02:35:06,662 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="97088a96-e264-4c8f-bdee-ad10df1823bb" 
+2017-10-11 02:35:06,662 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id 05e25dda-9285-4d11-8292-590aada16350 
+2017-10-11 02:35:06,663 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" size="60 byte" to TcpConnector with id 97088a96-e264-4c8f-bdee-ad10df1823bb 
+2017-10-11 02:35:06,663 [3] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id 05e25dda-9285-4d11-8292-590aada16350 
+2017-10-11 02:35:06,664 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PayloadMessage" by TcpConnector with id 97088a96-e264-4c8f-bdee-ad10df1823bb 
+2017-10-11 02:35:06,665 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - OpenConnectionResponse is preparing to be sent to UdpConnector with id="05e25dda-9285-4d11-8292-590aada16350" 
+2017-10-11 02:35:06,666 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="OpenConnectionResponse" size="222 byte" to UdpConnector with id 05e25dda-9285-4d11-8292-590aada16350 
+2017-10-11 02:35:06,673 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PingMessage" by UdpConnector with id 05e25dda-9285-4d11-8292-590aada16350 
+2017-10-11 02:35:06,673 [9] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessage" by UdpConnector with id 05e25dda-9285-4d11-8292-590aada16350 
+2017-10-11 02:35:06,674 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - PongMessage is preparing to be sent to UdpConnector with id="05e25dda-9285-4d11-8292-590aada16350" 
+2017-10-11 02:35:06,673 [10] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="ServerGerneralInfoRequest" by UdpConnector with id 05e25dda-9285-4d11-8292-590aada16350 
+2017-10-11 02:35:06,675 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PongMessage" size="170 byte" to UdpConnector with id 05e25dda-9285-4d11-8292-590aada16350 
+2017-10-11 02:35:06,676 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="ServerGerneralInfoRequest" by TcpConnector with id 97088a96-e264-4c8f-bdee-ad10df1823bb 
+2017-10-11 02:35:06,677 [10] [DEBUG ] Transport.Connectors.Udp.UdpConnector - ServerGeneralInfoResponse is preparing to be sent to UdpConnector with id="05e25dda-9285-4d11-8292-590aada16350" 
+2017-10-11 02:35:06,678 [10] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="ServerGeneralInfoResponse" size="200 byte" to UdpConnector with id 05e25dda-9285-4d11-8292-590aada16350 
+2017-10-11 02:35:06,679 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - ServerGeneralInfoResponse is preparing to be sent to TcpConnector with id="97088a96-e264-4c8f-bdee-ad10df1823bb" 
+2017-10-11 02:35:06,680 [8] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="ServerGeneralInfoResponse" size="90 byte" to TcpConnector with id 97088a96-e264-4c8f-bdee-ad10df1823bb 
+2017-10-11 02:35:59,554 [8] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed TcpConnector with id="97088a96-e264-4c8f-bdee-ad10df1823bb" 
+2017-10-11 02:36:00,353 [10] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:58695" 
+2017-10-11 02:36:00,354 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-11 02:36:00,381 [11] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 23b42c16-10ab-4d64-afd5-07fdf01b598d 
+2017-10-11 02:36:00,382 [11] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 23b42c16-10ab-4d64-afd5-07fdf01b598d 
+2017-10-11 02:36:00,383 [10] [DEBUG ] Transport.Connectors.Udp.UdpConnector - UdpInitMessageResponse is preparing to be sent to UdpConnector with id="4fc38577-3e1f-4480-96e7-288fa81c5ce2" 
+2017-10-11 02:36:00,383 [11] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="23b42c16-10ab-4d64-afd5-07fdf01b598d" 
+2017-10-11 02:36:00,386 [10] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id 4fc38577-3e1f-4480-96e7-288fa81c5ce2 
+2017-10-11 02:36:00,387 [11] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" size="112 byte" to TcpConnector with id 23b42c16-10ab-4d64-afd5-07fdf01b598d 
+2017-10-11 02:36:00,423 [11] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 23b42c16-10ab-4d64-afd5-07fdf01b598d 
+2017-10-11 02:36:00,425 [11] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="23b42c16-10ab-4d64-afd5-07fdf01b598d" 
+2017-10-11 02:36:00,425 [11] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" size="60 byte" to TcpConnector with id 23b42c16-10ab-4d64-afd5-07fdf01b598d 
+2017-10-11 02:36:00,426 [11] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PayloadMessage" by TcpConnector with id 23b42c16-10ab-4d64-afd5-07fdf01b598d 
+2017-10-11 02:36:00,428 [11] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="ServerGerneralInfoRequest" by TcpConnector with id 23b42c16-10ab-4d64-afd5-07fdf01b598d 
+2017-10-11 02:36:00,429 [11] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - ServerGeneralInfoResponse is preparing to be sent to TcpConnector with id="23b42c16-10ab-4d64-afd5-07fdf01b598d" 
+2017-10-11 02:36:00,429 [11] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="ServerGeneralInfoResponse" size="90 byte" to TcpConnector with id 23b42c16-10ab-4d64-afd5-07fdf01b598d 
+2017-10-11 02:36:00,427 [10] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id 4fc38577-3e1f-4480-96e7-288fa81c5ce2 
+2017-10-11 02:36:00,430 [10] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id 4fc38577-3e1f-4480-96e7-288fa81c5ce2 
+2017-10-11 02:36:00,431 [10] [DEBUG ] Transport.Connectors.Udp.UdpConnector - OpenConnectionResponse is preparing to be sent to UdpConnector with id="4fc38577-3e1f-4480-96e7-288fa81c5ce2" 
+2017-10-11 02:36:00,432 [10] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="OpenConnectionResponse" size="222 byte" to UdpConnector with id 4fc38577-3e1f-4480-96e7-288fa81c5ce2 
+2017-10-11 02:36:00,445 [10] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PingMessage" by UdpConnector with id 4fc38577-3e1f-4480-96e7-288fa81c5ce2 
+2017-10-11 02:36:00,445 [15] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="ServerGerneralInfoRequest" by UdpConnector with id 4fc38577-3e1f-4480-96e7-288fa81c5ce2 
+2017-10-11 02:36:00,446 [10] [DEBUG ] Transport.Connectors.Udp.UdpConnector - PongMessage is preparing to be sent to UdpConnector with id="4fc38577-3e1f-4480-96e7-288fa81c5ce2" 
+2017-10-11 02:36:00,447 [10] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PongMessage" size="170 byte" to UdpConnector with id 4fc38577-3e1f-4480-96e7-288fa81c5ce2 
+2017-10-11 02:36:00,445 [12] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessage" by UdpConnector with id 4fc38577-3e1f-4480-96e7-288fa81c5ce2 
+2017-10-11 02:36:00,449 [15] [DEBUG ] Transport.Connectors.Udp.UdpConnector - ServerGeneralInfoResponse is preparing to be sent to UdpConnector with id="4fc38577-3e1f-4480-96e7-288fa81c5ce2" 
+2017-10-11 02:36:00,450 [15] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="ServerGeneralInfoResponse" size="200 byte" to UdpConnector with id 4fc38577-3e1f-4480-96e7-288fa81c5ce2 
+2017-10-11 02:36:03,729 [11] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="CloseConnectionRequest" by TcpConnector with id 23b42c16-10ab-4d64-afd5-07fdf01b598d 
+2017-10-11 02:36:03,731 [11] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector stoped 
+2017-10-11 02:36:29,114 [1] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - CloseConnectionResponse is preparing to be sent to TcpConnector with id="97088a96-e264-4c8f-bdee-ad10df1823bb" 
+2017-10-11 02:36:40,737 [5] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:36:40,745 [5] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-11 02:38:29,582 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - UdpInitMessageResponse is preparing to be sent to UdpConnector with id="9086f4c4-a93b-43fe-a35e-2933ebda86b2" 
+2017-10-11 02:38:29,587 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id 9086f4c4-a93b-43fe-a35e-2933ebda86b2 
+2017-10-11 02:38:29,624 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id 9086f4c4-a93b-43fe-a35e-2933ebda86b2 
+2017-10-11 02:38:29,628 [3] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id 9086f4c4-a93b-43fe-a35e-2933ebda86b2 
+2017-10-11 02:38:29,629 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - OpenConnectionResponse is preparing to be sent to UdpConnector with id="9086f4c4-a93b-43fe-a35e-2933ebda86b2" 
+2017-10-11 02:38:29,630 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="OpenConnectionResponse" size="222 byte" to UdpConnector with id 9086f4c4-a93b-43fe-a35e-2933ebda86b2 
+2017-10-11 02:38:29,637 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PingMessage" by UdpConnector with id 9086f4c4-a93b-43fe-a35e-2933ebda86b2 
+2017-10-11 02:38:29,638 [9] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="ServerGerneralInfoRequest" by UdpConnector with id 9086f4c4-a93b-43fe-a35e-2933ebda86b2 
+2017-10-11 02:38:29,638 [6] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessage" by UdpConnector with id 9086f4c4-a93b-43fe-a35e-2933ebda86b2 
+2017-10-11 02:38:29,639 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - PongMessage is preparing to be sent to UdpConnector with id="9086f4c4-a93b-43fe-a35e-2933ebda86b2" 
+2017-10-11 02:38:29,640 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PongMessage" size="170 byte" to UdpConnector with id 9086f4c4-a93b-43fe-a35e-2933ebda86b2 
+2017-10-11 02:38:29,641 [9] [DEBUG ] Transport.Connectors.Udp.UdpConnector - ServerGeneralInfoResponse is preparing to be sent to UdpConnector with id="9086f4c4-a93b-43fe-a35e-2933ebda86b2" 
+2017-10-11 02:38:29,642 [9] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="ServerGeneralInfoResponse" size="200 byte" to UdpConnector with id 9086f4c4-a93b-43fe-a35e-2933ebda86b2 
+2017-10-11 02:40:24,670 [1] [DEBUG ] Transport.Connectors.Udp.UdpConnector - CloseConnectionResponse is preparing to be sent to UdpConnector with id="9086f4c4-a93b-43fe-a35e-2933ebda86b2" 
+2017-10-11 02:40:24,671 [1] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="CloseConnectionResponse" size="182 byte" to UdpConnector with id 9086f4c4-a93b-43fe-a35e-2933ebda86b2 
+2017-10-11 02:40:24,673 [1] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Stoping UdpReceiver 
+2017-10-11 02:40:24,675 [1] [DEBUG ] Transport.Connectors.Udp.UdpConnector - UdpConnector stoped 
+2017-10-11 02:40:25,304 [5] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:40:25,315 [5] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-11 02:40:40,508 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - UdpInitMessageResponse is preparing to be sent to UdpConnector with id="1037b758-ded3-42f0-a3e0-2f2d20447953" 
+2017-10-11 02:40:40,514 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id 1037b758-ded3-42f0-a3e0-2f2d20447953 
+2017-10-11 02:40:49,067 [4] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:40:49,075 [4] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-11 02:40:56,073 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - UdpInitMessageResponse is preparing to be sent to UdpConnector with id="b0a49841-b58d-42dc-8457-4c3952d7585f" 
+2017-10-11 02:40:56,075 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id b0a49841-b58d-42dc-8457-4c3952d7585f 
+2017-10-11 02:40:56,122 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id b0a49841-b58d-42dc-8457-4c3952d7585f 
+2017-10-11 02:40:56,124 [3] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id b0a49841-b58d-42dc-8457-4c3952d7585f 
+2017-10-11 02:40:56,126 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - OpenConnectionResponse is preparing to be sent to UdpConnector with id="b0a49841-b58d-42dc-8457-4c3952d7585f" 
+2017-10-11 02:40:56,127 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="OpenConnectionResponse" size="222 byte" to UdpConnector with id b0a49841-b58d-42dc-8457-4c3952d7585f 
+2017-10-11 02:40:56,131 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PingMessage" by UdpConnector with id b0a49841-b58d-42dc-8457-4c3952d7585f 
+2017-10-11 02:40:56,132 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - PongMessage is preparing to be sent to UdpConnector with id="b0a49841-b58d-42dc-8457-4c3952d7585f" 
+2017-10-11 02:40:56,133 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PongMessage" size="170 byte" to UdpConnector with id b0a49841-b58d-42dc-8457-4c3952d7585f 
+2017-10-11 02:41:01,935 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="CloseConnectionRequest" by UdpConnector with id b0a49841-b58d-42dc-8457-4c3952d7585f 
+2017-10-11 02:41:01,937 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - UdpConnector stoped 
+2017-10-11 02:46:22,713 [1] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Stoping UdpReceiver 
+2017-10-11 02:46:39,338 [4] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:46:39,346 [4] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-11 02:46:44,220 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - UdpInitMessageResponse is preparing to be sent to UdpConnector with id="355c87b6-36d6-4978-b823-9a9a6e3b30a7" 
+2017-10-11 02:46:44,223 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id 355c87b6-36d6-4978-b823-9a9a6e3b30a7 
+2017-10-11 02:46:51,271 [4] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:46:51,280 [4] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-11 02:46:54,683 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - UdpInitMessageResponse is preparing to be sent to UdpConnector with id="51aeeca2-bae2-4b3e-a630-4b5f646e799b" 
+2017-10-11 02:46:54,685 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id 51aeeca2-bae2-4b3e-a630-4b5f646e799b 
+2017-10-11 02:47:38,314 [4] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:47:38,323 [4] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-11 02:47:45,965 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - UdpInitMessageResponse is preparing to be sent to UdpConnector with id="03f43e88-adeb-44aa-87a4-a57fa96c6075" 
+2017-10-11 02:47:45,967 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id 03f43e88-adeb-44aa-87a4-a57fa96c6075 
+2017-10-11 02:48:01,525 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="CloseConnectionRequest" by UdpConnector with id 03f43e88-adeb-44aa-87a4-a57fa96c6075 
+2017-10-11 02:48:24,470 [4] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:48:24,478 [4] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-11 02:48:29,472 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - UdpInitMessageResponse is preparing to be sent to UdpConnector with id="6311675a-9cb9-4e5a-8d6e-dd31349fe0b5" 
+2017-10-11 02:48:29,474 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id 6311675a-9cb9-4e5a-8d6e-dd31349fe0b5 
+2017-10-11 02:48:29,511 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id 6311675a-9cb9-4e5a-8d6e-dd31349fe0b5 
+2017-10-11 02:48:29,514 [3] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id 6311675a-9cb9-4e5a-8d6e-dd31349fe0b5 
+2017-10-11 02:48:29,515 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - OpenConnectionResponse is preparing to be sent to UdpConnector with id="6311675a-9cb9-4e5a-8d6e-dd31349fe0b5" 
+2017-10-11 02:48:29,516 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="OpenConnectionResponse" size="222 byte" to UdpConnector with id 6311675a-9cb9-4e5a-8d6e-dd31349fe0b5 
+2017-10-11 02:48:29,521 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PingMessage" by UdpConnector with id 6311675a-9cb9-4e5a-8d6e-dd31349fe0b5 
+2017-10-11 02:48:29,523 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - PongMessage is preparing to be sent to UdpConnector with id="6311675a-9cb9-4e5a-8d6e-dd31349fe0b5" 
+2017-10-11 02:48:29,523 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PongMessage" size="170 byte" to UdpConnector with id 6311675a-9cb9-4e5a-8d6e-dd31349fe0b5 
+2017-10-11 02:48:38,545 [1] [DEBUG ] Transport.Connectors.Udp.UdpConnector - CloseConnectionResponse is preparing to be sent to UdpConnector with id="6311675a-9cb9-4e5a-8d6e-dd31349fe0b5" 
+2017-10-11 02:48:38,546 [1] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="CloseConnectionResponse" size="182 byte" to UdpConnector with id 6311675a-9cb9-4e5a-8d6e-dd31349fe0b5 
+2017-10-11 02:48:38,547 [1] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Stoping UdpReceiver 
+2017-10-11 02:48:38,548 [1] [DEBUG ] Transport.Connectors.Udp.UdpConnector - UdpConnector stoped 
+2017-10-11 02:48:51,653 [5] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:48:51,665 [5] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-11 02:48:55,327 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - UdpInitMessageResponse is preparing to be sent to UdpConnector with id="4d4b71ef-2772-4852-9168-5036f4308590" 
+2017-10-11 02:48:55,330 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id 4d4b71ef-2772-4852-9168-5036f4308590 
+2017-10-11 02:48:55,366 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id 4d4b71ef-2772-4852-9168-5036f4308590 
+2017-10-11 02:48:55,369 [3] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id 4d4b71ef-2772-4852-9168-5036f4308590 
+2017-10-11 02:48:55,372 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - OpenConnectionResponse is preparing to be sent to UdpConnector with id="4d4b71ef-2772-4852-9168-5036f4308590" 
+2017-10-11 02:48:55,375 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="OpenConnectionResponse" size="222 byte" to UdpConnector with id 4d4b71ef-2772-4852-9168-5036f4308590 
+2017-10-11 02:48:55,379 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PingMessage" by UdpConnector with id 4d4b71ef-2772-4852-9168-5036f4308590 
+2017-10-11 02:48:55,381 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - PongMessage is preparing to be sent to UdpConnector with id="4d4b71ef-2772-4852-9168-5036f4308590" 
+2017-10-11 02:48:55,381 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PongMessage" size="170 byte" to UdpConnector with id 4d4b71ef-2772-4852-9168-5036f4308590 
+2017-10-11 02:48:59,080 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="CloseConnectionRequest" by UdpConnector with id 4d4b71ef-2772-4852-9168-5036f4308590 
+2017-10-11 02:48:59,081 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - UdpConnector stoped 
+2017-10-11 02:49:09,221 [1] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Stoping UdpReceiver 
+2017-10-11 02:49:11,329 [4] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-11 02:49:11,339 [4] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-11 02:49:14,368 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - UdpInitMessageResponse is preparing to be sent to UdpConnector with id="2eecbaa8-a12a-4e62-a655-4dec22de5620" 
+2017-10-11 02:49:14,370 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id 2eecbaa8-a12a-4e62-a655-4dec22de5620 
+2017-10-11 02:49:14,403 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id 2eecbaa8-a12a-4e62-a655-4dec22de5620 
+2017-10-11 02:49:14,405 [3] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id 2eecbaa8-a12a-4e62-a655-4dec22de5620 
+2017-10-11 02:49:14,406 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - OpenConnectionResponse is preparing to be sent to UdpConnector with id="2eecbaa8-a12a-4e62-a655-4dec22de5620" 
+2017-10-11 02:49:14,407 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="OpenConnectionResponse" size="222 byte" to UdpConnector with id 2eecbaa8-a12a-4e62-a655-4dec22de5620 
+2017-10-11 02:49:14,412 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PingMessage" by UdpConnector with id 2eecbaa8-a12a-4e62-a655-4dec22de5620 
+2017-10-11 02:49:14,415 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - PongMessage is preparing to be sent to UdpConnector with id="2eecbaa8-a12a-4e62-a655-4dec22de5620" 
+2017-10-11 02:49:14,417 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PongMessage" size="170 byte" to UdpConnector with id 2eecbaa8-a12a-4e62-a655-4dec22de5620 
+2017-10-11 02:49:17,982 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="CloseConnectionRequest" by UdpConnector with id 2eecbaa8-a12a-4e62-a655-4dec22de5620 
+2017-10-11 02:49:17,984 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - UdpConnector stoped 
+2017-10-11 02:49:18,635 [3] [DEBUG ] Transport.Connectors.Udp.UdpConnector - UdpInitMessageResponse is preparing to be sent to UdpConnector with id="a6b8e879-1788-424e-9569-090c9e170b87" 
+2017-10-11 02:49:18,637 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id a6b8e879-1788-424e-9569-090c9e170b87 
+2017-10-11 02:49:34,181 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="CloseConnectionRequest" by UdpConnector with id a6b8e879-1788-424e-9569-090c9e170b87 
+2017-10-11 02:49:34,181 [8] [DEBUG ] Transport.Connectors.Udp.UdpConnector - UdpInitMessageResponse is preparing to be sent to UdpConnector with id="770c1b55-92e9-4103-97dd-19bc2a34b15c" 
+2017-10-11 02:49:34,183 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id 770c1b55-92e9-4103-97dd-19bc2a34b15c 
+2017-10-11 02:49:34,183 [1] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Stoping UdpReceiver 

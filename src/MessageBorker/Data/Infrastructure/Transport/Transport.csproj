@@ -50,6 +50,7 @@
     <Compile Include="Connectors\Tcp\Events\TcpClientConnectedEventArgs.cs" />
     <Compile Include="Connectors\Tcp\TcpConnectionListener.cs" />
     <Compile Include="Connectors\Tcp\TcpConnector.cs" />
+    <Compile Include="Connectors\Udp\Events\UdpMessageReceivedEventArgs.cs" />
     <Compile Include="Connectors\Udp\UdpConnector.cs" />
     <Compile Include="Connectors\Udp\UdpReceiver.cs" />
     <Compile Include="Events\CommunicationWay.cs" />
@@ -64,6 +65,10 @@
     <Compile Include="UdpConnectionManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Messages\Messages.csproj">
+      <Project>{2A5971C3-1E8F-4129-850B-5777CCAA59EE}</Project>
+      <Name>Messages</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Serialization\Serialization.csproj">
       <Project>{D834526C-49E4-4EC9-A4F7-43FCCDD165DC}</Project>
       <Name>Serialization</Name>

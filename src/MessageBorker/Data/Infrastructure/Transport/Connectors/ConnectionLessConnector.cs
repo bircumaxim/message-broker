@@ -21,12 +21,11 @@ namespace Transport.Connectors
 
         public override void Start()
         {
-            _logger.Info("Starting connection less comunication");
             lock (_sendLock)
             {
                 if (IsAlive)
                 {
-                    _logger.Error("Connection less communication is already started");
+                    _logger.Error($"{GetType().Name} already started");
                     return;
                 }
                 StartCommunication();
@@ -36,15 +35,15 @@ namespace Transport.Connectors
 
         public override void Stop()
         {
-            _logger.Info("Connector is going to be disconnected"); 
             lock (_sendLock)
             {
                 if (!IsAlive)
                 {
-                    _logger.Error("Connectiop less comunication is already stoped");
+                    _logger.Error($"{GetType().Name} already stoped");
                     return;
                 }
                 StopCommunication();
+                _logger.Debug($"{GetType().Name} stoped");
                 IsAlive = false;
             }
         }

@@ -15,7 +15,7 @@ namespace Transport.Connectors
 
         protected ConnectionOrientedConnector()
         {
-            _logger = LogManager.GetLogger(this.GetType());
+            _logger = LogManager.GetLogger(GetType());
             CommunicationWay = CommunicationWay.Send;
             ConnectionState = ConnectionState.Disconnected;
             _sendLock = new object();
@@ -25,12 +25,14 @@ namespace Transport.Connectors
 
         public override void Start()
         {
-            if (ConnectionState != ConnectionState.Disconnected)
-            {
-                throw new Exception("Connector is already connected");
-            }
             lock (_sendLock)
             {
+                if (ConnectionState != ConnectionState.Disconnected)
+                {
+                    _logger.Error($"{GetType().Name} already started");
+                    return;
+                }
+
                 OnStateChange(ConnectionState.Connecting);
                 StartCommunication();
                 _logger.Debug($"{GetType().Name} started");
@@ -42,6 +44,12 @@ namespace Transport.Connectors
         {
             lock (_sendLock)
             {
+                if (ConnectionState == ConnectionState.Disconnected)
+                {
+                    _logger.Error($"{GetType().Name} already stoped");
+                    return;
+                }
+
                 OnStateChange(ConnectionState.Disconnecting);
                 StopCommunication();
                 _logger.Debug($"{GetType().Name} stoped");
@@ -64,12 +72,12 @@ namespace Transport.Connectors
         protected abstract void StartCommunication();
 
         protected abstract void StopCommunication();
-        
+
         public override void SendMessage(Message message)
         {
             lock (_sendLock)
             {
-                SendMessageInternal(message);                
+                SendMessageInternal(message);
             }
         }
 

@@ -22,7 +22,7 @@ namespace MessageBuss.Buss
         public Buss GetBussFor(string brockerName)
         {
             var brocker = _brockerClients[brockerName];
-            brocker.Start();
+            brocker.StartAsync();
             return new Buss(brocker);
         }
     }

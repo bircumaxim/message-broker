@@ -17,7 +17,7 @@ namespace Transport.Connectors
 
         protected Connector()
         {
-            _logger = LogManager.GetLogger(this.GetType());
+            _logger = LogManager.GetLogger(GetType());
             ConnectorId = Guid.NewGuid().ToString();
             Validate();
         }

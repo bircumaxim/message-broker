@@ -1,5 +1,4 @@
-﻿using System.Net;
-using Serialization;
+﻿using Serialization;
 using Transport.Events;
 
 namespace Transport.Connectors

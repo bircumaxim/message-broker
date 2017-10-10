@@ -17,7 +17,7 @@ namespace Transport.Connectors.Tcp
         private readonly Socket _listenerSocket;
         private readonly CancellationTokenSource _cancellationTokenSource;
         private readonly ManualResetEvent _allDone;
-        public bool IsListening { get; set; }
+        private bool _isAlive;
         public event TcpClientConnectedHandler TcpClientConnected;
 
         public TcpConnectionListener(int port)
@@ -34,15 +34,15 @@ namespace Transport.Connectors.Tcp
 
         public void Start()
         {
-            _logger.Debug("Starting sockets listener");
-            if (IsListening)
+            _logger.Debug($"Starting {GetType().Name}");
+            if (_isAlive)
             {
-                _logger.Error("Socket already listening");
+                _logger.Error($"{GetType().Name} is already started");
                 return;
             }
-            BindSocketToEndpoint(new IPEndPoint(0, _port));
-            IsListening = !IsListening;
-            _logger.Info($"Started Socket protocol=\"TCP\" port=\"{_port}\"");
+            BindSocketToEndpoint(new IPEndPoint(IPAddress.Any, _port));
+            _isAlive = !_isAlive;
+            _logger.Info($"Started Socket protocol=\"Tcp\" port=\"{_port}\"");
             TcpSocketListening();
         }
 
@@ -53,13 +53,13 @@ namespace Transport.Connectors.Tcp
 
         public void Stop()
         {
-            _logger.Info("Stop sockets listener");
-            if (!IsListening)
+            _logger.Debug($"Stoping {GetType().Name}");
+            if (!_isAlive)
             {
-                _logger.Error("Socket is not listening already");
+                _logger.Error($"{GetType().Name} stoped already");
                 return;
             }
-            IsListening = !IsListening;
+            _isAlive = !_isAlive;
             _cancellationTokenSource.Cancel();
             _listenerSocket.Close();
             _listenerSocket.Dispose();
@@ -74,10 +74,9 @@ namespace Transport.Connectors.Tcp
                 _listenerSocket.Bind(endPoint);
                 _listenerSocket.Listen(0);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                _logger.Error("Socket binding exception");
-                Console.WriteLine(e);
+                _logger.Error($"{GetType().Name} Socket binding exception");
                 throw;
             }
         }
@@ -85,7 +84,7 @@ namespace Transport.Connectors.Tcp
         private void TcpSocketListening()
         {
             _logger.Info("Waiting for connections...");
-            while (IsListening)
+            while (_isAlive)
             {
                 _allDone.Reset();
                 _listenerSocket.BeginAccept(OnSocketAccepted, _listenerSocket);
@@ -95,7 +94,7 @@ namespace Transport.Connectors.Tcp
 
         private void OnSocketAccepted(IAsyncResult result)
         {
-            if (!IsListening) return;
+            if (!_isAlive) return;
             _allDone.Set();
             var socketListener = (Socket) result.AsyncState;
             if (socketListener == null) return;

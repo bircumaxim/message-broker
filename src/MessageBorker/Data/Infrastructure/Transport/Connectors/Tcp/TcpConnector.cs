@@ -77,8 +77,8 @@ namespace Transport.Connectors.Tcp
 
         private void SendMessageToSocket(Message message)
         {
-            _logger.Debug(
-                $"{message.MessageTypeName} is preparing to be sent to {GetType().Name} with id=\"{ConnectorId}\"");
+            _logger.Debug($"{message.MessageTypeName} is preparing to be sent to " +
+                          $"{GetType().Name} with id=\"{ConnectorId}\"");
             var memoryStream = new MemoryStream();
             _wireProtocol.WriteMessage(new DefaultSerializer(memoryStream), message);
 
@@ -102,7 +102,8 @@ namespace Transport.Connectors.Tcp
 
                 totalSent += sent;
             }
-            _logger.Info($"Sent     message=\"{message.MessageTypeName}\" size=\"{totalSent} byte\" to {GetType().Name} with id {ConnectorId}");
+            _logger.Info(
+                $"Sent     message=\"{message.MessageTypeName}\" size=\"{totalSent} byte\" to {GetType().Name} with id {ConnectorId}");
         }
 
         private void Validate()

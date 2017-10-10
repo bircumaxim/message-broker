@@ -5,10 +5,12 @@
             Name - {required, unique}
             Port - default = 9000
             WireProtocol - deafutl = DefaultWireProtocol
+            DefautlProtocols - inner {DefaultDirect, DefaultTopic, DefaultFanout}
+                each default protocol should have a unique name.
 -->
 <Buss>
     <Brockers>
-        <Brocker Name="Brocker" Ip="127.0.0.1" Port="9000" WireProtocol="DefaultWireProtocol">
+        <Brocker Name="Brocker" SocketProtocol="Tcp" Ip="127.0.0.1" Port="9000" WireProtocol="DefaultWireProtocol">
             <DefaultDirect Name="test"/>
             <DefaultTopic Name="Test1"/>
             <DefaultFanout Name="Test2"/>

@@ -12,13 +12,13 @@ namespace Serialization.Deserializers
         private readonly Stream _stream;
 
         public DefaultDeserializer(Stream stream)
-        {
-            _logger =  LogManager.GetLogger(this.GetType());
+        {   
+            _logger =  LogManager.GetLogger(GetType());
             _stream = stream;
         }
 
         public byte ReadByte()
-        {
+        {   
             var b = _stream.ReadByte();
             if (b == -1)
             {

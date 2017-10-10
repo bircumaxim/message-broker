@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Text;
 using System.Xml;
 using MessageBuss.Brocker;
 using Serialization;
@@ -47,11 +48,23 @@ namespace MessageBuss.Configuration
                     brockerNode.Attributes.GetNamedItem("WireProtocol")?.Value ?? DefaultWireProtcolName;
                 var ip = brockerNode.Attributes.GetNamedItem("Ip")?.Value ?? DefaultIp;
                 var port = Convert.ToInt32(brockerNode.Attributes.GetNamedItem("Port")?.Value ?? DefaultPort);
-
-                brocker = new BrockerClient(brockerName, GetWireProtocol(wireProtocolName),
-                    new IPEndPoint(IPAddress.Parse(ip), port), GetDefaultExchanges(brockerNode));
+                var protocolType = brockerNode.Attributes.GetNamedItem("SocketProtocol")?.Value;
+                brocker = GetBrockerBySocketProtocol(brockerName, GetWireProtocol(wireProtocolName),
+                    new IPEndPoint(IPAddress.Parse(ip), port), GetDefaultExchanges(brockerNode), protocolType);
             }
             return brocker;
+        }
+
+        private BrockerClient GetBrockerBySocketProtocol(string brockerName, IWireProtocol wireProtocol,
+            IPEndPoint endPoint, Dictionary<string, string> defautlExchanges, string socketProtocol)
+        {
+            switch (socketProtocol)
+            {
+                case "Udp":
+                    return new UdpBrockerClient(brockerName, wireProtocol, endPoint, defautlExchanges);
+                default:
+                    return new TcpBrockerClient(brockerName, wireProtocol, endPoint, defautlExchanges);
+            }
         }
 
         private Dictionary<string, string> GetDefaultExchanges(XmlNode brockerNode)
@@ -61,7 +74,7 @@ namespace MessageBuss.Configuration
             {
                 var exchangeType = exchangeNode.Name;
                 var exchangeName = exchangeNode.Attributes.GetNamedItem("Name").Value;
-                defaultExchanges.Add(exchangeType, exchangeName);   
+                defaultExchanges.Add(exchangeType, exchangeName);
             }
             return defaultExchanges;
         }

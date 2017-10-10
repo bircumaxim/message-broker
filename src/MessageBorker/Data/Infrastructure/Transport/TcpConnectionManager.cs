@@ -1,7 +1,5 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Serialization;
-using Serialization.WireProtocols;
 using Transport.Connectors.Tcp;
 using Transport.Connectors.Tcp.Events;
 
@@ -9,8 +7,8 @@ namespace Transport
 {
     public class TcpConnectionManager : ConnectionManager
     {
-        private readonly TcpConnectionListener _connectionListener;
         private readonly int _maxMessageLength;
+        private readonly TcpConnectionListener _connectionListener;
 
         public TcpConnectionManager(int port, IWireProtocol wireProtocol, int maxMessageLength) :
             base(wireProtocol)

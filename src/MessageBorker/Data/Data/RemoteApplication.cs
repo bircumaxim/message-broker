@@ -12,7 +12,7 @@ using Transport.Events;
 
 namespace Data
 {
-    public class RemoteApplication : IRun
+    public class RemoteApplication
     {
         public string Name { get; }
         private readonly IConnector _connector;
@@ -40,16 +40,6 @@ namespace Data
         public void Send(Message message)
         {
             _connector.SendMessage(message);
-        }
-        
-        public void Start()
-        {
-            _connector.Start();
-        }
-
-        public Task StartAsync()
-        {
-            return _connector.StartAsync();
         }
 
         public void Stop()

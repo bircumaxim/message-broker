@@ -13,14 +13,12 @@ namespace Data
 {
     public class RemoteApplicationManager : IRun
     {
-        private readonly ILog _logger;
-        private readonly Dictionary<string, RemoteApplication> _remoteApplications;
         private readonly List<IConnectionManager> _connectionManagers;
+        private readonly Dictionary<string, RemoteApplication> _remoteApplications;
         public event RemoteApplicationMessageReceived RemoteApplicationMessageReceived;
 
         public RemoteApplicationManager(IConfiguration configuration)
         {
-            _logger = LogManager.GetLogger(GetType());
             _remoteApplications = new Dictionary<string, RemoteApplication>();
             _connectionManagers = configuration.GetConnectionManagers();
         }
@@ -33,7 +31,6 @@ namespace Data
             {
                 manager.ConnectorConnected += OnConnectorConnected;
                 manager.Start();
-                _logger.Info($"Started {manager.GetType().Name}");
             });
         }
 
@@ -84,12 +81,12 @@ namespace Data
             if (args.Message.MessageTypeName == typeof(OpenConnectionRequest).Name)
             {
                 var remoteApplication = new RemoteApplication(args.Connector);
+                args.Connector.MessageReceived -= OnMessageReceivedFromConnector;
                 remoteApplication.RemoteApplicationMessageReceived += RemoteApplicationMessageReceived;
                 lock (_remoteApplications)
                 {
                     _remoteApplications.Add(remoteApplication.Name, remoteApplication);
                 }
-                remoteApplication.StartAsync();
                 remoteApplication.Send(new OpenConnectionResponse
                 {
                     IsConnectionAccepted = true,

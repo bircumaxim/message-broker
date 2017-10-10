@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Buss>
     <Brockers>
-        <Brocker Name="Brocker" Ip="127.0.0.1" Port="9000" WireProtocol="DefaultWireProtocol" >
+        <Brocker Name="Brocker" SocketProtocol="Tcp" Ip="127.0.0.1" Port="9000" WireProtocol="DefaultWireProtocol">
+            <Fanout Name="Test2"/>
+            <Direct Name="test"/>
+            <Topic Name="Test1"/>
+        </Brocker>
+
+        <Brocker Name="Brocker2" SocketProtocol="Udp" Ip="127.0.0.1" Port="8000" WireProtocol="DefaultWireProtocol">
             <Fanout Name="Test2"/>
             <Direct Name="test"/>
             <Topic Name="Test1"/>
