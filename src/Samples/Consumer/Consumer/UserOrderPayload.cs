@@ -1,4 +1,6 @@
 ﻿using Serialization;
+using Serialization.Deserializer;
+using Serialization.Serializer;
 
 namespace Consumer
 {

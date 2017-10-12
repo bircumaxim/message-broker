@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using Data.Configuration;
 using Data.Models;
 using Data.Models.Mappers;
 using Domain.Exhcanges;
 using Domain.GateWays;
-using Persistence.Storages;
+using Messages.Payload;
 using Message = Domain.Messages.Message;
 
 namespace Data
@@ -15,61 +13,58 @@ namespace Data
     {
         private readonly MessageMapper _messageMapper;
         private readonly ExchangeMapper _exchangeMapper;
-        private readonly Storrage<List<ExchangeData>> _exchangesStorage;
-        private readonly Storrage<Dictionary<string, QueueData<MessageData>>> _queuesStorrage;
-        private readonly Storrage<ServerGeneralInfo> _serrverInfoStorrage;
+        private readonly MemoryPersistence _memoryPersistence;
+        private readonly FilePersistence _filePersistence;
 
         public Persistence(IConfiguration configuration)
         {
             _messageMapper = new MessageMapper();
             _exchangeMapper = new ExchangeMapper();
-
-            _serrverInfoStorrage =
-                MemoryStorageFactory.Instance.GetStorrageFor<ServerGeneralInfo>(typeof(ServerGeneralInfo));
-
-            _queuesStorrage =
-                MemoryStorageFactory.Instance.GetStorrageFor<Dictionary<string, QueueData<MessageData>>>(
-                    typeof(Dictionary<string, QueueData<MessageData>>));
-            _exchangesStorage =
-                MemoryStorageFactory.Instance.GetStorrageFor<List<ExchangeData>>(typeof(List<ExchangeData>));
-
-            _serrverInfoStorrage.Data = new ServerGeneralInfo {ServerStartTime = DateTime.Now};
-            _queuesStorrage.Data = configuration.GetQueueDataList();
-            _exchangesStorage.Data = configuration.GetExchangeDataList();
+            _memoryPersistence = new MemoryPersistence(configuration);
+            _filePersistence = new FilePersistence(configuration);
         }
 
+        public void DeleteMessageWithName(string name)
+        {
+            _filePersistence.DeleteMessage(name);
+        }
+        
+        public List<PayloadMessage> GetPerisistedMessages()
+        {
+            return _filePersistence.GetAllMessages();
+        }
 
         public void PersistQueues(Dictionary<string, Domain.Queue<Message>> queues)
         {
             foreach (var queue in queues)
             {
-                var queueData = _queuesStorrage.Data[queue.Key];
                 while (!queue.Value.IsEmpty())
                 {
                     var message = queue.Value.Dequeue();
-                    queueData.Enqueue(_messageMapper.InverseMap(message));
+                    if (message.IsDurable)
+                    {
+                        _filePersistence.PersistMessage(queue.Key, _messageMapper.InverseMap(message));
+                    }
+                    _memoryPersistence.PersistMessage(queue.Key, _messageMapper.InverseMap(message));
                 }
             }
         }
 
         public Exchange GetExchangeFor(Message message)
         {
-            var exchangeData =
-                _exchangesStorage.Data.FirstOrDefault(excnage => excnage.Name.Equals(message.ExchangeName));
-            return _exchangeMapper.Map(exchangeData);
+            var exchange = _memoryPersistence.GetExchangeByName(message.ExchangeName);
+            return _exchangeMapper.Map(exchange);
         }
 
         public Message GetMessageFromQueueWithName(string queueName)
         {
-            return _messageMapper.Map(_queuesStorrage.Data[queueName].Dequeue());
+            var message = _memoryPersistence.GetMessageFromQueueWithName(queueName);
+            return _messageMapper.Map(message);
         }
 
         public ServerGeneralInfo GetServerInfo()
         {
-            _serrverInfoStorrage.Data.MessagesInQueue = _queuesStorrage.Data.Values
-                .Where(queue => queue != null)
-                .Sum(queue => queue.Count());
-            return _serrverInfoStorrage.Data;
+            return _memoryPersistence.GetServerGeneralInfo();
         }
     }
 }

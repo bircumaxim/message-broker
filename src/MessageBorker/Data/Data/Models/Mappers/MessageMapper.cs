@@ -9,6 +9,7 @@ namespace Data.Models.Mappers
         {
             return new Message
             {
+                MessageId = model.MessageId,
                 ExchangeName = model.ExchangeName,
                 IsDurable = model.IsDurable,
                 RoutingKey = model.RoutingKey,
@@ -20,6 +21,7 @@ namespace Data.Models.Mappers
         {
             return new MessageData
             {
+                MessageId = model.MessageId,
                 ExchangeName = model.ExchangeName,
                 IsDurable = model.IsDurable,
                 RoutingKey = model.RoutingKey,

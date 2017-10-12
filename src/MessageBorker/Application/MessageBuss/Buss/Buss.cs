@@ -7,8 +7,8 @@ using Messages;
 using Messages.Payload;
 using Messages.ServerInfo;
 using Serialization;
-using Serialization.Deserializers;
-using Serialization.Serializers;
+using Serialization.Deserializer;
+using Serialization.Serializer;
 
 namespace MessageBuss.Buss
 {

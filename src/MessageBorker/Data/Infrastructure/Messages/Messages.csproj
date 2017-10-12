@@ -46,6 +46,7 @@
     <Compile Include="Connection\OpenConnectionRequest.cs" />
     <Compile Include="Connection\OpenConnectionResponse.cs" />
     <Compile Include="ErrorMessage.cs" />
+    <Compile Include="PayloadMessageReceived.cs" />
     <Compile Include="Payload\PayloadRequest.cs" />
     <Compile Include="Payload\PayloadResponse.cs" />
     <Compile Include="Payload\PayloadMessage.cs" />

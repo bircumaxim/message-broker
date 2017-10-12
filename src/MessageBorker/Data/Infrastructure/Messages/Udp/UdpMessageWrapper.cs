@@ -1,5 +1,7 @@
 ﻿using System.IO;
 using Serialization;
+using Serialization.Deserializer;
+using Serialization.Serializer;
 
 namespace Messages.Udp
 {

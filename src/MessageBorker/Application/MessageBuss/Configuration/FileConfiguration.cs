@@ -6,7 +6,7 @@ using System.Text;
 using System.Xml;
 using MessageBuss.Brocker;
 using Serialization;
-using Serialization.WireProtocols;
+using Serialization.WireProtocol;
 
 namespace MessageBuss.Configuration
 {
@@ -49,7 +49,8 @@ namespace MessageBuss.Configuration
                 var ip = brockerNode.Attributes.GetNamedItem("Ip")?.Value ?? DefaultIp;
                 var port = Convert.ToInt32(brockerNode.Attributes.GetNamedItem("Port")?.Value ?? DefaultPort);
                 var protocolType = brockerNode.Attributes.GetNamedItem("SocketProtocol")?.Value;
-                brocker = GetBrockerBySocketProtocol(brockerName, GetWireProtocol(wireProtocolName),
+                var enableCrypting = Convert.ToBoolean(brockerNode.Attributes.GetNamedItem("EnableCrypting")?.Value);
+                brocker = GetBrockerBySocketProtocol(brockerName, GetWireProtocol(wireProtocolName, enableCrypting),
                     new IPEndPoint(IPAddress.Parse(ip), port), GetDefaultExchanges(brockerNode), protocolType);
             }
             return brocker;
@@ -79,15 +80,14 @@ namespace MessageBuss.Configuration
             return defaultExchanges;
         }
 
-        private IWireProtocol GetWireProtocol(string wireProtocolName)
+        private IWireProtocol GetWireProtocol(string wireProtocolName, bool isCryptingEnabled)
         {
             switch (wireProtocolName)
             {
                 default:
-                    return new DefaultWireProtocol();
+                    return new DefaultWireProtocol(isCryptingEnabled);
             }
         }
-
 
         public Dictionary<string, BrockerClient> GetBrockers()
         {

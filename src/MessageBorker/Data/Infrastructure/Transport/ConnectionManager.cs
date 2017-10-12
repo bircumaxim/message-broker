@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Serialization;
-using Serialization.WireProtocols;
+using Serialization.WireProtocol;
 using Transport.Connectors;
 using Transport.Events;
 

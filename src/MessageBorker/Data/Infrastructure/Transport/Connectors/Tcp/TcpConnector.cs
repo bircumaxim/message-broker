@@ -4,8 +4,9 @@ using System.Net.Sockets;
 using System.Threading.Tasks;
 using log4net;
 using Serialization;
-using Serialization.Deserializers;
-using Serialization.Serializers;
+using Serialization.Deserializer;
+using Serialization.Serializer;
+using Serialization.WireProtocol;
 using Transport.Events;
 
 namespace Transport.Connectors.Tcp
@@ -15,7 +16,7 @@ namespace Transport.Connectors.Tcp
         private const int DefaultMessageLength = 52428800;
         private readonly ILog _logger;
         private readonly Socket _socket;
-        private readonly NetworkStream _networkStream;
+        private readonly Stream _networkStream;
         private readonly IWireProtocol _wireProtocol;
         private readonly int _maxMessageLength;
 
@@ -79,7 +80,7 @@ namespace Transport.Connectors.Tcp
         {
             _logger.Debug($"{message.MessageTypeName} is preparing to be sent to " +
                           $"{GetType().Name} with id=\"{ConnectorId}\"");
-            var memoryStream = new MemoryStream();
+            MemoryStream memoryStream = new MemoryStream();
             _wireProtocol.WriteMessage(new DefaultSerializer(memoryStream), message);
 
             if (memoryStream.Length > _maxMessageLength)

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Xml;
 using Data.Models;
+using Serialization.WireProtocol;
 using Transport;
 
 namespace Data.Configuration.FileConfiguration
@@ -9,13 +10,15 @@ namespace Data.Configuration.FileConfiguration
     {
         private readonly ConnectionManagersConfiguration _connectionManagersConfiguration;
         private readonly ExchangeAndQueuesConfiguration _exchangeAndQueuesConfiguration;
+        private readonly PersistenceConfiguration _persistenceConfiguration;
 
         public FileConfiguration(string filePath)
         {
-            var configsDocument = new XmlDocument();
-            configsDocument.Load(filePath);
-            _connectionManagersConfiguration = new ConnectionManagersConfiguration(configsDocument);
-            _exchangeAndQueuesConfiguration = new ExchangeAndQueuesConfiguration(configsDocument);
+            var configsXmlDocument = new XmlDocument();
+            configsXmlDocument.Load(filePath);
+            _connectionManagersConfiguration = new ConnectionManagersConfiguration(configsXmlDocument);
+            _exchangeAndQueuesConfiguration = new ExchangeAndQueuesConfiguration(configsXmlDocument); 
+            _persistenceConfiguration = new PersistenceConfiguration(configsXmlDocument);
         }
 
         public List<IConnectionManager> GetConnectionManagers()
@@ -31,6 +34,16 @@ namespace Data.Configuration.FileConfiguration
         public Dictionary<string, QueueData<MessageData>> GetQueueDataList()
         {
             return _exchangeAndQueuesConfiguration.Queues;
+        }
+
+        public IWireProtocol GetPersistenceWireProtocol()
+        {
+            return _persistenceConfiguration.WireProtocol;
+        }
+
+        public string GetFilePersistenceRootDirectory()
+        {
+            return _persistenceConfiguration.RootDirectory;
         }
     }
 }

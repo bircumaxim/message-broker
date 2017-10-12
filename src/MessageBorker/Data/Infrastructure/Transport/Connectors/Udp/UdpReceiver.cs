@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 using log4net;
 using Messages.Udp;
 using Serialization;
-using Serialization.Deserializers;
+using Serialization.Deserializer;
+using Serialization.WireProtocol;
 using Transport.Connectors.Udp.Events;
 
 namespace Transport.Connectors.Udp
@@ -115,8 +116,7 @@ namespace Transport.Connectors.Udp
             var bytesRead = Socket.EndReceive(result);
             var state = result.AsyncState as StateObject;
             if (state == null) return;
-            var memoryStream = new MemoryStream(state.Buffer, 0, bytesRead);
-            var message = _wireProtocol.ReadMessage(new DefaultDeserializer(memoryStream));
+            var message = _wireProtocol.ReadMessage(new DefaultDeserializer(new MemoryStream(state.Buffer, 0, bytesRead)));
             if (message != null && message.MessageTypeName == typeof(UdpMessageWrapper).Name)
             {
                 OnMessageReceived(message as UdpMessageWrapper);
@@ -125,8 +125,7 @@ namespace Transport.Connectors.Udp
 
         protected void OnMessageReceived(UdpMessageWrapper udpMessageWrapper)
         {
-            var memoryStream = new MemoryStream(udpMessageWrapper.Message);
-            var message = _wireProtocol.ReadMessage(new DefaultDeserializer(memoryStream));
+            var message = _wireProtocol.ReadMessage(new DefaultDeserializer(new MemoryStream(udpMessageWrapper.Message)));
             UdpMessageReceived?.Invoke(this, new UdpMessageReceivedEventArgs(udpMessageWrapper.ClientName, message));
         }
         

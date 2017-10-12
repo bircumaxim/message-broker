@@ -36,14 +36,8 @@
     <Reference Include="MessageBuss, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\..\MessageBorker\Application\MessageBuss\bin\Debug\MessageBuss.dll</HintPath>
     </Reference>
-    <Reference Include="MessageBuss, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\MessageBorker\Application\MessageBuss\bin\Debug\MessageBuss.dll</HintPath>
-    </Reference>
     <Reference Include="Messages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\..\MessageBorker\Application\MessageBuss\bin\Debug\Messages.dll</HintPath>
-    </Reference>
-    <Reference Include="Serialization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\MessageBorker\Application\MessageBuss\bin\Debug\Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Serialization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\..\MessageBorker\Application\MessageBuss\bin\Debug\Serialization.dll</HintPath>

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Messages.Connection;
 using Messages.Udp;
 using Serialization;
+using Serialization.WireProtocol;
 using Transport.Connectors.Udp;
 using Transport.Connectors.Udp.Events;
 

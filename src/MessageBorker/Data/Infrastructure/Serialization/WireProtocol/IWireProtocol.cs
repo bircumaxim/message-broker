@@ -1,4 +1,7 @@
-﻿namespace Serialization
+﻿using Serialization.Deserializer;
+using Serialization.Serializer;
+
+namespace Serialization.WireProtocol
 {
     public interface IWireProtocol
     {

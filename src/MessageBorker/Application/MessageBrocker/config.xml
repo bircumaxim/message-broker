@@ -1,15 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    Short description
+
+    ConnectionManagers : 
+        TcpConnectionManager : 
+            Port - default = 9000
+            MaxMessageLength - deafutl = 52428800
+            WireProtocol - deafutl = DefaultWireProtocol
+            EnableCrypting - default = false
+            
+        UdpConnectionManager :
+            Port - default = 9000
+            MaxMessageLength - deafutl = 52428800
+            WireProtocol - deafutl = DefaultWireProtocol.
+            EnableCrypting - default = false
+
+    Exchanges:
+        DirectExchange - Name {required, unique}
+        TopicExchange - Name {required, unique}
+        FanoutExchange - Name {required, unique}
+        Eche exchange could hold ques 
+                        Queue: Name {required, unique}
+-->
+
 <MessageBrocker>
+
+    <Persistence>
+        <FilePersistence EnableCrypting="true"/>
+    </Persistence>
+
     <ConnectionManagers>
-        <TcpConnectionManager  />
-        <UdpConnectionManager Port="8000"  />
+        <TcpConnectionManager/>
+        <UdpConnectionManager Port="8000"/>
     </ConnectionManagers>
-    
+
     <Exchanges>
         <DirectExchange Name="test">
-            <Queue Name="test1"/>    
-            <Queue Name="test2"/>    
-            <Queue Name="test3"/>    
+            <Queue Name="test1"/>
+            <Queue Name="test2"/>
+            <Queue Name="test3"/>
         </DirectExchange>
 
         <TopicExchange Name="Test1">
@@ -24,24 +54,3 @@
         </FanoutExchange>
     </Exchanges>
 </MessageBrocker>
-
-
-<!--
-        Short description
-
-    ConnectionManagers : 
-        TcpConnectionManager : 
-            Port - default = 9000
-            MaxMessageLength - deafutl = 52428800
-            WireProtocol - deafutl = DefaultWireProtocol
-            
-        UdpConnectionManager :
-            TODO refacor Udp connection manager and add settings here.
-            
-    Exchanges:
-        DirectExchange - Name {required, unique}
-        TopicExchange - Name {required, unique}
-        FanoutExchange - Name {required, unique}
-        Eche exchange could hold ques 
-                        Queue: Name {required, unique}
--->

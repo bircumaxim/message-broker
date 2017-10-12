@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Persistence.Storages
+namespace Persistence.Storages.MemoryStorage
 {
     public class MemoryStorageFactory
     {

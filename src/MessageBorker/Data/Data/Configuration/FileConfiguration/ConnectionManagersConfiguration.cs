@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Xml;
-using Serialization;
-using Serialization.WireProtocols;
+using Serialization.WireProtocol;
 using Transport;
 
 namespace Data.Configuration.FileConfiguration
@@ -43,7 +42,8 @@ namespace Data.Configuration.FileConfiguration
             if (connectionManager.Attributes != null)
             {
                 var port = Convert.ToInt32(connectionManager.Attributes.GetNamedItem("Port")?.Value ?? DefaultPort);
-                ConnectionManagers.Add(new UdpConnectionManager(port, GetWireProtocolByName(connectionManager)));
+                ConnectionManagers.Add(new UdpConnectionManager(port,
+                    WireProtocolConfigHelper.GetWireProtocolByName(connectionManager)));
             }
         }
 
@@ -55,25 +55,10 @@ namespace Data.Configuration.FileConfiguration
                 var maxMessageLength = Convert.ToInt32(
                     connectionManager.Attributes.GetNamedItem("MaxMessageLength")?.Value ??
                     DefaultMessageLength);
-                ConnectionManagers.Add(new TcpConnectionManager(port, GetWireProtocolByName(connectionManager),
+                ConnectionManagers.Add(new TcpConnectionManager(port,
+                    WireProtocolConfigHelper.GetWireProtocolByName(connectionManager),
                     maxMessageLength));
             }
-        }
-
-        private IWireProtocol GetWireProtocolByName(XmlNode connectionManager)
-        {
-            IWireProtocol wireProtocol = null;
-            if (connectionManager.Attributes != null)
-            {
-                var wireProtocolName = connectionManager.Attributes.GetNamedItem("WireProtocol")?.Value;
-                switch (wireProtocolName)
-                {
-                    default:
-                        wireProtocol = new DefaultWireProtocol();
-                        break;
-                }
-            }
-            return wireProtocol;
         }
     }
 }

@@ -1,4 +1,7 @@
-﻿namespace Serialization
+﻿using Serialization.Deserializer;
+using Serialization.Serializer;
+
+namespace Serialization
 {
     public interface ISerializable
     {

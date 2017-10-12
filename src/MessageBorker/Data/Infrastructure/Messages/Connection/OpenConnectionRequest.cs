@@ -4,6 +4,5 @@ namespace Messages.Connection
 {
     public class OpenConnectionRequest : Message
     {
-    
     }
 }

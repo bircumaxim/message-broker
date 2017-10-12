@@ -5,7 +5,8 @@ using System.Net.Sockets;
 using log4net;
 using Messages.Udp;
 using Serialization;
-using Serialization.Serializers;
+using Serialization.Serializer;
+using Serialization.WireProtocol;
 
 namespace Transport.Connectors.Udp
 {
@@ -22,6 +23,7 @@ namespace Transport.Connectors.Udp
             _socket = socket;
             IpEndPoint = ipEndPoint;
             _wireProtocol = wireProtocol;
+            Validate();
         }
 
         protected override void StartCommunication()
@@ -43,13 +45,14 @@ namespace Transport.Connectors.Udp
         {
             _logger.Debug($"{message.MessageTypeName} is preparing to be sent to " +
                           $"{GetType().Name} with id=\"{ConnectorId}\"");
-            var memoryStream = new MemoryStream();
+            MemoryStream memoryStream = new MemoryStream();
             var udpMessageWrapper = new UdpMessageWrapper {ClientName = ConnectorId};
             _wireProtocol.WriteMessage(new DefaultSerializer(udpMessageWrapper.MemoryStream), message);
             _wireProtocol.WriteMessage(new DefaultSerializer(memoryStream), udpMessageWrapper);
             _socket.SendTo(memoryStream.ToArray(), IpEndPoint);
-            _logger.Info(
-                $"Sent     message=\"{message.MessageTypeName}\" size=\"{memoryStream.Length} byte\" to {GetType().Name} with id {ConnectorId}");
+            _logger.Info($"Sent     " +
+                         $"message=\"{message.MessageTypeName}\" " +
+                         $"size=\"{memoryStream.Length} byte\" to {GetType().Name} with id {ConnectorId}");
         }
 
         private void Validate()

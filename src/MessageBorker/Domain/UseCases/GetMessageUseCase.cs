@@ -24,6 +24,7 @@ namespace Domain.UseCases
             var message = _persistenceGateWay.GetMessageFromQueueWithName(_messageRequest.QueueName);
             var messageResponse = new MessageResponse
             {
+                MessageId = message.MessageId,
                 Payload = message.Payload, 
                 ReceiverName = _messageRequest.ReceiverName
             };

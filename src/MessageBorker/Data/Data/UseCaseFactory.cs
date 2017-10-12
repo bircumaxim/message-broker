@@ -1,16 +1,17 @@
 ﻿using System;
 using Data.Events;
 using Data.Mappers;
+using Data.Models.Mappers;
 using Domain.Messages;
 using Domain.UseCases;
 using log4net;
-using Messages;
 using Messages.Payload;
 
 namespace Data
 {
     public class UseCaseFactory
     {
+        private readonly MessageMapper _messageMapper;
         private readonly PayloadMessageMapper _payloadMessageMapper;
         private readonly PayloadRequestMapper _payloadRequestMapper;
         private readonly ILog _logger;
@@ -19,6 +20,7 @@ namespace Data
 
         public UseCaseFactory(Persistence persistence, Transport transport)
         {
+            _messageMapper = new MessageMapper();
             _payloadRequestMapper = new PayloadRequestMapper();
             _payloadMessageMapper = new PayloadMessageMapper();
             _logger = LogManager.GetLogger(GetType());
@@ -30,7 +32,8 @@ namespace Data
         {
             if (args.Message.MessageTypeName == typeof(PayloadMessage).Name)
             {
-                var domainMessage = _payloadMessageMapper.Map(args.Message as PayloadMessage);
+                var messageData = _payloadMessageMapper.Map(args.Message as PayloadMessage);
+                var domainMessage = _messageMapper.Map(messageData);
                 return CreateRouteUseCase(domainMessage);
             }
             if (args.Message.MessageTypeName == typeof(PayloadRequest).Name)

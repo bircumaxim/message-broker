@@ -1,9 +1,13 @@
 ﻿using System;
+using System.IO;
 
-namespace Serialization
+namespace Serialization.Deserializer
 {
+    public delegate void DecryptFunction(Stream cipherData, string secretKey);
+    
     public interface IDeserializer
     {
+        void Decrypt(DecryptFunction decryptFunction, string secretKey);
         byte ReadByte();
         byte[] ReadByteArray();
         int ReadInt32();

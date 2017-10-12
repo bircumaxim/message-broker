@@ -9,7 +9,11 @@ namespace Data.Mappers
     {
         public DefaultMessageResponse Map(MessageResponse model)
         {
-            return model == null ? null : new DefaultMessageResponse {Payload = model.Payload};
+            return model == null ? null : new DefaultMessageResponse
+            {
+                ReceivedMessageId = model.MessageId,
+                Payload = model.Payload
+            };
         }
     }
 }

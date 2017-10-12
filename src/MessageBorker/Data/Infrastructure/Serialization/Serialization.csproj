@@ -43,17 +43,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration.cs" />
-    <Compile Include="Deserializers\DefaultDeserializer.cs" />
-    <Compile Include="IDeserializer.cs" />
+    <Compile Include="Deserializer\DefaultDeserializer.cs" />
+    <Compile Include="Deserializer\Deserializer.cs" />
+    <Compile Include="Deserializer\IDeserializer.cs" />
+    <Compile Include="EncDec.cs" />
     <Compile Include="ISerializable.cs" />
-    <Compile Include="ISerializer.cs" />
-    <Compile Include="IWireProtocol.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="MessageFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SerializableObjectHandler.cs" />
-    <Compile Include="Serializers\DefaultSerializer.cs" />
-    <Compile Include="WireProtocols\DefaultWireProtocol.cs" />
+    <Compile Include="Serializer\DefaultSerializer.cs" />
+    <Compile Include="Serializer\ISerializer.cs" />
+    <Compile Include="Serializer\SerializableObjectHandler.cs" />
+    <Compile Include="Serializer\Serializer.cs" />
+    <Compile Include="WireProtocol\DefaultWireProtocol.cs" />
+    <Compile Include="WireProtocol\IWireProtocol.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

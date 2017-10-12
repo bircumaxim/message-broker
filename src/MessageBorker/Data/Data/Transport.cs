@@ -4,6 +4,7 @@ using Data.Events;
 using Data.Mappers;
 using Domain.GateWays;
 using Domain.Messages;
+using Messages;
 using Messages.Connection;
 using Messages.ServerInfo;
 
@@ -29,11 +30,21 @@ namespace Data
 
         public void Start()
         {
+            _persistence.GetPerisistedMessages().ForEach(message =>
+            {
+                RemoteApplicationMessageReceived(this,
+                    new RemoteApplicationMessageReceivedEventArgs {Message = message});
+            });
             _remoteApplicationManager.Start();
         }
 
         public Task StartAsync()
         {
+            _persistence.GetPerisistedMessages().ForEach(message =>
+            {
+                RemoteApplicationMessageReceived(this,
+                    new RemoteApplicationMessageReceivedEventArgs {Message = message});
+            });
             return _remoteApplicationManager.StartAsync();
         }
 
@@ -64,6 +75,10 @@ namespace Data
             {
                 //TODO add logs here.
             }
+            else if (args.Message.MessageTypeName == typeof(PayloadMessageReceived).Name)
+            {
+                _persistence.DeleteMessageWithName(args.Message.MessageId);
+            }
             else
             {
                 var useCase = _useCaseFactory.GetUseCaseFor(args);
@@ -73,8 +88,8 @@ namespace Data
 
         public void Send(MessageResponse messageResponse)
         {
-            _remoteApplicationManager.SendMessage(messageResponse.ReceiverName,
-                _payloadResponseMapper.Map(messageResponse));
+            var defaultMessageResponse = _payloadResponseMapper.Map(messageResponse);
+            _remoteApplicationManager.SendMessage(messageResponse.ReceiverName, defaultMessageResponse);
         }
     }
 }

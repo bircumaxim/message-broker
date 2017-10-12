@@ -5,6 +5,7 @@ using System.Net.Sockets;
 using System.Threading.Tasks;
 using Messages.Connection;
 using Serialization;
+using Serialization.WireProtocol;
 using Transport.Connectors.Tcp;
 using Transport.Events;
 

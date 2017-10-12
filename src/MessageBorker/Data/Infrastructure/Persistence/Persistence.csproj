@@ -43,8 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Storages\FileStorage.cs" />
-    <Compile Include="Storages\MemoryStorageFactory.cs" />
+    <Compile Include="Storages\FileStorage\FileHelper.cs" />
+    <Compile Include="Storages\FileStorage\FileStorage.cs" />
+    <Compile Include="Storages\MemoryStorage\MemoryStorageFactory.cs" />
     <Compile Include="Storages\Storrage.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using MessageBuss.Brocker.Events;
+using Messages;
 using Messages.Connection;
+using Messages.Payload;
 using Messages.ServerInfo;
 using Serialization;
+using Serialization.WireProtocol;
 using Transport.Events;
 
 namespace MessageBuss.Brocker
@@ -43,6 +47,10 @@ namespace MessageBuss.Brocker
             {
                 _messagesToSend.Enqueue(message);
             }
+            else
+            {
+                SendMessageToConnector(message);
+            }
         }
 
         public void Ping()
@@ -71,12 +79,22 @@ namespace MessageBuss.Brocker
                     SendMessageToConnector(new OpenConnectionRequest());
                     break;
                 default:
+                    if (args.Message.MessageTypeName == "DefaultMessageResponse")
+                    {
+                        SendMessageReceivedAcknoledge(args.Message);
+                    }
                     var message = new BrockerClientMessageReceivedEventArgs(this, args.Message);
                     MessageReceivedFromBrockerHandler?.Invoke(this, message);
                     break;
             }
         }
 
+        private void SendMessageReceivedAcknoledge(Message message)
+        {
+            var defaultMessageResponse = message as DefaultMessageResponse;
+            SendOrEnqueue(new PayloadMessageReceived { MessageId = defaultMessageResponse.ReceivedMessageId});
+        }
+        
         private void OnCloseConecctionResponse()
         {
             Stop();

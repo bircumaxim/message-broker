@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Data.Models;
+using Serialization.WireProtocol;
 using Transport;
 
 namespace Data.Configuration
@@ -9,5 +10,7 @@ namespace Data.Configuration
         List<IConnectionManager> GetConnectionManagers();
         List<ExchangeData> GetExchangeDataList();
         Dictionary<string, QueueData<MessageData>> GetQueueDataList();
+        IWireProtocol GetPersistenceWireProtocol();
+        string GetFilePersistenceRootDirectory();
     }
 }
