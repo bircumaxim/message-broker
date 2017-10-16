@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using MessageBuss.Brocker.Events;
@@ -7,6 +8,7 @@ using Messages;
 using Messages.Connection;
 using Messages.Payload;
 using Messages.ServerInfo;
+using Microsoft.SqlServer.Server;
 using Serialization;
 using Serialization.WireProtocol;
 using Transport.Events;
@@ -21,12 +23,14 @@ namespace MessageBuss.Brocker
         private readonly Queue<Message> _messagesToSend;
         public Dictionary<string, string> DefautlExchanges { get; }
         public event BrockerClientMessageReceivedHandler MessageReceivedFromBrockerHandler;
+        public IPEndPoint IpEndPoint { get; }
 
         protected BrockerClient(string brockerName, IWireProtocol wireProtocol,
-            Dictionary<string, string> defautlExchanges)
+            Dictionary<string, string> defautlExchanges, IPEndPoint ipEndPoint)
         {
             BrockerName = brockerName;
             DefautlExchanges = defautlExchanges;
+            IpEndPoint = ipEndPoint;
             WireProtocol = wireProtocol;
             _messagesToSend = new Queue<Message>();
         }
@@ -41,6 +45,11 @@ namespace MessageBuss.Brocker
 
         #endregion
 
+        public void Ping()
+        {
+            SendOrEnqueue(new PingMessage());
+        }
+
         public void SendOrEnqueue(Message message)
         {
             if (!_isConnectionAccepted)
@@ -53,12 +62,14 @@ namespace MessageBuss.Brocker
             }
         }
 
-        public void Ping()
+        public void Subscribe(string queueName)
         {
-            SendOrEnqueue(new PingMessage());
+            SendOrEnqueue(GetSubscribtionMessage(queueName));
         }
-
+        
         protected abstract void SendMessageToConnector(Message message);
+
+        protected abstract Message GetSubscribtionMessage(string queueName);
 
         #region Listeners
 
@@ -92,9 +103,9 @@ namespace MessageBuss.Brocker
         private void SendMessageReceivedAcknoledge(Message message)
         {
             var payloadMessage = message as PayloadMessage;
-            SendOrEnqueue(new PayloadMessageReceived { MessageId = payloadMessage?.MessageId});
+            SendOrEnqueue(new PayloadMessageReceived {MessageId = payloadMessage?.MessageId});
         }
-        
+
         private void OnCloseConecctionResponse()
         {
             Stop();
@@ -109,6 +120,6 @@ namespace MessageBuss.Brocker
             }
         }
 
-        #endregion
+        #endregion        
     }
 }

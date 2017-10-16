@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
-
-    Short description
-
+    FilePersistence:
+        RootDirectory - default = messages {path where to save messages}
+        EnableCrypting - default = false   {enables or disables crypting}
+    
     ConnectionManagers : 
         TcpConnectionManager : 
             Port - default = 9000
@@ -18,20 +19,20 @@
 
     Exchanges:
         DirectExchange - Name {required, unique}
-        TopicExchange - Name {required, unique}
+        TopicExchange -  Name {required, unique}
         FanoutExchange - Name {required, unique}
-        Eche exchange could hold ques 
-                        Queue: Name {required, unique}
+        Eche exchange could hold ques : 
+                Queue: 
+                    Name {required, unique}
 -->
 
 <MessageBrocker>
-
     <Persistence>
         <FilePersistence EnableCrypting="true"/>
     </Persistence>
 
     <ConnectionManagers>
-        <TcpConnectionManager/>
+        <TcpConnectionManager />
         <UdpConnectionManager Port="8000"/>
     </ConnectionManagers>
 

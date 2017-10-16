@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Data.Commands;
 using Data.Configuration;
 using Data.Events;
 using Data.Mappers;
@@ -8,6 +9,7 @@ using Domain.Models;
 using log4net;
 using Messages;
 using Messages.Connection;
+using Messages.Payload;
 using Messages.ServerInfo;
 
 namespace Data
@@ -15,21 +17,20 @@ namespace Data
     public class Transport : ITransportGateWay
     {
         private readonly ILog _logger;
-        private readonly ServerGeneralInfoResponseMapper _serverGeneralInfoResponseMapper;
-        private readonly PayloadMessageMapper _payloadMessageMapper;
         private readonly RemoteApplicationManager _remoteApplicationManager;
-        private readonly UseCaseFactory _useCaseFactory;
+        private readonly CommandFactory _commandFactory;
+        private readonly SubscribtionManager _subscribtionManager;
         private readonly Persistence _persistence;
 
         public Transport(IConfiguration configuration)
         {
-            _logger = LogManager.GetLogger(GetType());
             _persistence = new Persistence(configuration.GetPersistenceConfiguration());
-            _useCaseFactory = new UseCaseFactory(_persistence, this);
+            _persistence.QueueUpdate += OnQueueUpdate;
+            _logger = LogManager.GetLogger(GetType());
             _remoteApplicationManager = new RemoteApplicationManager(configuration);
             _remoteApplicationManager.RemoteApplicationMessageReceived += RemoteApplicationMessageReceived;
-            _payloadMessageMapper = new PayloadMessageMapper();
-            _serverGeneralInfoResponseMapper = new ServerGeneralInfoResponseMapper();
+            _subscribtionManager = new SubscribtionManager(_remoteApplicationManager, _persistence);
+            _commandFactory = new CommandFactory(this, _persistence, _remoteApplicationManager, _subscribtionManager);
         }
 
         public void Start()
@@ -44,45 +45,27 @@ namespace Data
 
         public void Stop()
         {
+            _persistence.QueueUpdate -= OnQueueUpdate;
             _remoteApplicationManager.RemoteApplicationMessageReceived -= RemoteApplicationMessageReceived;
             _remoteApplicationManager.Stop();
+        }
+        
+        private void OnQueueUpdate(object sender, QueueUpdateEventArgs args)
+        {
+            _subscribtionManager.NotifySubscribers(args.QueueName);
         }
 
         private void RemoteApplicationMessageReceived(object seneder, RemoteApplicationMessageReceivedEventArgs args)
         {
-            if (args.Message.MessageTypeName == typeof(CloseConnectionRequest).Name)
-            {
-                _remoteApplicationManager.StopRemoteApplication(args.Application.Name);
-            }
-            else if (args.Message.MessageTypeName == typeof(PingMessage).Name)
-            {
-                _remoteApplicationManager.SendMessage(args.Application.Name, new PongMessage());
-            }
-            else if (args.Message.MessageTypeName == typeof(ServerGerneralInfoRequest).Name)
-            {
-                var serverGeneralInfo = _persistence.GetServerInfo();
-                serverGeneralInfo.ConnectionsCount = _remoteApplicationManager.GetConnectionsNumber();
-                var serverGeneralInfoResponse = _serverGeneralInfoResponseMapper.Map(serverGeneralInfo);
-                _remoteApplicationManager.SendMessage(args.Application.Name, serverGeneralInfoResponse);
-            }
-            else if (args.Message.MessageTypeName == typeof(PongMessage).Name)
-            {
-                _logger.Info($"Received pong message from client with id=\"{args.Application.Name}\"");
-            }
-            else if (args.Message.MessageTypeName == typeof(PayloadMessageReceived).Name)
-            {
-                _persistence.DeleteMessageWithName(args.Message.MessageId);
-            }
-            else
-            {
-                var useCase = _useCaseFactory.GetUseCaseFor(args);
-                useCase?.Execute();
-            }
+            var command = _commandFactory.GetCommandFor(args);
+            command?.Execute();
+            _logger.Debug($"Executed {command?.GetType().Name} for application with id=\"{args.Application.Name}\"");
         }
 
         public void Send(Message message)
         {
-            _remoteApplicationManager.SendMessage(message.ReceiverName, _payloadMessageMapper.Map(message));
+            var payloadMessage = MappersPull.Instance.Map<Message, PayloadMessage>(message);
+            _remoteApplicationManager.SendMessage(message.ReceiverName, payloadMessage);
         }
     }
 }

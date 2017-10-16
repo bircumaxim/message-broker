@@ -6,6 +6,7 @@ using MessageBuss.Buss.Events;
 using Messages;
 using Messages.Payload;
 using Messages.ServerInfo;
+using Messages.Subscribe;
 using Serialization;
 using Serialization.Deserializer;
 using Serialization.Serializer;
@@ -58,6 +59,16 @@ namespace MessageBuss.Buss
         public void Topic(Message payload, string routingKey, bool isDurable = false)
         {
             Publish(GetExchangeNameForType("Topic"), routingKey, payload, isDurable);
+        }
+
+        public void Subscribe(string queueName)
+        {
+           _brocker.Subscribe(queueName);
+        }
+        
+        public void Unsubscribe()
+        {
+            //TODO implement unsubscribe feature.
         }
 
         public void Dispose()

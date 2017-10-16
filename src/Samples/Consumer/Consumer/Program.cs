@@ -9,9 +9,12 @@ namespace Consumer
         public static void Main(string[] args)
         {
             var buss = BussFactory.Instance.GetBussFor("Brocker");
-            buss.Request("TestQueue2");
+            buss.Subscribe("TestQueue2");
+            buss.Subscribe("TestQueue3");
             buss.MessageReceived += OnMessageReceived;
             Console.WriteLine("done");
+            Console.ReadKey();
+            buss.Dispose();
             Console.ReadKey();
         }
 

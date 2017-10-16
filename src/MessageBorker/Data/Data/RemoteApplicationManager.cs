@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Runtime.Remoting.Messaging;
 using System.Threading.Tasks;
 using Data.Configuration;
 using Data.Events;
@@ -7,6 +8,7 @@ using Messages;
 using Messages.Connection;
 using Serialization;
 using Transport;
+using Transport.Connectors.Udp;
 using Transport.Events;
 
 namespace Data
@@ -68,7 +70,9 @@ namespace Data
         }
 
         #endregion
-        
+
+        #region Listeners
+
         private void OnConnectorConnected(object sender, ConnectorConnectedEventArgs args)
         {
             var connector = args.Connector;
@@ -83,10 +87,7 @@ namespace Data
                 var remoteApplication = new RemoteApplication(args.Connector);
                 args.Connector.MessageReceived -= OnMessageReceivedFromConnector;
                 remoteApplication.RemoteApplicationMessageReceived += RemoteApplicationMessageReceived;
-                lock (_remoteApplications)
-                {
-                    _remoteApplications.Add(remoteApplication.Name, remoteApplication);
-                }
+                AddRemoteApplication(remoteApplication);
                 remoteApplication.Send(new OpenConnectionResponse
                 {
                     IsConnectionAccepted = true,
@@ -95,6 +96,34 @@ namespace Data
             }
         }
 
+        public void AddRemoteApplication(RemoteApplication remoteApplication)
+        {
+            lock (_remoteApplications)
+            {
+                _remoteApplications.Add(remoteApplication.Name, remoteApplication);
+            }
+        }
+
+        #endregion
+
+        private void StopRemoteApplications()
+        {
+            lock (_remoteApplications)
+            {
+                foreach (var remoteApplication in _remoteApplications.Values)
+                {
+                    remoteApplication.RemoteApplicationMessageReceived -= RemoteApplicationMessageReceived;
+                    remoteApplication.Stop();
+                }
+                _remoteApplications.Clear();
+            }
+        }
+        
+        public int GetConnectionsNumber()
+        {
+            return _remoteApplications.Count;
+        }
+        
         public void SendMessage(string applicationName, Message message)
         {
             lock (_remoteApplications)
@@ -111,24 +140,6 @@ namespace Data
                 _remoteApplications[applicationName].RemoteApplicationMessageReceived -= RemoteApplicationMessageReceived;
                 _remoteApplications.Remove(applicationName);
             }
-        }
-        
-        private void StopRemoteApplications()
-        {
-            lock (_remoteApplications)
-            {
-                foreach (var remoteApplication in _remoteApplications.Values)
-                {
-                    remoteApplication.RemoteApplicationMessageReceived -= RemoteApplicationMessageReceived;
-                    remoteApplication.Stop();
-                }
-                _remoteApplications.Clear();
-            }
-        }
-
-        public int GetConnectionsNumber()
-        {
-            return _remoteApplications.Count;
         }
     }
 }

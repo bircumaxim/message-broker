@@ -46,11 +46,13 @@
     <Compile Include="FilePersistence.cs" />
     <Compile Include="MemoryPersistence.cs" />
     <Compile Include="Models\Mappers\PayloadMessageMapper.cs" />
+    <Compile Include="Models\Mappers\SubscriptionMessageMapper.cs" />
     <Compile Include="Models\PersistenceExchange.cs" />
     <Compile Include="Models\PersistenceExchangeType.cs" />
     <Compile Include="Models\PersistenceMessage.cs" />
     <Compile Include="Models\PersistenceQueue.cs" />
     <Compile Include="Models\PersistenceServerGeneralInfo.cs" />
+    <Compile Include="Models\PersistenceSubscription.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Storages\FileStorage\FileHelper.cs" />
     <Compile Include="Storages\FileStorage\FileStorage.cs" />

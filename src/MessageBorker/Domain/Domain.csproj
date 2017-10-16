@@ -49,7 +49,6 @@
     <Compile Include="Exhcanges\TopicExchange.cs" />
     <Compile Include="GateWays\IPersistenceGateWay.cs" />
     <Compile Include="GateWays\ITransportGateWay.cs" />
-    <Compile Include="Infrastructure\Mapping\ITwoWaysMapper.cs" />
     <Compile Include="Infrastructure\Mapping\ListMapper.cs" />
     <Compile Include="Infrastructure\Mapping\Mapper.cs" />
     <Compile Include="Infrastructure\ObjectCloner.cs" />

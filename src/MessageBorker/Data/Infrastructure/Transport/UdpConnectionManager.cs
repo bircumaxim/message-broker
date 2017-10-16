@@ -3,6 +3,7 @@ using System.Net;
 using System.Runtime.Remoting.Channels;
 using System.Threading.Tasks;
 using Messages;
+using Messages.Connection;
 using Messages.Udp;
 using Serialization;
 using Serialization.WireProtocol;
@@ -31,7 +32,7 @@ namespace Transport
             if (_connectors.TryGetValue(args.ConnectorName, out connector))
             {
                 connector.OnNewMessageReceived(args.Message);
-            }
+            } 
             else if(args.Message.MessageTypeName == typeof(UdpInitMessageRequest).Name)
             {
                 var message = args.Message as UdpInitMessageRequest;
@@ -43,6 +44,10 @@ namespace Transport
                     OnNewConnection(udpConnector);
                     udpConnector.SendMessage(new UdpInitMessageResponse());
                 }
+            }
+            if (args.Message.MessageTypeName == typeof(CloseConnectionRequest).Name)
+            {
+                _connectors.Remove(args.ConnectorName);
             }
         }
 

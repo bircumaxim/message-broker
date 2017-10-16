@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 using Messages.Connection;
+using Messages.Subscribe;
 using Messages.Udp;
 using Serialization;
 using Serialization.WireProtocol;
@@ -16,20 +17,20 @@ namespace MessageBuss.Brocker
         private readonly UdpConnector _udpConnector;
         private readonly UdpReceiver _udpReceiver;
 
-        public UdpBrockerClient(string brockerName, IWireProtocol wireProtocol, IPEndPoint endPoint,
-            Dictionary<string, string> defautlExchanges) : base(brockerName, wireProtocol, defautlExchanges)
+        public UdpBrockerClient(string brockerName, IWireProtocol wireProtocol, IPEndPoint ipEndPoint,
+            Dictionary<string, string> defautlExchanges) : base(brockerName, wireProtocol, defautlExchanges, ipEndPoint)
         {
             _udpReceiver = new UdpReceiver(5000, wireProtocol);
-            _udpConnector = new UdpConnector(GetUdpSocket(), endPoint, wireProtocol);
+            _udpConnector = new UdpConnector(GetUdpSocket(), ipEndPoint, wireProtocol);
             _udpReceiver.UdpMessageReceived += UdpReceiverOnUdpMessageReceived;
             _udpConnector.MessageReceived += OnMessageReceived;
         }
-
 
         #region IRun methods
 
         public override void Start()
         {
+            //TODO add ip and port to configuration
             _udpConnector.SendMessage(new UdpInitMessageRequest {ClientIp = "127.0.0.1", ClientPort = 5000});
             _udpReceiver.Start();
             _udpConnector.Start();
@@ -37,6 +38,7 @@ namespace MessageBuss.Brocker
 
         public override Task StartAsync()
         {
+            //TODO add ip and port to configuration
             _udpConnector.SendMessage(new UdpInitMessageRequest {ClientIp = "127.0.0.1", ClientPort = 5000});
             _udpReceiver.StartAsync();
             return _udpConnector.StartAsync();
@@ -51,15 +53,27 @@ namespace MessageBuss.Brocker
         }
 
         #endregion
-        
+
         private void UdpReceiverOnUdpMessageReceived(object sender, UdpMessageReceivedEventArgs args)
         {
             _udpConnector.OnNewMessageReceived(args.Message);
         }
-        
+
         protected override void SendMessageToConnector(Message message)
         {
             _udpConnector.SendMessage(message);
+        }
+
+        protected override Message GetSubscribtionMessage(string queueName)
+        {
+            //TODO add ip and port to configuration
+            return new SubscribeMessage
+            {
+                Ip = "127.0.0.1",
+                Port = 5000,
+                QueueName = queueName,
+                IsDurable = true
+            };
         }
 
         private Socket GetUdpSocket()

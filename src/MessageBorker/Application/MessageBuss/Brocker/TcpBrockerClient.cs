@@ -4,6 +4,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 using Messages.Connection;
+using Messages.Subscribe;
 using Serialization;
 using Serialization.WireProtocol;
 using Transport.Connectors.Tcp;
@@ -16,7 +17,7 @@ namespace MessageBuss.Brocker
         private readonly TcpConnector _tcpConnector;
 
         public TcpBrockerClient(string brockerName, IWireProtocol wireProtocol, IPEndPoint ipEndPoint,
-            Dictionary<string, string> defautlExchanges) : base(brockerName, wireProtocol, defautlExchanges)
+            Dictionary<string, string> defautlExchanges) : base(brockerName, wireProtocol, defautlExchanges, ipEndPoint)
         {
             _tcpConnector = new TcpConnector(GetTcpSocket(ipEndPoint), WireProtocol);
             _tcpConnector.StateChanged += OnStateChange;
@@ -52,7 +53,16 @@ namespace MessageBuss.Brocker
         {
             _tcpConnector.SendMessage(message);
         }
-        
+
+        protected override Message GetSubscribtionMessage(string queueName)
+        {
+            return new SubscribeMessage
+            {
+                IsDurable = false,
+                QueueName = queueName
+            };
+        }
+
         private void OnStateChange(object sender, ConnectorStateChangeEventArgs args)
         {
             if (args.NewState == ConnectionState.Connected)

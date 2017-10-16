@@ -54,7 +54,7 @@ public class EncDec
         cs.Close();
         return  ms.ToArray();
     }
-   
+    
     private static byte[] ToByteArray(Stream stream)
     {
         stream.Position = 0;

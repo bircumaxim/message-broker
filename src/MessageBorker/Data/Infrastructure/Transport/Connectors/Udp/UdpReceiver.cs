@@ -40,7 +40,7 @@ namespace Transport.Connectors.Udp
         }
 
         #region IRun controll methods
-        
+
         public void Start()
         {
             _logger.Debug($"Starting {GetType().Name}");
@@ -75,7 +75,7 @@ namespace Transport.Connectors.Udp
         }
 
         #endregion
-        
+
         private void BindSocketToEndpoint(EndPoint endPoint)
         {
             try
@@ -88,7 +88,7 @@ namespace Transport.Connectors.Udp
                 throw;
             }
         }
-        
+
         private void StartReceivingMessages()
         {
             while (_isAlive)
@@ -102,7 +102,6 @@ namespace Transport.Connectors.Udp
                 catch (Exception ex)
                 {
                     _logger.Error(ex);
-                    break;
                 }
                 _allDone.WaitOne();
             }
@@ -110,32 +109,45 @@ namespace Transport.Connectors.Udp
 
         public void ReadCallback(IAsyncResult result)
         {
-            if(!_isAlive) return;
+            if (!_isAlive) return;
             _allDone.Set();
             if (Socket == null) return;
-            var bytesRead = Socket.EndReceive(result);
-            var state = result.AsyncState as StateObject;
-            if (state == null) return;
-            var message = _wireProtocol.ReadMessage(new DefaultDeserializer(new MemoryStream(state.Buffer, 0, bytesRead)));
-            if (message != null && message.MessageTypeName == typeof(UdpMessageWrapper).Name)
+            int bytesRead = 0;
+            try
             {
-                OnMessageReceived(message as UdpMessageWrapper);
+                bytesRead = Socket.EndReceive(result);
+            }
+            catch (Exception ex)
+            {
+                // ignored
+            }
+            if (bytesRead > 0)
+            {
+                var state = result.AsyncState as StateObject;
+                if (state == null) return;
+                var message =
+                    _wireProtocol.ReadMessage(new DefaultDeserializer(new MemoryStream(state.Buffer, 0, bytesRead)));
+                if (message != null && message.MessageTypeName == typeof(UdpMessageWrapper).Name)
+                {
+                    OnMessageReceived(message as UdpMessageWrapper);
+                }
             }
         }
 
         protected void OnMessageReceived(UdpMessageWrapper udpMessageWrapper)
         {
-            var message = _wireProtocol.ReadMessage(new DefaultDeserializer(new MemoryStream(udpMessageWrapper.Message)));
+            var message =
+                _wireProtocol.ReadMessage(new DefaultDeserializer(new MemoryStream(udpMessageWrapper.Message)));
             UdpMessageReceived?.Invoke(this, new UdpMessageReceivedEventArgs(udpMessageWrapper.ClientName, message));
         }
-        
+
         private bool IsPortAvailable(int port)
         {
             return IPGlobalProperties.GetIPGlobalProperties()
                 .GetActiveTcpConnections()
                 .Any(tcpConnectionInformation => tcpConnectionInformation.LocalEndPoint.Port != port);
         }
-        
+
         private void Validate()
         {
             if (!IsPortAvailable(_port) || Socket == null || _allDone == null || _wireProtocol == null)

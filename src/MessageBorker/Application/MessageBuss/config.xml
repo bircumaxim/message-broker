@@ -3,9 +3,10 @@
     Brockers : 
         Brocker : 
             Name - {required, unique}
+            SocketProtocol - default = Tcp {Tcp, Udp}
             Port - default = 9000
             WireProtocol - deafutl = DefaultWireProtocol
-            DefautlProtocols - inner {DefaultDirect, DefaultTopic, DefaultFanout}
+            DefautlProtocols - inner {Direct, Topic, Fanout}
                 each default protocol should have a unique name.
             EnableCrypting - default = false
 -->
@@ -17,9 +18,21 @@
                  Port="9000"
                  WireProtocol="DefaultWireProtocol"
                  EnableCrypting="true">
-            <DefaultDirect Name="test"/>
-            <DefaultTopic Name="Test1"/>
-            <DefaultFanout Name="Test2"/>
+
+            <Fanout Name="Test2"/>
+            <Direct Name="test"/>
+            <Topic Name="Test1"/>
+        </Brocker>
+
+        <Brocker Name="Brocker2"
+                 SocketProtocol="Udp"
+                 Ip="127.0.0.1"
+                 Port="8000"
+                 WireProtocol="DefaultWireProtocol">
+
+            <Fanout Name="Test2"/>
+            <Direct Name="test"/>
+            <Topic Name="Test1"/>
         </Brocker>
     </Brockers>
 </Buss>

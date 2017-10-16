@@ -11,16 +11,12 @@ namespace Data
 {
     public class UseCaseFactory
     {
-        private readonly PayloadRouteMessageMapper _payloadRouteMessageMapper;
-        private readonly PayloadRequestMessageMapper _payloadRequestMessageMapper;
         private readonly ILog _logger;
         private readonly Persistence _persistence;
         private readonly Transport _transport;
 
         public UseCaseFactory(Persistence persistence, Transport transport)
         {
-            _payloadRequestMessageMapper = new PayloadRequestMessageMapper();
-            _payloadRouteMessageMapper = new PayloadRouteMessageMapper();
             _logger = LogManager.GetLogger(GetType());
             _persistence = persistence;
             _transport = transport;
@@ -30,14 +26,16 @@ namespace Data
         {
             if (args.Message.MessageTypeName == typeof(PayloadRouteMessage).Name)
             {
-                var message = _payloadRouteMessageMapper.Map(args.Message as PayloadRouteMessage);
+                var payloadRouteMessage = args.Message as PayloadRouteMessage;
+                var message = MappersPull.Instance.Map<PayloadRouteMessage, RouteMessage>(payloadRouteMessage);
                 return CreateRouteUseCase(message);
             }
             if (args.Message.MessageTypeName == typeof(PayloadRequestMessage).Name)
             {
-                var domainRequestMessage = _payloadRequestMessageMapper.Map(args.Message as PayloadRequestMessage);
-                domainRequestMessage.ReceiverName = args.Application.Name;
-                return CreateGetMessageUseCase(domainRequestMessage);
+                var payloadRequestMessage = args.Message as PayloadRequestMessage;
+                var requestMessage = MappersPull.Instance.Map<PayloadRequestMessage, MessageRequest>(payloadRequestMessage);
+                requestMessage.ReceiverName = args.Application.Name;
+                return CreateGetMessageUseCase(requestMessage);
             }
             return null;
         }
@@ -55,7 +53,7 @@ namespace Data
             }
             return routeMessageUseCase;
         }
-        
+
         private IUseCase CreateGetMessageUseCase(MessageRequest message)
         {
             GetMessageUseCase getMessageUseCase = null;

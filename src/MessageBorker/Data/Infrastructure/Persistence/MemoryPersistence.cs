@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using log4net;
+using Messages.Subscribe;
 using Persistence.Configuration;
 using Persistence.Models;
 using Persistence.Storages;
@@ -20,19 +21,25 @@ namespace Persistence
         {
             _logger = LogManager.GetLogger(GetType());
             _serrverInfoStorrage =
-                MemoryStorageFactory.Instance.GetStorrageFor<PersistenceServerGeneralInfo>(typeof(PersistenceServerGeneralInfo));
+                MemoryStorageFactory.Instance.GetStorrageFor<PersistenceServerGeneralInfo>(
+                    typeof(PersistenceServerGeneralInfo));
 
             _queuesStorrage =
                 MemoryStorageFactory.Instance.GetStorrageFor<Dictionary<string, PersistenceQueue<PersistenceMessage>>>(
                     typeof(Dictionary<string, PersistenceQueue<PersistenceMessage>>));
             _exchangesStorage =
-                MemoryStorageFactory.Instance.GetStorrageFor<List<PersistenceExchange>>(typeof(List<PersistenceExchange>));
-
+                MemoryStorageFactory.Instance.GetStorrageFor<List<PersistenceExchange>>(
+                    typeof(List<PersistenceExchange>));
             _serrverInfoStorrage.Data = new PersistenceServerGeneralInfo {ServerStartTime = DateTime.Now};
             _queuesStorrage.Data = configuration.GetQueueDataList();
             _exchangesStorage.Data = configuration.GetExchangeDataList();
         }
 
+        public void PersistSubscription(PersistenceSubscription subscription)
+        {
+           //TODO add fizical persistence
+        }
+        
         public void PersistMessage(string queueKey, PersistenceMessage message)
         {
             _queuesStorrage.Data[queueKey].Enqueue(message);
