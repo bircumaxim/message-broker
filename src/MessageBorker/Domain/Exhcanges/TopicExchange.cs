@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using Domain.Messages;
+using Domain.Models;
 
 namespace Domain.Exhcanges
 {
@@ -11,13 +11,13 @@ namespace Domain.Exhcanges
         {
         }
 
-        public TopicExchange(string name, Dictionary<string, Queue<Message>> queues) : base(name, queues)
+        public TopicExchange(string name, Dictionary<string, Queue<RouteMessage>> queues) : base(name, queues)
         {
         }
 
-        protected override List<Queue<Message>> SelectQueues(Message message)
+        protected override List<Queue<RouteMessage>> SelectQueues(RouteMessage routeMessage)
         {
-            var routingRegex = new Regex(message.RoutingKey);
+            var routingRegex = new Regex(routeMessage.RoutingKey);
             return Queues.Where(queue => routingRegex.IsMatch(queue.Key))
                 .Select(queue => queue.Value)
                 .ToList();

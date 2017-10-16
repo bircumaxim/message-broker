@@ -1,8 +1,8 @@
 ﻿using System;
 using Data.Events;
 using Data.Mappers;
-using Data.Models.Mappers;
-using Domain.Messages;
+using Data.Mappers.Messages;
+using Domain.Models;
 using Domain.UseCases;
 using log4net;
 using Messages.Payload;
@@ -11,18 +11,16 @@ namespace Data
 {
     public class UseCaseFactory
     {
-        private readonly MessageMapper _messageMapper;
-        private readonly PayloadMessageMapper _payloadMessageMapper;
-        private readonly PayloadRequestMapper _payloadRequestMapper;
+        private readonly PayloadRouteMessageMapper _payloadRouteMessageMapper;
+        private readonly PayloadRequestMessageMapper _payloadRequestMessageMapper;
         private readonly ILog _logger;
         private readonly Persistence _persistence;
         private readonly Transport _transport;
 
         public UseCaseFactory(Persistence persistence, Transport transport)
         {
-            _messageMapper = new MessageMapper();
-            _payloadRequestMapper = new PayloadRequestMapper();
-            _payloadMessageMapper = new PayloadMessageMapper();
+            _payloadRequestMessageMapper = new PayloadRequestMessageMapper();
+            _payloadRouteMessageMapper = new PayloadRouteMessageMapper();
             _logger = LogManager.GetLogger(GetType());
             _persistence = persistence;
             _transport = transport;
@@ -30,31 +28,30 @@ namespace Data
 
         public IUseCase GetUseCaseFor(RemoteApplicationMessageReceivedEventArgs args)
         {
-            if (args.Message.MessageTypeName == typeof(PayloadMessage).Name)
+            if (args.Message.MessageTypeName == typeof(PayloadRouteMessage).Name)
             {
-                var messageData = _payloadMessageMapper.Map(args.Message as PayloadMessage);
-                var domainMessage = _messageMapper.Map(messageData);
-                return CreateRouteUseCase(domainMessage);
+                var message = _payloadRouteMessageMapper.Map(args.Message as PayloadRouteMessage);
+                return CreateRouteUseCase(message);
             }
-            if (args.Message.MessageTypeName == typeof(PayloadRequest).Name)
+            if (args.Message.MessageTypeName == typeof(PayloadRequestMessage).Name)
             {
-                var domainRequestMessage = _payloadRequestMapper.Map(args.Message as PayloadRequest);
+                var domainRequestMessage = _payloadRequestMessageMapper.Map(args.Message as PayloadRequestMessage);
                 domainRequestMessage.ReceiverName = args.Application.Name;
                 return CreateGetMessageUseCase(domainRequestMessage);
             }
             return null;
         }
 
-        private IUseCase CreateRouteUseCase(Message message)
+        private IUseCase CreateRouteUseCase(RouteMessage routeMessage)
         {
             RouteMessageUseCase routeMessageUseCase = null;
             try
             {
-                routeMessageUseCase = new RouteMessageUseCase(message, _persistence);
+                routeMessageUseCase = new RouteMessageUseCase(routeMessage, _persistence);
             }
             catch (Exception ex)
             {
-                _logger.Error("Smth went wrong during executing RouteMessageUseCase");
+                _logger.Error("Smth went wrong during executing RouteMessageUseCase", ex);
             }
             return routeMessageUseCase;
         }
@@ -68,7 +65,7 @@ namespace Data
             }
             catch (Exception ex)
             {
-                _logger.Error("Smth went wrong during executing GetMessageUseCase");
+                _logger.Error("Smth went wrong during executing GetMessageUseCase", ex);
             }
             return getMessageUseCase;
         }

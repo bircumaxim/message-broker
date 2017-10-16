@@ -2,8 +2,10 @@
 using Data.Configuration;
 using Data.Events;
 using Data.Mappers;
+using Data.Mappers.Messages;
 using Domain.GateWays;
-using Domain.Messages;
+using Domain.Models;
+using log4net;
 using Messages;
 using Messages.Connection;
 using Messages.ServerInfo;
@@ -12,39 +14,31 @@ namespace Data
 {
     public class Transport : ITransportGateWay
     {
+        private readonly ILog _logger;
         private readonly ServerGeneralInfoResponseMapper _serverGeneralInfoResponseMapper;
-        private readonly PayloadResponseMapper _payloadResponseMapper;
+        private readonly PayloadMessageMapper _payloadMessageMapper;
         private readonly RemoteApplicationManager _remoteApplicationManager;
         private readonly UseCaseFactory _useCaseFactory;
         private readonly Persistence _persistence;
 
         public Transport(IConfiguration configuration)
         {
-            _persistence = new Persistence(configuration);
+            _logger = LogManager.GetLogger(GetType());
+            _persistence = new Persistence(configuration.GetPersistenceConfiguration());
             _useCaseFactory = new UseCaseFactory(_persistence, this);
             _remoteApplicationManager = new RemoteApplicationManager(configuration);
             _remoteApplicationManager.RemoteApplicationMessageReceived += RemoteApplicationMessageReceived;
-            _payloadResponseMapper = new PayloadResponseMapper();
+            _payloadMessageMapper = new PayloadMessageMapper();
             _serverGeneralInfoResponseMapper = new ServerGeneralInfoResponseMapper();
         }
 
         public void Start()
         {
-            _persistence.GetPerisistedMessages().ForEach(message =>
-            {
-                RemoteApplicationMessageReceived(this,
-                    new RemoteApplicationMessageReceivedEventArgs {Message = message});
-            });
             _remoteApplicationManager.Start();
         }
 
         public Task StartAsync()
         {
-            _persistence.GetPerisistedMessages().ForEach(message =>
-            {
-                RemoteApplicationMessageReceived(this,
-                    new RemoteApplicationMessageReceivedEventArgs {Message = message});
-            });
             return _remoteApplicationManager.StartAsync();
         }
 
@@ -73,7 +67,7 @@ namespace Data
             }
             else if (args.Message.MessageTypeName == typeof(PongMessage).Name)
             {
-                //TODO add logs here.
+                _logger.Info($"Received pong message from client with id=\"{args.Application.Name}\"");
             }
             else if (args.Message.MessageTypeName == typeof(PayloadMessageReceived).Name)
             {
@@ -86,10 +80,9 @@ namespace Data
             }
         }
 
-        public void Send(MessageResponse messageResponse)
+        public void Send(Message message)
         {
-            var defaultMessageResponse = _payloadResponseMapper.Map(messageResponse);
-            _remoteApplicationManager.SendMessage(messageResponse.ReceiverName, defaultMessageResponse);
+            _remoteApplicationManager.SendMessage(message.ReceiverName, _payloadMessageMapper.Map(message));
         }
     }
 }

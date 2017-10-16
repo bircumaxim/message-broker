@@ -47,8 +47,8 @@
     <Compile Include="Connection\OpenConnectionResponse.cs" />
     <Compile Include="ErrorMessage.cs" />
     <Compile Include="PayloadMessageReceived.cs" />
-    <Compile Include="Payload\PayloadRequest.cs" />
-    <Compile Include="Payload\PayloadResponse.cs" />
+    <Compile Include="Payload\PayloadRouteMessage.cs" />
+    <Compile Include="Payload\PayloadRequesttMessage.cs" />
     <Compile Include="Payload\PayloadMessage.cs" />
     <Compile Include="ServerInfo\PingMessage.cs" />
     <Compile Include="ServerInfo\PongMessage.cs" />

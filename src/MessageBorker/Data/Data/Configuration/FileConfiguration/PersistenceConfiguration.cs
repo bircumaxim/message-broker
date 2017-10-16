@@ -1,25 +1,45 @@
-﻿using System.Xml;
+﻿using System.Collections.Generic;
+using System.Xml;
+using Persistence.Configuration;
+using Persistence.Models;
 using Serialization.WireProtocol;
 
 namespace Data.Configuration.FileConfiguration
 {
-    public class PersistenceConfiguration
+    public class PersistenceConfiguration : IPersistenceConfiguration
     {
         private const string DefaultRootDirectory = ".\\messages";
-        
-        public string RootDirectory { get; set; }
-        public IWireProtocol WireProtocol { get; set; }
+
+        private readonly string _rootDirectory;
+        private readonly IWireProtocol _wireProtocol;
+        private readonly ExchangeAndQueuesConfiguration _exchangeAndQueuesConfiguration;
         
         public PersistenceConfiguration(XmlDocument configsDocument)
         {
             var fileConfigurationNode = configsDocument.SelectSingleNode("MessageBrocker/Persistence/FilePersistence");
-            LoadFileConfigurations(fileConfigurationNode);
-            WireProtocol = WireProtocolConfigHelper.GetWireProtocolByName(fileConfigurationNode);
+            _rootDirectory =  fileConfigurationNode?.Attributes?.GetNamedItem("RootDirectory")?.Value ?? DefaultRootDirectory;
+            _wireProtocol = WireProtocolConfigHelper.GetWireProtocolByName(fileConfigurationNode);
+            _exchangeAndQueuesConfiguration = new ExchangeAndQueuesConfiguration(configsDocument);
         }
 
-        private void LoadFileConfigurations(XmlNode configurationNode)
+        public IWireProtocol GetPersistenceWireProtocol()
         {
-            RootDirectory =  configurationNode?.Attributes?.GetNamedItem("RootDirectory")?.Value ?? DefaultRootDirectory;
+            return _wireProtocol;
+        }
+
+        public string GetFilePersistenceRootDirectory()
+        {
+            return _rootDirectory;
+        }
+
+        public List<PersistenceExchange> GetExchangeDataList()
+        {
+            return _exchangeAndQueuesConfiguration.Exchanges;
+        }
+
+        public Dictionary<string, PersistenceQueue<PersistenceMessage>> GetQueueDataList()
+        {
+            return _exchangeAndQueuesConfiguration.Queues;
         }
     }
 }

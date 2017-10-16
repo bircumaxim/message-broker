@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Domain.Messages;
+using Domain.Models;
 using log4net;
 
 namespace Domain.Exhcanges
@@ -10,30 +10,30 @@ namespace Domain.Exhcanges
     {
         public string Name { get; }
         private readonly ILog _logger;
-        public readonly Dictionary<string, Queue<Message>> Queues;
+        public readonly Dictionary<string, Queue<RouteMessage>> Queues;
 
         protected Exchange(string name)
         {
             Name = name;
-            Queues = new Dictionary<string, Queue<Message>>();
+            Queues = new Dictionary<string, Queue<RouteMessage>>();
             _logger = LogManager.GetLogger(GetType());
             Validate();
         }
 
-        protected Exchange(string name, Dictionary<string, Queue<Message>> queues)
+        protected Exchange(string name, Dictionary<string, Queue<RouteMessage>> queues)
         {
             Name = name;
             Queues = queues;
         }
 
-        public void Route(Message message)
+        public void Route(RouteMessage routeMessage)
         {
-            SelectQueues(message).ForEach(queue => queue.Enqueue(message));
+            SelectQueues(routeMessage).ForEach(queue => queue.Enqueue(routeMessage.Duplicate()));
         }
 
-        protected abstract List<Queue<Message>> SelectQueues(Message message);
+        protected abstract List<Queue<RouteMessage>> SelectQueues(RouteMessage routeMessage);
 
-        public void AddQueue(string bindingKey, Queue<Message> queue)
+        public void AddQueue(string bindingKey, Queue<RouteMessage> queue)
         {
             Queues.Add(bindingKey, queue);
         }
@@ -47,7 +47,7 @@ namespace Domain.Exhcanges
             }
         }
 
-        public List<Queue<Message>> GetAllQueues()
+        public List<Queue<RouteMessage>> GetAllQueues()
         {
             return Queues.Values.ToList();
         }

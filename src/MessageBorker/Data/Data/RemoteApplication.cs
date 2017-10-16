@@ -1,12 +1,7 @@
 ﻿using System;
-using System.ComponentModel.Design.Serialization;
-using System.Threading.Tasks;
 using Data.Events;
-using Data.Mappers;
 using log4net;
-using Messages;
 using Serialization;
-using Transport;
 using Transport.Connectors;
 using Transport.Events;
 

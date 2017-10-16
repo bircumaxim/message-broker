@@ -15,7 +15,7 @@ namespace Domain
 
         public void Enqueue(T message)
         {
-            _concurrentQueue.Enqueue(ObjectCloner.Clone(message));
+            _concurrentQueue.Enqueue(message);
         }
 
         public bool IsEmpty()

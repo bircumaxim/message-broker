@@ -1,0 +1,43 @@
+2017-10-13 09:11:40,740 [5] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Starting TcpConnectionListener 
+2017-10-13 09:11:40,740 [6] [DEBUG ] Transport.Connectors.Udp.UdpReceiver - Starting UdpReceiver 
+2017-10-13 09:11:40,760 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="Tcp" port="9000" 
+2017-10-13 09:11:40,762 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-13 09:11:40,761 [6] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-13 09:12:13,236 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:61587" 
+2017-10-13 09:12:13,236 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-13 09:12:13,268 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 5869bfb3-478d-4f6a-bea5-1af1ef17afa7 
+2017-10-13 09:12:13,268 [9] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 5869bfb3-478d-4f6a-bea5-1af1ef17afa7 
+2017-10-13 09:12:13,284 [9] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="5869bfb3-478d-4f6a-bea5-1af1ef17afa7" 
+2017-10-13 09:12:13,284 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" size="112 byte" to TcpConnector with id 5869bfb3-478d-4f6a-bea5-1af1ef17afa7 
+2017-10-13 09:12:13,315 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 5869bfb3-478d-4f6a-bea5-1af1ef17afa7 
+2017-10-13 09:12:13,315 [9] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="5869bfb3-478d-4f6a-bea5-1af1ef17afa7" 
+2017-10-13 09:12:13,315 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" size="60 byte" to TcpConnector with id 5869bfb3-478d-4f6a-bea5-1af1ef17afa7 
+2017-10-13 09:12:13,333 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PayloadMessage" by TcpConnector with id 5869bfb3-478d-4f6a-bea5-1af1ef17afa7 
+2017-10-13 09:12:13,353 [9] [DEBUG ] Data.FilePersistence - Saved MessageData to Queue with id="TestQueue2" 
+2017-10-13 09:12:13,353 [9] [DEBUG ] Data.MemoryPersistence - Saved MessageData to Queue with id="TestQueue2" 
+2017-10-13 09:12:13,353 [9] [DEBUG ] Data.FilePersistence - Saved MessageData to Queue with id="TestQueue3" 
+2017-10-13 09:12:13,353 [9] [DEBUG ] Data.MemoryPersistence - Saved MessageData to Queue with id="TestQueue3" 
+2017-10-13 09:12:13,353 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="ServerGerneralInfoRequest" by TcpConnector with id 5869bfb3-478d-4f6a-bea5-1af1ef17afa7 
+2017-10-13 09:12:13,353 [9] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - ServerGeneralInfoResponse is preparing to be sent to TcpConnector with id="5869bfb3-478d-4f6a-bea5-1af1ef17afa7" 
+2017-10-13 09:12:13,353 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="ServerGeneralInfoResponse" size="90 byte" to TcpConnector with id 5869bfb3-478d-4f6a-bea5-1af1ef17afa7 
+2017-10-13 09:12:16,217 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="CloseConnectionRequest" by TcpConnector with id 5869bfb3-478d-4f6a-bea5-1af1ef17afa7 
+2017-10-13 09:12:16,217 [9] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector stoped 
+2017-10-13 09:12:16,909 [3] [DEBUG ] Transport.Connectors.Tcp.TcpConnectionListener - Socket accepted protocol="Tcp" endpoint="127.0.0.1:61590" 
+2017-10-13 09:12:16,909 [8] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector started 
+2017-10-13 09:12:16,932 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 5bb5325d-186d-42cd-9ed2-7fdb76d000f0 
+2017-10-13 09:12:16,947 [10] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 5bb5325d-186d-42cd-9ed2-7fdb76d000f0 
+2017-10-13 09:12:16,947 [10] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - OpenConnectionResponse is preparing to be sent to TcpConnector with id="5bb5325d-186d-42cd-9ed2-7fdb76d000f0" 
+2017-10-13 09:12:16,947 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" size="112 byte" to TcpConnector with id 5bb5325d-186d-42cd-9ed2-7fdb76d000f0 
+2017-10-13 09:12:16,979 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 5bb5325d-186d-42cd-9ed2-7fdb76d000f0 
+2017-10-13 09:12:16,979 [10] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - PongMessage is preparing to be sent to TcpConnector with id="5bb5325d-186d-42cd-9ed2-7fdb76d000f0" 
+2017-10-13 09:12:16,979 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" size="60 byte" to TcpConnector with id 5bb5325d-186d-42cd-9ed2-7fdb76d000f0 
+2017-10-13 09:12:16,979 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PayloadMessage" by TcpConnector with id 5bb5325d-186d-42cd-9ed2-7fdb76d000f0 
+2017-10-13 09:12:16,994 [10] [DEBUG ] Data.FilePersistence - Saved MessageData to Queue with id="TestQueue2" 
+2017-10-13 09:12:16,994 [10] [DEBUG ] Data.MemoryPersistence - Saved MessageData to Queue with id="TestQueue2" 
+2017-10-13 09:12:16,994 [10] [DEBUG ] Data.FilePersistence - Saved MessageData to Queue with id="TestQueue3" 
+2017-10-13 09:12:16,994 [10] [DEBUG ] Data.MemoryPersistence - Saved MessageData to Queue with id="TestQueue3" 
+2017-10-13 09:12:16,994 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="ServerGerneralInfoRequest" by TcpConnector with id 5bb5325d-186d-42cd-9ed2-7fdb76d000f0 
+2017-10-13 09:12:16,994 [10] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - ServerGeneralInfoResponse is preparing to be sent to TcpConnector with id="5bb5325d-186d-42cd-9ed2-7fdb76d000f0" 
+2017-10-13 09:12:16,994 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="ServerGeneralInfoResponse" size="90 byte" to TcpConnector with id 5bb5325d-186d-42cd-9ed2-7fdb76d000f0 
+2017-10-13 09:15:28,184 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="CloseConnectionRequest" by TcpConnector with id 5bb5325d-186d-42cd-9ed2-7fdb76d000f0 
+2017-10-13 09:15:28,184 [10] [DEBUG ] Transport.Connectors.Tcp.TcpConnector - TcpConnector stoped 

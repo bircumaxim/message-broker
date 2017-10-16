@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Xml;
-using Data.Models;
+using Persistence.Models;
 
 namespace Data.Configuration.FileConfiguration
 {
@@ -10,13 +10,13 @@ namespace Data.Configuration.FileConfiguration
         private const string DefaultExchangeNme = "DefaultExchange";
         private const string DefaultQueuename = "DefaultQueue";
 
-        public List<ExchangeData> Exchanges { get; }
-        public Dictionary<string, QueueData<MessageData>> Queues { get; }
+        public List<PersistenceExchange> Exchanges { get; }
+        public Dictionary<string, PersistenceQueue<PersistenceMessage>> Queues { get; }
 
         public ExchangeAndQueuesConfiguration(XmlNode configsDocument)
         {
-            Exchanges = new List<ExchangeData>();
-            Queues = new Dictionary<string, QueueData<MessageData>>();
+            Exchanges = new List<PersistenceExchange>();
+            Queues = new Dictionary<string, PersistenceQueue<PersistenceMessage>>();
             LoadConfigurations(configsDocument);
         }
 
@@ -32,22 +32,22 @@ namespace Data.Configuration.FileConfiguration
             }
         }
 
-        private ExchangeData CreateExchange(XmlNode exchangeNode)
+        private PersistenceExchange CreateExchange(XmlNode exchangeNode)
         {
-            var exchange = new ExchangeData();
+            var exchange = new PersistenceExchange();
             if (exchangeNode.Attributes != null)
             {
                 exchange.Name = exchangeNode.Attributes.GetNamedItem("Name").Value ?? DefaultExchangeNme;
                 switch (exchangeNode.Name)
                 {
                     case "DirectExchange":
-                        exchange.ExchangeTypeData = ExchangeTypeData.Direct;
+                        exchange.ExchangeType = PersistenceExchangeType.Direct;
                         break;
                     case "TopicExchange":
-                        exchange.ExchangeTypeData = ExchangeTypeData.Topic;
+                        exchange.ExchangeType = PersistenceExchangeType.Topic;
                         break;
                     case "FanoutExchange":
-                        exchange.ExchangeTypeData = ExchangeTypeData.Fanout;
+                        exchange.ExchangeType = PersistenceExchangeType.Fanout;
                         break;
                 }
 
@@ -57,12 +57,12 @@ namespace Data.Configuration.FileConfiguration
             return exchange;
         }
 
-        private Dictionary<string, QueueData<MessageData>> GetExchangeQueues(XmlNode exchangeNode)
+        private Dictionary<string, PersistenceQueue<PersistenceMessage>> GetExchangeQueues(XmlNode exchangeNode)
         {
-            var queuesThatBelongToGivenExchange = new Dictionary<string, QueueData<MessageData>>();
+            var queuesThatBelongToGivenExchange = new Dictionary<string, PersistenceQueue<PersistenceMessage>>();
             foreach (XmlNode queueNode in exchangeNode.ChildNodes)
             {
-                var queue = new QueueData<MessageData>();
+                var queue = new PersistenceQueue<PersistenceMessage>();
                 if (queueNode.Attributes != null)
                 {
                     queue.Name = queueNode.Attributes.GetNamedItem("Name").Value ?? DefaultQueuename;
@@ -77,7 +77,7 @@ namespace Data.Configuration.FileConfiguration
             return queuesThatBelongToGivenExchange;
         }
 
-        private void AddIfNotExist(QueueData<MessageData> queue)
+        private void AddIfNotExist(PersistenceQueue<PersistenceMessage> queue)
         {
             if (!Queues.ContainsKey(queue.Name))
             {

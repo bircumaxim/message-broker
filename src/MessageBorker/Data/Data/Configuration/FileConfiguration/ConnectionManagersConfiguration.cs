@@ -25,14 +25,12 @@ namespace Data.Configuration.FileConfiguration
             if (connectionManagers == null) return;
             foreach (XmlElement connectionManagerXmlElement in connectionManagers)
             {
-                switch (connectionManagerXmlElement.Name)
+                var managerName = connectionManagerXmlElement.Name;
+                if (managerName == typeof(UdpConnectionManager).Name)
+                    AddUdpConnectionManager(connectionManagerXmlElement);
+                else if (managerName == typeof(TcpConnectionManager).Name)
                 {
-                    case "UdpConnectionManager":
-                        AddUdpConnectionManager(connectionManagerXmlElement);
-                        break;
-                    case "TcpConnectionManager":
-                        AddTcpConnectionManager(connectionManagerXmlElement);
-                        break;
+                    AddTcpConnectionManager(connectionManagerXmlElement);
                 }
             }
         }

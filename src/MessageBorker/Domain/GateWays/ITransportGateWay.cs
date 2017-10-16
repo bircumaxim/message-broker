@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Domain.Messages;
+using Domain.Models;
 
 namespace Domain.GateWays
 {
@@ -8,6 +8,6 @@ namespace Domain.GateWays
         void Start();
         Task StartAsync();
         void Stop();
-        void Send(MessageResponse messageResponse);
+        void Send(Message message);
     }
 }

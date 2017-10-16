@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Domain.Messages;
+using Domain.Models;
 
 namespace Domain.Exhcanges
 {
@@ -10,11 +10,11 @@ namespace Domain.Exhcanges
         {
         }
 
-        public FanoutExchange(string name, Dictionary<string, Queue<Message>> queues) : base(name, queues)
+        public FanoutExchange(string name, Dictionary<string, Queue<RouteMessage>> queues) : base(name, queues)
         {
         }
 
-        protected override List<Queue<Message>> SelectQueues(Message message)
+        protected override List<Queue<RouteMessage>> SelectQueues(RouteMessage routeMessage)
         {
             return Queues.Select(queue => queue.Value).ToList();
         }

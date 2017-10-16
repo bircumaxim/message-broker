@@ -1,6 +1,6 @@
 ﻿using System;
 using Domain.GateWays;
-using Domain.Messages;
+using Domain.Models;
 
 namespace Domain.UseCases
 {
@@ -22,7 +22,7 @@ namespace Domain.UseCases
         public void Execute()
         {
             var message = _persistenceGateWay.GetMessageFromQueueWithName(_messageRequest.QueueName);
-            var messageResponse = new MessageResponse
+            var messageResponse = new Message
             {
                 MessageId = message.MessageId,
                 Payload = message.Payload, 

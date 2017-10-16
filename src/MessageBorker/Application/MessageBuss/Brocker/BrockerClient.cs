@@ -79,7 +79,7 @@ namespace MessageBuss.Brocker
                     SendMessageToConnector(new OpenConnectionRequest());
                     break;
                 default:
-                    if (args.Message.MessageTypeName == "DefaultMessageResponse")
+                    if (args.Message.MessageTypeName == typeof(PayloadMessage).Name)
                     {
                         SendMessageReceivedAcknoledge(args.Message);
                     }
@@ -91,8 +91,8 @@ namespace MessageBuss.Brocker
 
         private void SendMessageReceivedAcknoledge(Message message)
         {
-            var defaultMessageResponse = message as DefaultMessageResponse;
-            SendOrEnqueue(new PayloadMessageReceived { MessageId = defaultMessageResponse.ReceivedMessageId});
+            var payloadMessage = message as PayloadMessage;
+            SendOrEnqueue(new PayloadMessageReceived { MessageId = payloadMessage?.MessageId});
         }
         
         private void OnCloseConecctionResponse()

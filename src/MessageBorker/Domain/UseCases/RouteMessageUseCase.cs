@@ -2,33 +2,33 @@
 using System.Xml.Schema;
 using Domain.Exhcanges;
 using Domain.GateWays;
-using Domain.Messages;
+using Domain.Models;
 
 namespace Domain.UseCases
 {
     public class RouteMessageUseCase : IUseCase
     {
         private readonly IPersistenceGateWay _persistence;
-        private readonly Message _message;
+        private readonly RouteMessage _routeMessage;
         private readonly Exchange _exchange;
 
-        public RouteMessageUseCase(Message message, IPersistenceGateWay persistence)
+        public RouteMessageUseCase(RouteMessage routeMessage, IPersistenceGateWay persistence)
         {
-            _message = message;
+            _routeMessage = routeMessage;
             _persistence = persistence;
-            _exchange = _persistence.GetExchangeFor(_message);
+            _exchange = _persistence.GetExchangeFor(_routeMessage);
             Validate();
         }
 
         public void Execute()
         {
-            _exchange.Route(_message);
+            _exchange.Route(_routeMessage);
             _persistence.PersistQueues(_exchange.Queues);
         }
 
         private void Validate()
         {
-            if (_exchange == null || _message == null || _persistence == null)
+            if (_exchange == null || _routeMessage == null || _persistence == null)
             {
                 throw new NullReferenceException();
             }
