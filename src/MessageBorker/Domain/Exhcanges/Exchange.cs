@@ -28,7 +28,7 @@ namespace Domain.Exhcanges
 
         public void Route(RouteMessage routeMessage)
         {
-            SelectQueues(routeMessage).ForEach(queue => queue.Enqueue(routeMessage.Duplicate()));
+            SelectQueues(routeMessage).ForEach(queue => queue.Enqueue(routeMessage));
         }
 
         protected abstract List<Queue<RouteMessage>> SelectQueues(RouteMessage routeMessage);

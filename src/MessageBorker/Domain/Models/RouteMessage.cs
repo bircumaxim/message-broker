@@ -2,8 +2,7 @@
 
 namespace Domain.Models
 {
-    [Serializable]
-    public class RouteMessage
+    public class RouteMessage : IMessage
     {
         public string MessageId { get; set; }
         public bool IsDurable { get; set; }
@@ -17,6 +16,17 @@ namespace Domain.Models
         }
 
         public RouteMessage Duplicate()
+        {
+            return new RouteMessage
+            {
+                IsDurable = IsDurable,
+                RoutingKey = RoutingKey,
+                ExchangeName = ExchangeName,
+                Payload = Payload
+            };
+        }
+
+        public IMessage MakeCopy()
         {
             return new RouteMessage
             {

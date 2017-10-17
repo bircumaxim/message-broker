@@ -111,3 +111,6 @@
 2017-10-17 04:20:02,392 [17] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
 2017-10-17 04:20:02,607 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="CloseConnectionRequest" by TcpConnector with id 51927bc2-9d6f-4d35-a433-3112f9d86092 
 2017-10-17 04:20:02,607 [17] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="CloseConnectionRequest" by UdpConnector with id e5562778-3753-410e-a5b5-bb7fce5b26ba 
+2017-10-17 21:04:03,599 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="Tcp" port="9000" 
+2017-10-17 21:04:03,599 [6] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-17 21:04:03,612 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
