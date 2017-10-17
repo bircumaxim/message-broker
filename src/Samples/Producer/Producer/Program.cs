@@ -11,14 +11,14 @@ namespace Producer
     {
         public static void Main(string[] args)
         {
-            var buss = BussFactory.Instance.GetBussFor("Brocker");
+            var buss = BussFactory.Instance.GetBussFor("Broker");
             buss.Ping();
             buss.MessageReceived += OnMessageReceived;
             buss.Fanout(new UserOrderPayload {UserName = "Papusoi Ion"}, true);
             Console.ReadKey();
             buss.RequestServerInfo();
 
-            var buss2 = BussFactory.Instance.GetBussFor("Brocker2");
+            var buss2 = BussFactory.Instance.GetBussFor("Broker2");
             buss2.MessageReceived += OnMessageReceived;
             buss2.Fanout(new UserOrderPayload(), true);
             Console.ReadKey();

@@ -1,12 +1,10 @@
 ﻿using System;
 using System.IO;
-using MessageBuss.Brocker;
-using MessageBuss.Brocker.Events;
+using MessageBuss.Broker;
+using MessageBuss.Broker.Events;
 using MessageBuss.Buss.Events;
-using Messages;
 using Messages.Payload;
 using Messages.ServerInfo;
-using Messages.Subscribe;
 using Serialization;
 using Serialization.Deserializer;
 using Serialization.Serializer;
@@ -15,35 +13,35 @@ namespace MessageBuss.Buss
 {
     public class Buss
     {
-        private readonly BrockerClient _brocker;
+        private readonly BrokerClient _broker;
         public event MessageReceivedHandler MessageReceived;
 
-        public Buss(BrockerClient brocker)
+        public Buss(BrokerClient broker)
         {
-            _brocker = brocker;
-            _brocker.MessageReceivedFromBrockerHandler += OnMessageReceivedFromBrocker;
+            _broker = broker;
+            _broker.MessageReceivedFromBrokerHandler += OnMessageReceivedFromBroker;
         }
 
         #region Buss features
 
         public void Ping()
         {
-            _brocker.Ping();
+            _broker.Ping();
         }
 
         public void RequestServerInfo()
         {
-            _brocker.SendOrEnqueue(new ServerGerneralInfoRequest());
+            _broker.SendOrEnqueue(new ServerGerneralInfoRequest());
         }
 
         public void Request(string queueName)
         {
-            _brocker.SendOrEnqueue(new PayloadRequestMessage {QueueName = queueName});
+            _broker.SendOrEnqueue(new PayloadRequestMessage {QueueName = queueName});
         }
 
         public void Publish(string exchangeName, string routingKey, Message payload, bool isDurable = false)
         {
-            _brocker.SendOrEnqueue(CreateRouteMessage(exchangeName, routingKey, payload, isDurable));
+            _broker.SendOrEnqueue(CreateRouteMessage(exchangeName, routingKey, payload, isDurable));
         }
 
         public void Fanout(Message payload, bool isDurable = false)
@@ -63,7 +61,7 @@ namespace MessageBuss.Buss
 
         public void Subscribe(string queueName)
         {
-           _brocker.Subscribe(queueName);
+           _broker.Subscribe(queueName);
         }
         
         public void Unsubscribe()
@@ -73,13 +71,13 @@ namespace MessageBuss.Buss
 
         public void Dispose()
         {
-            _brocker.MessageReceivedFromBrockerHandler -= OnMessageReceivedFromBrocker;
-            _brocker.Stop();
+            _broker.MessageReceivedFromBrokerHandler -= OnMessageReceivedFromBroker;
+            _broker.Stop();
         }
 
         #endregion
 
-        private void OnMessageReceivedFromBrocker(object sender, BrockerClientMessageReceivedEventArgs args)
+        private void OnMessageReceivedFromBroker(object sender, BrokerClientMessageReceivedEventArgs args)
         {
             var messageType = args.Message.MessageTypeName;
             if (messageType == typeof(PayloadMessage).Name)
@@ -89,7 +87,7 @@ namespace MessageBuss.Buss
                 if (payloadMessage != null)
                 {
                     var deserializer = new DefaultDeserializer(new MemoryStream(payloadMessage.Payload));
-                    payload = _brocker.WireProtocol.ReadMessage(deserializer);
+                    payload = _broker.WireProtocol.ReadMessage(deserializer);
                 }
                 MessageReceived?.Invoke(this, new MessegeReceviedEventArgs(payload));
             }
@@ -102,7 +100,7 @@ namespace MessageBuss.Buss
         private string GetExchangeNameForType(string exchangeType)
         {
             string exchangeName;
-            _brocker.DefautlExchanges.TryGetValue(exchangeType, out exchangeName);
+            _broker.DefautlExchanges.TryGetValue(exchangeType, out exchangeName);
             if (exchangeName == null)
             {
                 throw new Exception($"Default exchange for {exchangeType} was not set !!!");
@@ -119,7 +117,7 @@ namespace MessageBuss.Buss
                 RoutingKey = routingKey,
                 ExchangeName = exchangeName
             };
-            _brocker.WireProtocol.WriteMessage(new DefaultSerializer(defaultMessage.MemoryStream), payload);
+            _broker.WireProtocol.WriteMessage(new DefaultSerializer(defaultMessage.MemoryStream), payload);
             return defaultMessage;
         }
     }

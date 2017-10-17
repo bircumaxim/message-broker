@@ -21,7 +21,7 @@ namespace Data.Configuration.FileConfiguration
 
         private void LoadConnectionManagers(XmlDocument configsDocument)
         {
-            var connectionManagers = configsDocument.SelectSingleNode("/Brocker/ConnectionManagers");
+            var connectionManagers = configsDocument.SelectSingleNode("/Broker/ConnectionManagers");
             if (connectionManagers == null) return;
             foreach (XmlElement connectionManagerXmlElement in connectionManagers)
             {

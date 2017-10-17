@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using MessageBuss.Brocker;
+using MessageBuss.Broker;
 using MessageBuss.Configuration;
 
 namespace MessageBuss.Buss
@@ -11,19 +11,19 @@ namespace MessageBuss.Buss
         public static BussFactory Instance => _instance ?? (_instance = new BussFactory());
         
         private static readonly string ConfigFilePath = Path.Combine(Directory.GetCurrentDirectory(), "./config.xml");
-        private readonly Dictionary<string, BrockerClient> _brockerClients;
+        private readonly Dictionary<string, BrokerClient> _brokerClients;
 
         private BussFactory()
         {
             IConfiguration configuration = new FileConfiguration(ConfigFilePath);
-            _brockerClients = configuration.GetBrockers();
+            _brokerClients = configuration.GetBrokers();
         }
 
-        public Buss GetBussFor(string brockerName)
+        public Buss GetBussFor(string brokerName)
         {
-            var brocker = _brockerClients[brockerName];
-            brocker.StartAsync();
-            return new Buss(brocker);
+            var broker = _brokerClients[brokerName];
+            broker.StartAsync();
+            return new Buss(broker);
         }
     }
 }

@@ -1,19 +1,18 @@
 ﻿using System;
-using System.IO;
 using log4net;
 
-namespace MessageBrocker
+namespace MessageBroker
 {
     internal class Program
     {
         private static readonly ILog Logger = LogManager.GetLogger(typeof(Program));
-        private static readonly BrockerService BrockerService = new BrockerService();
+        private static readonly BrokerService BrokerService = new BrokerService();
 
         public static void Main(string[] args)
         {   
-            BrockerService.StartAsync();
+            BrokerService.StartAsync();
             Console.ReadKey();
-            BrockerService.Stop();
+            BrokerService.Stop();
             Console.WriteLine("\nServer stoped.\nPress any key to exit.");
             Console.ReadKey(); 
         }

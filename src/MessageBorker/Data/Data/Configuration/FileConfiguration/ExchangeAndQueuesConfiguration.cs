@@ -22,7 +22,7 @@ namespace Data.Configuration.FileConfiguration
 
         private void LoadConfigurations(XmlNode configsDocument)
         {
-            var exchangeNodes = configsDocument.SelectSingleNode("/Brocker/Exchanges");
+            var exchangeNodes = configsDocument.SelectSingleNode("/Broker/Exchanges");
             if (exchangeNodes != null)
             {
                 foreach (XmlElement exchangeNode in exchangeNodes)

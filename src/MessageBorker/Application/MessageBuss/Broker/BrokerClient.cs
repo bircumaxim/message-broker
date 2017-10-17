@@ -1,34 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Net;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
-using MessageBuss.Brocker.Events;
-using Messages;
+using MessageBuss.Broker.Events;
 using Messages.Connection;
 using Messages.Payload;
-using Messages.ServerInfo;
-using Microsoft.SqlServer.Server;
 using Serialization;
 using Serialization.WireProtocol;
 using Transport.Events;
 
-namespace MessageBuss.Brocker
+namespace MessageBuss.Broker
 {
-    public abstract class BrockerClient : IRun
+    public abstract class BrokerClient : IRun
     {
-        public string BrockerName { get; }
+        public string BrokerName { get; }
         private bool _isConnectionAccepted;
         public IWireProtocol WireProtocol { get; }
         private readonly Queue<Message> _messagesToSend;
         public Dictionary<string, string> DefautlExchanges { get; }
-        public event BrockerClientMessageReceivedHandler MessageReceivedFromBrockerHandler;
+        public event BrokerClientMessageReceivedHandler MessageReceivedFromBrokerHandler;
         public IPEndPoint IpEndPoint { get; }
 
-        protected BrockerClient(string brockerName, IWireProtocol wireProtocol,
+        protected BrokerClient(string brokerName, IWireProtocol wireProtocol,
             Dictionary<string, string> defautlExchanges, IPEndPoint ipEndPoint)
         {
-            BrockerName = brockerName;
+            BrokerName = brokerName;
             DefautlExchanges = defautlExchanges;
             IpEndPoint = ipEndPoint;
             WireProtocol = wireProtocol;
@@ -94,8 +89,8 @@ namespace MessageBuss.Brocker
                     {
                         SendMessageReceivedAcknoledge(args.Message);
                     }
-                    var message = new BrockerClientMessageReceivedEventArgs(this, args.Message);
-                    MessageReceivedFromBrockerHandler?.Invoke(this, message);
+                    var message = new BrokerClientMessageReceivedEventArgs(this, args.Message);
+                    MessageReceivedFromBrokerHandler?.Invoke(this, message);
                     break;
             }
         }

@@ -10,14 +10,14 @@ using Serialization.WireProtocol;
 using Transport.Connectors.Tcp;
 using Transport.Events;
 
-namespace MessageBuss.Brocker
+namespace MessageBuss.Broker
 {
-    public class TcpBrockerClient : BrockerClient
+    public class TcpBrokerClient : BrokerClient
     {
         private readonly TcpConnector _tcpConnector;
 
-        public TcpBrockerClient(string brockerName, IWireProtocol wireProtocol, IPEndPoint ipEndPoint,
-            Dictionary<string, string> defautlExchanges) : base(brockerName, wireProtocol, defautlExchanges, ipEndPoint)
+        public TcpBrokerClient(string brokerName, IWireProtocol wireProtocol, IPEndPoint ipEndPoint,
+            Dictionary<string, string> defautlExchanges) : base(brokerName, wireProtocol, defautlExchanges, ipEndPoint)
         {
             _tcpConnector = new TcpConnector(GetTcpSocket(ipEndPoint), WireProtocol);
             _tcpConnector.StateChanged += OnStateChange;
@@ -82,7 +82,7 @@ namespace MessageBuss.Brocker
             {
                 Console.WriteLine("\nConnection to server failed.\n" +
                                   $"Check please that on {endPoint} " +
-                                  "there is a running instance of message brocker server.");
+                                  "there is a running instance of message broker server.");
                 throw ex;
             }
             return socket;

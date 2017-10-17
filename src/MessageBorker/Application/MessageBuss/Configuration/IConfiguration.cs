@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using MessageBuss.Brocker;
+using MessageBuss.Broker;
 
 namespace MessageBuss.Configuration
 {
     internal interface IConfiguration
     {
-        Dictionary<string, BrockerClient> GetBrockers();
+        Dictionary<string, BrokerClient> GetBrokers();
     }
 }

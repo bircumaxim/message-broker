@@ -42,10 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Brocker\BrockerClient.cs" />
-    <Compile Include="Brocker\Events\BrockerClientMessageReceivedEventArgs.cs" />
-    <Compile Include="Brocker\TcpBrockerClient.cs" />
-    <Compile Include="Brocker\UdpBrockerClient.cs" />
+    <Compile Include="Broker\BrokerClient.cs" />
+    <Compile Include="Broker\Events\BrokerClientMessageReceivedEventArgs.cs" />
+    <Compile Include="Broker\TcpBrokerClient.cs" />
+    <Compile Include="Broker\UdpBrokerClient.cs" />
     <Compile Include="Buss\Buss.cs" />
     <Compile Include="Buss\BussFactory.cs" />
     <Compile Include="Buss\Events\MessegeReceviedEventArgs.cs" />

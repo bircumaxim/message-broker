@@ -1,0 +1,113 @@
+2017-10-17 04:11:16,959 [6] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-17 04:11:16,960 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="Tcp" port="9000" 
+2017-10-17 04:11:16,972 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-17 04:17:22,359 [4] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-17 04:17:22,359 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="Tcp" port="9000" 
+2017-10-17 04:17:22,374 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-17 04:18:26,491 [6] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-17 04:18:26,491 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="Tcp" port="9000" 
+2017-10-17 04:18:26,502 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-17 04:19:10,990 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 0e7b6021-bdbe-4f40-8093-d1262a18f554 
+2017-10-17 04:19:10,990 [9] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 0e7b6021-bdbe-4f40-8093-d1262a18f554 
+2017-10-17 04:19:11,005 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" size="112 byte" to TcpConnector with id 0e7b6021-bdbe-4f40-8093-d1262a18f554 
+2017-10-17 04:19:11,190 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 0e7b6021-bdbe-4f40-8093-d1262a18f554 
+2017-10-17 04:19:11,190 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" size="60 byte" to TcpConnector with id 0e7b6021-bdbe-4f40-8093-d1262a18f554 
+2017-10-17 04:19:11,190 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PayloadRouteMessage" by TcpConnector with id 0e7b6021-bdbe-4f40-8093-d1262a18f554 
+2017-10-17 04:19:17,227 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="ServerGerneralInfoRequest" by TcpConnector with id 0e7b6021-bdbe-4f40-8093-d1262a18f554 
+2017-10-17 04:19:17,242 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="ServerGeneralInfoResponse" size="90 byte" to TcpConnector with id 0e7b6021-bdbe-4f40-8093-d1262a18f554 
+2017-10-17 04:19:17,242 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id a94a2e7c-6b59-4699-8f07-5df2892ba8e2 
+2017-10-17 04:19:17,242 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id a94a2e7c-6b59-4699-8f07-5df2892ba8e2 
+2017-10-17 04:19:17,242 [3] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id a94a2e7c-6b59-4699-8f07-5df2892ba8e2 
+2017-10-17 04:19:17,242 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="OpenConnectionResponse" size="222 byte" to UdpConnector with id a94a2e7c-6b59-4699-8f07-5df2892ba8e2 
+2017-10-17 04:19:17,257 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadRouteMessage" by UdpConnector with id a94a2e7c-6b59-4699-8f07-5df2892ba8e2 
+2017-10-17 04:19:18,912 [9] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="CloseConnectionRequest" by TcpConnector with id 0e7b6021-bdbe-4f40-8093-d1262a18f554 
+2017-10-17 04:19:18,912 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="CloseConnectionRequest" by UdpConnector with id a94a2e7c-6b59-4699-8f07-5df2892ba8e2 
+2017-10-17 04:19:44,983 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:01,327 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 51927bc2-9d6f-4d35-a433-3112f9d86092 
+2017-10-17 04:20:01,327 [10] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 51927bc2-9d6f-4d35-a433-3112f9d86092 
+2017-10-17 04:20:01,327 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" size="112 byte" to TcpConnector with id 51927bc2-9d6f-4d35-a433-3112f9d86092 
+2017-10-17 04:20:01,490 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PingMessage" by TcpConnector with id 51927bc2-9d6f-4d35-a433-3112f9d86092 
+2017-10-17 04:20:01,490 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="PongMessage" size="60 byte" to TcpConnector with id 51927bc2-9d6f-4d35-a433-3112f9d86092 
+2017-10-17 04:20:01,490 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PayloadRouteMessage" by TcpConnector with id 51927bc2-9d6f-4d35-a433-3112f9d86092 
+2017-10-17 04:20:02,075 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="ServerGerneralInfoRequest" by TcpConnector with id 51927bc2-9d6f-4d35-a433-3112f9d86092 
+2017-10-17 04:20:02,075 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="ServerGeneralInfoResponse" size="90 byte" to TcpConnector with id 51927bc2-9d6f-4d35-a433-3112f9d86092 
+2017-10-17 04:20:02,075 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id e5562778-3753-410e-a5b5-bb7fce5b26ba 
+2017-10-17 04:20:02,244 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,244 [11] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,244 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="OpenConnectionResponse" size="222 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,244 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="SubscribeMessage" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,244 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="SubscribeMessage" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,260 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="265 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,260 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="262 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,260 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="265 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,260 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="265 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,260 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="265 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,260 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="265 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,260 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="262 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,260 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="265 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,260 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="265 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,260 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="262 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,260 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="265 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,260 [7] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,276 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="262 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,276 [9] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,276 [7] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,276 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="273 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,276 [4] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,291 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,291 [16] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,291 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,291 [16] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,291 [4] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,291 [9] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,291 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="273 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,291 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,291 [7] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,291 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,291 [17] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,307 [17] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,307 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="273 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,307 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="273 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,307 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="262 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,307 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="273 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,307 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="265 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,307 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="262 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,307 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="265 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,323 [17] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,326 [7] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,326 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="265 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,323 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,327 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,329 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,329 [9] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,345 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,325 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,329 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="265 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,345 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="265 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,345 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="262 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,345 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="265 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,345 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="265 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,345 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="262 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,360 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,360 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="265 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,360 [6] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,360 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="262 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,360 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,360 [9] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,360 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="273 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,360 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,360 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="273 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,360 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="273 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,360 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="273 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,360 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="262 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,360 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="273 byte" to UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,376 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,376 [13] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,376 [11] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,376 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,392 [7] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,376 [9] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,392 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,392 [17] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id c594a782-4b68-498d-ab56-05f7be09de31 
+2017-10-17 04:20:02,607 [10] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="CloseConnectionRequest" by TcpConnector with id 51927bc2-9d6f-4d35-a433-3112f9d86092 
+2017-10-17 04:20:02,607 [17] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="CloseConnectionRequest" by UdpConnector with id e5562778-3753-410e-a5b5-bb7fce5b26ba 

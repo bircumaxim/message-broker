@@ -10,15 +10,15 @@ using Serialization.WireProtocol;
 using Transport.Connectors.Udp;
 using Transport.Connectors.Udp.Events;
 
-namespace MessageBuss.Brocker
+namespace MessageBuss.Broker
 {
-    public class UdpBrockerClient : BrockerClient
+    public class UdpBrokerClient : BrokerClient
     {
         private readonly UdpConnector _udpConnector;
         private readonly UdpReceiver _udpReceiver;
 
-        public UdpBrockerClient(string brockerName, IWireProtocol wireProtocol, IPEndPoint ipEndPoint,
-            Dictionary<string, string> defautlExchanges) : base(brockerName, wireProtocol, defautlExchanges, ipEndPoint)
+        public UdpBrokerClient(string brokerName, IWireProtocol wireProtocol, IPEndPoint ipEndPoint,
+            Dictionary<string, string> defautlExchanges) : base(brokerName, wireProtocol, defautlExchanges, ipEndPoint)
         {
             _udpReceiver = new UdpReceiver(5000, wireProtocol);
             _udpConnector = new UdpConnector(GetUdpSocket(), ipEndPoint, wireProtocol);

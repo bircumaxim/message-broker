@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace MessageBrocker.Infrastructure
+namespace MessageBroker.Infrastructure
 {
     public interface IRun
     {

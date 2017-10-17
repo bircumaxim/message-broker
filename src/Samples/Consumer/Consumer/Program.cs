@@ -8,7 +8,7 @@ namespace Consumer
     {
         public static void Main(string[] args)
         {
-            var buss = BussFactory.Instance.GetBussFor("Brocker");
+            var buss = BussFactory.Instance.GetBussFor("Broker");
             buss.Subscribe("TestQueue2");
             buss.Subscribe("TestQueue3");
             buss.MessageReceived += OnMessageReceived;

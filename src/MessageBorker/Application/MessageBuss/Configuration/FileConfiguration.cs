@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Xml;
-using MessageBuss.Brocker;
+using MessageBuss.Broker;
 using Serialization;
 using Serialization.WireProtocol;
 
@@ -15,11 +15,11 @@ namespace MessageBuss.Configuration
         private const string DefaultWireProtcolName = "DefaultWireProtocol";
         private const string DefaultIp = "127.0.0.1";
         private const string DefaultPort = "9000";
-        private readonly Dictionary<string, BrockerClient> _brockerClients;
+        private readonly Dictionary<string, BrokerClient> _brokerClients;
 
         internal FileConfiguration(string filePath)
         {
-            _brockerClients = new Dictionary<string, BrockerClient>();
+            _brokerClients = new Dictionary<string, BrokerClient>();
             var configsDocument = new XmlDocument();
             configsDocument.Load(filePath);
             LoadConfigurationFrom(configsDocument);
@@ -27,51 +27,51 @@ namespace MessageBuss.Configuration
 
         private void LoadConfigurationFrom(XmlDocument configsDocument)
         {
-            var brockerNodes = configsDocument.SelectSingleNode("/Buss/Brockers");
-            if (brockerNodes != null)
+            var brokerNodes = configsDocument.SelectSingleNode("/Buss/Brokers");
+            if (brokerNodes != null)
             {
-                foreach (XmlElement brockerNode in brockerNodes)
+                foreach (XmlElement brokerNode in brokerNodes)
                 {
-                    BrockerClient brockerClient = GetBrockerFromNode(brockerNode);
-                    _brockerClients.Add(brockerClient.BrockerName, brockerClient);
+                    BrokerClient brokerClient = GetBrokerFromNode(brokerNode);
+                    _brokerClients.Add(brokerClient.BrokerName, brokerClient);
                 }
             }
         }
 
-        private BrockerClient GetBrockerFromNode(XmlNode brockerNode)
+        private BrokerClient GetBrokerFromNode(XmlNode brokerNode)
         {
-            BrockerClient brocker = null;
-            if (brockerNode.Attributes != null)
+            BrokerClient broker = null;
+            if (brokerNode.Attributes != null)
             {
-                var brockerName = brockerNode.Attributes.GetNamedItem("Name")?.Value;
+                var brokerName = brokerNode.Attributes.GetNamedItem("Name")?.Value;
                 var wireProtocolName =
-                    brockerNode.Attributes.GetNamedItem("WireProtocol")?.Value ?? DefaultWireProtcolName;
-                var ip = brockerNode.Attributes.GetNamedItem("Ip")?.Value ?? DefaultIp;
-                var port = Convert.ToInt32(brockerNode.Attributes.GetNamedItem("Port")?.Value ?? DefaultPort);
-                var protocolType = brockerNode.Attributes.GetNamedItem("SocketProtocol")?.Value;
-                var enableCrypting = Convert.ToBoolean(brockerNode.Attributes.GetNamedItem("EnableCrypting")?.Value);
-                brocker = GetBrockerBySocketProtocol(brockerName, GetWireProtocol(wireProtocolName, enableCrypting),
-                    new IPEndPoint(IPAddress.Parse(ip), port), GetDefaultExchanges(brockerNode), protocolType);
+                    brokerNode.Attributes.GetNamedItem("WireProtocol")?.Value ?? DefaultWireProtcolName;
+                var ip = brokerNode.Attributes.GetNamedItem("Ip")?.Value ?? DefaultIp;
+                var port = Convert.ToInt32(brokerNode.Attributes.GetNamedItem("Port")?.Value ?? DefaultPort);
+                var protocolType = brokerNode.Attributes.GetNamedItem("SocketProtocol")?.Value;
+                var enableCrypting = Convert.ToBoolean(brokerNode.Attributes.GetNamedItem("EnableCrypting")?.Value);
+                broker = GetBrokerBySocketProtocol(brokerName, GetWireProtocol(wireProtocolName, enableCrypting),
+                    new IPEndPoint(IPAddress.Parse(ip), port), GetDefaultExchanges(brokerNode), protocolType);
             }
-            return brocker;
+            return broker;
         }
 
-        private BrockerClient GetBrockerBySocketProtocol(string brockerName, IWireProtocol wireProtocol,
+        private BrokerClient GetBrokerBySocketProtocol(string brokerName, IWireProtocol wireProtocol,
             IPEndPoint endPoint, Dictionary<string, string> defautlExchanges, string socketProtocol)
         {
             switch (socketProtocol)
             {
                 case "Udp":
-                    return new UdpBrockerClient(brockerName, wireProtocol, endPoint, defautlExchanges);
+                    return new UdpBrokerClient(brokerName, wireProtocol, endPoint, defautlExchanges);
                 default:
-                    return new TcpBrockerClient(brockerName, wireProtocol, endPoint, defautlExchanges);
+                    return new TcpBrokerClient(brokerName, wireProtocol, endPoint, defautlExchanges);
             }
         }
 
-        private Dictionary<string, string> GetDefaultExchanges(XmlNode brockerNode)
+        private Dictionary<string, string> GetDefaultExchanges(XmlNode brokerNode)
         {
             var defaultExchanges = new Dictionary<string, string>();
-            foreach (XmlElement exchangeNode in brockerNode)
+            foreach (XmlElement exchangeNode in brokerNode)
             {
                 var exchangeType = exchangeNode.Name;
                 var exchangeName = exchangeNode.Attributes.GetNamedItem("Name").Value;
@@ -89,9 +89,9 @@ namespace MessageBuss.Configuration
             }
         }
 
-        public Dictionary<string, BrockerClient> GetBrockers()
+        public Dictionary<string, BrokerClient> GetBrokers()
         {
-            return _brockerClients;
+            return _brokerClients;
         }
     }
 }
