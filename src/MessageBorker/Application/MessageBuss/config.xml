@@ -19,9 +19,9 @@
                  WireProtocol="DefaultWireProtocol"
                  EnableCrypting="true">
 
-            <Fanout Name="Test2"/>
-            <Direct Name="test"/>
-            <Topic Name="Test1"/>
+            <Fanout Name="DefaultFanoutExchange"/>
+            <Direct Name="DefaultDirectExchange"/>
+            <Topic Name="DefaultTopicExchange"/>
         </Brocker>
 
         <Brocker Name="Brocker2"
@@ -30,9 +30,9 @@
                  Port="8000"
                  WireProtocol="DefaultWireProtocol">
 
-            <Fanout Name="Test2"/>
-            <Direct Name="test"/>
-            <Topic Name="Test1"/>
+            <Fanout Name="DefaultFanoutExchange"/>
+            <Direct Name="DefaultDirectExchange"/>
+            <Topic Name="DefaultTopicExchange"/>
         </Brocker>
     </Brockers>
 </Buss>

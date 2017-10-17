@@ -16,7 +16,7 @@ namespace Data.Configuration.FileConfiguration
         
         public PersistenceConfiguration(XmlDocument configsDocument)
         {
-            var fileConfigurationNode = configsDocument.SelectSingleNode("MessageBrocker/Persistence/FilePersistence");
+            var fileConfigurationNode = configsDocument.SelectSingleNode("Brocker/Persistence/FilePersistence");
             _rootDirectory =  fileConfigurationNode?.Attributes?.GetNamedItem("RootDirectory")?.Value ?? DefaultRootDirectory;
             _wireProtocol = WireProtocolConfigHelper.GetWireProtocolByName(fileConfigurationNode);
             _exchangeAndQueuesConfiguration = new ExchangeAndQueuesConfiguration(configsDocument);
