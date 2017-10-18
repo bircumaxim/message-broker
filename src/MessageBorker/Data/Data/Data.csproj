@@ -70,6 +70,8 @@
     <Compile Include="Mappers\Persistence\PersistenceQueueToQueueMapper.cs" />
     <Compile Include="Mappers\Persistence\PersitenceServerGeneralInfoToServerGeneralInfoMapper.cs" />
     <Compile Include="Mappers\Persistence\RouteMessageToPersistenceMessageMapper.cs" />
+    <Compile Include="Mappers\Pull.cs" />
+    <Compile Include="Mappers\ObjectPullBuilder.cs" />
     <Compile Include="Models\ServerGeneralInfo.cs" />
     <Compile Include="RemoteApplicationManager.cs" />
     <Compile Include="Events\RemoteApplicationMessageReceivedEventArgs.cs" />

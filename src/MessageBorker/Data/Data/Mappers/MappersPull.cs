@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using Data.Mappers.Messages;
+﻿using Data.Mappers.Messages;
 using Data.Mappers.Persistence;
 using Data.Models;
+using Domain;
 using Domain.Exhcanges;
 using Domain.Infrastructure.Mapping;
 using Domain.Models;
@@ -15,51 +14,30 @@ namespace Data.Mappers
 {
     public class MappersPull
     {
-        private readonly Dictionary<Type, object> _mappersPull;
-        private readonly Dictionary<Type, Type> _registeredMappers;
-
         private static MappersPull _instance;
         public static MappersPull Instance => _instance ?? (_instance = new MappersPull());
+     
+        private readonly Pull<object> _pull;
 
         private MappersPull()
         {
-            _registeredMappers = new Dictionary<Type, Type>();
-            _mappersPull = new Dictionary<Type, object>();
-
-            RegisterMapper<Message, PayloadMessage>(typeof(MessageToPayloadMessageMapper));
-            RegisterMapper<PayloadRouteMessage, RouteMessage>(typeof(PayloadRouteMessageToRouteMessageMapper));
-            RegisterMapper<RouteMessage, PayloadRouteMessage>(typeof(RouteMessageToPayloadRouteMessageMapper));
-            RegisterMapper<ServerGeneralInfo, ServerGeneralInfoResponse>(typeof(ServerGeneralInfoResponseMapper));
-            RegisterMapper<PersistenceExchange, Exchange>(typeof(PersistenceExchangeToExchangeMapper));
-            RegisterMapper<PersistenceMessage, Message>(typeof(PersistenceMessageToMessageMapper));
-            RegisterMapper<PersistenceQueue<RouteMessage>, Queue<RouteMessage>>(typeof(PersistenceQueueToQueueMapper));
-            RegisterMapper<PersistenceServerGeneralInfo, ServerGeneralInfo>(typeof(PersitenceServerGeneralInfoToServerGeneralInfoMapper));
-            RegisterMapper<RouteMessage, PersistenceMessage>(typeof(RouteMessageToPersistenceMessageMapper));
-            RegisterMapper<SubscribeMessage, PersistenceSubscription>(typeof(SubscribeMessageToPersistenceSubscription));
+            _pull = new ObjectPullBuilder<object>()
+                .For(typeof(IMapper<Message, PayloadMessage>)).Use(typeof(MessageToPayloadMessageMapper))
+                .For(typeof(IMapper<PayloadRouteMessage, RouteMessage>)).Use(typeof(PayloadRouteMessageToRouteMessageMapper))
+                .For(typeof(IMapper<RouteMessage, PayloadRouteMessage>)).Use(typeof(RouteMessageToPayloadRouteMessageMapper))
+                .For(typeof(IMapper<ServerGeneralInfo, ServerGeneralInfoResponse>)).Use(typeof(ServerGeneralInfoResponseMapper))
+                .For(typeof(IMapper<PersistenceExchange, Exchange>)).Use(typeof(PersistenceExchangeToExchangeMapper))
+                .For(typeof(IMapper<PersistenceQueue<RouteMessage>, Queue<RouteMessage>>)).Use(typeof(PersistenceQueueToQueueMapper))
+                .For(typeof(IMapper<PersistenceServerGeneralInfo, ServerGeneralInfo>)).Use(typeof(PersitenceServerGeneralInfoToServerGeneralInfoMapper))
+                .For(typeof(IMapper<RouteMessage, PersistenceMessage>)).Use(typeof(RouteMessageToPersistenceMessageMapper))
+                .For(typeof(IMapper<SubscribeMessage, PersistenceSubscription>)).Use(typeof(SubscribeMessageToPersistenceSubscription))
+                .Build();
         }
 
         public TR Map<TM, TR>(TM objecToMapp)
         {
-            var type = typeof(IMapper<TM, TR>);
-            if (!_registeredMappers.ContainsKey(type))
-            {
-                throw new Exception($"There was not registered any mapper for such object {type}");
-            }
-            return GetMapperByType<TM, TR>().Map(objecToMapp);
-        }
-
-        private void RegisterMapper<TM,TR>(Type mapper)
-        {
-            _registeredMappers.Add(typeof(IMapper<TM, TR>), mapper);
-        }
-        
-        private IMapper<TM, TR> GetMapperByType<TM, TR>()
-        {
-            if (!_mappersPull.ContainsKey(typeof(IMapper<TM, TR>)))
-            {
-                _mappersPull.Add(typeof(IMapper<TM, TR>), Activator.CreateInstance(_registeredMappers[typeof(IMapper<TM, TR>)]));
-            }
-            return _mappersPull[typeof(IMapper<TM, TR>)] as IMapper<TM, TR>;
+            var mapper = (IMapper<TM, TR>) _pull.GetObject(typeof(IMapper<TM, TR>));
+            return mapper.Map(objecToMapp);
         }
     }
 }
