@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -20,9 +21,13 @@ namespace MessageBuss.Configuration
         internal FileConfiguration(string filePath)
         {
             _brokerClients = new Dictionary<string, BrokerClient>();
-            var configsDocument = new XmlDocument();
-            configsDocument.Load(filePath);
-            LoadConfigurationFrom(configsDocument);
+
+            if (File.Exists(filePath))
+            {
+                var configsDocument = new XmlDocument();
+                configsDocument.Load(filePath);
+                LoadConfigurationFrom(configsDocument);
+            }
         }
 
         private void LoadConfigurationFrom(XmlDocument configsDocument)
@@ -63,6 +68,8 @@ namespace MessageBuss.Configuration
             {
                 case "Udp":
                     return new UdpBrokerClient(brokerName, wireProtocol, endPoint, defautlExchanges);
+                case "UdpMulticast":
+                    return new UdpMulticastBrocker(brokerName, wireProtocol, endPoint, defautlExchanges);
                 default:
                     return new TcpBrokerClient(brokerName, wireProtocol, endPoint, defautlExchanges);
             }

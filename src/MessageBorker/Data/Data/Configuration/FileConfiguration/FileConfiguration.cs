@@ -14,8 +14,7 @@ namespace Data.Configuration.FileConfiguration
 
         public FileConfiguration(string filePath)
         {
-            var configsXmlDocument = new XmlDocument();
-            configsXmlDocument.Load(filePath);
+ 
             _connectionManagersConfiguration = new ConnectionManagersConfiguration(configsXmlDocument); 
             _persistenceConfiguration = new PersistenceConfiguration(configsXmlDocument);
         }

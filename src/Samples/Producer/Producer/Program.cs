@@ -12,6 +12,7 @@ namespace Producer
         public static void Main(string[] args)
         {
             var buss = BussFactory.Instance.GetBussFor("Broker");
+            
             buss.Ping();
             buss.MessageReceived += OnMessageReceived;
             buss.Fanout(new UserOrderPayload {UserName = "Papusoi Ion"}, true);

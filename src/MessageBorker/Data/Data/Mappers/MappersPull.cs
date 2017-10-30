@@ -31,6 +31,7 @@ namespace Data.Mappers
                 .For(typeof(IMapper<PersistenceServerGeneralInfo, ServerGeneralInfo>)).Use(typeof(PersitenceServerGeneralInfoToServerGeneralInfoMapper))
                 .For(typeof(IMapper<RouteMessage, PersistenceMessage>)).Use(typeof(RouteMessageToPersistenceMessageMapper))
                 .For(typeof(IMapper<SubscribeMessage, PersistenceSubscription>)).Use(typeof(SubscribeMessageToPersistenceSubscription))
+                .For(typeof(IMapper<PersistenceMessage, Message>)).Use(typeof(PersistenceMessageToMessageMapper))
                 .Build();
         }
 

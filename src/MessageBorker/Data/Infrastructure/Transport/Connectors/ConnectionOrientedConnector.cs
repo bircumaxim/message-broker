@@ -29,7 +29,8 @@ namespace Transport.Connectors
             {
                 if (ConnectionState != ConnectionState.Disconnected)
                 {
-                    _logger.Error($"{GetType().Name} already started");
+                    //TODO fix the issue with multicast.
+//                    _logger.Error($"{GetType().Name} already started");
                     return;
                 }
 

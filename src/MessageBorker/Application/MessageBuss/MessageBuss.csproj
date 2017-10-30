@@ -46,6 +46,8 @@
     <Compile Include="Broker\Events\BrokerClientMessageReceivedEventArgs.cs" />
     <Compile Include="Broker\TcpBrokerClient.cs" />
     <Compile Include="Broker\UdpBrokerClient.cs" />
+    <Compile Include="Broker\UdpMulticastBrocker.cs" />
+    <Compile Include="Buss\BrockerFactory.cs" />
     <Compile Include="Buss\Buss.cs" />
     <Compile Include="Buss\BussFactory.cs" />
     <Compile Include="Buss\Events\MessegeReceviedEventArgs.cs" />

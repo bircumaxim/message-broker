@@ -24,7 +24,7 @@ namespace Transport.Connectors.Udp
         private readonly CancellationTokenSource _cancellationTokenSource;
         private readonly ManualResetEvent _allDone;
         private bool _isAlive;
-        public event UdpMessageReceivedHandler UdpMessageReceived;
+        public event UdpMessageReceivedEventHandler UdpMessageReceived;
         private readonly IWireProtocol _wireProtocol;
 
         public UdpReceiver(int port, IWireProtocol wireProtocol)

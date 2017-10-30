@@ -6,5 +6,10 @@
             <Direct Name="test"/>
             <Topic Name="Test1"/>   
         </Broker>
+        <Broker Name="Broker2" Ip="224.5.6.7" Port="7000" SocketProtocol="UdpMulticast" WireProtocol="DefaultWireProtocol">
+            <Fanout Name="Test2"/>
+            <Direct Name="test"/>
+            <Topic Name="Test1"/>
+        </Broker>
     </Brokers>
 </Buss>
