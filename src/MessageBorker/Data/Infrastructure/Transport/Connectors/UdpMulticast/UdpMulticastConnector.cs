@@ -29,6 +29,7 @@ namespace Transport.Connectors.UdpMulticast
 
         protected override void StartCommunication()
         {
+            //TODO decide what to do with multicast receiver.
 //            Task.Factory.StartNew(_udpMulticastReceiver.StartReceivingMessages);
         }
 

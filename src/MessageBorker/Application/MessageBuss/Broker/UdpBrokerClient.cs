@@ -16,12 +16,18 @@ namespace MessageBuss.Broker
     {
         private readonly UdpConnector _udpConnector;
         private readonly UdpReceiver _udpReceiver;
+        private readonly IPEndPoint _receiverIpEndPoint;
 
-        public UdpBrokerClient(string brokerName, IWireProtocol wireProtocol, IPEndPoint ipEndPoint,
-            Dictionary<string, string> defautlExchanges) : base(brokerName, wireProtocol, defautlExchanges, ipEndPoint)
+        public UdpBrokerClient(string brokerName,
+            IWireProtocol wireProtocol,
+            IPEndPoint connectorIpEndpoint,
+            IPEndPoint receiverIpEndPoint,
+            Dictionary<string, string> defautlExchanges) : base(brokerName, wireProtocol, defautlExchanges,
+            connectorIpEndpoint)
         {
-            _udpReceiver = new UdpReceiver(5000, wireProtocol);
-            _udpConnector = new UdpConnector(GetUdpSocket(), ipEndPoint, wireProtocol);
+            _receiverIpEndPoint = receiverIpEndPoint;
+            _udpReceiver = new UdpReceiver(_receiverIpEndPoint.Port, wireProtocol);
+            _udpConnector = new UdpConnector(GetUdpSocket(), connectorIpEndpoint, wireProtocol);
             _udpReceiver.UdpMessageReceived += UdpReceiverOnUdpMessageReceived;
             _udpConnector.MessageReceived += OnMessageReceived;
         }
@@ -30,17 +36,23 @@ namespace MessageBuss.Broker
 
         public override void Start()
         {
-            //TODO add ip and port to configuration
-            _udpConnector.SendMessage(new UdpInitMessageRequest {ClientIp = "127.0.0.1", ClientPort = 5000});
+            _udpConnector.SendMessage(new UdpInitMessageRequest
+            {
+                ClientIp = _receiverIpEndPoint.Address.ToString(),
+                ClientPort = _receiverIpEndPoint.Port
+            });
             _udpReceiver.Start();
             _udpConnector.Start();
         }
 
         public override Task StartAsync()
         {
-            //TODO add ip and port to configuration
-            _udpConnector.SendMessage(new UdpInitMessageRequest {ClientIp = "127.0.0.1", ClientPort = 5000});
             _udpReceiver.StartAsync();
+            _udpConnector.SendMessage(new UdpInitMessageRequest
+            {
+                ClientIp = _receiverIpEndPoint.Address.ToString(),
+                ClientPort = _receiverIpEndPoint.Port
+            });
             return _udpConnector.StartAsync();
         }
 
@@ -66,11 +78,10 @@ namespace MessageBuss.Broker
 
         protected override Message GetSubscribtionMessage(string queueName)
         {
-            //TODO add ip and port to configuration
             return new SubscribeMessage
             {
-                Ip = "127.0.0.1",
-                Port = 5000,
+                Ip = _receiverIpEndPoint.Address.ToString(),
+                Port = _receiverIpEndPoint.Port,
                 QueueName = queueName,
                 IsDurable = true
             };

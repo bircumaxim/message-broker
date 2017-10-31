@@ -66,13 +66,16 @@ namespace MessageBuss.Buss
         
         public void Unsubscribe()
         {
-            //TODO implement unsubscribe feature.
+            _broker.Unsubscribe();
         }
 
         public void Dispose()
         {
-            _broker.MessageReceivedFromBrokerHandler -= OnMessageReceivedFromBroker;
-            _broker.Stop();
+            if (_broker != null)
+            {
+                _broker.MessageReceivedFromBrokerHandler -= OnMessageReceivedFromBroker;
+                _broker.Stop();    
+            }
         }
 
         #endregion

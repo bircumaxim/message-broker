@@ -53,21 +53,27 @@ namespace MessageBuss.Configuration
                     brokerNode.Attributes.GetNamedItem("WireProtocol")?.Value ?? DefaultWireProtcolName;
                 var ip = brokerNode.Attributes.GetNamedItem("Ip")?.Value ?? DefaultIp;
                 var port = Convert.ToInt32(brokerNode.Attributes.GetNamedItem("Port")?.Value ?? DefaultPort);
+                
+                var receiverIp = brokerNode.Attributes.GetNamedItem("ReceiverIp")?.Value ?? DefaultIp;
+                var receiverPport = Convert.ToInt32(brokerNode.Attributes.GetNamedItem("ReceiverPort")?.Value ?? DefaultPort);
+                
                 var protocolType = brokerNode.Attributes.GetNamedItem("SocketProtocol")?.Value;
                 var enableCrypting = Convert.ToBoolean(brokerNode.Attributes.GetNamedItem("EnableCrypting")?.Value);
                 broker = GetBrokerBySocketProtocol(brokerName, GetWireProtocol(wireProtocolName, enableCrypting),
-                    new IPEndPoint(IPAddress.Parse(ip), port), GetDefaultExchanges(brokerNode), protocolType);
+                    new IPEndPoint(IPAddress.Parse(ip), port),
+                    new IPEndPoint(IPAddress.Parse(receiverIp), receiverPport),
+                    GetDefaultExchanges(brokerNode), protocolType);
             }
             return broker;
         }
 
         private BrokerClient GetBrokerBySocketProtocol(string brokerName, IWireProtocol wireProtocol,
-            IPEndPoint endPoint, Dictionary<string, string> defautlExchanges, string socketProtocol)
+            IPEndPoint endPoint, IPEndPoint receiverIpEndPoint, Dictionary<string, string> defautlExchanges, string socketProtocol)
         {
             switch (socketProtocol)
             {
                 case "Udp":
-                    return new UdpBrokerClient(brokerName, wireProtocol, endPoint, defautlExchanges);
+                    return new UdpBrokerClient(brokerName, wireProtocol, endPoint, receiverIpEndPoint, defautlExchanges);
                 case "UdpMulticast":
                     return new UdpMulticastBrocker(brokerName, wireProtocol, endPoint, defautlExchanges);
                 default:

@@ -18,6 +18,20 @@ namespace Data
             _subscriptions = new Dictionary<string, List<string>>();
         }
 
+        public void RemoveSubscription(string applicationName)
+        {
+            lock (_subscriptions)
+            {
+                foreach (var subscription in _subscriptions)
+                {
+                    if (subscription.Value.Contains(applicationName))
+                    {
+                        subscription.Value.Remove(applicationName);
+                    }
+                }
+            }
+        }
+        
         public void AddSubscrption(string queueName, string applicationName)
         {
             lock (_subscriptions)

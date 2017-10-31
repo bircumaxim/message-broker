@@ -16,12 +16,12 @@ namespace MessageBuss.Broker
         private readonly UdpMulticastConnector _udpMulticastConnector;
         private readonly UdpMulticastReceiver _udpMulticastReceiver;
 
-        public UdpMulticastBrocker(string brokerName, IWireProtocol wireProtocol, IPEndPoint ipEndPoint,
+        public UdpMulticastBrocker(string brokerName, IWireProtocol wireProtocol, IPEndPoint connectorIpEndpoint,
             Dictionary<string, string> defautlExchanges) : base(brokerName, wireProtocol,
-            defautlExchanges, ipEndPoint)
+            defautlExchanges, connectorIpEndpoint)
         {
-            _udpMulticastConnector = new UdpMulticastConnector(ipEndPoint, wireProtocol);
-            _udpMulticastReceiver = new UdpMulticastReceiver(ipEndPoint, wireProtocol);
+            _udpMulticastConnector = new UdpMulticastConnector(connectorIpEndpoint, wireProtocol);
+            _udpMulticastReceiver = new UdpMulticastReceiver(connectorIpEndpoint, wireProtocol);
             _udpMulticastReceiver.UdpMulticastMessageReceivedHandler += OnMessageReceived;
         }
 

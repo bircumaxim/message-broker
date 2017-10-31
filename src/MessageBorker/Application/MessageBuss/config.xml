@@ -28,6 +28,8 @@
                  SocketProtocol="Udp"
                  Ip="127.0.0.1"
                  Port="8000"
+                 ReceiverIp="127.0.0.1"
+                 ReceiverPort="8000"
                  WireProtocol="DefaultWireProtocol">
 
             <Fanout Name="DefaultFanoutExchange"/>

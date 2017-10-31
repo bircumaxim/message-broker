@@ -8,7 +8,8 @@ namespace MessageBuss.Buss
 {
     public static class BrockerFactory
     {
-        public static BrokerClient GetBrocker(string brokerName, IPEndPoint endPoint, string socketProtocol = "Udp",
+        public static BrokerClient GetBrocker(string brokerName, IPEndPoint endPoint, IPEndPoint receiverIpEndPoint,
+            string socketProtocol = "Udp",
             string wireProtocol = "DefaultWireProtocol",
             bool isCryptingEnabled = false, Dictionary<string, string> defautlExchanges = null)
         {
@@ -16,6 +17,7 @@ namespace MessageBuss.Buss
             {
                 case "Udp":
                     return new UdpBrokerClient(brokerName, GetWireProtocol(wireProtocol, isCryptingEnabled), endPoint,
+                        receiverIpEndPoint,
                         defautlExchanges);
                 case "UdpMulticast":
                     return new UdpMulticastBrocker(brokerName, GetWireProtocol(wireProtocol, isCryptingEnabled),

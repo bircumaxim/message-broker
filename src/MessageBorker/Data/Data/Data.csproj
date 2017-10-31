@@ -50,6 +50,7 @@
     <Compile Include="Command\Commands\SendPingMessageCommand.cs" />
     <Compile Include="Command\Commands\StopRemoteApplicationCommand.cs" />
     <Compile Include="Command\Commands\SubscribeCommand.cs" />
+    <Compile Include="Command\Commands\UnsubscribeCommand.cs" />
     <Compile Include="Command\ICommand.cs" />
     <Compile Include="Configuration\FileConfiguration\ConnectionManagersConfiguration.cs" />
     <Compile Include="Configuration\FileConfiguration\ExchangeAndQueuesConfiguration.cs" />

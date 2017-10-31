@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using MessageBuss.Broker.Events;
 using Messages.Connection;
 using Messages.Payload;
+using Messages.Subscribe;
 using Serialization;
 using Serialization.WireProtocol;
 using Transport.Events;
@@ -19,14 +20,14 @@ namespace MessageBuss.Broker
         private readonly Queue<Message> _messagesToSend;
         public Dictionary<string, string> DefautlExchanges { get; }
         public event BrokerClientMessageReceivedHandler MessageReceivedFromBrokerHandler;
-        public IPEndPoint IpEndPoint { get; }
+        public IPEndPoint ConnectorIpEndpoint { get; }
 
         protected BrokerClient(string brokerName, IWireProtocol wireProtocol,
-            Dictionary<string, string> defautlExchanges, IPEndPoint ipEndPoint)
+            Dictionary<string, string> defautlExchanges, IPEndPoint connectorIpEndpoint)
         {
             BrokerName = brokerName;
             DefautlExchanges = defautlExchanges;
-            IpEndPoint = ipEndPoint;
+            ConnectorIpEndpoint = connectorIpEndpoint;
             WireProtocol = wireProtocol;
             _messagesToSend = new Queue<Message>();
         }
@@ -62,6 +63,11 @@ namespace MessageBuss.Broker
         {
             SendOrEnqueue(GetSubscribtionMessage(queueName));
         }
+
+        public void Unsubscribe()
+        {
+            SendOrEnqueue(new UnsubscribeMessage());
+        }
         
         protected abstract void SendMessageToConnector(Message message);
 
@@ -71,6 +77,7 @@ namespace MessageBuss.Broker
 
         protected void OnMessageReceived(object sender, MessageReceivedEventArgs args)
         {
+            Console.WriteLine(args.Message.MessageTypeName);
             switch (args.Message.MessageTypeName)
             {
                 case "OpenConnectionResponse":

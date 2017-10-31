@@ -16,10 +16,10 @@ namespace MessageBuss.Broker
     {
         private readonly TcpConnector _tcpConnector;
 
-        public TcpBrokerClient(string brokerName, IWireProtocol wireProtocol, IPEndPoint ipEndPoint,
-            Dictionary<string, string> defautlExchanges) : base(brokerName, wireProtocol, defautlExchanges, ipEndPoint)
+        public TcpBrokerClient(string brokerName, IWireProtocol wireProtocol, IPEndPoint connectorIpEndpoint,
+            Dictionary<string, string> defautlExchanges) : base(brokerName, wireProtocol, defautlExchanges, connectorIpEndpoint)
         {
-            _tcpConnector = new TcpConnector(GetTcpSocket(ipEndPoint), WireProtocol);
+            _tcpConnector = new TcpConnector(GetTcpSocket(connectorIpEndpoint), WireProtocol);
             _tcpConnector.StateChanged += OnStateChange;
             _tcpConnector.MessageReceived += OnMessageReceived;
         }
@@ -83,7 +83,7 @@ namespace MessageBuss.Broker
                 Console.WriteLine("\nConnection to server failed.\n" +
                                   $"Check please that on {endPoint} " +
                                   "there is a running instance of message broker server.");
-                throw ex;
+                throw;
             }
             return socket;
         }

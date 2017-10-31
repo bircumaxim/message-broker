@@ -17,7 +17,6 @@ namespace MessageBuss.Buss
 
         private BussFactory()
         {
-            new OpenConnectionResponse();
             IConfiguration configuration = new FileConfiguration(ConfigFilePath);
             _brokerClients = configuration.GetBrokers();
         }
@@ -29,11 +28,13 @@ namespace MessageBuss.Buss
             return new Buss(broker);
         }
 
-        public Buss GetBussFor(string brockerName, IPEndPoint ipEndPoint, string protcolType = "Udp")
+        public Buss GetBussFor(string brockerName, IPEndPoint brockerIpEndPoint, IPEndPoint receiverIpEndPoint,
+            string protcolType = "Udp")
         {
             if (!_brokerClients.ContainsKey(brockerName))
             {
-                var brokerClient = BrockerFactory.GetBrocker(brockerName, ipEndPoint, protcolType);
+                var brokerClient =
+                    BrockerFactory.GetBrocker(brockerName, brockerIpEndPoint, receiverIpEndPoint, protcolType);
                 _brokerClients.Add(brockerName, brokerClient);
             }
 

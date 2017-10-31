@@ -53,6 +53,11 @@ namespace Data
                 var message = args.Message as SubscribeMessage;
                 return new SubscribeCommand(args.Application.Name, message, _persistence, _subscribtionManager);
             }
+            if (args.Message.MessageTypeName == typeof(UnsubscribeCommand).Name)
+            {
+                return new UnsubscribeCommand(args.Application.Name, _subscribtionManager);
+            }
+
             var useCase = _useCaseFactory.GetUseCaseFor(args);
             return new ExecuteDomainUseCaseCommand(useCase);
         }

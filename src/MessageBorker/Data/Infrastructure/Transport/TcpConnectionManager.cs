@@ -8,10 +8,11 @@ namespace Transport
 {
     public class TcpConnectionManager : ConnectionManager
     {
+        private const int DefaultMessageLength = 52428800;
         private readonly int _maxMessageLength;
         private readonly TcpConnectionListener _connectionListener;
 
-        public TcpConnectionManager(int port, IWireProtocol wireProtocol, int maxMessageLength) :
+        public TcpConnectionManager(int port, IWireProtocol wireProtocol, int maxMessageLength = DefaultMessageLength) :
             base(wireProtocol)
         {
             _maxMessageLength = maxMessageLength;

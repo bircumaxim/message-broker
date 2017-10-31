@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Xml;
-using Data.Models;
 using Persistence.Configuration;
-using Serialization.WireProtocol;
 using Transport;
 
 namespace Data.Configuration.FileConfiguration
@@ -14,7 +12,8 @@ namespace Data.Configuration.FileConfiguration
 
         public FileConfiguration(string filePath)
         {
- 
+            var configsXmlDocument = new XmlDocument();
+            configsXmlDocument.Load(filePath);
             _connectionManagersConfiguration = new ConnectionManagersConfiguration(configsXmlDocument); 
             _persistenceConfiguration = new PersistenceConfiguration(configsXmlDocument);
         }
