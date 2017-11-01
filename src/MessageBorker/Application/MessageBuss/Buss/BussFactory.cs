@@ -34,11 +34,9 @@ namespace MessageBuss.Buss
                 var brokerClient =
                     BrockerFactory.GetBrocker(brockerName, brockerIpEndPoint, receiverIpEndPoint, protcolType);
                 _brokerClients.Add(brockerName, brokerClient);
+                brokerClient.StartAsync();
             }
-
-            var broker = _brokerClients[brockerName];
-            broker.StartAsync();
-            return new Buss(broker);
+            return new Buss(_brokerClients[brockerName]);
         }
     }
 }

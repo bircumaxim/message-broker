@@ -48,7 +48,8 @@ namespace Data
             subscription.SubscriberName = subscriberName;
             if (subscribeMessage.IsDurable)
             {
-                _filePersistence.PersistSubscription(subscription);
+                //TODO dont uncommnet till the unsubscribe feature will not be finished.
+//                _filePersistence.PersistSubscription(subscription);
             }
             _memoryPersistence.PersistSubscription(subscription);
         }

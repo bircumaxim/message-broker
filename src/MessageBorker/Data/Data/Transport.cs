@@ -27,7 +27,7 @@ namespace Data
             _subscribtionManager = new SubscribtionManager(_remoteApplicationManager, _persistence);
             _commandFactory = new CommandFactory(this, _persistence, _remoteApplicationManager, _subscribtionManager);
         }
-
+        
         public void Start()
         {
             _remoteApplicationManager.Start();

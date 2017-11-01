@@ -29,7 +29,6 @@ namespace Transport
 
         private void OnMessageReceived(object sender, UdpMessageReceivedEventArgs args)
         {
-            Console.WriteLine(args.Message.MessageTypeName);
             UdpConnector connector;
             if (_connectors.TryGetValue(args.ConnectorName, out connector))
             {

@@ -65,7 +65,7 @@ namespace Data
                 foreach (var remoteApplication in _remoteApplications.Values)
                 {
                     remoteApplication.Send(new CloseConnectionResponse());
-                }   
+                }
             }
         }
 
@@ -118,26 +118,28 @@ namespace Data
                 _remoteApplications.Clear();
             }
         }
-        
+
         public int GetConnectionsNumber()
         {
             return _remoteApplications.Count;
         }
-        
+
         public void SendMessage(string applicationName, Message message)
         {
             lock (_remoteApplications)
             {
-                _remoteApplications[applicationName].Send(message);
+                if (_remoteApplications.ContainsKey(applicationName))
+                    _remoteApplications[applicationName].Send(message);
             }
         }
-        
+
         public void StopRemoteApplication(string applicationName)
         {
             lock (_remoteApplications)
             {
                 _remoteApplications[applicationName].Stop();
-                _remoteApplications[applicationName].RemoteApplicationMessageReceived -= RemoteApplicationMessageReceived;
+                _remoteApplications[applicationName].RemoteApplicationMessageReceived -=
+                    RemoteApplicationMessageReceived;
                 _remoteApplications.Remove(applicationName);
             }
         }
