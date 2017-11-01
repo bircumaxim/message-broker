@@ -9,6 +9,7 @@ using Serialization;
 using Serialization.WireProtocol;
 using Transport.Connectors.Udp;
 using Transport.Connectors.Udp.Events;
+using Transport.Events;
 
 namespace MessageBuss.Broker
 {
@@ -28,9 +29,11 @@ namespace MessageBuss.Broker
             _receiverIpEndPoint = receiverIpEndPoint;
             _udpReceiver = new UdpReceiver(_receiverIpEndPoint.Port, wireProtocol);
             _udpConnector = new UdpConnector(GetUdpSocket(), connectorIpEndpoint, wireProtocol);
+            _udpReceiver.ReciverStateChanged += OnReiverStateChanged;
             _udpReceiver.UdpMessageReceived += UdpReceiverOnUdpMessageReceived;
             _udpConnector.MessageReceived += OnMessageReceived;
         }
+
 
         #region IRun methods
 
@@ -48,11 +51,6 @@ namespace MessageBuss.Broker
         public override Task StartAsync()
         {
             _udpReceiver.StartAsync();
-            _udpConnector.SendMessage(new UdpInitMessageRequest
-            {
-                ClientIp = _receiverIpEndPoint.Address.ToString(),
-                ClientPort = _receiverIpEndPoint.Port
-            });
             return _udpConnector.StartAsync();
         }
 
@@ -66,6 +64,15 @@ namespace MessageBuss.Broker
 
         #endregion
 
+        private void OnReiverStateChanged(object sender, ReceiverStateChangedEventArgs args)
+        {
+            _udpConnector.SendMessage(new UdpInitMessageRequest
+            {
+                ClientIp = _receiverIpEndPoint.Address.ToString(),
+                ClientPort = _receiverIpEndPoint.Port
+            });
+        }
+        
         private void UdpReceiverOnUdpMessageReceived(object sender, UdpMessageReceivedEventArgs args)
         {
             _udpConnector.OnNewMessageReceived(args.Message);

@@ -46,7 +46,10 @@ namespace Transport.Connectors.Udp
             _logger.Debug($"{message.MessageTypeName} is preparing to be sent to " +
                           $"{GetType().Name} with id=\"{ConnectorId}\"");
             MemoryStream memoryStream = new MemoryStream();
-            var udpMessageWrapper = new UdpMessageWrapper {ClientName = ConnectorId};
+            var udpMessageWrapper = new UdpMessageWrapper
+            {
+                ClientName = ConnectorId
+            };
             _wireProtocol.WriteMessage(new DefaultSerializer(udpMessageWrapper.MemoryStream), message);
             _wireProtocol.WriteMessage(new DefaultSerializer(memoryStream), udpMessageWrapper);
             _socket.SendTo(memoryStream.ToArray(), IpEndPoint);

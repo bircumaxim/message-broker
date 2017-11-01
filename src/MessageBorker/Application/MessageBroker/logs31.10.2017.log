@@ -1,0 +1,68 @@
+2017-10-31 23:53:03,648 [6] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-31 23:53:03,648 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="Tcp" port="9000" 
+2017-10-31 23:53:03,648 [7] [INFO  ] Transport.Connectors.UdpMulticast.UdpMulticastConnector - Received message="OpenConnectionRequest" by UdpMulticastConnector with id 74f39320-3b30-42c6-b375-dc6e3b8c04f5 
+2017-10-31 23:53:03,664 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-31 23:53:03,664 [7] [INFO  ] Data.RemoteApplication - New remote application UdpMulticastConnector with id 74f39320-3b30-42c6-b375-dc6e3b8c04f5 
+2017-10-31 23:53:03,664 [7] [INFO  ] Transport.Connectors.UdpMulticast.UdpMulticastConnector - Sent     message="OpenConnectionResponse" size="112 byte" to UdpMulticastConnector with id 74f39320-3b30-42c6-b375-dc6e3b8c04f5 
+2017-10-31 23:53:03,664 [7] [INFO  ] Transport.Connectors.UdpMulticast.UdpMulticastConnector - Received message="SubscribeMessage" by UdpMulticastConnector with id 74f39320-3b30-42c6-b375-dc6e3b8c04f5 
+2017-10-31 23:54:37,271 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id fe4a5e2a-4f46-44bb-9edf-6608b979fe75 
+2017-10-31 23:54:37,349 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id fe4a5e2a-4f46-44bb-9edf-6608b979fe75 
+2017-10-31 23:54:37,349 [3] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id fe4a5e2a-4f46-44bb-9edf-6608b979fe75 
+2017-10-31 23:54:37,365 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="OpenConnectionResponse" size="222 byte" to UdpConnector with id fe4a5e2a-4f46-44bb-9edf-6608b979fe75 
+2017-10-31 23:54:37,365 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadRouteMessage" by UdpConnector with id fe4a5e2a-4f46-44bb-9edf-6608b979fe75 
+2017-10-31 23:54:46,319 [10] [ERROR ] Transport.Connectors.Tcp.TcpConnector - Receiving message failed TcpConnector with id="d44dfb66-55a0-4a1b-a58b-6f512320413d" 
+2017-10-31 23:55:49,726 [13] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 1fafcb75-3292-47f1-ba1f-8eda05159922 
+2017-10-31 23:55:49,742 [13] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 1fafcb75-3292-47f1-ba1f-8eda05159922 
+2017-10-31 23:55:49,742 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id a7a82d81-5456-4903-a4c9-57e30c6c0c2e 
+2017-10-31 23:55:49,742 [13] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" size="112 byte" to TcpConnector with id 1fafcb75-3292-47f1-ba1f-8eda05159922 
+2017-10-31 23:55:49,758 [13] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PayloadRouteMessage" by TcpConnector with id 1fafcb75-3292-47f1-ba1f-8eda05159922 
+2017-10-31 23:55:49,758 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id a7a82d81-5456-4903-a4c9-57e30c6c0c2e 
+2017-10-31 23:55:49,758 [8] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id a7a82d81-5456-4903-a4c9-57e30c6c0c2e 
+2017-10-31 23:55:49,758 [13] [INFO  ] Transport.Connectors.UdpMulticast.UdpMulticastConnector - Sent     message="PayloadMessage" size="213 byte" to UdpMulticastConnector with id 74f39320-3b30-42c6-b375-dc6e3b8c04f5 
+2017-10-31 23:55:49,758 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="OpenConnectionResponse" size="222 byte" to UdpConnector with id a7a82d81-5456-4903-a4c9-57e30c6c0c2e 
+2017-10-31 23:55:49,758 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="SubscribeMessage" by UdpConnector with id a7a82d81-5456-4903-a4c9-57e30c6c0c2e 
+2017-10-31 23:55:49,758 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="270 byte" to UdpConnector with id a7a82d81-5456-4903-a4c9-57e30c6c0c2e 
+2017-10-31 23:55:49,773 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id a7a82d81-5456-4903-a4c9-57e30c6c0c2e 
+2017-10-31 23:55:49,805 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id 847e2e41-2677-4a50-ab36-4f294b14cacf 
+2017-10-31 23:55:49,805 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id 847e2e41-2677-4a50-ab36-4f294b14cacf 
+2017-10-31 23:55:49,805 [8] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id 847e2e41-2677-4a50-ab36-4f294b14cacf 
+2017-10-31 23:55:49,805 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="OpenConnectionResponse" size="222 byte" to UdpConnector with id 847e2e41-2677-4a50-ab36-4f294b14cacf 
+2017-10-31 23:55:49,820 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadRouteMessage" by UdpConnector with id 847e2e41-2677-4a50-ab36-4f294b14cacf 
+2017-10-31 23:55:49,820 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="272 byte" to UdpConnector with id a7a82d81-5456-4903-a4c9-57e30c6c0c2e 
+2017-10-31 23:55:49,820 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id a7a82d81-5456-4903-a4c9-57e30c6c0c2e 
+2017-10-31 23:57:04,735 [1] [INFO  ] Transport.Connectors.UdpMulticast.UdpMulticastConnector - Sent     message="CloseConnectionResponse" size="72 byte" to UdpMulticastConnector with id 74f39320-3b30-42c6-b375-dc6e3b8c04f5 
+2017-10-31 23:57:04,735 [1] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="CloseConnectionResponse" size="182 byte" to UdpConnector with id fe4a5e2a-4f46-44bb-9edf-6608b979fe75 
+2017-10-31 23:57:04,750 [1] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="CloseConnectionResponse" size="72 byte" to TcpConnector with id 1fafcb75-3292-47f1-ba1f-8eda05159922 
+2017-10-31 23:57:04,750 [1] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="CloseConnectionResponse" size="182 byte" to UdpConnector with id a7a82d81-5456-4903-a4c9-57e30c6c0c2e 
+2017-10-31 23:57:04,750 [1] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="CloseConnectionResponse" size="182 byte" to UdpConnector with id 847e2e41-2677-4a50-ab36-4f294b14cacf 
+2017-10-31 23:57:04,750 [13] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="CloseConnectionRequest" by TcpConnector with id 1fafcb75-3292-47f1-ba1f-8eda05159922 
+2017-10-31 23:57:04,750 [8] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="CloseConnectionRequest" by UdpConnector with id a7a82d81-5456-4903-a4c9-57e30c6c0c2e 
+2017-10-31 23:57:04,750 [15] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="CloseConnectionRequest" by UdpConnector with id 847e2e41-2677-4a50-ab36-4f294b14cacf 
+2017-10-31 23:57:04,750 [1] [ERROR ] Transport.Connectors.UdpMulticast.UdpMulticastConnector - UdpMulticastConnector already stoped 
+2017-10-31 23:57:23,190 [6] [INFO  ] Transport.Connectors.Udp.UdpReceiver - Started Socket protocol="Udp" port="8000" 
+2017-10-31 23:57:23,190 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Started Socket protocol="Tcp" port="9000" 
+2017-10-31 23:57:23,190 [7] [INFO  ] Transport.Connectors.UdpMulticast.UdpMulticastConnector - Received message="OpenConnectionRequest" by UdpMulticastConnector with id c0f0f5e5-78ae-4d32-a9e6-73e970d960e7 
+2017-10-31 23:57:23,190 [5] [INFO  ] Transport.Connectors.Tcp.TcpConnectionListener - Waiting for connections... 
+2017-10-31 23:57:23,190 [7] [INFO  ] Data.RemoteApplication - New remote application UdpMulticastConnector with id c0f0f5e5-78ae-4d32-a9e6-73e970d960e7 
+2017-10-31 23:57:23,205 [7] [INFO  ] Transport.Connectors.UdpMulticast.UdpMulticastConnector - Sent     message="OpenConnectionResponse" size="112 byte" to UdpMulticastConnector with id c0f0f5e5-78ae-4d32-a9e6-73e970d960e7 
+2017-10-31 23:57:23,205 [7] [INFO  ] Transport.Connectors.UdpMulticast.UdpMulticastConnector - Received message="SubscribeMessage" by UdpMulticastConnector with id c0f0f5e5-78ae-4d32-a9e6-73e970d960e7 
+2017-10-31 23:57:31,081 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="OpenConnectionRequest" by TcpConnector with id 83e5c265-56bd-498f-aea5-b0f880a3ab36 
+2017-10-31 23:57:31,081 [7] [INFO  ] Data.RemoteApplication - New remote application TcpConnector with id 83e5c265-56bd-498f-aea5-b0f880a3ab36 
+2017-10-31 23:57:31,081 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Sent     message="OpenConnectionResponse" size="112 byte" to TcpConnector with id 83e5c265-56bd-498f-aea5-b0f880a3ab36 
+2017-10-31 23:57:31,081 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id 1e890ca6-a11f-4dcf-a139-f53c69d9d69f 
+2017-10-31 23:57:31,097 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="PayloadRouteMessage" by TcpConnector with id 83e5c265-56bd-498f-aea5-b0f880a3ab36 
+2017-10-31 23:57:31,097 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id 1e890ca6-a11f-4dcf-a139-f53c69d9d69f 
+2017-10-31 23:57:31,097 [3] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id 1e890ca6-a11f-4dcf-a139-f53c69d9d69f 
+2017-10-31 23:57:31,097 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="OpenConnectionResponse" size="222 byte" to UdpConnector with id 1e890ca6-a11f-4dcf-a139-f53c69d9d69f 
+2017-10-31 23:57:31,097 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="SubscribeMessage" by UdpConnector with id 1e890ca6-a11f-4dcf-a139-f53c69d9d69f 
+2017-10-31 23:57:31,112 [7] [INFO  ] Transport.Connectors.UdpMulticast.UdpMulticastConnector - Sent     message="PayloadMessage" size="213 byte" to UdpMulticastConnector with id c0f0f5e5-78ae-4d32-a9e6-73e970d960e7 
+2017-10-31 23:57:31,159 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="UdpInitMessageResponse" size="181 byte" to UdpConnector with id f6addc03-c0b8-4668-a1fa-7e8b5588aa39 
+2017-10-31 23:57:31,159 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="OpenConnectionRequest" by UdpConnector with id f6addc03-c0b8-4668-a1fa-7e8b5588aa39 
+2017-10-31 23:57:31,159 [3] [INFO  ] Data.RemoteApplication - New remote application UdpConnector with id f6addc03-c0b8-4668-a1fa-7e8b5588aa39 
+2017-10-31 23:57:31,159 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="OpenConnectionResponse" size="222 byte" to UdpConnector with id f6addc03-c0b8-4668-a1fa-7e8b5588aa39 
+2017-10-31 23:57:31,159 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadRouteMessage" by UdpConnector with id f6addc03-c0b8-4668-a1fa-7e8b5588aa39 
+2017-10-31 23:57:31,175 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Sent     message="PayloadMessage" size="272 byte" to UdpConnector with id 1e890ca6-a11f-4dcf-a139-f53c69d9d69f 
+2017-10-31 23:57:31,175 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="PayloadMessageReceived" by UdpConnector with id 1e890ca6-a11f-4dcf-a139-f53c69d9d69f 
+2017-10-31 23:58:55,278 [3] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="UnsubscribeMessage" by UdpConnector with id 1e890ca6-a11f-4dcf-a139-f53c69d9d69f 
+2017-10-31 23:58:55,278 [10] [INFO  ] Transport.Connectors.Udp.UdpConnector - Received message="CloseConnectionRequest" by UdpConnector with id 1e890ca6-a11f-4dcf-a139-f53c69d9d69f 
+2017-10-31 23:58:55,294 [7] [INFO  ] Transport.Connectors.Tcp.TcpConnector - Received message="CloseConnectionRequest" by TcpConnector with id 83e5c265-56bd-498f-aea5-b0f880a3ab36 

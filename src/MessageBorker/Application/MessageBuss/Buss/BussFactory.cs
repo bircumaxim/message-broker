@@ -3,7 +3,6 @@ using System.IO;
 using System.Net;
 using MessageBuss.Broker;
 using MessageBuss.Configuration;
-using Messages.Connection;
 
 namespace MessageBuss.Buss
 {
@@ -28,8 +27,7 @@ namespace MessageBuss.Buss
             return new Buss(broker);
         }
 
-        public Buss GetBussFor(string brockerName, IPEndPoint brockerIpEndPoint, IPEndPoint receiverIpEndPoint,
-            string protcolType = "Udp")
+        public Buss GetBussFor(string brockerName, IPEndPoint brockerIpEndPoint, IPEndPoint receiverIpEndPoint, BrokerProtocolType protcolType = BrokerProtocolType.Udp)
         {
             if (!_brokerClients.ContainsKey(brockerName))
             {

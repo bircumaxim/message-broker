@@ -56,6 +56,7 @@
     <Compile Include="ServerInfo\ServerGeneralInfoResponse.cs" />
     <Compile Include="ServerInfo\ServerGerneralInfoRequest.cs" />
     <Compile Include="Subscribe\SubscribeMessage.cs" />
+    <Compile Include="Subscribe\SubscribeSuccessMessage.cs" />
     <Compile Include="Subscribe\UnsubscribeMessage.cs" />
     <Compile Include="Udp\UdpInitMessageRequest.cs" />
     <Compile Include="Udp\UdpInitMessageResponse.cs" />

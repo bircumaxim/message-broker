@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 using MessageBuss.Broker.Events;
@@ -77,7 +76,6 @@ namespace MessageBuss.Broker
 
         protected void OnMessageReceived(object sender, MessageReceivedEventArgs args)
         {
-            Console.WriteLine(args.Message.MessageTypeName);
             switch (args.Message.MessageTypeName)
             {
                 case "OpenConnectionResponse":

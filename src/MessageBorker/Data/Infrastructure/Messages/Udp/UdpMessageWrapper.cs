@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Net;
 using Serialization;
 using Serialization.Deserializer;
 using Serialization.Serializer;
@@ -9,7 +10,7 @@ namespace Messages.Udp
     {
         public string ClientName { get; set; }
         public MemoryStream MemoryStream { get; set; }
-        public byte[] Message{ get; set; }
+        public byte[] Message { get; set; }
 
         public UdpMessageWrapper()
         {

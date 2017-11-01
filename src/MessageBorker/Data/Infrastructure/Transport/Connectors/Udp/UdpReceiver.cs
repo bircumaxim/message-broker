@@ -13,6 +13,7 @@ using Serialization;
 using Serialization.Deserializer;
 using Serialization.WireProtocol;
 using Transport.Connectors.Udp.Events;
+using Transport.Events;
 
 namespace Transport.Connectors.Udp
 {
@@ -25,6 +26,7 @@ namespace Transport.Connectors.Udp
         private readonly ManualResetEvent _allDone;
         private bool _isAlive;
         public event UdpMessageReceivedEventHandler UdpMessageReceived;
+        public event ReceiverStateChangedEventHandler ReciverStateChanged;
         private readonly IWireProtocol _wireProtocol;
 
         public UdpReceiver(int port, IWireProtocol wireProtocol)
@@ -91,6 +93,7 @@ namespace Transport.Connectors.Udp
 
         private void StartReceivingMessages()
         {
+            ReciverStateChanged?.Invoke(this, new ReceiverStateChangedEventArgs());
             while (_isAlive)
             {
                 try
@@ -136,8 +139,7 @@ namespace Transport.Connectors.Udp
 
         protected void OnMessageReceived(UdpMessageWrapper udpMessageWrapper)
         {
-            var message =
-                _wireProtocol.ReadMessage(new DefaultDeserializer(new MemoryStream(udpMessageWrapper.Message)));
+            var message = _wireProtocol.ReadMessage(new DefaultDeserializer(new MemoryStream(udpMessageWrapper.Message)));
             UdpMessageReceived?.Invoke(this, new UdpMessageReceivedEventArgs(udpMessageWrapper.ClientName, message));
         }
 

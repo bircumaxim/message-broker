@@ -51,6 +51,7 @@
     <Compile Include="Buss\Buss.cs" />
     <Compile Include="Buss\BussFactory.cs" />
     <Compile Include="Buss\Events\MessegeReceviedEventArgs.cs" />
+    <Compile Include="Buss\BrokerProtocolType.cs" />
     <Compile Include="Configuration\FileConfiguration.cs" />
     <Compile Include="Configuration\IConfiguration.cs" />
     <Compile Include="IRun.cs" />

@@ -63,6 +63,7 @@
     <Compile Include="Events\ConnectorConnectedEventArgs.cs" />
     <Compile Include="Events\ConnectorStateChangeEventArgs.cs" />
     <Compile Include="Events\MessageReceivedEventArgs.cs" />
+    <Compile Include="Events\ReceiverStateChangedEventArgs.cs" />
     <Compile Include="IConnectionManager.cs" />
     <Compile Include="IRun.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

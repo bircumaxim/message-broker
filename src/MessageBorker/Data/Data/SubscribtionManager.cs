@@ -2,6 +2,7 @@
 using Data.Mappers;
 using Domain.Models;
 using Messages.Payload;
+using Messages.Subscribe;
 
 namespace Data
 {
@@ -44,7 +45,13 @@ namespace Data
                 {
                     _subscriptions.Add(queueName, new List<string> {applicationName});
                 }
+                SendSubscribeSuccessMessage(applicationName);
             }
+        }
+
+        private void SendSubscribeSuccessMessage(string remoteApplicationName)
+        {
+            _remoteApplicationManager.SendMessage(remoteApplicationName, new SubscribeSuccessMessage());
         }
 
         public void NotifySubscribers(string queueName)

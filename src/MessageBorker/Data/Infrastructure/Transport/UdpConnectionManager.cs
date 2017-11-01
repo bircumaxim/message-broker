@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Runtime.Remoting.Channels;
 using System.Threading.Tasks;
@@ -28,6 +29,7 @@ namespace Transport
 
         private void OnMessageReceived(object sender, UdpMessageReceivedEventArgs args)
         {
+            Console.WriteLine(args.Message.MessageTypeName);
             UdpConnector connector;
             if (_connectors.TryGetValue(args.ConnectorName, out connector))
             {
